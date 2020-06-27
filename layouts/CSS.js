@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavStyle = styled.div`
     background: ${props => props.theme.navBgColor};
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 0.8fr 3fr 1fr;
     transition: all 0.2s ease-out;
     position: absolute;
     height: 72px;
@@ -25,6 +25,21 @@ export const NavStyle = styled.div`
                 margin: 5px;
             }
         }
+    }
+
+    .demo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .demo .login {
+        color: white;
+        font-size: 13px;
+        font-family: Poppins;
+        font-style: normal;
+        padding-top: 26px;
+        padding-left: 5px;
+
     }
 `;
 
@@ -52,7 +67,6 @@ export const NavBarStyle = styled.div`
         font-size: 13px;
         font-family: Poppins;
         font-style: normal;
-        font-weight: 500;
         color: ${props => props.theme.navBarFontColor};
         margin: 0;
     }

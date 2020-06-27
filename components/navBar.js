@@ -15,6 +15,29 @@ const LogoStyle = styled.img`
     top: 12px;
 `;
 
+const DemoButton = styled.a`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    background: ${props => props.theme.redButton};
+    border-radius: 4px;
+    height: 20px;
+    width: 90px;
+    margin-top: 16px;
+    padding: 10px 10px;
+
+    font-family: Poppins-Semi;
+    font-style: normal;
+    font-size: 12px;
+    color: white;
+    
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('static/fonts/Poppins-SemiBold.ttf');
+      }
+`;
+
 const NavBar = () => {
 
     return (
@@ -76,8 +99,9 @@ const NavBar = () => {
                     </div>
                 </NavBarStyle>
             </div>   
-            <div>
-                
+            <div className="demo">
+                <DemoButton>Book Demo</DemoButton>
+                <a className="login">Login</a>
             </div>   
         </NavStyle>
     );
