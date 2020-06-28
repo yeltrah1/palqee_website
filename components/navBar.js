@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { ThemeProvider } from 'styled-components';
+import translate from "../providers/i18n/translate";
 
 import PalqeeWhite from '../public/static/icons/palqee_white.png';
-import { NavStyle, NavBarStyle } from '../layouts/CSS';
+import PalqeeBlue from '../public/static/icons/palqee_blue.png';
+import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
+import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
 
 const LogoStyle = styled.img`
     position: absolute;
@@ -15,36 +19,37 @@ const LogoStyle = styled.img`
     top: 12px;
 `;
 
-const DemoButton = styled.a`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    cursor: pointer;
-    background: ${props => props.theme.redButton};
-    border-radius: 4px;
-    height: 20px;
-    width: 90px;
-    margin-top: 16px;
-    padding: 10px 10px;
+class NavBar extends React.Component {
 
-    font-family: Poppins-Semi;
-    font-style: normal;
-    font-size: 12px;
-    color: white;
-    
-    @font-face {
-        font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf');
-      }
-`;
+    constructor() {
+        super();
+        this.state = {
+            scrolled: false,
+        };
+    }
 
-const NavBar = () => {
+    componentDidMount() {
+        window.addEventListener('scroll', () => {
+            const isTop = window.scrollY < 20 ;
+            if (isTop !== true) {
+                this.setState({ scrolled: true });
+            } else {
+                this.setState({ scrolled: false });
+            }
+        });
+    }
 
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll');
+    // }
+
+    render() {
     return (
+        <ThemeProvider theme={this.state.scrolled ? scrollNavBar : initialNavBar}>
         <NavStyle>
             <div>
                 <Link href="/">
-                    <LogoStyle src={PalqeeWhite}/>
+                    <LogoStyle src={this.state.scrolled ? PalqeeBlue : PalqeeWhite}/>
                 </Link>
             </div>
             <div>
@@ -55,9 +60,9 @@ const NavBar = () => {
                 </div>
                 <NavBarStyle>
                     <div className="navbar">
-                        <a className="menu-item" href="/about">Products</a>
+                        <a className="menu-item" href="/about">{translate('navBar.products')}</a>
                         <div className="dropdown">
-                            <a className="menu-item" href="/skills">Use Cases</a>
+                            <a className="menu-item" href="/skills">{translate('navBar.cases')}</a>
                             <div className="dropdown-content">
                                 <div></div>
                                 <div>
@@ -101,10 +106,12 @@ const NavBar = () => {
             </div>   
             <div className="demo">
                 <DemoButton>Book Demo</DemoButton>
-                <a className="login">Login</a>
+                <LoginButton href="https://dev.palqee.com">Login</LoginButton>
             </div>   
         </NavStyle>
+        </ThemeProvider>
     );
+    }
 }
 
 export { NavBar } ;

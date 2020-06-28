@@ -4,8 +4,8 @@ export const NavStyle = styled.div`
     background: ${props => props.theme.navBgColor};
     display: grid;
     grid-template-columns: 0.8fr 3fr 1fr;
-    transition: all 0.2s ease-out;
-    position: absolute;
+    transition: all 0.25s ease-out;
+    position: ${props => props.theme.navBarPosition};
     height: 72px;
     width: 100%;
     left: 0px;
@@ -31,16 +31,6 @@ export const NavStyle = styled.div`
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
-    .demo .login {
-        color: white;
-        font-size: 13px;
-        font-family: Poppins;
-        font-style: normal;
-        padding-top: 26px;
-        padding-left: 5px;
-
-    }
 `;
 
 export const NavBarStyle = styled.div` 
@@ -62,7 +52,7 @@ export const NavBarStyle = styled.div`
         float: left;
         text-align: center;
         line-height: 20px;
-        padding: 16px 20px;
+        padding: 16px 1.5vw;
         text-decoration: none;
         font-size: 13px;
         font-family: Poppins;
@@ -117,12 +107,52 @@ export const NavBarStyle = styled.div`
     }
 `;
 
+export const DemoButton = styled.a`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    background: ${props => props.theme.redButton};
+    border-radius: 4px;
+    height: 18px;
+    width: 90px;
+    margin-top: 16px;
+    padding: 10px 10px;
+    font-family: Poppins-Semi;
+    font-style: normal;
+    font-size: 12px;
+    color: white;
+    
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('static/fonts/Poppins-SemiBold.ttf');
+      }
+
+    :hover {
+    background: #FF5458;
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    }
+`;
+
+export const LoginButton = styled.a`
+    cursor: pointer;
+    color: ${props => props.theme.navBarFontColor};
+    font-size: 13px;
+    font-family: Poppins;
+    font-style: normal;
+    text-decoration: none;
+    height: 20px;
+    width: 40px;
+    margin-top: 16px;
+    padding: 10px 1vw;
+`;
+
 export const HomeStyle = styled.div`
   display:grid;
   grid-template-rows: 0.95fr 0.05fr;
   min-height: calc(100vh - 60px);
 
-  background-image: url(${props => props.theme.pageBg});  
+  background: linear-gradient(299.62deg, #0D254A 36.54%, #112A6B 107.31%);  
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.2s ease-out; 

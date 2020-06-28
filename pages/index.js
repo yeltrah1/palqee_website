@@ -28,15 +28,9 @@ const App = () => {
               </h1>
                 <div></div>
                 <div></div>
-                <div>
-                  <div className="headline">Web apps and websites,<br/>done right.</div>
-                  <div className="text">I’m Andre, a <a>UX/UI designer</a> and <a>Front-end developer</a> from London with a passion for designing and coding <a>beautiful and functional experiences</a>. I enjoy building everything from <a>elegant websites</a> to <a>high-performing web applications</a>.</div>  
-                </div>
+                <div></div>
                 <div className="button-area">
-                  <a className="button" href="/portfolio/all">
-                      <div>View portfolio&nbsp;</div>
-                      <img src="/static/icons/whiteArrow.png" width="34px" height="34px"></img>
-                  </a>
+
                 </div>
             </div>
           </HomeStyle>
