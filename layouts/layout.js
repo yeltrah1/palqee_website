@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
+import translate from "../providers/i18n/translate";
 
+import Head from '../components/head'
 import { NavBar } from '../components/navBar';
 import { Footer } from '../components/footer';
 import { palqeeTheme } from '../providers/theme/colors.ts';
@@ -16,6 +18,7 @@ const Layout = ({ children }) => {
 
     return (
     <ThemeProvider theme={palqeeTheme}>
+        <Head title={translate('page.title')}/>
         <style jsx global>{`
             body {
             margin: 0px;

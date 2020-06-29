@@ -1,47 +1,26 @@
 import React from 'react';
 import { PageContextProvider } from "../providers/context";
 import { I18nProvider, LOCALES } from "../providers/i18n";
-import translate from "../providers/i18n/translate";
-import Head from 'next/head'
-
 //components
 import Layout from '../layouts/layout';
 import { HomeStyle } from '../layouts/CSS';
 
-const App = () => {
+const App = ({ children }) => {
   return (
  
     <PageContextProvider>
     <I18nProvider>
-      <div className="container">
-
-        <Head>
-          <title>Palqee Technologies | Privacy Operations Software</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
         <Layout>
-          <HomeStyle>
-            <div className="page">
-              <h1 className="title">
-              {translate('landingPage.headline')}
-              </h1>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div className="button-area">
-
-                </div>
-            </div>
-          </HomeStyle>
+          { children }
         </Layout>
-      </div>
     </I18nProvider>
     </PageContextProvider>
   )
 }
 
 export default App;
+
+// {translate('page.title')}
 
         // <style jsx>{`
         //   .container {

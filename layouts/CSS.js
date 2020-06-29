@@ -226,3 +226,54 @@ export const HomeStyle = styled.div`
     background-color: ${props => props.theme.buttonHover};
   }
 `;
+
+export const FooterStyle = styled.div`
+  background: ${props => props.theme.footerBackground};
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  position: absolute;
+  height: 130px;
+  width: 100%;
+
+  .content {
+    box-shadow: 0px -1px 0px rgba(117, 129, 148, 0.1);
+    border-top: 1px solid #eaeaea;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    }
+
+  .content .links {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    line-height: 20px;
+  }
+      
+  .content .links .pages {
+    font-size: 13px;
+    color: ${props => props.theme.footerLinksColor};
+    font-family: Larsseit;
+    text-align: center;
+    line-height: 10px;
+    padding: 0px 10px;
+    text-decoration: none;
+
+    @font-face {
+      font-family: 'Larsseit';
+      src: url('static/fonts/Larsseit-Regular.ttf');
+    }
+  }
+
+  .content .links .rights {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    line-height: 34px;
+    color: "#758194";
+    opacity: 0.5;
+  }
+`;

@@ -2,9 +2,10 @@
 //color palette
 export const palqeeTheme = {
     redButton: "#FF696D",
+    footerBackground: "#FBFBFB",
+    footerLinksColor: "#758194",
 
     pageBgColor: "white",
-    pageBg: "/static/images/design-background.jpg",
     fontNavHoverColor: "#c2c2c2",
     fontSubitemHoverColor: "#c2c2c2",
 };

@@ -1,33 +1,52 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import translate from "../providers/i18n/translate";
+import { ThemeProvider } from 'styled-components';
 
-export default function Footer() {
-    return (
-    <>
-        <footer>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-          </a>
-        </footer>
+import PalqeeBlue from '../public/static/icons/palqee_blue.png';
+import { FooterStyle } from '../layouts/CSS';
+import { palqeeTheme } from '../providers/theme/colors.ts';
 
-        <style jsx>{`
-        footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-        `}</style>
-    </>
-    )
+const LogoFooterStyle = styled.img`
+    position: absolute;
+    width: 90.64px;
+    height: 35.2px;
+    top: 30px;
+`;
+
+const Footer = () => {
+    
+  return (
+    <ThemeProvider theme={palqeeTheme}>
+      <FooterStyle>
+        <div></div>
+        <div className="content">
+          <div>
+              <Link href="/" alt="Palqee Logo">
+                  <LogoFooterStyle src={PalqeeBlue}/>
+              </Link>
+          </div>
+          <div className="links">
+              <div>
+                <a className="pages" href="/">{translate('footer.blog')}</a>
+                <a className="pages" href="/">{translate('footer.policy')}</a>
+                <a className="pages" href="/">{translate('footer.settings')}</a>
+                <a className="pages" href="/">{translate('footer.terms')}</a>
+                <a className="pages" href="/">{translate('footer.contact')}</a>
+              </div>
+              <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
+          </div>
+          <div>
+              <Link href="/" target="_blank">
+                  <LogoFooterStyle src={PalqeeBlue}/>
+              </Link>
+          </div>
+        </div>
+        <div></div>
+      </FooterStyle>
+    </ThemeProvider>
+  )
 }
 
 export { Footer } ;
