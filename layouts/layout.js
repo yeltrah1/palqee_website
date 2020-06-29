@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
     return (
     <ThemeProvider theme={palqeeTheme}>
-        <Head title={translate('page.title')}/>
+        <Head/>
         <style jsx global>{`
             body {
             margin: 0px;
