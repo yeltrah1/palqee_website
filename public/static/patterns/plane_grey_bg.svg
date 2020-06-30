@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="484" fill="none" viewBox="0 0 1440 484">
+    <path fill="#FBFBFB" d="M0 0H1440V506H0z"/>
+    <rect width="139.43" height="141.009" x="1295" y="76.087" fill="#F4F5F5" rx="16" transform="rotate(-15 1295 76.087)"/>
+    <path stroke="#FF696D" stroke-width="1.843" d="M1342.92 117.989c3.97 4.279 5.96 6.412 5.96 6.399v-10.223"/>
+    <path fill-rule="evenodd" stroke="#1A3154" stroke-width="1.843" d="M1348.37 114.073l-14.59 9.893L1326 95l40.04 10.699-12.53 5.24-26.95-15.35 21.81 18.484z" clip-rule="evenodd"/>
+    <path stroke="#1A3154" stroke-dasharray="4.26 4.26" stroke-width="1.843" d="M1359.12 120.026c21.83 13.844 92.96 22.824 61.77 46.857-32.48 25.026-46.86-59.211 51.65 19.062l50.68 39.901"/>
+    <rect width="139.43" height="141.009" x="-62" y="158.087" fill="#F4F5F5" rx="16" transform="rotate(-15 -62 158.087)"/>
+    <rect width="57.381" height="58.031" x="1225" y="198.851" fill="#F4F5F5" rx="16" transform="rotate(-15 1225 198.851)"/>
+    <rect width="57.381" height="58.031" x="110" y="69.851" fill="#F4F5F5" rx="16" transform="rotate(-15 110 69.851)"/>
+</svg>

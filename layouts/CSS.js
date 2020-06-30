@@ -153,10 +153,10 @@ export const HomeStyle = styled.div`
   padding-top: 72px;    // same as NavStyle height
 
   .headline {
-    background-image: url("/static/patterns/Blue_bg.svg");
+    background-image: url("/static/patterns/blue_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 111vh;
+    height: 113vh;
     width: 100vw;
     position: relative;
   }
@@ -195,10 +195,12 @@ export const HomeStyle = styled.div`
   }
 
   .bottom-grey {
-    background: ${props => props.theme.footerBackground};
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     height: 55vh;
-    width: 100%;
+    width: 100vw;
   }
 
   // .text {

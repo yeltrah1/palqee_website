@@ -14,7 +14,7 @@ const LogoStyle = styled.img`
     cursor: pointer;
     width: 113.3px;
     height: 44px;
-    left: 11.5%;
+    left: 8%;
     right: 9.3%;
     top: 12px;
 `;
