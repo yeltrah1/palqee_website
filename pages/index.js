@@ -14,16 +14,16 @@ const App = () => {
     <I18nProvider>
       <Layout>
         <HomeStyle>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div>
+          <div className="headline"></div>
+          <div className="small-white"></div>
+          <div className="large-white"></div>
+          <div className="large-grey"></div>
+          <div className="large-white"></div>
+          <div className="large-grey"></div>
+          <div className="large-white"></div>
+          <div className="small-blue"></div>
+          <div className="skewed-blue"></div>
+          <div className="bottom-grey">
             <Sales/>
           </div>
         </HomeStyle>

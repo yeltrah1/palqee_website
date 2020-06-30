@@ -149,30 +149,57 @@ export const LoginButton = styled.a`
 
 export const HomeStyle = styled.div`
   display:grid;
-  grid-template-rows: 2fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.7fr 1fr 1fr;
-  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
   padding-top: 72px;    // same as NavStyle height
-  background: linear-gradient(299.62deg, #0D254A 36.54%, #112A6B 107.31%);  
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 0.2s ease-out; 
 
-  // .page {
-  //   display: grid;
-  //   grid-template-columns: .55fr .45fr;
-  //   grid-template-rows: 0.4fr 0.6fr;
-  //   align-items: center;
-  //   cursor: default;
-  // }
+  .headline {
+    background-image: url("/static/patterns/Blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 111vh;
+    width: 100vw;
+    position: relative;
+  }
 
-  // .headline {
-  //   padding-left: 40px;
-  //   font-size: 42px;
-  //   font-family: Poppins;
-  //   font-style: normal;
-  //   font-weight: bold;
-  //   color: ${props => props.theme.fontColor};
-  // }
+  .small-white {
+    background: "white";
+    height: 55vh;
+    position: relative;
+  }
+
+  .large-white {
+    background: "white";
+    height: 75vh;
+    position: relative;
+  }
+
+  .large-grey {
+    background: linear-gradient(to top, rgba(250, 251, 252, 0.8), rgba(250, 251, 252, 0.39));
+    height: 75vh;
+    position: relative;
+  }
+
+  .small-blue {
+    background: #f2f8fd;
+    height: 55vh;
+    position: relative;
+  }
+
+  .skewed-blue {
+    background: #f2f8fd;
+    height: 60vh;
+    width: 200vw;
+    position: relative;
+    left: -180vw;
+    transform: skew(-80deg);
+  }
+
+  .bottom-grey {
+    background: ${props => props.theme.footerBackground};
+    position: relative;
+    height: 55vh;
+    width: 100%;
+  }
 
   // .text {
   //   padding-top: 2em;

@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import translate from "../providers/i18n/translate";
 
 import Head from '../components/head'
 import { NavBar } from '../components/navBar';
 import { Footer } from '../components/footer';
 import { palqeeTheme } from '../providers/theme/colors.ts';
 
-const Wrapper = styled.div` 
-    position: relative;
-    z-index: 0; //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
-    height: 140vh;
-`;
+// const Wrapper = styled.div` 
+//     position: relative;
+//     z-index: 0; //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
+//     height: 140vh;
+// `;
 
 const Layout = ({ children }) => {
 
@@ -28,10 +27,10 @@ const Layout = ({ children }) => {
         <div style={{zIndex:2, position:"relative"}}>
             <NavBar/>
         </div>
-        <Wrapper>        
+        <div>        
             {children}
-        </Wrapper>
-        <div style={{zIndex:2, position:"relative"}}>
+        </div>
+        <div>
             <Footer/>
         </div>
     </ThemeProvider>

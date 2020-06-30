@@ -7,12 +7,9 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../providers/theme/colors.ts';
 
 const SalesStyle = styled.div`
-    background: ${props => props.theme.footerBackground};
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
-    height: 350px;
-    width: 100%;
+    height: 55vh;
 `;
 
 const Sales = () => {

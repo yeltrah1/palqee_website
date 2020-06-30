@@ -101,7 +101,6 @@ class NavBar extends React.Component {
                             </div>
                         </div>
                         <a className="menu-item" href="/proposal">Blog</a>
-                        <a className="menu-item" href="/proposal">Resources</a>
                     </div>
                 </NavBarStyle>
             </div>   
