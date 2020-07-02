@@ -2,8 +2,14 @@
 //color palette
 export const palqeeTheme = {
     redButton: "#FF696D",
+    redButtonHover: "#FF5458",
+    redButtonPress: "#F5565A",
+    greenButton: "#74d9b1",
+    greenButtonHover: "#50CC9B",
+    greenButtonPress: "#40BB8A",
     footerBackground: "#FBFBFB",
     footerLinksColor: "#758194",
+
 
     pageBgColor: "white",
     fontNavHoverColor: "#c2c2c2",

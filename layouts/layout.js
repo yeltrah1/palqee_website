@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
             padding: 0px;
             }
             `}</style>
-        <div style={{zIndex:2, position:"relative"}}>
+        <div style={{zIndex:3, position:"relative"}}>
             <NavBar/>
         </div>
         <div>        

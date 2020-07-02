@@ -5,7 +5,9 @@ import { I18nProvider, LOCALES } from "../providers/i18n";
 //components
 import Layout from '../layouts/layout';
 import { HomeHero } from '../components/sections/home_hero';
+import { Clients } from '../components/sections/clients';
 import { Sales } from '../components/sections/sales';
+import { TakeTest } from '../components/sections/take_test';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
@@ -18,8 +20,12 @@ const App = () => {
           <div className="headline">
             <HomeHero/>
           </div>
-          <div className="small-white"></div>
-          <div className="large-white"></div>
+          <div className="small-white">
+            <Clients/>
+          </div>
+          <div className="large-white">
+            <TakeTest/>
+          </div>
           <div className="large-grey"></div>
           <div className="large-white"></div>
           <div className="large-grey"></div>

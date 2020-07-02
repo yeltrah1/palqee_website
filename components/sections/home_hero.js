@@ -5,6 +5,7 @@ import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
+import { GetStartedButton } from '../../layouts/CSS';
 
 const HeroStyle = styled.div`
     display: grid;
@@ -30,6 +31,7 @@ const HeroText = styled.div`
     font-weight: normal;
     font-style: normal;
     line-height: 1.33;
+    padding-bottom: 10px;
     letter-spacing: normal;
     color: #ffffff;
     }
@@ -54,7 +56,6 @@ const HeroText = styled.div`
         font-weight: normal;
         font-style: normal;
         letter-spacing: normal;
-        line-height: 3;
         color: #cbd0df;
     }
 `;
@@ -79,7 +80,8 @@ const HomeHero = () => {
                 <span className="semi">And there is <u>Palqee</u>.</span><br/>
             </div>
             <div className="small">
-                The tool to succeed with internal Privacy Operations.
+                The tool to succeed with internal Privacy Operations.<br/>
+                <GetStartedButton>Get started for free</GetStartedButton>
             </div>
         </HeroText>
         <Image src={"/static/images/palqee_hero.png"}/>

@@ -129,9 +129,46 @@ export const DemoButton = styled.a`
       }
 
     :hover {
-    background: #FF5458;
+    background: ${props => props.theme.redButtonHover};
     box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
     }
+
+    :active {
+      background: ${props => props.theme.redButtonPress};
+      box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+      }
+`;
+
+export const GetStartedButton = styled.a`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    background: ${props => props.theme.redButton};
+    border-radius: 4px;
+    height: 18px;
+    width: 120px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-family: Poppins-Semi;
+    font-style: normal;
+    font-size: 12px;
+    color: white;
+    
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('static/fonts/Poppins-SemiBold.ttf');
+      }
+
+    :hover {
+    background: ${props => props.theme.redButtonHover};
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    }
+
+    :active {
+      background: ${props => props.theme.redButtonPress};
+      box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+      }
 `;
 
 export const LoginButton = styled.a`
@@ -163,7 +200,7 @@ export const HomeStyle = styled.div`
 
   .small-white {
     background: "white";
-    height: 55vh;
+    height: 30vh;
     position: relative;
   }
 
@@ -254,6 +291,38 @@ export const HomeStyle = styled.div`
   // .button:hover {
   //   background-color: ${props => props.theme.buttonHover};
   // }
+`;
+
+export const TakeTestButton = styled.a`
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  background: ${props => props.theme.greenButton};
+  border-radius: 4px;
+  height: 22px;
+  width: 140px;
+  padding: 10px 10px;
+  font-family: Poppins-Semi;
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+  
+  @font-face {
+      font-family: 'Poppins-Semi';
+      src: url('static/fonts/Poppins-SemiBold.ttf');
+    }
+
+  :hover {
+    background: ${props => props.theme.greenButtonHover};
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    }
+
+  :active {
+    background: ${props => props.theme.greenButtonPress};
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    }
 `;
 
 export const FooterStyle = styled.div`
