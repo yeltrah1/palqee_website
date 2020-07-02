@@ -204,9 +204,15 @@ export const HomeStyle = styled.div`
     position: relative;
   }
 
+  .mid-white {
+    background: "white";
+    height: 500px;
+    position: relative;
+  }
+
   .large-white {
     background: "white";
-    height: 75vh;
+    height: 600px;
     position: relative;
   }
 

@@ -8,6 +8,7 @@ import { HomeHero } from '../components/sections/home_hero';
 import { Clients } from '../components/sections/clients';
 import { Sales } from '../components/sections/sales';
 import { TakeTest } from '../components/sections/take_test';
+import { BenefitBuilder } from '../components/sections/benefit_builder';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
@@ -23,13 +24,15 @@ const App = () => {
           <div className="small-white">
             <Clients/>
           </div>
-          <div className="large-white">
+          <div className="mid-white">
             <TakeTest/>
           </div>
           <div className="large-grey"></div>
           <div className="large-white"></div>
           <div className="large-grey"></div>
-          <div className="large-white"></div>
+          <div className="large-white">
+            <BenefitBuilder/>
+          </div>
           <div className="small-blue"></div>
           <div className="skewed-blue"></div>
           <div className="bottom-grey">
