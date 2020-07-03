@@ -53,8 +53,7 @@ const BenefitText = styled.div`
 
 const Video = styled.video`
     place-self: center;
-    margin-left: 80px;
-    width: 500px;
+    width: 600px;
 `;
 
 const BenefitEngagement = () => {
@@ -66,7 +65,7 @@ const BenefitEngagement = () => {
                 src="https://res.cloudinary.com/palqee/video/upload/vc_auto/v1593804197/palqee_engage.mp4" 
                 preload="auto"
                 loop
-                autoplay
+                autoPlay
                 />
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>
