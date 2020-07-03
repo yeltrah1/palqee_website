@@ -16,11 +16,10 @@ const Wrapper = styled.div`
 const BenefitText = styled.div`
     display: grid;
     place-self: center;
-    justify-items: end;
+    justify-items: start;
     grid-template-columns: 1fr;
-    height: 35%;
-    margin-right: 65px;
-    margin-bottom: 80px;
+    margin-left: 60px;
+    height: 40%;  
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -28,8 +27,7 @@ const BenefitText = styled.div`
     }
 
     .large {
-        width: 70%;
-        padding-right: 10%;
+        width: 85%;
         font-family: Poppins-Semi;
         font-size: 39px;
         font-weight: 600;
@@ -41,7 +39,7 @@ const BenefitText = styled.div`
     }
 
     .small {
-        width: 80%;
+        width: 85%;
         font-family: Poppins;
         font-size: 13px;
         font-weight: normal;
@@ -55,22 +53,23 @@ const BenefitText = styled.div`
 
 const Image = styled.img`
     place-self: center;
+    margin-left: 80px;
     width: 600px;
 `;
 
-const BenefitBuilder = () => {
+const BenefitInsights = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <BenefitText>
-                    <div className="large">Be content you have it all covered</div>
-                    <div className="small">Palqee helps you with required assessments based on your business’ operations and combines repetitive regulation work among data protection regulations for streamlined global compliance.</div>
-                </BenefitText>
                 <Image src={"/static/images/palqee_builder.svg"}/>
+                <BenefitText>
+                    <div className="large">Act on privacy compliance risks and insights</div>
+                    <div className="small">With Palqee you have ongoing visibility on how your data landscape is evolving.</div>
+                </BenefitText>
             </Wrapper>
       </ThemeProvider>
     )
 }
 
-export { BenefitBuilder } ;
+export { BenefitInsights } ;

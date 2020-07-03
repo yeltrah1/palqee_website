@@ -218,7 +218,7 @@ export const HomeStyle = styled.div`
 
   .large-grey {
     background: linear-gradient(to top, rgba(250, 251, 252, 0.8), rgba(250, 251, 252, 0.39));
-    height: 75vh;
+    height: 600px;
     position: relative;
   }
 

@@ -11,6 +11,7 @@ import { TakeTest } from '../components/sections/take_test';
 import { BenefitBuilder } from '../components/sections/benefit_builder';
 import { BenefitEngagement } from '../components/sections/benefit_engagement';
 import { BenefitAdmin } from '../components/sections/benefit_admin';
+import { BenefitInsights } from '../components/sections/benefit_insights';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
@@ -29,7 +30,9 @@ const App = () => {
           <div className="mid-white">
             <TakeTest/>
           </div>
-          <div className="large-grey"></div>
+          <div className="large-grey">
+            <BenefitInsights/>
+          </div>
           <div className="large-white">
             <BenefitAdmin/>
           </div>

@@ -16,10 +16,11 @@ const Wrapper = styled.div`
 const BenefitText = styled.div`
     display: grid;
     place-self: center;
+    justify-items: end;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.7fr 1fr;
-    height: 320px;
-    margin-left: 50px;
+    height: 40%;
+    margin-right: 65px;
+    margin-bottom: 50px;
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -27,26 +28,26 @@ const BenefitText = styled.div`
     }
 
     .large {
-        width: 400px;
+        width: 80%;
         font-family: Poppins-Semi;
-        font-size: 34px;
+        font-size: 39px;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
-        line-height: 1.43;
+        line-height: 1.33;
         letter-spacing: normal;
         color: #192d4d;
     }
 
     .small {
-        width: 450px;
+        width: 80%;
         font-family: Poppins;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: normal;
         font-style: normal;
         letter-spacing: normal;
         font-stretch: normal;
-        line-height: 1.43;
+        line-height: 1.71;
         color: #758194;
     }
 `;
