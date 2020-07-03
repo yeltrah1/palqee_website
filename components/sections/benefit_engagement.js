@@ -51,10 +51,10 @@ const BenefitText = styled.div`
     }
 `;
 
-const Image = styled.img`
+const Video = styled.video`
     place-self: center;
     margin-left: 80px;
-    width: 600px;
+    width: 500px;
 `;
 
 const BenefitEngagement = () => {
@@ -62,7 +62,12 @@ const BenefitEngagement = () => {
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Image src={"/static/images/palqee_builder.svg"}/>
+                <Video 
+                src="https://res.cloudinary.com/palqee/video/upload/v1593785233/palqee_surveys_abqifq.mp4" 
+                preload="auto"
+                loop
+                autoplay
+                />
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>
                     <div className="small">Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team.</div>
