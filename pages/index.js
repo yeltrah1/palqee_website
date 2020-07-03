@@ -9,6 +9,8 @@ import { Clients } from '../components/sections/clients';
 import { Sales } from '../components/sections/sales';
 import { TakeTest } from '../components/sections/take_test';
 import { BenefitBuilder } from '../components/sections/benefit_builder';
+import { BenefitEngagement } from '../components/sections/benefit_engagement';
+import { BenefitAdmin } from '../components/sections/benefit_admin';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
@@ -28,8 +30,12 @@ const App = () => {
             <TakeTest/>
           </div>
           <div className="large-grey"></div>
-          <div className="large-white"></div>
-          <div className="large-grey"></div>
+          <div className="large-white">
+            <BenefitAdmin/>
+          </div>
+          <div className="large-grey">
+            <BenefitEngagement/>
+          </div>
           <div className="large-white">
             <BenefitBuilder/>
           </div>

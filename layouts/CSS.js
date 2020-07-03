@@ -193,9 +193,9 @@ export const HomeStyle = styled.div`
     background-image: url("/static/patterns/blue_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     height: 113vh;
     width: 100vw;
-    position: relative;
   }
 
   .small-white {
