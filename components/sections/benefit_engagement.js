@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import ReactPlayer from 'react-player'
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -51,22 +52,37 @@ const BenefitText = styled.div`
     }
 `;
 
-const Video = styled.video`
+const Video = styled.div`
     place-self: center;
     width: 600px;
+    margin-left: 20px;
 `;
 
-const BenefitEngagement = () => {
-    
+const BenefitEngagement = ({ play, setPlay }) => {
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const onScreenTop = window.scrollY > 2400 ;
+            const onScreenBottom = window.scrollY < 2800 ;
+            if (onScreenTop === true && onScreenBottom === true) {
+                setPlay(true);
+            } else {
+                setPlay(false);
+            }
+        });
+    }, []);
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Video 
-                src="https://res.cloudinary.com/palqee/video/upload/vc_auto/v1593804197/palqee_engage.mp4" 
-                preload="auto"
-                loop
-                autoPlay
-                />
+                <Video>
+                    <ReactPlayer 
+                    url='https://res.cloudinary.com/palqee/video/upload/vc_auto/v1593804197/palqee_engage.mp4' 
+                    playing={play}
+                    loop={true}
+                    autoPlay={false}
+                    />
+                </Video>
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>
                     <div className="small">Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team.</div>

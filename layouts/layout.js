@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 
@@ -15,6 +15,8 @@ import { palqeeTheme } from '../providers/theme/colors.ts';
 
 const Layout = ({ children }) => {
 
+    const [white, setWhite] = useState(false);
+
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Head/>
@@ -25,7 +27,7 @@ const Layout = ({ children }) => {
             }
             `}</style>
         <div style={{zIndex:3, position:"relative"}}>
-            <NavBar/>
+            <NavBar white={white} setWhite={setWhite}/>
         </div>
         <div>        
             {children}

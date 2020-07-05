@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
@@ -19,37 +19,25 @@ const LogoStyle = styled.img`
     top: 12px;
 `;
 
-class NavBar extends React.Component {
+const NavBar = ({ white, setWhite }) => {
 
-    constructor() {
-        super();
-        this.state = {
-            scrolled: false,
-        };
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 20 ;
             if (isTop !== true) {
-                this.setState({ scrolled: true });
+                setWhite(true);
             } else {
-                this.setState({ scrolled: false });
+                setWhite(false);
             }
         });
-    }
+    }, []);
 
-    // componentWillUnmount() {
-    //     window.removeEventListener('scroll');
-    // }
-
-    render() {
     return (
-        <ThemeProvider theme={this.state.scrolled ? scrollNavBar : initialNavBar}>
+        <ThemeProvider theme={white ? scrollNavBar : initialNavBar}>
         <NavStyle>
             <div>
                 <Link href="/">
-                    <LogoStyle src={this.state.scrolled ? PalqeeBlue : PalqeeWhite}/>
+                    <LogoStyle src={white ? PalqeeBlue : PalqeeWhite}/>
                 </Link>
             </div>
             <div>
@@ -111,7 +99,6 @@ class NavBar extends React.Component {
         </NavStyle>
         </ThemeProvider>
     );
-    }
 }
 
 export { NavBar } ;

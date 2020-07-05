@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageContextProvider } from "../providers/context";
 import { I18nProvider, LOCALES } from "../providers/i18n";
 
@@ -15,8 +15,10 @@ import { BenefitInsights } from '../components/sections/benefit_insights';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
-  return (
  
+  const [play, setPlay] = useState(false);
+ 
+  return (
     <PageContextProvider>
     <I18nProvider>
       <Layout>
@@ -37,7 +39,7 @@ const App = () => {
             <BenefitAdmin/>
           </div>
           <div className="large-grey">
-            <BenefitEngagement/>
+            <BenefitEngagement play={play} setPlay={setPlay}/>
           </div>
           <div className="large-white">
             <BenefitBuilder/>
