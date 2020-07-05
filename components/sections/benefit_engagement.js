@@ -62,8 +62,8 @@ const BenefitEngagement = ({ play, setPlay }) => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            const onScreenTop = window.scrollY > 2400 ;
-            const onScreenBottom = window.scrollY < 2800 ;
+            const onScreenTop = window.scrollY > 2350 ;
+            const onScreenBottom = window.scrollY < 2900 ;
             if (onScreenTop === true && onScreenBottom === true) {
                 setPlay(true);
             } else {

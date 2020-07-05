@@ -12,6 +12,7 @@ import { BenefitBuilder } from '../components/sections/benefit_builder';
 import { BenefitEngagement } from '../components/sections/benefit_engagement';
 import { BenefitAdmin } from '../components/sections/benefit_admin';
 import { BenefitInsights } from '../components/sections/benefit_insights';
+import { Statistics } from '../components/sections/statistics';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
@@ -44,7 +45,9 @@ const App = () => {
           <div className="large-white">
             <BenefitBuilder/>
           </div>
-          <div className="small-blue"></div>
+          <div className="small-blue">
+            <Statistics/>
+          </div>
           <div className="skewed-blue"></div>
           <div className="bottom-grey">
             <Sales/>
