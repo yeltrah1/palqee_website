@@ -224,17 +224,14 @@ export const HomeStyle = styled.div`
 
   .small-blue {
     background: #f2f8fd;
-    height: 55vh;
+    height: 300px;
     position: relative;
   }
 
   .skewed-blue {
-    background: #f2f8fd;
-    height: 60vh;
+    height: 500px;
     width: 200vw;
     position: relative;
-    left: -180vw;
-    transform: skew(-80deg);
   }
 
   .bottom-grey {
