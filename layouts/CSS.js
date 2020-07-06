@@ -447,7 +447,15 @@ export const FooterStyle = styled.div`
     grid-template-columns: 1fr 3fr 1fr;
     justify-content: center;
     align-items: center;
-    }
+  }
+
+  .content .logo {
+    justify-content: start;
+  }
+
+  .content .social {
+    justify-self: center;
+  }
 
   .content .links {
     display: grid;

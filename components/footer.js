@@ -22,7 +22,7 @@ const Footer = () => {
       <FooterStyle>
         <div></div>
         <div className="content">
-          <div>
+          <div className="logo">
             <LogoFooterStyle src={PalqeeBlue}/>
           </div>
           <div className="links">
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
               <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
           </div>
-          <div>
+          <div className="social">
             <a href="//www.linkedin.com/company/37457018/" target="_blank">
                 <LogoFooterStyle src={Linkedin}/>
             </a>
