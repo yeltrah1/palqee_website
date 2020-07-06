@@ -190,7 +190,7 @@ export const HomeStyle = styled.div`
   padding-top: 72px;    // same as NavStyle height
 
   .headline {
-    background-image: url("/static/patterns/blue_bg.svg");
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
