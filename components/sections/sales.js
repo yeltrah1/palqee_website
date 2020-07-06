@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
@@ -13,7 +13,7 @@ import { RequestInfoButton } from '../../layouts/CSS';
 const SalesStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.3fr;
   height: 200px;
   width: 100vw;
   place-items: center;
@@ -40,6 +40,16 @@ const SalesStyle = styled.div`
     line-height: 1.71;
     color: #758194;
   }
+
+  .confirmation {
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    color: ${props => props.theme.mainFontColor};
+  }
 `;
 
 const EmailStyle = styled.div`
@@ -58,28 +68,24 @@ const EmailStyle = styled.div`
   :focus-within {
     border: solid 1px #3f6db4;
   }
-
-  .text {
-
-  }
-
-  .button {
-
-  }
 `;
 
-function sendEmail(e) {
-  e.preventDefault();
-
-  emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', e.target, 'user_hcgMWnNDo2w6O830K9ITX')
-  .then((result) => {
-    console.log(result.text);
-}, (error) => {
-    console.log(error.text);
-});
-}
-
 const Sales = () => {
+
+  const [ sent, setSent ] = useState(false);
+
+  function sendEmail(e) {
+    e.preventDefault();
+  
+    // emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', e.target, 'user_hcgMWnNDo2w6O830K9ITX')
+    // .then((result) => {
+    //   console.log(result.text);
+    // }, (error) => {
+    //     console.log(error.text);
+    // });
+    document.forms["request_info"].reset();
+    setSent(true)
+  }
 
   return (
     <ThemeProvider theme={palqeeTheme}>
@@ -87,7 +93,7 @@ const Sales = () => {
         <div>
           <div className="large">Speak to Sales</div>
           <div className="small">The tool to succeed with internal Privacy Operations.</div>
-          <form onSubmit={sendEmail} id="request-info">
+          <form onSubmit={sendEmail} id="request_info">
             <ListInput name="reason" required>
               <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
               <option value="product information">Product information</option>
@@ -101,10 +107,13 @@ const Sales = () => {
               <option value="others">Other</option>
             </ListInput>
             <EmailStyle>
-              <EmailInput type="email" name="email" placeholder="Your business email"/>
+              <EmailInput type="email" name="email" required placeholder="Your business email"/>
               <RequestInfoButton type="submit" value="Request info"/>
             </EmailStyle>
           </form>
+          <div className="confirmation">{sent && (
+              <p>Thanks for contacting us, our team will be in touch shortly. ✅</p> )}
+          </div>
         </div>
       </SalesStyle>
     </ThemeProvider>

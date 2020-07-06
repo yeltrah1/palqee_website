@@ -5,14 +5,14 @@ import translate from "../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
 import PalqeeBlue from '../public/static/icons/palqee_blue.png';
+import Linkedin from '../public/static/icons/linkedin.png';
 import { FooterStyle } from '../layouts/CSS';
 import { palqeeTheme } from '../providers/theme/colors.ts';
 
 const LogoFooterStyle = styled.img`
     position: absolute;
-    width: 90.64px;
     height: 35.2px;
-    top: 30px;
+    top: 40px;
 `;
 
 const Footer = () => {
@@ -23,9 +23,7 @@ const Footer = () => {
         <div></div>
         <div className="content">
           <div>
-              <Link href="/" alt="Palqee Logo">
-                  <LogoFooterStyle src={PalqeeBlue}/>
-              </Link>
+            <LogoFooterStyle src={PalqeeBlue}/>
           </div>
           <div className="links">
               <div>
@@ -38,9 +36,9 @@ const Footer = () => {
               <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
           </div>
           <div>
-              <Link href="/" target="_blank">
-                  <LogoFooterStyle src={PalqeeBlue}/>
-              </Link>
+            <a href="//www.linkedin.com/company/37457018/" target="_blank">
+                <LogoFooterStyle src={Linkedin}/>
+            </a>
           </div>
         </div>
         <div></div>
