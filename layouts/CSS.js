@@ -125,7 +125,7 @@ export const DemoButton = styled.a`
     
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf');
+        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
       }
 
     :hover {
@@ -157,7 +157,7 @@ export const GetStartedButton = styled.a`
     
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf');
+        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
       }
 
     :hover {
@@ -314,7 +314,7 @@ export const TakeTestButton = styled.a`
   
   @font-face {
       font-family: 'Poppins-Semi';
-      src: url('static/fonts/Poppins-SemiBold.ttf');
+      src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
   :hover {
@@ -391,13 +391,11 @@ export const ListInput = styled.select`
     color: black;
   }
 
+  option:disabled {
+    color: rgba(117, 129, 148, 0.5);
+  }
+
   &:invalid {
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.71;
     color: rgba(117, 129, 148, 0.5);
   }
 `;
@@ -420,7 +418,7 @@ export const RequestInfoButton = styled.a`
   
   @font-face {
       font-family: 'Poppins-Semi';
-      src: url('static/fonts/Poppins-SemiBold.ttf');
+      src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
   :hover {
@@ -469,7 +467,7 @@ export const FooterStyle = styled.div`
 
     @font-face {
       font-family: 'Larsseit';
-      src: url('static/fonts/Larsseit-Regular.ttf');
+      src: url('static/fonts/Larsseit-Regular.ttf') format('truetype');
     }
   }
 

@@ -23,7 +23,7 @@ const BenefitText = styled.div`
 
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf');
+        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
     .large {
