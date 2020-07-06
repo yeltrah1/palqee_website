@@ -68,13 +68,15 @@ const EmailStyle = styled.div`
   }
 `;
 
-const sendEmail = () => {
-  emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', 'request-info')
-  .then(function(response) {
-     console.log('SUCCESS!', response.status, response.text);
-  }, function(error) {
-     console.log('FAILED...', error);
-  });
+function sendEmail(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', e.target, 'user_hcgMWnNDo2w6O830K9ITX')
+  .then((result) => {
+    console.log(result.text);
+}, (error) => {
+    console.log(error.text);
+});
 }
 
 const Sales = () => {
@@ -88,15 +90,15 @@ const Sales = () => {
           <form onSubmit={sendEmail} id="request-info">
             <ListInput name="reason" required>
               <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
-              <option value="product">Product information</option>
-              <option value="partnership">Partnerships</option>
-              <option value="reseller">Reseller</option>
-              <option value="support">Technical Support</option>
+              <option value="product information">Product information</option>
+              <option value="partnerships">Partnerships</option>
+              <option value="resellers">Resellers</option>
+              <option value="technical support">Technical Support</option>
               <option value="billing">Billing</option>
-              <option value="training">Palqee Training/Certification</option>
-              <option value="press">Media/Press requests</option>
-              <option value="events">Events/Speaking requests</option>
-              <option value="other">Other</option>
+              <option value="training and certifications">Palqee Training/Certifications</option>
+              <option value="press and media">Media/Press requests</option>
+              <option value="events and keynote speaking">Events/Speaking requests</option>
+              <option value="others">Other</option>
             </ListInput>
             <EmailStyle>
               <EmailInput type="email" name="email" placeholder="Your business email"/>
