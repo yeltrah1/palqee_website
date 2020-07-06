@@ -20,7 +20,7 @@ const BenefitText = styled.div`
     place-self: center;
     justify-items: start;
     grid-template-columns: 1fr;
-    margin-left: 60px;
+    margin-left: 70px;
     height: 45%;    
 
     @font-face {
@@ -55,7 +55,6 @@ const BenefitText = styled.div`
 
 const Video = styled.div`
     place-self: center;
-    width: 600px;
     margin-left: 20px;
 `;
 
@@ -73,12 +72,13 @@ const BenefitEngagement = ({ play, setPlay }) => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <Video>
-                <InView onChange={onInViewChange} rootMargin={"-300px"}>
+                <InView onChange={onInViewChange} rootMargin={"-200px"}>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/vc_auto/v1593804197/palqee_engage.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1594031027/palqee_engage.mp4' 
                     playing={play}
                     loop={true}
                     autoPlay={false}
+                    height="500px"
                     />
                 </InView>
                 </Video>
