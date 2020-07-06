@@ -328,7 +328,7 @@ export const TakeTestButton = styled.a`
     }
 `;
 
-export const EmailInput = styled.input.attrs(props => ({type: 'email', placeholder: 'Your business email'}))`
+export const EmailInput = styled.input`
   background-color: transparent;
   border: 0;
   width: 230px;
@@ -400,14 +400,14 @@ export const ListInput = styled.select`
   }
 `;
 
-export const RequestInfoButton = styled.a`
+export const RequestInfoButton = styled.input`
   display: flex;
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
   background: ${props => props.theme.redButton};
   border-radius: 4px;
-  height: 18px;
+  border: none;
   width: 100px;
   margin-right: 6px;
   padding: 10px 10px;

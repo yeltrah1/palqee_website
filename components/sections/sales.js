@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import emailjs from 'emailjs-com';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { EmailInput } from '../../layouts/CSS';
@@ -67,16 +68,25 @@ const EmailStyle = styled.div`
   }
 `;
 
+const sendEmail = () => {
+  emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', 'request-info')
+  .then(function(response) {
+     console.log('SUCCESS!', response.status, response.text);
+  }, function(error) {
+     console.log('FAILED...', error);
+  });
+}
+
 const Sales = () => {
-    
+
   return (
     <ThemeProvider theme={palqeeTheme}>
       <SalesStyle>
         <div>
           <div className="large">Speak to Sales</div>
           <div className="small">The tool to succeed with internal Privacy Operations.</div>
-          <form action="mailto:sales@palqee.com" method="post" encType="text/plain">
-            <ListInput name="reason" id="reason" required>
+          <form onSubmit={sendEmail} id="request-info">
+            <ListInput name="reason" required>
               <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
               <option value="product">Product information</option>
               <option value="partnership">Partnerships</option>
@@ -89,8 +99,8 @@ const Sales = () => {
               <option value="other">Other</option>
             </ListInput>
             <EmailStyle>
-              <EmailInput/>
-              <RequestInfoButton>Request info</RequestInfoButton>
+              <EmailInput type="email" name="email" placeholder="Your business email"/>
+              <RequestInfoButton type="submit" value="Request info"/>
             </EmailStyle>
           </form>
         </div>

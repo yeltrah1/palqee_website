@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
             padding: 0px;
             }
             `}</style>
+
         <div style={{zIndex:3, position:"relative"}}>
             <NavBar white={white} setWhite={setWhite}/>
         </div>

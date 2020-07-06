@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import ReactPlayer from 'react-player';
 import { InView } from 'react-intersection-observer';
-// import 'intersection-observer';
+import 'intersection-observer';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -59,11 +59,11 @@ const Video = styled.div`
     margin-left: 20px;
 `;
 
-// async function loadPolyfills() {
-//     if (typeof window.IntersectionObserver === 'undefined') {
-//         await import('intersection-observer')
-//     }
-// }
+async function loadPolyfills() {
+    if (typeof window.IntersectionObserver === 'undefined') {
+        await import('intersection-observer')
+    }
+}
 
 const BenefitEngagement = ({ play, setPlay }) => {
 
