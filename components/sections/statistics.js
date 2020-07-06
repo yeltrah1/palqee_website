@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import * as easings from 'd3-ease';
+import { InView } from 'react-intersection-observer'
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -101,13 +102,17 @@ const StatisticsNumbers = styled.div`
     }
 `;
 
-const Statistics = () => {
+const Statistics = ({ count, setCount }) => {
     
+    const onInViewChange = (inview) => {
+        if (!count && inview) setCount({ count: true })
+    }
+
     const props = useSpring({ 
-        engaged: 100, 
-        surveys: 5000, 
-        visits: 760, 
-        reports: 1000, 
+        engaged: count ? 100 : 0,
+        surveys: count ? 5000 : 0, 
+        visits: count ? 760 : 0, 
+        reports: count ? 1000 : 0, 
         from: { engaged: 0, surveys: 0, visits: 0, reports: 0 },
         config: { duration: 3000, easing: easings.easeCircleInOut }
     });
@@ -119,24 +124,26 @@ const Statistics = () => {
             <div className="large">Statistics on Palqee</div>
             <div className="small">Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team.</div>
         </StatisticsText>
-        <StatisticsNumbers>
-            <div>
-                <div className="large"><animated.a>{props.engaged.interpolate(engaged => Math.floor(engaged))}</animated.a><a className="pink">+</a></div>
-                <div className="small">N<sup>o</sup> of employees engaged</div>
-            </div>
-            <div>
-                <div className="large"><animated.a>{props.surveys.interpolate(surveys => Math.floor(surveys))}</animated.a></div>
-                <div className="small">N<sup>o</sup> of surveys answered</div>
-            </div>
-            <div>
-                <div className="large"><animated.a>{props.visits.interpolate(visits => Math.floor(visits))}</animated.a><a className="pink">+</a></div>
-                <div className="small">Daily Knowledge base visits</div>
-            </div>
-            <div>
-                <div className="large"><animated.a>{props.reports.interpolate(reports => Math.floor(reports))}</animated.a></div>
-                <div className="small">N<sup>o</sup> of compliance reports generated</div>
-            </div>
-        </StatisticsNumbers>
+        <InView onChange={onInViewChange}>
+            <StatisticsNumbers>
+                <div>
+                    <div className="large"><animated.a>{props.engaged.interpolate(engaged => Math.floor(engaged))}</animated.a><a className="pink">+</a></div>
+                    <div className="small">N<sup>o</sup> of employees engaged</div>
+                </div>
+                <div>
+                    <div className="large"><animated.a>{props.surveys.interpolate(surveys => Math.floor(surveys))}</animated.a></div>
+                    <div className="small">N<sup>o</sup> of surveys answered</div>
+                </div>
+                <div>
+                    <div className="large"><animated.a>{props.visits.interpolate(visits => Math.floor(visits))}</animated.a><a className="pink">+</a></div>
+                    <div className="small">Daily Knowledge base visits</div>
+                </div>
+                <div>
+                    <div className="large"><animated.a>{props.reports.interpolate(reports => Math.floor(reports))}</animated.a></div>
+                    <div className="small">N<sup>o</sup> of compliance reports generated</div>
+                </div>
+            </StatisticsNumbers>
+        </InView>
         </Wrapper>
     </ThemeProvider>
     )

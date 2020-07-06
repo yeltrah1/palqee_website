@@ -30,7 +30,7 @@ const SalesStyle = styled.div`
   }
 
   .small {
-    padding-top: 10px;
+    padding-top: 5px;
     font-family: Poppins;
     font-size: 13px;
     font-weight: normal;

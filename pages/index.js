@@ -19,6 +19,7 @@ import { HomeStyle } from '../layouts/CSS';
 const App = () => {
  
   const [play, setPlay] = useState(false);
+  const [count, setCount] = useState(false);
  
   return (
     <PageContextProvider>
@@ -47,7 +48,7 @@ const App = () => {
             <BenefitBuilder/>
           </div>
           <div className="small-blue">
-            <Statistics/>
+            <Statistics count={count} setCount={setCount}/>
           </div>
           <div className="skewed-blue">
             <Testimonials/>

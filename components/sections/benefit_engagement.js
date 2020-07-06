@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
