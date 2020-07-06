@@ -4,6 +4,7 @@ import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import ReactPlayer from 'react-player';
+import { InView } from 'react-intersection-observer';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -60,28 +61,26 @@ const Video = styled.div`
 
 const BenefitEngagement = ({ play, setPlay }) => {
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            const onScreenTop = window.scrollY > 2350 ;
-            const onScreenBottom = window.scrollY < 2900 ;
-            if (onScreenTop === true && onScreenBottom === true) {
-                setPlay(true);
-            } else {
-                setPlay(false);
-            }
-        });
-    }, []);
+    const onInViewChange = (inview) => {
+        if (inview) { 
+            setPlay(true)
+        } else { 
+            setPlay(false)
+        };
+    }
 
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <Video>
+                <InView onChange={onInViewChange} rootMargin={"-300px"}>
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/vc_auto/v1593804197/palqee_engage.mp4' 
                     playing={play}
                     loop={true}
                     autoPlay={false}
                     />
+                </InView>
                 </Video>
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>

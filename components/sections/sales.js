@@ -75,7 +75,7 @@ const Sales = () => {
         <div>
           <div className="large">Speak to Sales</div>
           <div className="small">The tool to succeed with internal Privacy Operations.</div>
-          <form action="mailto:sales@palqee.com" method="post" enctype="text/plain">
+          <form action="mailto:sales@palqee.com" method="post" encType="text/plain">
             <ListInput name="reason" id="reason" required>
               <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
               <option value="product">Product information</option>

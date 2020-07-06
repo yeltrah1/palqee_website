@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import * as easings from 'd3-ease';
-import { InView } from 'react-intersection-observer'
+import { InView } from 'react-intersection-observer';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
