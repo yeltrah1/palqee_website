@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { EmailInput } from '../../layouts/CSS';
+import { ListInput } from '../../layouts/CSS';
 import { RequestInfoButton } from '../../layouts/CSS';
 
 const SalesStyle = styled.div`
@@ -18,7 +19,7 @@ const SalesStyle = styled.div`
   text-align: center;
 
   .large {
-    margin-top: 60px;
+    margin-top: 40px;
     font-family: Poppins-Semi;
     font-size: 39px;
     font-weight: 600;
@@ -48,7 +49,7 @@ const EmailStyle = styled.div`
   justify-items: end;
   height: 50px;
   width: 400px;
-  margin-top: 20px;
+  margin-top: 5px;
   border-radius: 6px;
   border: solid 1px rgba(117, 129, 148, 0.12);
   background-color: #ffffff;
@@ -74,10 +75,24 @@ const Sales = () => {
         <div>
           <div className="large">Speak to Sales</div>
           <div className="small">The tool to succeed with internal Privacy Operations.</div>
-          <EmailStyle>
-            <EmailInput/>
-            <RequestInfoButton>Request info</RequestInfoButton>
-          </EmailStyle>
+          <form action="mailto:sales@palqee.com" method="post" enctype="text/plain">
+            <ListInput name="reason" id="reason" required>
+              <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
+              <option value="product">Product information</option>
+              <option value="partnership">Partnerships</option>
+              <option value="reseller">Reseller</option>
+              <option value="support">Technical Support</option>
+              <option value="billing">Billing</option>
+              <option value="training">Palqee Training/Certification</option>
+              <option value="press">Media/Press requests</option>
+              <option value="events">Events/Speaking requests</option>
+              <option value="other">Other</option>
+            </ListInput>
+            <EmailStyle>
+              <EmailInput/>
+              <RequestInfoButton>Request info</RequestInfoButton>
+            </EmailStyle>
+          </form>
         </div>
       </SalesStyle>
     </ThemeProvider>

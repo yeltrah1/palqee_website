@@ -328,14 +328,17 @@ export const TakeTestButton = styled.a`
     }
 `;
 
-export const EmailInput = styled.input.attrs(props => ({
-  type: 'email',
-  placeholder: 'Your business email',
-}))`
+export const EmailInput = styled.input.attrs(props => ({type: 'email', placeholder: 'Your business email'}))`
   background-color: transparent;
   border: 0;
   width: 230px;
   text-align: left;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
 
   :focus {
     outline: none;
@@ -350,7 +353,53 @@ export const EmailInput = styled.input.attrs(props => ({
     line-height: 1.71;
     color: rgba(117, 129, 148, 0.5);
   }
+`;
 
+export const ListInput = styled.select`
+  height: 50px;
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: solid 1px rgba(117, 129, 148, 0.12);
+  text-align: left;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
+  
+  :focus {
+    outline: none;
+  }
+
+  :focus-within {
+    border: solid 1px #3f6db4;
+  }
+
+  option {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: black;
+  }
+
+  &:invalid {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    color: rgba(117, 129, 148, 0.5);
+  }
 `;
 
 export const RequestInfoButton = styled.a`
