@@ -94,7 +94,7 @@ const TextCard = () => {
                 </div>
             </TitleStyle>
             <TextStyle>
-                Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!
+                "Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!"
             </TextStyle>
             <Logo src={Dell}/>
         </ContainerStyle>

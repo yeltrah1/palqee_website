@@ -239,7 +239,7 @@ export const HomeStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 55vh;
+    height: 300px;
     width: 100vw;
   }
 
@@ -324,6 +324,63 @@ export const TakeTestButton = styled.a`
 
   :active {
     background: ${props => props.theme.greenButtonPress};
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    }
+`;
+
+export const EmailInput = styled.input.attrs(props => ({
+  type: 'email',
+  placeholder: 'Your business email',
+}))`
+  background-color: transparent;
+  border: 0;
+  width: 230px;
+  text-align: left;
+
+  :focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    color: rgba(117, 129, 148, 0.5);
+  }
+
+`;
+
+export const RequestInfoButton = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  background: ${props => props.theme.redButton};
+  border-radius: 4px;
+  height: 18px;
+  width: 100px;
+  margin-right: 6px;
+  padding: 10px 10px;
+  font-family: Poppins-Semi;
+  font-style: normal;
+  font-size: 12px;
+  color: white;
+  
+  @font-face {
+      font-family: 'Poppins-Semi';
+      src: url('static/fonts/Poppins-SemiBold.ttf');
+    }
+
+  :hover {
+  background: ${props => props.theme.redButtonHover};
+  box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+  }
+
+  :active {
+    background: ${props => props.theme.redButtonPress};
     box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
     }
 `;

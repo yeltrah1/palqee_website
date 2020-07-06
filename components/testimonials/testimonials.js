@@ -52,8 +52,7 @@ const TestimonialsText = styled.div`
         font-stretch: normal;
         font-style: normal;
         line-height: 1.33;
-        letter-spacing: normal;
-        color: #192d4d;
+        color: ${props => props.theme.mainFontColor};
     }
 
     .small {
@@ -63,7 +62,6 @@ const TestimonialsText = styled.div`
         font-size: 13px;
         font-weight: normal;
         font-style: normal;
-        letter-spacing: normal;
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;

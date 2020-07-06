@@ -54,7 +54,7 @@ const TestText = styled.div`
         font-style: normal;
         line-height: 1.43;
         letter-spacing: normal;
-        color: #192d4d;
+        color: ${props => props.theme.mainFontColor};
         margin-top: 45px;
     }
 

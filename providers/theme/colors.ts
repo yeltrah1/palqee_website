@@ -5,6 +5,7 @@ export const palqeeTheme = {
     redButtonHover: "#FF5458",
     redButtonPress: "#F5565A",
     greenButton: "#74d9b1",
+    mainFontColor: "#192d4d",
     greenButtonHover: "#50CC9B",
     greenButtonPress: "#40BB8A",
     footerBackground: "#FBFBFB",

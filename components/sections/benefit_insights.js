@@ -35,7 +35,7 @@ const BenefitText = styled.div`
         font-style: normal;
         line-height: 1.33;
         letter-spacing: normal;
-        color: #192d4d;
+        color: ${props => props.theme.mainFontColor};
     }
 
     .small {

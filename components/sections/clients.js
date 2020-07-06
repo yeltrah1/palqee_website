@@ -29,7 +29,7 @@ const Headline = styled.div`
   font-style: normal;
   line-height: 1.6;
   letter-spacing: normal;
-  color: #192d4d;
+  color: ${props => props.theme.mainFontColor};
 
   @font-face {
     font-family: 'Poppins-Semi';
