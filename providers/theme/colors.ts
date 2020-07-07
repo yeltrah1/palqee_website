@@ -11,6 +11,8 @@ export const palqeeTheme = {
     footerBackground: "#FBFBFB",
     footerLinksColor: "#758194",
     fontNavHoverColor: "#3f6db4",
+    dropdownBgColor: "white",
+    dropdownFontColor: "#192d4d",
 
     pageBgColor: "white",
     fontSubitemHoverColor: "#c2c2c2",

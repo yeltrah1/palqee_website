@@ -70,12 +70,8 @@ const BenefitEngagement = ({ play, setPlay }) => {
     const onInViewChange = (inview) => {
         if (inview) { 
             setPlay(true)
-            console.log(inview)
-            console.log(play)
         } else { 
             setPlay(false)
-            console.log(inview)
-            console.log(play)
         };
     }
 

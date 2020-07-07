@@ -1,36 +1,36 @@
 import styled from 'styled-components';
 
 export const NavStyle = styled.div`
-    background: ${props => props.theme.navBgColor};
-    display: grid;
-    grid-template-columns: 0.8fr 3fr 1fr;
-    transition: all 0.25s ease-out;
-    position: ${props => props.theme.navBarPosition};
-    height: 72px;
-    width: 100%;
-    left: 0px;
-    top: 0px;
+  background: ${props => props.theme.navBgColor};
+  display: grid;
+  grid-template-columns: 0.8fr 3fr 1fr;
+  transition: all 0.3s ease-out;
+  position: ${props => props.theme.navBarPosition};
+  height: 72px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
 
-    .hamburger {
-        position: absolute;
-        cursor: pointer;
-        right: 5px;
-        top: 5px;  
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    top: 5px;  
 
-        .line {
-            @media screen and (max-width: 900px) {
-                width: 30px;
-                height: 3px;
-                background: ${props => props.theme.navBgColor};
-                margin: 5px;
-            }
-        }
+    .line {
+      @media screen and (max-width: 900px) {
+          width: 30px;
+          height: 3px;
+          background: ${props => props.theme.navBgColor};
+          margin: 5px;
+      }
     }
+  }
 
-    .demo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .demo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const NavBarStyle = styled.div` 
@@ -73,30 +73,78 @@ export const NavBarStyle = styled.div`
       transition: 0.25s;
     }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        align-content: center;
-        z-index: -1;     //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
-        background: ${props => props.theme.menuBgColor};
-        width: 100%;
-        height: 60px;
-        left: 0;
-        top: 60px;
-        box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+    .dropdown-products {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      visibility: hidden;
+      position: absolute;
+      align-content: center;
+      background: ${props => props.theme.dropdownBgColor};
+      width: 180px;
+      height: 150px;
+      top: 72px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
     }
 
-    .navbar .dropdown-content a {
-        cursor: pointer;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 16px;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: normal;
-        color: ${props => props.theme.menuFont};
+    @font-face {
+      font-family: 'Poppins-Semi';
+      src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
-        
+
+    .dropdown-products a {
+      font-family: Poppins;
+      font-size: 13px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.54;
+      letter-spacing: normal;
+      color: ${props => props.theme.dropdownFontColor};
+      text-decoration:none;
+      cursor: pointer;
+    }
+    
+    .dropdown-products .demo {
+      font-family: Poppins-Semi;
+      font-size: 13px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.54;
+      margin-top: 10px;
+      letter-spacing: normal;
+      color: ${props => props.theme.redButton};
+      text-decoration:none;
+      cursor: pointer;
+    }
+
+    .dropdown-cases {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      position: absolute;
+      align-content: center;
+      z-index: -1;     //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
+      background: ${props => props.theme.dropdownBgColor};
+      width: 40px;
+      height: 60px;
+      left: 0;
+      top: 60px;
+      box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+    }
+    
+    @keyframes menu-slider {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    .dropdown:hover .dropdown-products {
+      animation: menu-slider 0.3s;
+      visibility: visible;
+  }
+
+  // ------------------------------------
     .dropdown:hover .menu-item, .navbar .menu-item:hover {     //hover effect
         color: ${props => props.theme.fontNavHoverColor};
     }
@@ -105,18 +153,9 @@ export const NavBarStyle = styled.div`
         color: ${props => props.theme.fontSubitemHoverColor};
     }
 
-    .dropdown:hover .dropdown-content {
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        justify-items: center;
-        animation: menu-slider 0.8s;
-    }
 
-    // setting the dropdown to slide from behind the menu
-    @keyframes menu-slider {
-        from { transform: translateY(-60px) }
-        to { transform: translateY(0) }
-    }
+
+
 `;
 
 export const DemoButton = styled.a`

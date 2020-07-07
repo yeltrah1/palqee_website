@@ -15,7 +15,7 @@ import { palqeeTheme } from '../providers/theme/colors.ts';
 
 const Layout = ({ children }) => {
 
-    const [white, setWhite] = useState(true);
+    const [white, setWhite] = useState(false);
 
     return (
     <ThemeProvider theme={palqeeTheme}>

@@ -22,6 +22,24 @@ const LogoStyle = styled.img`
 const NavBar = ({ white, setWhite }) => {
 
     useEffect(() => {
+        
+        const element = document.getElementById('hover');
+
+        element.addEventListener("mouseover", () => {
+            setWhite(true);
+        });
+
+        element.addEventListener("mouseout", () => {
+            window.addEventListener('scroll', () => {
+                const isTop = window.scrollY < 10 ;
+                if (isTop) {
+                    setWhite(false);
+                } else {
+                    setWhite(true);
+                }
+            });
+        });
+        
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 10 ;
             if (isTop !== true) {
@@ -34,7 +52,7 @@ const NavBar = ({ white, setWhite }) => {
 
     return (
         <ThemeProvider theme={white ? scrollNavBar : initialNavBar}>
-        <NavStyle>
+        <NavStyle id="hover">
             <div>
                 <Link href="/">
                     <LogoStyle src={white ? PalqeeBlue : PalqeeWhite}/>
@@ -48,46 +66,27 @@ const NavBar = ({ white, setWhite }) => {
                 </div>
                 <NavBarStyle>
                     <div className="navbar">
-                        <a className="menu-item" href="/about">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
                         <div className="dropdown">
-                            <a className="menu-item" href="/skills">{translate('navBar.cases')}</a>
-                            <div className="dropdown-content">
-                                <div></div>
-                                <div>
-                                <a href="/skills/design">UX/UI Design</a>
-                                <a href="/skills/frontend">Agile Product Management</a>
-                                <a href="/skills/backend">Front-end Development</a>
-                                </div>
-                                <div></div>
+                            <a className="menu-item" href="/about">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
+                            <div className="dropdown-products">
+                                <a href="/skills/design">Surveys Manager</a>
+                                <a href="/skills/frontend">Certifications</a>
+                                <a href="/skills/backend">Innovation Roadmap</a>
+                                <a className="demo" href="/skills/backend">Book a demo</a>
                             </div>
                         </div>
                         <div className="dropdown">
-                            <Link as="/portfolio/all" href="/portfolio/[category]"><a className="menu-item">About Us</a></Link>
-                            <div className="dropdown-content">
-                                <div></div>
-                                <div>
-                                <Link as="/portfolio/all" href="/portfolio/[category]"><a>All</a></Link>                         
-                                <Link as="/portfolio/personal" href="/portfolio/[category]"><a>Personal</a></Link>
-                                <Link as="/portfolio/business" href="/portfolio/[category]"><a>Businesses</a></Link>
-                                <Link as="/portfolio/standalone" href="/portfolio/[category]"><a>Standalone Products</a></Link>
-                                <Link as="/portfolio/application" href="/portfolio/[category]"><a>Integrated Applications</a></Link>
-                                </div>
-                                <div></div>
+                            <a className="menu-item" href="/skills">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
+                            <div className="dropdown-cases">
+                                <a href="/skills/design">Start-ups</a>
+                                <a href="/skills/frontend">Small and Medium Businesses</a>
+                                <a href="/skills/backend">Large Enterprise</a>
                             </div>
                         </div>
-                        <div className="dropdown">
-                            <a className="menu-item" href="/services">Partners</a>
-                            <div className="dropdown-content">
-                                <div></div>
-                                <div>
-                                <a href="/services">User Research</a>
-                                <a href="/services">Web &amp; Product Design</a>
-                                <a href="/services">Product Management</a>
-                                <a href="/services">Front-end Development</a>
-                                </div>
-                                <div></div>
-                            </div>
-                        </div>
+                        <Link as="/portfolio/all" href="/portfolio/[category]">
+                            <a className="menu-item">About Us</a>
+                        </Link>
+                        <a className="menu-item" href="/services">Partners</a>
                         <a className="menu-item" href="/proposal">Blog</a>
                     </div>
                 </NavBarStyle>
