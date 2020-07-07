@@ -20,10 +20,10 @@ const HeroText = styled.div`
     grid-row: 1;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
-    width: 40%;
+    width: 40vw;
     height: 192px;
-    margin-top: 2%;
-    margin-left: 8%;
+    margin-top: 40px;
+    margin-left: 8vw;
 
     .large {
     font-family: Poppins;
@@ -63,9 +63,9 @@ const HeroText = styled.div`
 const Image = styled.img`
     grid-column: 1;
     grid-row: 1;
-    justify-self: end;
-    margin-right: 15px;
-    width: 50em;
+    justify-self: center;
+    margin-left: 40vw;
+    width: 900px;
 `;
 
 const HomeHero = () => {

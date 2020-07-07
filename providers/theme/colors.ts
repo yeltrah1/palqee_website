@@ -10,10 +10,9 @@ export const palqeeTheme = {
     greenButtonPress: "#40BB8A",
     footerBackground: "#FBFBFB",
     footerLinksColor: "#758194",
-
+    fontNavHoverColor: "#3f6db4",
 
     pageBgColor: "white",
-    fontNavHoverColor: "#c2c2c2",
     fontSubitemHoverColor: "#c2c2c2",
 };
 

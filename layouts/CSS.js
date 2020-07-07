@@ -61,6 +61,18 @@ export const NavBarStyle = styled.div`
         margin: 0;
     }
     
+    .navbar .menu-item .arrow {
+      position: absolute;
+      font-size: 8px;
+      transform: rotate(90deg);
+      transition: 0.25s;
+    }
+
+    .navbar .menu-item:hover .arrow {
+      transform: rotate(-90deg);
+      transition: 0.25s;
+    }
+
     .dropdown-content {
         display: none;
         position: absolute;

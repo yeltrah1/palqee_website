@@ -23,7 +23,7 @@ const NavBar = ({ white, setWhite }) => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            const isTop = window.scrollY < 20 ;
+            const isTop = window.scrollY < 10 ;
             if (isTop !== true) {
                 setWhite(true);
             } else {
@@ -48,7 +48,7 @@ const NavBar = ({ white, setWhite }) => {
                 </div>
                 <NavBarStyle>
                     <div className="navbar">
-                        <a className="menu-item" href="/about">{translate('navBar.products')}</a>
+                        <a className="menu-item" href="/about">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
                         <div className="dropdown">
                             <a className="menu-item" href="/skills">{translate('navBar.cases')}</a>
                             <div className="dropdown-content">
