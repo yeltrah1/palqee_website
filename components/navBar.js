@@ -20,41 +20,37 @@ const LogoStyle = styled.img`
 `;
 
 const NavBar = ({ white, setWhite }) => {
-
+   
     useEffect(() => {
-        
+
         const element = document.getElementById('hover');
 
-        element.addEventListener("mouseover", () => {
-            setWhite(true);
-        });
+        element.addEventListener('mouseenter', () => setWhite(true));
 
-        element.addEventListener("mouseout", () => {
-            window.addEventListener('scroll', () => {
-                const isTop = window.scrollY < 10 ;
-                if (isTop) {
-                    setWhite(false);
-                } else {
-                    setWhite(true);
+        window.addEventListener('scroll', () => {
+            const isTop = window.scrollY < 10;
+            if (isTop === false) {
+                setWhite(true)
+            } else {
+                setWhite(false)
+            }
+
+            element.addEventListener('mouseleave', () => {
+                if (isTop === false) {
+                    setWhite(true)
+                } else if (isTop === true) {
+                    setWhite(false)
                 }
             });
-        });
-        
-        window.addEventListener('scroll', () => {
-            const isTop = window.scrollY < 10 ;
-            if (isTop !== true) {
-                setWhite(true);
-            } else {
-                setWhite(false);
-            }
+            
         });
     }, []);
 
     return (
         <ThemeProvider theme={white ? scrollNavBar : initialNavBar}>
-        <NavStyle id="hover">
+        <NavStyle id='hover'>
             <div>
-                <Link href="/">
+                <Link href='/'>
                     <LogoStyle src={white ? PalqeeBlue : PalqeeWhite}/>
                 </Link>
             </div>
@@ -79,8 +75,8 @@ const NavBar = ({ white, setWhite }) => {
                             <a className="menu-item" href="/skills">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
                             <div className="dropdown-cases">
                                 <a href="/skills/design">Start-ups</a>
-                                <a href="/skills/frontend">Small and Medium Businesses</a>
-                                <a href="/skills/backend">Large Enterprise</a>
+                                <a href="/skills/frontend">Small & Midsize Businesses</a>
+                                <a href="/skills/backend">Large Enterprises</a>
                             </div>
                         </div>
                         <Link as="/portfolio/all" href="/portfolio/[category]">

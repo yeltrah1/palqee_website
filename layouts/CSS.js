@@ -94,7 +94,7 @@ export const NavBarStyle = styled.div`
       src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
-    .dropdown-products a {
+    .dropdown-products a, .dropdown-cases a {
       font-family: Poppins;
       font-size: 13px;
       font-weight: 500;
@@ -122,15 +122,17 @@ export const NavBarStyle = styled.div`
 
     .dropdown-cases {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       position: absolute;
+      visibility: hidden;
       align-content: center;
-      z-index: -1;     //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
       background: ${props => props.theme.dropdownBgColor};
-      width: 40px;
-      height: 60px;
-      left: 0;
-      top: 60px;
+      width: 190px;
+      height: 100px;
+      top: 72px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 10px;
       box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
     }
     
@@ -139,7 +141,7 @@ export const NavBarStyle = styled.div`
       to { opacity: 1 }
     }
 
-    .dropdown:hover .dropdown-products {
+    .dropdown:hover .dropdown-products, .dropdown:hover .dropdown-cases {
       animation: menu-slider 0.3s;
       visibility: visible;
   }
