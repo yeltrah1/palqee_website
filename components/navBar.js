@@ -24,8 +24,14 @@ const NavBar = ({ white, setWhite }) => {
     useEffect(() => {
 
         const element = document.getElementById('hover');
-
+        const isTop = true;
         element.addEventListener('mouseenter', () => setWhite(true));
+
+        element.addEventListener('mouseleave', () => {
+            if (isTop === true) {
+                setWhite(false)
+            }
+        });
 
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 10;
