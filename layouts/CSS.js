@@ -142,11 +142,12 @@ export const NavBarStyle = styled.div`
     
     @keyframes menu-slider {
       from { opacity: 0 }
+      50% { opacity: 0 }
       to { opacity: 1 }
     }
 
     .dropdown:hover .dropdown-products, .dropdown:hover .dropdown-cases {
-      animation: menu-slider 0.3s;
+      animation: menu-slider 0.4s;
       visibility: visible;
   }
 
