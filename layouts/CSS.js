@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const NavStyle = styled.div`
+  position: fixed;
   background: ${props => props.theme.navBgColor};
   display: grid;
   grid-template-columns: 0.8fr 3fr 1fr;
   transition: all 0.3s ease-out;
-  position: ${props => props.theme.navBarPosition};
   height: 72px;
   width: 100%;
   left: 0px;
@@ -41,10 +41,10 @@ export const NavBarStyle = styled.div`
         padding-top: 10px; 
     }
 
-    .dropdown {              // hoverable area to keep the menu open
+    .dropdown {           // hoverable area to keep the menu open
         float: left;
         overflow: hidden;
-        height: 56px;
+        height: 65px;
     }
     
     .navbar .menu-item {
@@ -103,8 +103,12 @@ export const NavBarStyle = styled.div`
       line-height: 1.54;
       letter-spacing: normal;
       color: ${props => props.theme.dropdownFontColor};
-      text-decoration:none;
+      text-decoration: none;
       cursor: pointer;
+    }
+
+    .dropdown-products a:hover, .dropdown-cases a:hover {
+      font-family: Poppins-Semi;
     }
     
     .dropdown-products .demo {
@@ -127,7 +131,7 @@ export const NavBarStyle = styled.div`
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
-      width: 190px;
+      width: 200px;
       height: 100px;
       top: 72px;
       padding-left: 20px;
@@ -240,7 +244,6 @@ export const LoginButton = styled.a`
 export const HomeStyle = styled.div`
   display:grid;
   overflow-x: hidden;
-  padding-top: 72px;    // same as NavStyle height
 
   .headline {
     background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg");
@@ -252,19 +255,19 @@ export const HomeStyle = styled.div`
   }
 
   .small-white {
-    background: "white";
+    background: white;
     height: 30vh;
     position: relative;
   }
 
   .mid-white {
-    background: "white";
+    background: white;
     height: 500px;
     position: relative;
   }
 
   .large-white {
-    background: "white";
+    background: white;
     height: 600px;
     position: relative;
   }
@@ -475,14 +478,14 @@ export const RequestInfoButton = styled.input`
     }
 
   :hover {
-  background: ${props => props.theme.redButtonHover};
-  box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
+    background: ${props => props.theme.redButtonHover};
+    box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
   }
 
   :active {
     background: ${props => props.theme.redButtonPress};
     box-shadow: 0px 8px 16px rgba(239, 39, 45, 0.12);
-    }
+  }
 `;
 
 export const FooterStyle = styled.div`

@@ -19,7 +19,6 @@ export const palqeeTheme = {
 };
 
 export const initialNavBar = {
-    navBarPosition: "absolute",
     navBgColor: "linear-gradient(299.62deg, #0D254A 36.54%, #112A6B 107.31%)",
     navBarFontColor: "white",
 };
@@ -27,5 +26,4 @@ export const initialNavBar = {
 export const scrollNavBar = {
     navBgColor: "white",
     navBarFontColor: "#192D4D",
-    navBarPosition: "fixed",
 };
