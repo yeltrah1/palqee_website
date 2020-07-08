@@ -25,7 +25,7 @@ const NavBar = ({ white, setWhite }) => {
 
         const element = document.getElementById('hover');
         const isTop = true;
-        element.addEventListener('mouseenter', () => setWhite(true));
+        element.addEventListener('mouseover', () => setWhite(true));
 
         element.addEventListener('mouseleave', () => {
             if (isTop === true) {
@@ -35,14 +35,14 @@ const NavBar = ({ white, setWhite }) => {
 
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 10;
-            if (isTop === false) {
+            if (isTop === false && white !== true) {
                 setWhite(true)
             } else {
                 setWhite(false)
             }
 
             element.addEventListener('mouseleave', () => {
-                if (isTop === false && white !== true) {
+                if (isTop === false) {
                     setWhite(true)
                 } else if (isTop === true) {
                     setWhite(false)
