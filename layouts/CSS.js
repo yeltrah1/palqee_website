@@ -302,58 +302,65 @@ export const HomeStyle = styled.div`
     height: 300px;
     width: 100vw;
   }
+`;
 
-  // .text {
-  //   padding-top: 2em;
-  //   line-height: 25px;
-  //   padding-left: 40px;
-  //   padding-right: 20px;
-  //   font-size: 16px;
-  //   font-family: Montserrat;
-  //   font-style: normal;
-  //   font-weight: regular;
-  //   color: ${props => props.theme.fontColor};
-  // }
-  
-  // .text a {
-  //   font-size: 16px;
-  //   font-family: Montserrat;
-  //   font-style: italic;
-  //   font-weight: bold;
-  //   color: ${props => props.theme.highlightColor};
-  // }
+export const SurveysStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
 
-  // .button-area {
-  //   display: grid;
-  //   grid-template-columns: 1fr 210px 1fr;
-  //   grid-template-rows: 4fr 2fr 4fr;
-  //   place-self: center;
-  // }
+  .headline {
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 113vh;
+    width: 100vw;
+  }
 
-  // .button {
-  //   display: grid;
-  //   grid-template-columns: 8fr 2fr;
-  //   padding: 10px;
-  //   height: 32px;
-  //   justify-items: center;
-  //   background-color: ${props => props.theme.buttonColor};
-  //   grid-column-start: 2;
-  //   grid-row-start: 3;    
-  //   box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.5);
-  //   cursor: pointer;
+  .small-white {
+    background: white;
+    height: 30vh;
+    position: relative;
+  }
 
-  //   font-family: Poppins;
-  //   font-style: normal;
-  //   font-weight: bold;
-  //   font-size: 20px;
-  //   text-decoration: none;
-  //   line-height: 32px;
-  //   color: ${props => props.theme.highlightColor};
-  // }
+  .mid-white {
+    background: white;
+    height: 500px;
+    position: relative;
+  }
 
-  // .button:hover {
-  //   background-color: ${props => props.theme.buttonHover};
-  // }
+  .large-white {
+    background: white;
+    height: 600px;
+    position: relative;
+  }
+
+  .large-grey {
+    background: #FBFCFD;
+    height: 600px;
+    position: relative;
+  }
+
+  .small-blue {
+    background: #f2f8fd;
+    height: 300px;
+    position: relative;
+  }
+
+  .skewed-blue {
+    height: 500px;
+    width: 200vw;
+    position: relative;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
 `;
 
 export const TakeTestButton = styled.a`
