@@ -97,6 +97,7 @@ const BenefitEngagement = ({ play, setPlay }) => {
                     playing={onScreen ? true : false}
                     loop={true}
                     autoPlay={true}
+                    muted
                     height="500px"
                     />
                 {/* </InView> */}
