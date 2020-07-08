@@ -16,23 +16,12 @@ const HeroStyle = styled.div`
     height: 600px;
 `;
 
-const BgStyle = styled.img`
-    grid-column: 1;
-    grid-row: 1;
-    width: auto;
-    height: 650px;
-    transform: scaleX(2);
-`;
-
 const HeroText = styled.div`
-    grid-column: 1;
-    grid-row: 1;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
     width: 100vw;
     height: 400px;
     margin-top: 160px;
-    z-index: 2;
 
     .large {
     font-family: Poppins;
@@ -92,7 +81,6 @@ const SurveysHero = () => {
                     <GetStartedButton className="button">Get started for free</GetStartedButton>
                 </div>
             </HeroText>
-            <BgStyle src={"https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg"}/>
         </HeroStyle>
       </ThemeProvider>
     )

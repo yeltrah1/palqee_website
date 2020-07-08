@@ -307,8 +307,11 @@ export const SurveysStyle = styled.div`
   overflow-x: hidden;
 
   .headline {
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594245395/blue_bg_small.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    height: 600px;
+    height: 90vh;
     width: 100vw;
   }
 
