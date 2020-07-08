@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
@@ -65,11 +65,17 @@ async function loadPolyfills() {
     }
 }
 
+
+
 const BenefitEngagement = ({ play, setPlay }) => {
 
-    const [ref, inView, entry] = useInView({
-        threshold: 0.4,
-    })
+    const ref = useRef();
+    const onScreen = useOnScreen(ref, '-300px');
+
+      // Empty array ensures that e
+    // const [ref, inView, entry] = useInView({
+    //     threshold: 0.4,
+    // })
 
     // const onInViewChange = (inview) => {
     //     if (inview) { 
@@ -83,12 +89,12 @@ const BenefitEngagement = ({ play, setPlay }) => {
 
     return (
       <ThemeProvider theme={palqeeTheme}>
-            <Wrapper inView={inView}>
+            <Wrapper>
                 <Video ref={ref}>
                 {/* <InView onChange={onInViewChange} rootMargin={"-200px"}> */}
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1594206264/palqee_engage.mp4' 
-                    playing={inView}
+                    playing={onScreen ? true : false}
                     loop={true}
                     autoPlay={false}
                     height="500px"
@@ -102,6 +108,32 @@ const BenefitEngagement = ({ play, setPlay }) => {
             </Wrapper>
       </ThemeProvider>
     )
+}
+
+function useOnScreen(ref, rootMargin = '0px') {
+
+    
+    const [isIntersecting, setIntersecting] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            // Update our state when observer callback fires
+            setIntersecting(entry.isIntersecting);
+          },
+          {
+            rootMargin
+          }
+        );
+        if (ref.current) {
+          observer.observe(ref.current);
+        }
+        return () => {
+          observer.unobserve(ref.current);
+        };
+    }, []); 
+
+    return isIntersecting;
 }
 
 export { BenefitEngagement } ;
