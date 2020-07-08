@@ -78,14 +78,17 @@ const Arrow = styled.img`
     cursor: pointer;
     width: 20px;
     margin: 0 10px;
+
+    :hover {
+        transform: scale(1.2);
+    }
 }
 `;
 
 const Cards = styled.div`
     grid-row: 1;
     grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     align-self: start;
     height: 200px;
     margin-top: 120px;
@@ -112,6 +115,9 @@ const Testimonials = () => {
             </div>
         </TestimonialsText>
         <Cards>
+            <TextCard/>
+            <TextCard/>
+            <TextCard/>
             <TextCard/>
         </Cards>
         </Wrapper>

@@ -35,7 +35,7 @@ const NavBar = ({ white, setWhite }) => {
 
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 10;
-            if (isTop === false && white !== true) {
+            if (isTop !== true && white !== true) {
                 setWhite(true)
             } else {
                 setWhite(false)
@@ -48,7 +48,6 @@ const NavBar = ({ white, setWhite }) => {
                     setWhite(false)
                 }
             });
-            
         });
     }, []);
 

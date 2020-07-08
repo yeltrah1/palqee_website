@@ -5,7 +5,7 @@ export const NavStyle = styled.div`
   background: ${props => props.theme.navBgColor};
   display: grid;
   grid-template-columns: 0.8fr 3fr 1fr;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-in;
   height: 72px;
   width: 100%;
   left: 0px;
@@ -75,9 +75,10 @@ export const NavBarStyle = styled.div`
 
     .dropdown-products {
       display: grid;
+      grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
-      visibility: hidden;
       position: absolute;
+      visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
       width: 180px;
@@ -110,15 +111,20 @@ export const NavBarStyle = styled.div`
     .dropdown-products a:hover, .dropdown-cases a:hover {
       font-family: Poppins-Semi;
     }
+
+    .dropdown-products .demo:hover {
+      color: ${props => props.theme.redButtonHover};
+      font-size: 14px;
+    }
     
     .dropdown-products .demo {
+      display: flex;
       font-family: Poppins-Semi;
       font-size: 13px;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.54;
       margin-top: 10px;
-      letter-spacing: normal;
       color: ${props => props.theme.redButton};
       text-decoration:none;
       cursor: pointer;
@@ -142,12 +148,12 @@ export const NavBarStyle = styled.div`
     
     @keyframes menu-slider {
       from { opacity: 0 }
-      50% { opacity: 0 }
+      99% { opacity: 0 }
       to { opacity: 1 }
     }
 
     .dropdown:hover .dropdown-products, .dropdown:hover .dropdown-cases {
-      animation: menu-slider 0.4s;
+      animation: menu-slider 0.2s;
       visibility: visible;
   }
 
@@ -159,9 +165,6 @@ export const NavBarStyle = styled.div`
     .dropdown-content a:hover {     //hover effect
         color: ${props => props.theme.fontSubitemHoverColor};
     }
-
-
-
 
 `;
 
