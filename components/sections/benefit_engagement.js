@@ -4,7 +4,7 @@ import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import ReactPlayer from 'react-player';
-import { InView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 import 'intersection-observer';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
@@ -67,29 +67,33 @@ async function loadPolyfills() {
 
 const BenefitEngagement = ({ play, setPlay }) => {
 
-    const onInViewChange = (inview) => {
-        if (inview) { 
-            setPlay(true)
-            console.log(play)
-        } else { 
-            setPlay(false)
-            console.log(play)
-        };
-    }
+    const [ref, inView, entry] = useInView({
+        threshold: 0.4,
+    })
+
+    // const onInViewChange = (inview) => {
+    //     if (inview) { 
+    //         setPlay(true)
+    //         console.log(play)
+    //     } else { 
+    //         setPlay(false)
+    //         console.log(play)
+    //     };
+    // }
 
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Video>
-                <InView onChange={onInViewChange} rootMargin={"-200px"}>
+                <Video ref={ref}>
+                {/* <InView onChange={onInViewChange} rootMargin={"-200px"}> */}
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1594206264/palqee_engage.mp4' 
-                    playing={play}
+                    playing={inView}
                     loop={true}
                     autoPlay={false}
                     height="500px"
                     />
-                </InView>
+                {/* </InView> */}
                 </Video>
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>
