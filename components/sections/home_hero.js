@@ -11,7 +11,7 @@ const HeroStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-top: 120px;
+    margin-top: 130px;
     width:100vw;
 `;
 

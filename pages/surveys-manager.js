@@ -6,6 +6,7 @@ import { I18nProvider, LOCALES } from "../providers/i18n";
 import Layout from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
+import { SurveysHero } from '../components/sections/surveys_hero';
 
 const SurveysManager = () => {
 
@@ -15,9 +16,9 @@ const SurveysManager = () => {
       <Layout>
         <SurveysStyle>
           <div className="headline">
-
+            <SurveysHero/>
           </div>
-          <div className="large-white">
+          <div className="small-white">
 
           </div>
           <div className="large-grey">

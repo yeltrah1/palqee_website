@@ -201,8 +201,6 @@ export const DemoButton = styled.a`
 `;
 
 export const GetStartedButton = styled.a`
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     cursor: pointer;
     background: ${props => props.theme.redButton};
@@ -309,11 +307,8 @@ export const SurveysStyle = styled.div`
   overflow-x: hidden;
 
   .headline {
-    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    height: 113vh;
+    height: 600px;
     width: 100vw;
   }
 
