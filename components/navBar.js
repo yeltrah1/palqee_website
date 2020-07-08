@@ -42,7 +42,7 @@ const NavBar = ({ white, setWhite }) => {
             }
 
             element.addEventListener('mouseleave', () => {
-                if (isTop === false) {
+                if (isTop === false && white !== true) {
                     setWhite(true)
                 } else if (isTop === true) {
                     setWhite(false)
