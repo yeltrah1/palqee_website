@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import ReactPlayer from 'react-player';
-import { useInView } from 'react-intersection-observer';
-import 'intersection-observer';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
+import { useOnScreen } from '../../hooks/useOnScreen';
 
 const Wrapper = styled.div`
   display: grid;
@@ -59,39 +58,23 @@ const Video = styled.div`
     margin-left: 20px;
 `;
 
-async function loadPolyfills() {
-    if (typeof window.IntersectionObserver === 'undefined') {
-        await import('intersection-observer')
-    }
-}
+// async function loadPolyfills() {
+//     if (typeof window.IntersectionObserver === 'undefined') {
+//         await import('intersection-observer')
+//     }
+// }
 
 
 
-const BenefitEngagement = ({ play, setPlay }) => {
+const BenefitEngagement = () => {
 
     const ref = useRef();
-    const onScreen = useOnScreen(ref, '-300px');
-
-      // Empty array ensures that e
-    // const [ref, inView, entry] = useInView({
-    //     threshold: 0.4,
-    // })
-
-    // const onInViewChange = (inview) => {
-    //     if (inview) { 
-    //         setPlay(true)
-    //         console.log(play)
-    //     } else { 
-    //         setPlay(false)
-    //         console.log(play)
-    //     };
-    // }
+    const onScreen = useOnScreen(ref, '-200px');
 
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <Video ref={ref}>
-                {/* <InView onChange={onInViewChange} rootMargin={"-200px"}> */}
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1594206264/palqee_engage.mp4' 
                     playing={onScreen ? true : false}
@@ -100,7 +83,6 @@ const BenefitEngagement = ({ play, setPlay }) => {
                     muted
                     height="500px"
                     />
-                {/* </InView> */}
                 </Video>
                 <BenefitText>
                     <div className="large">Have your workforce engaged on privacy programs</div>
@@ -109,32 +91,6 @@ const BenefitEngagement = ({ play, setPlay }) => {
             </Wrapper>
       </ThemeProvider>
     )
-}
-
-function useOnScreen(ref, rootMargin = '0px') {
-
-    
-    const [isIntersecting, setIntersecting] = useState(true);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            // Update our state when observer callback fires
-            setIntersecting(entry.isIntersecting);
-          },
-          {
-            rootMargin
-          }
-        );
-        if (ref.current) {
-          observer.observe(ref.current);
-        }
-        return () => {
-          observer.unobserve(ref.current);
-        };
-    }, []); 
-
-    return isIntersecting;
 }
 
 export { BenefitEngagement } ;

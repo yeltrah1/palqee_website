@@ -18,7 +18,6 @@ import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
  
-  const [play, setPlay] = useState(false);
   const [count, setCount] = useState(false);
  
   return (
@@ -42,7 +41,7 @@ const App = () => {
             <BenefitAdmin/>
           </div>
           <div className="large-grey">
-            <BenefitEngagement play={play} setPlay={setPlay}/>
+            <BenefitEngagement/>
           </div>
           <div className="large-white">
             <BenefitBuilder/>

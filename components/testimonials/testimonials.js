@@ -24,7 +24,7 @@ const Skewed = styled.div`
     height: 450px;
     width: 300vw;
     position: relative;
-    left: -300vw;
+    left: -350vw;
     transform: skew(-78deg);
 `;
 
