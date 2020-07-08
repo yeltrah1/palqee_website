@@ -70,8 +70,10 @@ const BenefitEngagement = ({ play, setPlay }) => {
     const onInViewChange = (inview) => {
         if (inview) { 
             setPlay(true)
+            console.log(play)
         } else { 
             setPlay(false)
+            console.log(play)
         };
     }
 
@@ -81,7 +83,7 @@ const BenefitEngagement = ({ play, setPlay }) => {
                 <Video>
                 <InView onChange={onInViewChange} rootMargin={"-200px"}>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/v1594031027/palqee_engage.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1594206264/palqee_engage.mp4' 
                     playing={play}
                     loop={true}
                     autoPlay={false}
