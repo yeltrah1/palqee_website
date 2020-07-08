@@ -96,7 +96,7 @@ const BenefitEngagement = ({ play, setPlay }) => {
                     url='https://res.cloudinary.com/palqee/video/upload/v1594206264/palqee_engage.mp4' 
                     playing={onScreen ? true : false}
                     loop={true}
-                    autoPlay={false}
+                    autoPlay={true}
                     height="500px"
                     />
                 {/* </InView> */}
