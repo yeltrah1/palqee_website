@@ -11,5 +11,6 @@ export default {
         "footer.settings": "Privacy Settings",
         "footer.terms": "Terms and Conditions",
         "footer.contact": "Contact Us",
+        "footer.resources": "Resources",
     }
 }

@@ -31,7 +31,7 @@ const Footer = () => {
                 <a className="pages" href="/">{translate('footer.policy')}</a>
                 <a className="pages" href="/">{translate('footer.settings')}</a>
                 <a className="pages" href="/">{translate('footer.terms')}</a>
-                <a className="pages" href="/">{translate('footer.contact')}</a>
+                <a className="pages" href="/">{translate('footer.resources')}</a>
               </div>
               <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
           </div>
