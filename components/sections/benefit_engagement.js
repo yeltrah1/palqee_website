@@ -113,7 +113,7 @@ const BenefitEngagement = ({ play, setPlay }) => {
 function useOnScreen(ref, rootMargin = '0px') {
 
     
-    const [isIntersecting, setIntersecting] = useState(false);
+    const [isIntersecting, setIntersecting] = useState(true);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
