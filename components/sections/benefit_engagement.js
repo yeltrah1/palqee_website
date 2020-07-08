@@ -83,7 +83,7 @@ const BenefitEngagement = ({ play, setPlay }) => {
 
     return (
       <ThemeProvider theme={palqeeTheme}>
-            <Wrapper>
+            <Wrapper inView={inView}>
                 <Video ref={ref}>
                 {/* <InView onChange={onInViewChange} rootMargin={"-200px"}> */}
                     <ReactPlayer 
