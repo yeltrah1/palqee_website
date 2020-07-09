@@ -9,6 +9,7 @@ import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const Wrapper = styled.div`
     display: grid;
@@ -80,9 +81,24 @@ const Cards = styled.div`
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
+    .swiper-container {
+        width: 100vw;
+        height: 285px;
+    }
 `;
 
 const SurveysFeatures = () => {
+
+    Swiper.use([Navigation, Pagination]);
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      })
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -94,14 +110,19 @@ const SurveysFeatures = () => {
             </div>
         </HeaderText>
         <Cards>
-            {features.map(features => 
-                <FeaturesCard 
-                    image={features.image}
-                    name={features.name}
-                    description={features.description} 
-                    key={features.id}
-                />
-            )}
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {features.map(features => 
+                    <FeaturesCard 
+                        image={features.image}
+                        name={features.name}
+                        description={features.description} 
+                        key={features.id}
+                    />
+                )}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </Cards>
         </Wrapper>
     </ThemeProvider>

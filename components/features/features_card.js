@@ -12,6 +12,7 @@ const ContainerStyle = styled.div`
     width: 200px;
     padding: 20px;
     margin: 0 10px;
+    cursor: grab;
 `;
 
 const IconStyle = styled.img`
@@ -55,13 +56,15 @@ const FeaturesCard = ({name, description, image}) => {
     const icon = "/static/icons/features/"+image+""
 
     return (
-        <ContainerStyle>
-            <IconStyle src={icon}/>
-            <TextStyle>
-                <div className="title">{name}</div>
-                {description}
-            </TextStyle>
-        </ContainerStyle>
+        <div class="swiper-slide">
+            <ContainerStyle>
+                <IconStyle src={icon}/>
+                <TextStyle>
+                    <div className="title">{name}</div>
+                    {description}
+                </TextStyle>
+            </ContainerStyle>
+        </div>
     );
 }
 

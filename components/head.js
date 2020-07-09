@@ -18,7 +18,7 @@ export default function Head() {
             <title>{intl.formatMessage(description)}</title>
 
             <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-            
+            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
             <link rel="apple-touch-icon" sizes="57x57" href="/static/icons/favicons/apple-icon-57x57.png"/>
             <link rel="apple-touch-icon" sizes="60x60" href="/static/icons/favicons/apple-icon-60x60.png"/>
             <link rel="apple-touch-icon" sizes="72x72" href="/static/icons/favicons/apple-icon-72x72.png"/>
