@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
@@ -9,6 +9,7 @@ import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
+import Glide from '@glidejs/glide';
 
 const Wrapper = styled.div`
     display: grid;
@@ -70,64 +71,39 @@ const Arrow = styled.img`
 const Cards = styled.div`
     grid-row: 2;
     grid-column: 1;
+    display: flex;
     align-content: left;
-    height: 250px;
-    width: 100%;
-    padding-top: 10px;
-    margin: auto;
-    overflow: hidden;
+    height: 200px;
+    margin-top: 20px;
 
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
-
-    .carousel-slide {
-        display: flex;
-        width: 100%;
-        height: 250px;
-    }
 `;
 
-const SurveysFeatures = ({ card, setCard }) => {
+const SurveysFeatures = () => {
 
-    const slide = 230;
-
-    useEffect(() => {
-        const carouselSlide = document.querySelector('.carousel-slide');
-        const prevBtn = document.querySelector('#prevBtn');
-        const nextBtn = document.querySelector('#nextBtn');
-
-        nextBtn.addEventListener('click', () => {
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
-            setCard(card++)
-        })
-
-        prevBtn.addEventListener('click', () => {
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
-            setCard(card--)
-        })
-    })
+    new Glide('.glide').mount()
 
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
-        <HeaderText>
-            <div className="text">The tools you need at your fingertips</div>
-            <div className="arrows">
-            <Arrow 
-                id="prevBtn"
-                src={ArrowLeft}/>
-            <Arrow 
-                id="nextBtn"
-                src={ArrowRight}/> 
-            </div>
-        </HeaderText>
-        <Cards>
-            <div className="carousel-slide">
-                {features.map(features => 
+        <div className="glide">
+            <HeaderText>
+                <div className="text">The tools you need at your fingertips</div>
+                <div className="arrows">
+                    <div className="glide__arrows" data-glide-el="controls">
+                    <Arrow className="glide__arrow glide__arrow--left" data-glide-dir="<"src={ArrowLeft}/>
+                    <Arrow className="glide__arrow glide__arrow--right" data-glide-dir=">"src={ArrowRight}/> 
+                    </div>
+                </div>
+            </HeaderText>
+            <Cards>
+            <div className="glide__track" data-glide-el="track">
+            <div className="glide__slides">
+
+                {features.map(features =>
                     <FeaturesCard 
                         image={features.image}
                         name={features.name}
@@ -135,11 +111,13 @@ const SurveysFeatures = ({ card, setCard }) => {
                         key={features.id}
                     />
                 )}
+                </div>
             </div>
-        </Cards>
+            </Cards>
+        </div>
         </Wrapper>
     </ThemeProvider>
     )
 }
 
-export { SurveysFeatures } ;
+export default SurveysFeatures ;

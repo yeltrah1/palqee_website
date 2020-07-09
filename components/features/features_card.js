@@ -9,6 +9,7 @@ const ContainerStyle = styled.div`
     box-shadow: 0 0.8px 24px 0 rgba(206, 206, 206, 0.2);
     background-color: #ffffff;
     height: 190px;
+    width: 200px;
     padding: 20px;
     margin: 0 10px;
 `;
@@ -54,7 +55,7 @@ const FeaturesCard = ({name, description, image}) => {
     const icon = "/static/icons/features/"+image+""
 
     return (
-        <ContainerStyle>
+        <ContainerStyle className="glide__slide">
             <IconStyle src={icon}/>
             <TextStyle>
                 <div className="title">{name}</div>

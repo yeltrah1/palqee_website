@@ -1,60 +1,60 @@
 [
     {
-        "id": "1",
+        "id": "0",
         "image": "interviews_icon.svg",
         "name": "Ready-to-use interview templates",
         "description": "From training to regulatory assessments. Choose a template from the Palqee library."
     },
     {
-        "id": "2",
+        "id": "1",
         "image": "dashboard_icon.svg",
         "name": "Employees dashboard",
         "description": "Secure authentication for every employee with their own dashboard to manage their data privacy responsibilities."
     },
     {
-        "id": "3",
+        "id": "2",
         "image": "audiences_icon.svg",
         "name": "Audience management",
         "description": "Assign Process-Owners and organise your companies' workforce."
     },
     {
-        "id": "4",
+        "id": "3",
         "image": "assessments_icon.svg",
         "name": "Gap assessments",
         "description": "Ongoing assessments make sure you don't miss anything."
     },
     {
-        "id": "5",
+        "id": "4",
         "image": "dpia_icon.svg",
         "name": "Data protection impact assessments (DPIA)",
         "description": "Easy to use template with automated assessment."
     },
     {
-        "id": "6",
+        "id": "5",
         "image": "reminders_icon.svg",
         "name": "Reminders and notifications",
         "description": "Send reminders to survey respondents."
     },
     {
-        "id": "7",
+        "id": "6",
         "image": "vendors_icon.svg",
         "name": "Vendor and 3rd party assessment",
         "description": "Send third-party assessment surveys to suppliers and vendors."
     },
     {
-        "id": "8",
+        "id": "7",
         "image": "insights_icon.svg",
         "name": "Interviews summary and insights",
         "description": "Keep track and organise all insights in one place."
     },
     {
-        "id": "9",
+        "id": "8",
         "image": "reports_icon.svg",
         "name": "Automated compliance reports",
         "description": "Download compiled reports with all the insights you need."
     },
     {
-        "id": "10",
+        "id": "9",
         "image": "mapping_icon.svg",
         "name": "Automated data mapping",
         "description": "Automate surveys for ongoing compliance."

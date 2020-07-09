@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "d3-ease": "^1.0.6",
     "emailjs-com": "^2.4.1",
     "framer-motion": "^1.11.1",

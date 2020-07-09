@@ -7,11 +7,14 @@ import Layout from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
 import { SurveysHero } from '../components/sections/surveys_hero';
-import { SurveysFeatures } from '../components/features/surveys_features';
+import dynamic from 'next/dynamic';
+
+const SurveysFeatures = dynamic(
+  () => import('../components/features/surveys_features'),
+  { ssr: false }
+)
 
 const SurveysManager = () => {
-
-  const [card, setCard] = useState(1);
 
   return (
     <PageContextProvider>
@@ -22,7 +25,7 @@ const SurveysManager = () => {
             <SurveysHero/>
           </div>
           <div className="small-white">
-            <SurveysFeatures card={card} setCard={setCard}/>
+            <SurveysFeatures/>
           </div>
           <div className="large-grey">
 
