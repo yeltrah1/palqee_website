@@ -89,28 +89,27 @@ const Cards = styled.div`
     }
 `;
 
-const SurveysFeatures = () => {
+const SurveysFeatures = ({ card, setCard }) => {
 
-    const [card, setCard] = useState(1);
     const slide = 230;
 
     useEffect(() => {
         const carouselSlide = document.querySelector('.carousel-slide');
-
         const prevBtn = document.querySelector('#prevBtn');
         const nextBtn = document.querySelector('#nextBtn');
 
         nextBtn.addEventListener('click', () => {
             carouselSlide.style.transition = "transform 0.4s ease-in-out";
             carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
+            setCard(card++)
         })
 
         prevBtn.addEventListener('click', () => {
             carouselSlide.style.transition = "transform 0.4s ease-in-out";
             carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
+            setCard(card--)
         })
-
-    }, []);
+    })
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -118,7 +117,12 @@ const SurveysFeatures = () => {
         <HeaderText>
             <div className="text">The tools you need at your fingertips</div>
             <div className="arrows">
-            <Arrow id="prevBtn" onClick={() => setCard(prevState => prevState - 1)} src={ArrowLeft}/><Arrow id="nextBtn" onClick={() => setCard(prevState => prevState + 1)} src={ArrowRight}/> 
+            <Arrow 
+                id="prevBtn"
+                src={ArrowLeft}/>
+            <Arrow 
+                id="nextBtn"
+                src={ArrowRight}/> 
             </div>
         </HeaderText>
         <Cards>

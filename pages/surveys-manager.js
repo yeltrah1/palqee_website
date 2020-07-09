@@ -11,6 +11,8 @@ import { SurveysFeatures } from '../components/features/surveys_features';
 
 const SurveysManager = () => {
 
+  const [card, setCard] = useState(1);
+
   return (
     <PageContextProvider>
     <I18nProvider>
@@ -20,7 +22,7 @@ const SurveysManager = () => {
             <SurveysHero/>
           </div>
           <div className="small-white">
-            <SurveysFeatures/>
+            <SurveysFeatures card={card} setCard={setCard}/>
           </div>
           <div className="large-grey">
 
