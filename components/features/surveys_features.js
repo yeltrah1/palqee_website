@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
@@ -9,7 +9,6 @@ import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
-import Swiper, { Navigation, Pagination } from 'swiper';
 
 const Wrapper = styled.div`
     display: grid;
@@ -71,34 +70,47 @@ const Arrow = styled.img`
 const Cards = styled.div`
     grid-row: 2;
     grid-column: 1;
-    display: flex;
     align-content: left;
-    height: 200px;
-    margin-top: 20px;
+    height: 250px;
+    width: 100%;
+    padding-top: 10px;
+    margin: auto;
+    overflow: hidden;
 
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
-    .swiper-container {
-        width: 100vw;
-        height: 285px;
+    .carousel-slide {
+        display: flex;
+        width: 100%;
+        height: 250px;
     }
 `;
 
 const SurveysFeatures = () => {
 
-    Swiper.use([Navigation, Pagination]);
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        freeMode: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      })
+    const [card, setCard] = useState(1);
+    const slide = 230;
+
+    useEffect(() => {
+        const carouselSlide = document.querySelector('.carousel-slide');
+
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
+
+        nextBtn.addEventListener('click', () => {
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
+        })
+
+        prevBtn.addEventListener('click', () => {
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            carouselSlide.style.transform = "translateX("+(-slide*card)+"px)";
+        })
+
+    }, []);
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -106,12 +118,11 @@ const SurveysFeatures = () => {
         <HeaderText>
             <div className="text">The tools you need at your fingertips</div>
             <div className="arrows">
-            <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
+            <Arrow id="prevBtn" onClick={() => setCard(prevState => prevState - 1)} src={ArrowLeft}/><Arrow id="nextBtn" onClick={() => setCard(prevState => prevState + 1)} src={ArrowRight}/> 
             </div>
         </HeaderText>
         <Cards>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
+            <div className="carousel-slide">
                 {features.map(features => 
                     <FeaturesCard 
                         image={features.image}
@@ -120,8 +131,6 @@ const SurveysFeatures = () => {
                         key={features.id}
                     />
                 )}
-                </div>
-                <div class="swiper-pagination"></div>
             </div>
         </Cards>
         </Wrapper>

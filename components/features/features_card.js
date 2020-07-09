@@ -3,16 +3,14 @@ import styled from 'styled-components';
 
 const ContainerStyle = styled.div`
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px;
     grid-template-rows: 75px 100px;
     border-radius: 6px;
     box-shadow: 0 0.8px 24px 0 rgba(206, 206, 206, 0.2);
     background-color: #ffffff;
     height: 190px;
-    width: 200px;
     padding: 20px;
     margin: 0 10px;
-    cursor: grab;
 `;
 
 const IconStyle = styled.img`
@@ -56,15 +54,13 @@ const FeaturesCard = ({name, description, image}) => {
     const icon = "/static/icons/features/"+image+""
 
     return (
-        <div class="swiper-slide">
-            <ContainerStyle>
-                <IconStyle src={icon}/>
-                <TextStyle>
-                    <div className="title">{name}</div>
-                    {description}
-                </TextStyle>
-            </ContainerStyle>
-        </div>
+        <ContainerStyle>
+            <IconStyle src={icon}/>
+            <TextStyle>
+                <div className="title">{name}</div>
+                {description}
+            </TextStyle>
+        </ContainerStyle>
     );
 }
 
