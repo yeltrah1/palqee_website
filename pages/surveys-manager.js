@@ -7,12 +7,7 @@ import Layout from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
 import { SurveysHero } from '../components/sections/surveys_hero';
-import dynamic from 'next/dynamic';
-
-const SurveysFeatures = dynamic(
-  () => import('../components/features/surveys_features'),
-  { ssr: false }
-)
+import { SurveysFeatures } from '../components/features/surveys_features';
 
 const SurveysManager = () => {
 

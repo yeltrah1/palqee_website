@@ -9,7 +9,6 @@ import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
-import Glide from '@glidejs/glide';
 
 const Wrapper = styled.div`
     display: grid;
@@ -83,41 +82,30 @@ const Cards = styled.div`
 `;
 
 const SurveysFeatures = () => {
-
-    new Glide('.glide').mount()
-
+    
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
-        <div className="glide">
             <HeaderText>
                 <div className="text">The tools you need at your fingertips</div>
                 <div className="arrows">
-                    <div className="glide__arrows" data-glide-el="controls">
-                    <Arrow className="glide__arrow glide__arrow--left" data-glide-dir="<"src={ArrowLeft}/>
-                    <Arrow className="glide__arrow glide__arrow--right" data-glide-dir=">"src={ArrowRight}/> 
-                    </div>
+                    <Arrow src={ArrowLeft}/>
+                    <Arrow src={ArrowRight}/> 
                 </div>
             </HeaderText>
             <Cards>
-            <div className="glide__track" data-glide-el="track">
-            <div className="glide__slides">
-
                 {features.map(features =>
-                    <FeaturesCard 
-                        image={features.image}
-                        name={features.name}
-                        description={features.description} 
-                        key={features.id}
-                    />
+                <FeaturesCard 
+                    image={features.image}
+                    name={features.name}
+                    description={features.description} 
+                    key={features.id}
+                />
                 )}
-                </div>
-            </div>
             </Cards>
-        </div>
         </Wrapper>
     </ThemeProvider>
     )
 }
 
-export default SurveysFeatures ;
+export { SurveysFeatures } ;
