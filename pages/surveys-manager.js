@@ -7,6 +7,7 @@ import Layout from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
 import { SurveysHero } from '../components/sections/surveys_hero';
+import { SurveysFeatures } from '../components/features/surveys_features';
 
 const SurveysManager = () => {
 
@@ -19,7 +20,7 @@ const SurveysManager = () => {
             <SurveysHero/>
           </div>
           <div className="small-white">
-
+            <SurveysFeatures/>
           </div>
           <div className="large-grey">
 

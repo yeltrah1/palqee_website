@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
+    <path fill="#74D9B1" d="M51.2 0H12.8C5.73 0 0 5.73 0 12.8v38.4C0 58.27 5.73 64 12.8 64h38.4C58.27 64 64 58.27 64 51.2V12.8C64 5.73 58.27 0 51.2 0z" opacity=".2"/>
+    <path fill="#fff" stroke="#6ACEA7" stroke-linecap="round" stroke-width="1.5" d="M37.704 29.616c2.383 0 4.315-1.929 4.315-4.308 0-2.38-1.932-4.308-4.315-4.308-2.383 0-4.315 1.929-4.315 4.308 0 2.38 1.932 4.308 4.315 4.308z"/>
+    <path fill="#fff" fill-rule="evenodd" stroke="#6ACEA7" stroke-linecap="round" stroke-width="1.5" d="M37.704 32.54c-3.606 0-7.532 1.51-9.418 4.116 0 0 1.56 1.5 2.103 2.733.482 1.094.611 2.998.611 2.998h17.184c0-5.439-4.692-9.847-10.48-9.847z" clip-rule="evenodd"/>
+    <path stroke="#6ACEA7" stroke-linecap="round" stroke-width="1.5" d="M21.76 33.716c1.697 0 3.073-1.354 3.073-3.023s-1.376-3.022-3.073-3.022-3.073 1.353-3.073 3.022c0 1.67 1.376 3.023 3.073 3.023z"/>
+    <path fill-rule="evenodd" stroke="#6ACEA7" stroke-linecap="round" stroke-width="1.5" d="M21.76 36.342c-3.734 0-6.76 2.706-6.76 6.045h13.52c0-3.339-3.027-6.045-6.76-6.045z" clip-rule="evenodd"/>
+</svg>

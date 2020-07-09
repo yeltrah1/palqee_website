@@ -13,7 +13,6 @@ const HeroStyle = styled.div`
     grid-template-rows: 1fr;
     justify-items: center;
     width: 100vw;
-    height: 600px;
 `;
 
 const HeroText = styled.div`
@@ -59,10 +58,6 @@ const HeroText = styled.div`
         letter-spacing: normal;
         color: #cbd0df;
     }
-
-    .small .button {
-            line-height: 6;
-    }
 `;
 
 const SurveysHero = () => {
@@ -78,7 +73,7 @@ const SurveysHero = () => {
                 </div>
                 <div className="small">
                 Get started in minutes and send out your first data assessment survey now.<br/>
-                    <GetStartedButton className="button">Get started for free</GetStartedButton>
+                    <GetStartedButton>Get started for free</GetStartedButton>
                 </div>
             </HeroText>
         </HeroStyle>

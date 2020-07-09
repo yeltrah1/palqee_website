@@ -7,12 +7,6 @@ import { NavBar } from '../components/navBar';
 import { Footer } from '../components/footer';
 import { palqeeTheme } from '../providers/theme/colors.ts';
 
-// const Wrapper = styled.div` 
-//     position: relative;
-//     z-index: 0; //portfolio page(-2) dropdown menu(-1) layout body(0) layout navbar(2)
-//     height: 140vh;
-// `;
-
 const Layout = ({ children }) => {
 
     const [white, setWhite] = useState(false);

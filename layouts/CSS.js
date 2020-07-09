@@ -205,14 +205,12 @@ export const GetStartedButton = styled.a`
     cursor: pointer;
     background: ${props => props.theme.redButton};
     border-radius: 4px;
-    height: 18px;
-    width: 120px;
-    margin-top: 20px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-family: Poppins-Semi;
     font-style: normal;
     font-size: 12px;
     color: white;
+    line-height: 6;
     
     @font-face {
         font-family: 'Poppins-Semi';
@@ -312,12 +310,12 @@ export const SurveysStyle = styled.div`
     background-size: cover;
     position: relative;
     height: 90vh;
-    width: 100vw;
+    width: 100vw
   }
 
   .small-white {
     background: white;
-    height: 30vh;
+    height: 400px;
     position: relative;
   }
 
