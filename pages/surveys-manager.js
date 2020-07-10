@@ -11,6 +11,7 @@ import { SurveysFeatures } from '../components/features/surveys_features';
 import { RegulationsMap } from '../components/sections/regulations_map';
 import { HowToSurveys } from '../components/sections/howto_surveys';
 import { Credentials } from '../components/sections/credentials';
+import { ComplianceTeams } from '../components/sections/compliance_teams';
 
 const SurveysManager = () => {
 
@@ -35,7 +36,7 @@ const SurveysManager = () => {
             <Credentials/>
           </div>
           <div className="large-blue">
-
+            <ComplianceTeams/>
           </div>
           <div className="skewed-blue">
 

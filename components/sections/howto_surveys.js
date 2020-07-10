@@ -139,9 +139,9 @@ const HowToSurveys = () => {
     const [width, setWidth] = useState(550)
 
     const changeImage = () => {
-        if (tab === 1) { return "/static/images/survey_builder.svg" }
-        if (tab === 2) { return "/static/images/survey_audiences.svg" }
-        if (tab === 3) { return "/static/images/survey_insights.svg" }
+        if (tab === 1) { return "https://res.cloudinary.com/palqee/image/upload/v1594398833/survey_builder.svg" }
+        if (tab === 2) { return "https://res.cloudinary.com/palqee/image/upload/v1594398833/survey_audiences.svg" }
+        if (tab === 3) { return "https://res.cloudinary.com/palqee/image/upload/v1594398833/survey_insights.svg" }
     }
 
     return (

@@ -55,6 +55,12 @@ const ContainerLogos = styled.div`
     grid-template-columns: repeat(6, 120px);
     grid-template-rows: 1fr;
     width: 100%;
+    height: 100%;
+    align-items: center;
+    background-image: url("/static/patterns/bg_line.svg");
+    background-repeat: no-repeat;
+    background-size: 650px;
+    background-position: bottom;
 `;
 
 const Logos = styled.img`

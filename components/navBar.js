@@ -94,7 +94,7 @@ const NavBar = ({ white, setWhite }) => {
             </div>   
             <div className="demo">
                 <DemoButton>Book Demo</DemoButton>
-                <LoginButton href="https://dev.palqee.com">Login</LoginButton>
+                <LoginButton href="https://dev.palqee.com/?showLogin=1">Login</LoginButton>
             </div>   
         </NavStyle>
         </ThemeProvider>
