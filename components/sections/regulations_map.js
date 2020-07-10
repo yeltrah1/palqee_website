@@ -19,7 +19,7 @@ const BenefitText = styled.div`
     justify-items: start;
     grid-template-columns: 1fr;
     margin-left: 60px;
-    height: 30%;  
+    height: 35%;  
 
     @font-face {
         font-family: 'Poppins-Semi';

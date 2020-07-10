@@ -327,13 +327,13 @@ export const SurveysStyle = styled.div`
 
   .large-white {
     background: white;
-    height: 600px;
+    height: 700px;
     position: relative;
   }
 
   .large-grey {
     background: #FBFCFD;
-    height: 500px;
+    height: 600px;
     position: relative;
   }
 
