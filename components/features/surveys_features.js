@@ -115,39 +115,39 @@ const SurveysFeatures = () => {
         resizeRef.current = handleResize
     })
 
-    useEffect(() => {
-        const play = () => {
-          autoPlayRef.current()
-        }
+    // useEffect(() => {
+    //     const play = () => {
+    //       autoPlayRef.current()
+    //     }
 
-        const smooth = e => {
-            if (e.target.className.includes('SliderContent')) {
-              transitionRef.current()
-            }
-        }
+    //     const smooth = e => {
+    //         if (e.target.className.includes('SliderContent')) {
+    //           transitionRef.current()
+    //         }
+    //     }
 
-        const resize = () => {
-            resizeRef.current()
-        }
+    //     const resize = () => {
+    //         resizeRef.current()
+    //     }
 
-        const transitionEnd = window.addEventListener('transitionend', smooth)
-        const onResize = window.addEventListener('resize', resize)
+    //     const transitionEnd = window.addEventListener('transitionend', smooth)
+    //     const onResize = window.addEventListener('resize', resize)
 
-        let interval = null
+    //     let interval = null
       
-        if (features.autoPlay) {
-           interval = setInterval(play, features.autoPlay * 1000)
-        }
+    //     if (features.autoPlay) {
+    //        interval = setInterval(play, features.autoPlay * 1000)
+    //     }
 
-        return () => {
-            window.removeEventListener('transitionend', transitionEnd)
-            window.removeEventListener('resize', onResize)
+    //     return () => {
+    //         window.removeEventListener('transitionend', transitionEnd)
+    //         window.removeEventListener('resize', onResize)
 
-            if (features.autoPlay) {
-              clearInterval(interval)
-            }
-          }
-    }, [])
+    //         if (features.autoPlay) {
+    //           clearInterval(interval)
+    //         }
+    //       }
+    // }, [])
 
     useEffect(() => {
         if (transition === 0) setState({ ...state, transition: 0.45 })

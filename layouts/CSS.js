@@ -333,7 +333,7 @@ export const SurveysStyle = styled.div`
 
   .large-grey {
     background: #FBFCFD;
-    height: 600px;
+    height: 500px;
     position: relative;
   }
 

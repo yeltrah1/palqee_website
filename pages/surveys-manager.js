@@ -8,6 +8,7 @@ import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
 import { SurveysHero } from '../components/sections/surveys_hero';
 import { SurveysFeatures } from '../components/features/surveys_features';
+import { RegulationsMap } from '../components/sections/regulations_map';
 
 const SurveysManager = () => {
 
@@ -23,7 +24,7 @@ const SurveysManager = () => {
             <SurveysFeatures/>
           </div>
           <div className="large-grey">
-
+            <RegulationsMap/>
           </div>
           <div className="large-white">
 
