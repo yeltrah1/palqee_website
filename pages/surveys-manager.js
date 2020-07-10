@@ -10,6 +10,7 @@ import { SurveysHero } from '../components/sections/surveys_hero';
 import { SurveysFeatures } from '../components/features/surveys_features';
 import { RegulationsMap } from '../components/sections/regulations_map';
 import { HowToSurveys } from '../components/sections/howto_surveys';
+import { Credentials } from '../components/sections/credentials';
 
 const SurveysManager = () => {
 
@@ -31,7 +32,7 @@ const SurveysManager = () => {
             <HowToSurveys/>
           </div>
           <div className="small-darkblue">
-
+            <Credentials/>
           </div>
           <div className="large-blue">
 

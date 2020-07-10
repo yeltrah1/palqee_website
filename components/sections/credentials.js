@@ -4,49 +4,30 @@ import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
-import { TakeTestButton } from '../../layouts/CSS';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
-const TestStyle = styled.div`
+const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 950px 1fr;
+    grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
     width:100vw;
+    height: 100%;
+    align-items: center;
 `;
 
-const Container = styled.div`
+const Text = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin: 5vh 0;
-    width: 100%;
-    height: 50vh;
-`;
-
-const TestText = styled.div`
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
-    justify-content: center;
-
-    display: grid;
     align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.4fr 0.3fr;
-    width: 900px;
-    height: 320px;
-    padding-left: 50px;
-    border-radius: 16px;
-    background-color: #f2f8fd;
-
+    margin: 0 90px;
+    
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
     .large {
-        z-index: 2;
-        width: 400px;
         font-family: Poppins-Semi;
         font-size: 28px;
         font-weight: 600;
@@ -54,48 +35,50 @@ const TestText = styled.div`
         font-style: normal;
         line-height: 1.43;
         letter-spacing: normal;
-        color: ${props => props.theme.mainFontColor};
-        margin-top: 45px;
+        color: #f2f8fd;
     }
 
     .small {
-        z-index: 2;
-        width: 400px;
         font-family: Poppins;
         font-size: 14px;
         font-weight: normal;
-        font-style: normal;
-        letter-spacing: normal;
         font-stretch: normal;
+        font-style: normal;
         line-height: 1.71;
-        color: #758194;
+        letter-spacing: normal;
+        color: #f2f8fd;
     }
 `;
 
-const Image = styled.img`
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: end;
-    width: 60em;
-    margin-right: -50px;
+const ContainerLogos = styled.div`
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows: 1fr;
+    width: 100%;
+`;
+
+const Logos = styled.img`
+    justify-self: center;
 `;
 
 const Credentials = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
-          <TestStyle>
-            <div></div>
-            <Container>
-                <TestText>
-                    <div className="large">Not 100% sure whether you have to comply with GDPR, CCPA or LGPD?</div>
-                    <div className="small">Take our test and have an answer within minutes.</div>
-                    <TakeTestButton>Take the free test</TakeTestButton>
-                </TestText>
-                <Image src={"/static/images/palqee_test.svg"}/>
-            </Container>
-            <div></div>
-          </TestStyle>
+          <Wrapper>
+            <Text>
+                <div className="large">Our Credentials</div>
+                <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
+            </Text>
+            <ContainerLogos>
+                <Logos style={{paddingBottom:"50px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+                <Logos style={{paddingTop:"100px"}} width={150} src={"/static/icons/badges/anppd.png"}/>
+                <Logos style={{paddingBottom:"70px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+                <Logos style={{paddingTop:"60px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+                <Logos style={{paddingBottom:"50px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+                <Logos style={{paddingTop:"40px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+            </ContainerLogos>
+          </Wrapper>
       </ThemeProvider>
     )
 }
