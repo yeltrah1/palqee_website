@@ -319,9 +319,9 @@ export const SurveysStyle = styled.div`
     position: relative;
   }
 
-  .mid-white {
-    background: white;
-    height: 500px;
+  .large-grey {
+    background: #FBFCFD;
+    height: 600px;
     position: relative;
   }
 
@@ -331,15 +331,15 @@ export const SurveysStyle = styled.div`
     position: relative;
   }
 
-  .large-grey {
-    background: #FBFCFD;
-    height: 600px;
+  .small-darkblue {
+    background: black;
+    height: 300px;
     position: relative;
   }
 
-  .small-blue {
-    background: #f2f8fd;
-    height: 300px;
+  .large-blue {
+    background: #f2f8fd
+    height: 700px;
     position: relative;
   }
 

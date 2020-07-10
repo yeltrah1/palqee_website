@@ -30,7 +30,10 @@ const SurveysManager = () => {
           <div className="large-white">
             <HowToSurveys/>
           </div>
-          <div className="small-blue">
+          <div className="small-darkblue">
+
+          </div>
+          <div className="large-blue">
 
           </div>
           <div className="skewed-blue">
