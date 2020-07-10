@@ -52,7 +52,7 @@ const Text = styled.div`
 
 const ContainerLogos = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 120px);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     width: 100%;
     height: 100%;

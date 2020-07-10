@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -61,9 +61,10 @@ const Items = styled.div`
     grid-template-rows: 1fr;
     width: 90%;
     height: 80%;
-    align-items: center;
 
     .active-bar {
+        grid-column: 1;
+        grid-row: 1;
         width: 3px;
         height: 130px;
         border-radius: 1px;
@@ -71,11 +72,12 @@ const Items = styled.div`
     }
 
     .inactive-bar {
+        grid-column: 1;
+        grid-row: 1;
         width: 3px;
         height: 130px;
-        opacity: 0.2;
         border-radius: 1px;
-        background-color: #a0aab9;
+        background-color: #f2f2f2;
     }
 `;
 
@@ -155,24 +157,45 @@ const HowToSurveys = () => {
                         initial={{ opacity: 0, width: width}} 
                         animate={{ opacity: 1 }} 
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}/>
+                        transition={{ duration: 0.4 }}/>
                     <StepsItems>
                         <Items>
-                            <div className={ tab === 1 ? "active-bar" : "inactive-bar" }></div>
+                            <div className={"inactive-bar"}></div>
+                            <motion.div className={ tab === 1 ? "active-bar" : "inactive-bar" }
+                                key={tab}
+                                initial={{ height: 0 }} 
+                                animate={{ height: 130 }} 
+                                exit={{ height: 0 }}
+                                transition={{ duration: 0.2 }}
+                            ></motion.div>
                             <TextItems onClick={() => { setTab(1); setWidth(550) }}>
                             <div className={ tab === 1 ? "active-large" : "inactive-large" }>1. Start with a survey</div>
                             <div className={ tab === 1 ? "active-small" : "inactive-small" }>Know what you have to do, with Palqee regulatory survey templates or create your own with our survey wizard.</div>
                             </TextItems>
                         </Items>
                         <Items>
-                            <div className={ tab === 2 ? "active-bar" : "inactive-bar" }></div>
+                            <div className={"inactive-bar"}></div>
+                            <motion.div className={ tab === 2 ? "active-bar" : "inactive-bar" }
+                                key={tab}
+                                initial={{ height: 0 }} 
+                                animate={{ height: 130 }} 
+                                exit={{ height: 0 }}
+                                transition={{ duration: 0.2 }}
+                            ></motion.div>
                             <TextItems onClick={() => {setTab(2); setWidth(530)}}>
                             <div className={ tab === 2 ? "active-large" : "inactive-large" }>2. Pick your audience</div>
                             <div className={ tab === 2 ? "active-small" : "inactive-small" }>Create audiences and manage your stakeholders efficiently. Send a data mapping survey to your businesses’ workforce and a assessments to your 3rd party vendors.</div>
                             </TextItems>
                         </Items>
                         <Items>
-                            <div className={ tab === 3 ? "active-bar" : "inactive-bar" }></div>
+                            <div className={"inactive-bar"}></div>
+                            <motion.div className={ tab === 3 ? "active-bar" : "inactive-bar" }
+                                key={tab}
+                                initial={{ height: 0 }} 
+                                animate={{ height: 130 }} 
+                                exit={{ height: 0 }}
+                                transition={{ duration: 0.2 }}
+                            ></motion.div>
                             <TextItems onClick={() => {setTab(3), setWidth(600)}}>
                             <div className={ tab === 3 ? "active-large" : "inactive-large" }>3. Get the insight</div>
                             <div className={ tab === 3 ? "active-small" : "inactive-small" }>Palqee automatically summarises and analyses results for you. Identify areas of improvement in your data map, recommend next steps on DPIAs and track workforce confidence on data protection best practices.</div>
