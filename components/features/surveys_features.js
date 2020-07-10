@@ -64,7 +64,6 @@ const Arrow = styled.img`
     :hover {
         transform: scale(1.2);
     }
-}
 `;
 
 const Cards = styled.div`
@@ -81,7 +80,7 @@ const Cards = styled.div`
     }
 `;
 
-const Slider = styled.div`
+const SliderContent = styled.div`
     transform: translateX(-${props => props.translate}px);
     transition: transform ease-out ${props => props.transition}s;
     height: 100%;
@@ -95,6 +94,7 @@ const SurveysFeatures = () => {
     const secondCard = features[1]
     const lastCard = features[features.length - 1]
     const width = 260
+    const getWidth = () => window.innerWidth
 
     const [state, setState] = useState({
         activeCard: 0,
@@ -107,13 +107,55 @@ const SurveysFeatures = () => {
 
     const autoPlayRef = useRef()
     const transitionRef = useRef()
+    const resizeRef = useRef()
 
-    const nextSlide = () => {setState({
-      ...state,
-      translate: translate + width,
-      activeCard: activeCard === features.length - 1 ? 0 : activeCard + 1
+    useEffect(() => {
+        autoPlayRef.current = nextSlide
+        transitionRef.current = smoothTransition
+        resizeRef.current = handleResize
     })
-    console.log(activeCard)}
+
+    useEffect(() => {
+        const play = () => {
+          autoPlayRef.current()
+        }
+
+        const smooth = e => {
+            if (e.target.className.includes('SliderContent')) {
+              transitionRef.current()
+            }
+        }
+
+        const resize = () => {
+            resizeRef.current()
+        }
+
+        const transitionEnd = window.addEventListener('transitionend', smooth)
+        const onResize = window.addEventListener('resize', resize)
+
+        let interval = null
+      
+        if (features.autoPlay) {
+           interval = setInterval(play, features.autoPlay * 1000)
+        }
+
+        return () => {
+            window.removeEventListener('transitionend', transitionEnd)
+            window.removeEventListener('resize', onResize)
+
+            if (features.autoPlay) {
+              clearInterval(interval)
+            }
+          }
+    }, [])
+
+    useEffect(() => {
+        if (transition === 0) setState({ ...state, transition: 0.45 })
+    }, [transition])
+
+    const handleResize = () => {
+        setState({ ...state, translate: width, transition: 0 })
+      }
 
     const smoothTransition = () => {
         let _slides = []
@@ -134,50 +176,22 @@ const SurveysFeatures = () => {
         })
     }
 
-    useEffect(() => {
-        autoPlayRef.current = nextSlide
-        transitionRef.current = smoothTransition
+    const nextSlide = () => {
+        if (activeCard !== features.length - 5) // deactivate nextSlide
+        setState({
+            ...state,
+            translate: translate + width,
+            activeCard: activeCard === features.length - 1 ? 0 : activeCard + 1
     })
-
-    useEffect(() => {
-        const play = () => {
-          autoPlayRef.current()
-        }
-
-        const smooth = e => {
-            if (e.target.className.includes('SliderContent')) {
-              transitionRef.current()
-            }
-        }
-
-        const transitionEnd = window.addEventListener('transitionend', smooth)
-      
-        let interval = null
-      
-        if (features.autoPlay) {
-           interval = setInterval(play, features.autoPlay * 1000)
-        }
-
-        return () => {
-            window.removeEventListener('transitionend', transitionEnd)
-      
-            if (features.autoPlay) {
-              clearInterval(interval)
-            }
-          }
-    }, [])
-
-    useEffect(() => {
-        if (transition === 0) setState({ ...state, transition: 0.45 })
-    }, [transition])
+    }
 
     const prevSlide = () => {
-    setState({
-      ...state,
-      translate: translate - width,
-      activeCard: activeCard === 0 ? 0 : activeCard - 1
+        if (activeCard !== 0) // deactivate prevSlide
+            setState({
+            ...state,
+            translate: translate - width,
+            activeCard: activeCard === 0 ? 0 : activeCard - 1
     })
-    console.log(activeCard)
     }
 
     return (
@@ -186,12 +200,12 @@ const SurveysFeatures = () => {
             <HeaderText>
                 <div className="text">The tools you need at your fingertips</div>
                 <div className="arrows">
-                    <Arrow src={ArrowLeft} onClick={prevSlide}/>
-                    <Arrow src={ArrowRight} onClick={nextSlide}/> 
+                    <Arrow className={activeCard === 0 ? "hidden" : "visible"} src={ArrowLeft} onClick={prevSlide}/>
+                    <Arrow className={activeCard === (features.length - 1) ? "hidden" : "visible"} src={ArrowRight} onClick={nextSlide}/> 
                 </div>
             </HeaderText>
             <Cards>
-            <Slider
+            <SliderContent
                 translate={translate}
                 transition={transition}
                 width={width * _slides.length}
@@ -204,7 +218,7 @@ const SurveysFeatures = () => {
                     key={features.id}
                 />
                 )}
-            </Slider>
+            </SliderContent>
             </Cards>
         </Wrapper>
     </ThemeProvider>
