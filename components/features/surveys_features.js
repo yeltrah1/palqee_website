@@ -108,11 +108,12 @@ const SurveysFeatures = () => {
     const autoPlayRef = useRef()
     const transitionRef = useRef()
 
-    const nextSlide = () => setState({
+    const nextSlide = () => {setState({
       ...state,
       translate: translate + width,
       activeCard: activeCard === features.length - 1 ? 0 : activeCard + 1
     })
+    console.log(activeCard)}
 
     const smoothTransition = () => {
         let _slides = []
@@ -170,12 +171,14 @@ const SurveysFeatures = () => {
         if (transition === 0) setState({ ...state, transition: 0.45 })
     }, [transition])
 
-    const prevSlide = () =>
+    const prevSlide = () => {
     setState({
       ...state,
-      translate: 0,
-      activeCard: activeCard === 0 ? features.length - 1 : activeCard - 1
+      translate: translate - width,
+      activeCard: activeCard === 0 ? 0 : activeCard - 1
     })
+    console.log(activeCard)
+    }
 
     return (
     <ThemeProvider theme={palqeeTheme}>
