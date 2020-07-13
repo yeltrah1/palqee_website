@@ -12,6 +12,7 @@ import { RegulationsMap } from '../components/sections/regulations_map';
 import { HowToSurveys } from '../components/sections/howto_surveys';
 import { Credentials } from '../components/sections/credentials';
 import { ComplianceTeams } from '../components/sections/compliance_teams';
+import { ProductBlog } from '../components/sections/product_blog';
 
 const SurveysManager = () => {
 
@@ -37,9 +38,7 @@ const SurveysManager = () => {
           </div>
           <div className="large-blue">
             <ComplianceTeams/>
-          </div>
-          <div className="skewed-blue">
-
+            <ProductBlog/>
           </div>
           <div className="bottom-grey">
             <Sales/>

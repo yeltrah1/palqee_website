@@ -12,9 +12,8 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     width:100vw;
-    height: 100%;
-    place-items: center;
-    padding-top: 60px;
+    justify-items: center;
+    padding-top: 80px;
 `;
 
 const Header = styled.div`
@@ -22,6 +21,7 @@ const Header = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+    height: 280px;
     width: 60%;
     
     @font-face {
@@ -31,13 +31,15 @@ const Header = styled.div`
 
     .large {
         font-family: Poppins-Semi;
-        font-size: 36px;
+        font-size: 39px;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
         text-align: center;
         line-height: 1.43;
         letter-spacing: normal;
+        align-self: end;
+        padding-bottom: 20px;
         color: ${props => props.theme.mainFontColor};
     }
 `;
@@ -46,8 +48,8 @@ const ContainerTeams = styled.div`
     display: grid;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 200px 200px;
-    column-gap: 25px;
-    row-gap: 25px;
+    column-gap: 35px;
+    row-gap: 35px;
 `;
 
 const Cards = styled.div`
@@ -55,6 +57,7 @@ const Cards = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
     padding-bottom: 20px;
+    background: white;
 
     .icon {
         align-self: end;
@@ -126,7 +129,7 @@ const ComplianceTeams = () => {
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/members.svg" className="icon"/>
-                    <div className="title">New team members</div>
+                    <div className="title">New Team Members</div>
                     <div className="small">Get every new team member on board with Data Privacy training.</div>
                 </Cards>
             </ContainerTeams>

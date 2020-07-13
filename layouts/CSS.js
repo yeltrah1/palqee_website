@@ -332,20 +332,23 @@ export const SurveysStyle = styled.div`
   }
 
   .small-darkblue {
-    background: black;
+    background-image: url("/static/patterns/small_blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 300px;
     position: relative;
+    margin-top: 50px;
+    z-index: 1;
   }
 
   .large-blue {
-    background: #f2f8fd
-    height: 700px;
-    position: relative;
-  }
-
-  .skewed-blue {
-    height: 500px;
-    width: 200vw;
+    background-image: url("/static/patterns/light_blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1500px;
+    width: 100vw;
+    margin-top: -100px;
+    padding-top: 100px;
     position: relative;
   }
 

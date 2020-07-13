@@ -8,7 +8,7 @@ import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 45% 1fr;
     grid-template-rows: 1fr;
     width:100vw;
     height: 100%;
@@ -20,7 +20,8 @@ const Text = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    margin: 0 90px;
+    margin-left: 150px;
+    margin-right: 60px;
     
     @font-face {
         font-family: 'Poppins-Semi';
@@ -53,6 +54,7 @@ const Text = styled.div`
 const ContainerLogos = styled.div`
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    column-gap: 20px;
     grid-template-rows: 1fr;
     width: 100%;
     height: 100%;
@@ -77,12 +79,12 @@ const Credentials = () => {
                 <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
             </Text>
             <ContainerLogos>
-                <Logos style={{paddingBottom:"50px"}} width={100} src={"/static/icons/badges/exin.png"}/>
-                <Logos style={{paddingTop:"100px"}} width={150} src={"/static/icons/badges/anppd.png"}/>
-                <Logos style={{paddingBottom:"70px"}} width={100} src={"/static/icons/badges/exin.png"}/>
-                <Logos style={{paddingTop:"60px"}} width={100} src={"/static/icons/badges/exin.png"}/>
-                <Logos style={{paddingBottom:"50px"}} width={100} src={"/static/icons/badges/exin.png"}/>
-                <Logos style={{paddingTop:"40px"}} width={100} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={140} src={"/static/icons/badges/anppd.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
             </ContainerLogos>
           </Wrapper>
       </ThemeProvider>
