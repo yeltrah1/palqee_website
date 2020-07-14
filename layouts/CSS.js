@@ -246,11 +246,11 @@ export const HomeStyle = styled.div`
   overflow-x: hidden;
 
   .headline {
-    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594009368/blue_bg.svg");
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594742812/blue_bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 650px;
     position: relative;
-    height: 113vh;
+    height: 700px;
     width: 100vw;
   }
 
@@ -305,12 +305,11 @@ export const SurveysStyle = styled.div`
   overflow-x: hidden;
 
   .headline {
-    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594245395/blue_bg_small.svg");
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594748081/Blue_Bg_smal.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 550px;
     position: relative;
-    height: 90vh;
-    width: 100vw
+    height: 550px;
   }
 
   .small-white {
@@ -322,6 +321,62 @@ export const SurveysStyle = styled.div`
   .large-grey {
     background: #FBFCFD;
     height: 600px;
+    position: relative;
+  }
+
+  .large-white {
+    background: white;
+    height: 700px;
+    position: relative;
+  }
+
+  .small-darkblue {
+    background-image: url("/static/patterns/small_blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    margin-top: 50px;
+    z-index: 1;
+  }
+
+  .large-blue {
+    background-image: url("/static/patterns/light_blue_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1500px;
+    width: 100vw;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+`;
+
+export const AboutStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/globe_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    position: relative;
+    height: 90vh;
+    width: 100vw
+  }
+
+  .small-white {
+    background: white;
+    height: 400px;
     position: relative;
   }
 

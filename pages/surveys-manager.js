@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PageContextProvider } from "../providers/context";
 import { I18nProvider, LOCALES } from "../providers/i18n";
 
