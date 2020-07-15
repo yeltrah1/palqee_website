@@ -9,24 +9,21 @@ import { GetStartedButton } from '../../layouts/CSS';
 
 const HeroStyle = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-top: 68px;
+    margin-top: 58px;
     width: 100vw;
 `;
 
 const HeroText = styled.div`
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr;
-    width: 40vw;
+    width: 400px;
     height: 192px;
-    margin-top: 40px;
-    margin-left: 8vw;
+    margin-left: 18vw;
+    margin-top: 120px;
 
     .large {
     font-family: Poppins;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: normal;
     font-style: normal;
     line-height: 1.33;
@@ -51,7 +48,7 @@ const HeroText = styled.div`
 
     .small {
         font-family: Poppins;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
         font-style: normal;
         letter-spacing: normal;
@@ -60,10 +57,7 @@ const HeroText = styled.div`
 `;
 
 const Image = styled.img`
-    grid-column: 1;
-    grid-row: 1;
     justify-self: center;
-    margin-left: 40vw;
     width: 600px;
 `;
 
@@ -74,14 +68,14 @@ const AboutHero = () => {
       <HeroStyle>
         <HeroText>
             <div className="large">
-                ...<br/>
-                <span className="semi">...<u>Palqee</u>.</span><br/>
+                <span className="semi"><u>Our Mission</u></span><br/>
             </div>
             <div className="small">
-                The tool to succeed with internal Privacy Operations.<br/>
+                We facilitate ethical and secure management of Personal Data universally for everyone.<br/>
                 <GetStartedButton>Get started for free</GetStartedButton>
             </div>
         </HeroText>
+        <Image src={"/static/images/globe.png"}/>
       </HeroStyle>
     </ThemeProvider>
   )

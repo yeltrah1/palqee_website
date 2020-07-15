@@ -7,6 +7,8 @@ import Layout from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { AboutStyle } from '../layouts/CSS';
 import { AboutHero } from '../components/sections/about_hero';
+import { Culture } from '../components/sections/culture';
+import { AboutDetails } from '../components/sections/about_details';
 
 const AboutUs = () => {
 
@@ -19,10 +21,10 @@ const AboutUs = () => {
             <AboutHero/>
           </div>
           <div className="small-white">
-
+            <Culture/>
           </div>
-          <div className="large-grey">
-
+          <div className="large-white">
+            <AboutDetails/>
           </div>
           <div className="large-white">
 

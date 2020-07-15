@@ -366,23 +366,23 @@ export const AboutStyle = styled.div`
   overflow-x: hidden;
 
   .headline {
-    background-image: url("/static/patterns/globe_bg.jpg");
+    background-image: url("/static/patterns/clouds_bg.png");
     background-repeat: no-repeat;
     background-size: 100% 550px;
     position: relative;
-    height: 90vh;
-    width: 100vw
+    height: 580px;
+    width: 100vw;
   }
 
   .small-white {
     background: white;
-    height: 400px;
+    height: 350px;
     position: relative;
   }
 
   .large-white {
     background: white;
-    height: 700px;
+    height: 500px;
     position: relative;
   }
 
