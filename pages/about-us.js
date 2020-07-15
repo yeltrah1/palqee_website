@@ -9,6 +9,7 @@ import { AboutStyle } from '../layouts/CSS';
 import { AboutHero } from '../components/sections/about_hero';
 import { Culture } from '../components/sections/culture';
 import { AboutDetails } from '../components/sections/about_details';
+import { InnovationBanner } from '../components/sections/innovation_banner';
 
 const AboutUs = () => {
 
@@ -26,11 +27,8 @@ const AboutUs = () => {
           <div className="large-white">
             <AboutDetails/>
           </div>
-          <div className="large-white">
-
-          </div>
           <div className="small-darkblue">
-              
+            <InnovationBanner/>
           </div>
           <div className="large-blue">
 

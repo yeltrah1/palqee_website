@@ -376,24 +376,22 @@ export const AboutStyle = styled.div`
 
   .small-white {
     background: white;
-    height: 350px;
+    height: 380px;
     position: relative;
   }
 
   .large-white {
     background: white;
-    height: 500px;
+    height: 330px;
     position: relative;
   }
 
   .small-darkblue {
-    background-image: url("/static/patterns/small_blue_bg.svg");
+    background-image: url("/static/patterns/small_blue_about.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+    background-size: 100% 100%;
+    height: 350px;
     position: relative;
-    margin-top: 50px;
-    z-index: 1;
   }
 
   .large-blue {
