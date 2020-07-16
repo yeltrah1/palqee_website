@@ -341,9 +341,9 @@ export const SurveysStyle = styled.div`
   }
 
   .large-blue {
-    background-image: url("/static/patterns/light_blue_bg.svg");
+    background-image: url("/static/patterns/light_blue_surveys.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 1250px;
     height: 1500px;
     width: 100vw;
     margin-top: -100px;
@@ -395,9 +395,9 @@ export const AboutStyle = styled.div`
   }
 
   .large-blue {
-    background-image: url("/static/patterns/light_blue_bg.svg");
+    background-image: url("/static/patterns/light_blue_about.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 1250px;
     height: 1500px;
     width: 100vw;
     margin-top: -100px;
