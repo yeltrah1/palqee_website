@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "type": "team",
+        "name": "Sabrina Palme",
+        "image": "sabrina.png",
+        "role": "Chief Executive Officer",        
+        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+    },
+    {
+        "id": "2",
+        "type": "team",
+        "name": "Andre Quintanilha",
+        "image": "sabrina.png",
+        "role": "Chief Privacy Officer",        
+        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+    },
+    {
+        "id": "3",
+        "type": "team",
+        "name": "Andre Quintanilha",
+        "image": "sabrina.png",
+        "role": "Chief Privacy Officer",        
+        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+    },
+    {
+        "id": "4",
+        "type": "advisor",
+        "name": "Andre Quintanilha",
+        "image": "sabrina.png",
+        "role": "Chief Privacy Officer",        
+        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+    }
+    
+]

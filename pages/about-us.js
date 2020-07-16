@@ -10,6 +10,7 @@ import { AboutHero } from '../components/sections/about_hero';
 import { Culture } from '../components/sections/culture';
 import { AboutDetails } from '../components/sections/about_details';
 import { InnovationBanner } from '../components/sections/innovation_banner';
+import { TeamMembers } from '../components/team/team_members';
 
 const AboutUs = () => {
 
@@ -31,7 +32,7 @@ const AboutUs = () => {
             <InnovationBanner/>
           </div>
           <div className="large-blue">
-
+            <TeamMembers/>
           </div>
           <div className="bottom-grey">
             <Sales/>
