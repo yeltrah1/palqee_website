@@ -5,8 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
-
-import PalqeeBlue from '../../public/static/icons/palqee_blue.png';
 import Slavian from '../../public/static/icons/clients/Slavian_blue.png';
 
 const Wrapper = styled.div`
@@ -68,16 +66,16 @@ const Clients = () => {
               ease: "linear", 
               loop: Infinity, 
               duration: 30 }}>
-              <ClientsStyle src={PalqeeBlue}/>
+              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
               <ClientsStyle src={Slavian}/>
               <ClientsStyle src={Slavian}/>
               <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={PalqeeBlue}/>
-              <ClientsStyle src={PalqeeBlue}/>
+              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
+              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
               <ClientsStyle src={Slavian}/>
               <ClientsStyle src={Slavian}/>
               <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={PalqeeBlue}/>
+              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
             </Carousel>
 
         </Wrapper>
