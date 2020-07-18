@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import translate from "../providers/i18n/translate";
 
-import PalqeeWhite from '../public/static/icons/palqee_white.png';
-import PalqeeBlue from '../public/static/icons/palqee_blue.png';
 import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
 import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
 
@@ -56,7 +54,7 @@ const NavBar = ({ white, setWhite }) => {
         <NavStyle id='hover'>
             <div>
                 <Link href='/'>
-                    <LogoStyle src={white ? PalqeeBlue : PalqeeWhite}/>
+                    <LogoStyle src={white ? "https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png" : "https://res.cloudinary.com/palqee/image/upload/c_scale,w_1904/v1595107428/palqee_white.png"}/>
                 </Link>
             </div>
             <div>

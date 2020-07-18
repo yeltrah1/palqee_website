@@ -4,7 +4,6 @@ import Link from 'next/link';
 import translate from "../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
-import PalqeeBlue from '../public/static/icons/palqee_blue.png';
 import Linkedin from '../public/static/icons/linkedin.png';
 import { FooterStyle } from '../layouts/CSS';
 import { palqeeTheme } from '../providers/theme/colors.ts';
@@ -23,7 +22,7 @@ const Footer = () => {
         <div></div>
         <div className="content">
           <div className="logo">
-            <LogoFooterStyle src={PalqeeBlue}/>
+            <LogoFooterStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
           </div>
           <div className="links">
               <div>
