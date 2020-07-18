@@ -13,7 +13,7 @@ import { BenefitEngagement } from '../components/sections/benefit_engagement';
 import { BenefitAdmin } from '../components/sections/benefit_admin';
 import { BenefitInsights } from '../components/sections/benefit_insights';
 import { Statistics } from '../components/sections/statistics';
-import { Testimonials } from '../components/testimonials/testimonials';
+import { Testimonials } from '../components/testimonials/testimonials_home';
 import { HomeStyle } from '../layouts/CSS';
 
 const App = () => {
