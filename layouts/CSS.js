@@ -415,6 +415,54 @@ export const AboutStyle = styled.div`
   }
 `;
 
+export const PartnerStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594748081/Blue_Bg_smal.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 550px;
+    position: relative;
+    height: 550px;
+  }
+
+  .large-white {
+    background: white;
+    height: 600px;
+    position: relative;
+  }
+
+  .large-grey {
+    background: #FBFCFD;
+    height: 600px;
+    position: relative;
+  }
+
+  .skewed-grey {
+    height: 600px;
+    width: 200vw;
+    position: relative;
+  }
+
+  .small-darkblue {
+    background-image: url("/static/patterns/small_blue_about.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100%;
+    height: 350px;
+    position: relative;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+`;
+
 export const TakeTestButton = styled.a`
   z-index: 2;
   display: flex;

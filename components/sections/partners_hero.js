@@ -1,0 +1,83 @@
+import React from 'react';
+import styled from 'styled-components';
+import Link from 'next/link';
+import translate from "../../providers/i18n/translate";
+import { ThemeProvider } from 'styled-components';
+
+import { palqeeTheme } from '../../providers/theme/colors.ts';
+import { GetStartedButton } from '../../layouts/CSS';
+
+const HeroStyle = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    width: 100vw;
+`;
+
+const HeroText = styled.div`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    width: 60vw;
+    height: 400px;
+    margin-top: 160px;
+
+    .large {
+    font-family: Poppins;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    line-height: 1.17;
+    padding-bottom: 10px;
+    letter-spacing: normal;
+    color: #ffffff;
+    }
+
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+    
+    .large .semi {
+        font-family: Poppins-Semi;
+    }
+
+    .large .semi u {
+        text-decoration: underline solid;
+        text-decoration-color: ${props => props.theme.redButton};
+    }
+
+    .small {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #cbd0df;
+    }
+`;
+
+const PartnersHero = () => {
+    
+    return (
+      <ThemeProvider theme={palqeeTheme}>
+        <HeroStyle>
+            <HeroText>
+                <div className="large">
+                        Partner with&nbsp;
+                        <span className="semi"><u>Palqee</u></span><br/>
+                </div>
+                <div className="small">
+                Data Privacy Compliance can only be achieved through collaboration. We’re always exploring ways of doing exactly that. Check out our partner programs and reach out to us.<br/>
+                    <GetStartedButton>Become a Partner</GetStartedButton>
+                </div>
+            </HeroText>
+        </HeroStyle>
+      </ThemeProvider>
+    )
+  }
+  
+  export { PartnersHero } ;

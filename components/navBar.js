@@ -87,8 +87,8 @@ const NavBar = ({ white, setWhite }) => {
                         <Link href="/about-us">
                             <a className="menu-item">About Us</a>
                         </Link>
-                        <a className="menu-item" href="/services">Partners</a>
-                        <a className="menu-item" href="/proposal">Blog</a>
+                        <a className="menu-item" href="/partners">Partners</a>
+                        <a className="menu-item" href="/blog">Blog</a>
                     </div>
                 </NavBarStyle>
             </div>   
