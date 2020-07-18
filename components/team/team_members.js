@@ -163,11 +163,12 @@ const TeamMembers = () => {
                     ></motion.div>
                 </TabsContainer>
                 <TeamContainer 
-                    key={tab}
-                    initial={{ opacity: 0 }} 
-                    animate={{ opacity: 1 }} 
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}>
+                    // key={tab}
+                    // initial={{ opacity: 0 }} 
+                    // animate={{ opacity: 1 }} 
+                    // exit={{ opacity: 0 }}
+                    // transition={{ duration: 0.2 }}
+                    >
                         {members
                         .filter(member => member.type === tab )
                         .map(member => 

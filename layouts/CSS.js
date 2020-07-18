@@ -398,7 +398,7 @@ export const AboutStyle = styled.div`
     background-image: url("/static/patterns/light_blue_about.png");
     background-repeat: no-repeat;
     background-size: 100% 1250px;
-    height: 1500px;
+    height: 1250px;
     width: 100vw;
     margin-top: -100px;
     padding-top: 100px;
