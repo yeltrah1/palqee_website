@@ -78,7 +78,7 @@ const InnovationHighlights = () => {
                 <HighlightText>
                     <div className="large">Current Highlights</div>
                     <ul className="small">
-                            <li>Regulation surveys for GDPR, LGPD and CCPA</li>
+                            <li>Regulation surveys for GDPR, LGPD and CCPA;</li>
                             <li>Regulation surveys merge for global compliance projects</li>                     
                             <li>Templates for employee training</li>
                             <li>Automated data mapping</li>  
