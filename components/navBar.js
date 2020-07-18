@@ -71,8 +71,7 @@ const NavBar = ({ white, setWhite }) => {
                             <a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
                             <div className="dropdown-products">
                                 <a href="/surveys-manager">Surveys Manager</a>
-                                <a href="/skills/frontend">Certifications</a>
-                                <a href="/skills/backend">Innovation Roadmap</a>
+                                <a href="/innovation-roadmap">Innovation Roadmap</a>
                                 <a className="demo" href="/skills/backend">Book a demo</a>
                             </div>
                         </div>

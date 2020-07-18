@@ -13,7 +13,7 @@ import { StartupsPartner } from '../components/sections/partners_startups';
 import { PartnersTraining } from '../components/sections/partners_training';
 import { DevPartner } from '../components/sections/partners_dev';
 
-const AboutUs = () => {
+const Partners = () => {
 
   return (
     <PageContextProvider>
@@ -48,4 +48,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
+export default Partners;

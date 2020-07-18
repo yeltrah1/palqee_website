@@ -76,13 +76,13 @@ export const NavBarStyle = styled.div`
     .dropdown-products {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       position: absolute;
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
       width: 180px;
-      height: 150px;
+      height: 100px;
       top: 72px;
       padding-left: 20px;
       padding-top: 20px;
@@ -124,7 +124,7 @@ export const NavBarStyle = styled.div`
       font-stretch: normal;
       font-style: normal;
       line-height: 1.54;
-      margin-top: 10px;
+      margin-top: 5px;
       color: ${props => props.theme.redButton};
       text-decoration:none;
       cursor: pointer;
@@ -450,6 +450,46 @@ export const PartnerStyle = styled.div`
     background-repeat: no-repeat;
     background-size: 100vw 100%;
     height: 350px;
+    position: relative;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+`;
+
+export const InnovationStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("https://res.cloudinary.com/palqee/image/upload/v1594748081/Blue_Bg_smal.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 550px;
+    position: relative;
+    height: 550px;
+  }
+
+  .large-white {
+    background: white;
+    height: 600px;
+    position: relative;
+  }
+
+  .large-grey {
+    background: #FBFCFD;
+    height: 600px;
+    position: relative;
+  }
+
+  .skewed-grey {
+    height: 500px;
+    width: 200vw;
     position: relative;
   }
 

@@ -20,7 +20,7 @@ const HeroText = styled.div`
     grid-template-rows: 1fr 0.5fr;
     width: 60vw;
     height: 400px;
-    margin-top: 160px;
+    margin-top: 140px;
 
     .large {
     font-family: Poppins;
@@ -60,19 +60,20 @@ const HeroText = styled.div`
     }
 `;
 
-const PartnersHero = () => {
+const InnovationHero = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                        Partner with&nbsp;
-                        <span className="semi"><u>Palqee</u></span><br/>
+                    <span className="semi"><u>Palqee Roadmap</u></span> for<br/>
+                        New Tools and Features
+                        <br/>
                 </div>
                 <div className="small">
-                Data Privacy Compliance can only be achieved through collaboration. We’re always exploring ways of doing exactly that. Check out our partner programs and reach out to us.<br/><br/>
-                    <GetStartedButton>Become a Partner</GetStartedButton>
+                Our drive is to deliver you the best tools for successful data privacy management. Period. Check out the Palqee roadmap and explore our current updates, coming soon launches and future innovations.<br/><br/>
+                    <GetStartedButton>Get started for free</GetStartedButton>
                 </div>
             </HeroText>
         </HeroStyle>
@@ -80,4 +81,4 @@ const PartnersHero = () => {
     )
   }
   
-  export { PartnersHero } ;
+  export { InnovationHero } ;
