@@ -183,6 +183,7 @@ export const DemoButton = styled.a`
     font-style: normal;
     font-size: 12px;
     color: white;
+    text-decoration: none;
     
     @font-face {
         font-family: 'Poppins-Semi';
