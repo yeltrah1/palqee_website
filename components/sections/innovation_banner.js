@@ -41,7 +41,7 @@ const InnovationBanner = () => {
           <div></div>
         <BannerText>
             To get a glimpse of what we are up to, check out our innovation roadmap.<br/>
-            <DemoButton style={{marginTop:"30px"}}>Take me there</DemoButton>
+            <DemoButton style={{marginTop:"30px"}} href="/innovation-roadmap">Take me there</DemoButton>
         </BannerText>
         <div></div>
       </BannerStyle>
