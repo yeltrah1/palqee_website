@@ -64,7 +64,7 @@ const Clients = () => {
               from: 0, 
               ease: "linear", 
               loop: Infinity, 
-              duration: 100 }}>
+              duration: 80 }}>
               <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
               <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
