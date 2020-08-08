@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
-import Slavian from '../../public/static/icons/clients/Slavian_blue.png';
 
 const Wrapper = styled.div`
   display: grid;
@@ -37,16 +36,16 @@ const Headline = styled.div`
 
 const Carousel = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(3, 220px 198px 259px 158px 220px 192px 130px);
   justify-items: end;
   height: 50%;
 `;
 
 const ClientsStyle = styled.img`
     flex-basis: 20%;
-    width: 50%;
     display: flex;
     align-items: center;
+    place-self: center;
     justify-content: center;
 `;
 
@@ -65,17 +64,30 @@ const Clients = () => {
               from: 0, 
               ease: "linear", 
               loop: Infinity, 
-              duration: 30 }}>
-              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
-              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={Slavian}/>
-              <ClientsStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
+              duration: 100 }}>
+              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
+              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
+
+              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
+              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
+
+              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
+              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
             </Carousel>
 
         </Wrapper>

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Avatar from '../../public/static/photos/avatar.png';
-import Dell from '../../public/static/icons/clients/dell.png';
 
 const ContainerStyle = styled.div`
     display:grid;
@@ -97,7 +96,7 @@ const TextCard = () => {
             <TextStyle>
                 "Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!"
             </TextStyle>
-            <Logo src={Dell}/>
+            <Logo src={"static/icons/clients/getglobal_logo.png"}/>
         </ContainerStyle>
     );
 }

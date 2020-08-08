@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import ReactPlayer from 'react-player';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
+import { useOnScreen } from '../../hooks/useOnScreen';
 
 const Wrapper = styled.div`
   display: grid;
@@ -51,18 +53,29 @@ const BenefitText = styled.div`
     }
 `;
 
-const Image = styled.img`
+const Video = styled.div`
     place-self: center;
-    margin-left: 80px;
-    width: 600px;
+    margin-left: 20px;
 `;
 
 const BenefitInsights = () => {
     
+    const ref = useRef();
+    const onScreen = useOnScreen(ref, '-200px');
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Image src={"/static/images/palqee_builder.svg"}/>
+            <Video ref={ref}>
+                    <ReactPlayer 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1596912849/palqee_compliance.mp4' 
+                    playing={onScreen ? true : false}
+                    loop={true}
+                    autoPlay={true}
+                    muted
+                    height="500px"
+                    />
+                </Video>
                 <BenefitText>
                     <div className="large">Act on privacy compliance risks and insights</div>
                     <div className="small">With Palqee you have ongoing visibility on how your data landscape is evolving.</div>
