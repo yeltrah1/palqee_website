@@ -431,7 +431,7 @@ export const CasesStyle = styled.div`
 
   .large-white-skewed {
     background: white;
-    height: 330px;
+    height: 2000px;
     position: relative;
   }
 
