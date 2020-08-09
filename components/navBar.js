@@ -74,11 +74,11 @@ const NavBar = ({ white, setWhite }) => {
                             </div>
                         </div>
                         <div className="dropdown">
-                            <a className="menu-item" href="/skills">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
+                            <a className="menu-item" href="/use-cases">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
                             <div className="dropdown-cases">
-                                <a href="/skills/design">Start-ups</a>
-                                <a href="/skills/frontend">Small & Midsize Businesses</a>
-                                <a href="/skills/backend">Large Enterprises</a>
+                                <a href="/use-cases">Start-ups</a>
+                                <a href="/use-cases">Small & Midsize Businesses</a>
+                                <a href="/use-cases">Large Enterprises</a>
                             </div>
                         </div>
                         <Link href="/about-us">
@@ -91,7 +91,7 @@ const NavBar = ({ white, setWhite }) => {
             </div>   
             <div className="demo">
                 <DemoButton>Book Demo</DemoButton>
-                <LoginButton href="https://dev.palqee.com/?showLogin=1">Login</LoginButton>
+                <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
             </div>   
         </NavStyle>
         </ThemeProvider>

@@ -416,6 +416,35 @@ export const AboutStyle = styled.div`
   }
 `;
 
+export const CasesStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/blue_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    height: 400px;
+    width: 100vw;
+  }
+
+  .large-white-skewed {
+    background: white;
+    height: 330px;
+    position: relative;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+`;
+
 export const PartnerStyle = styled.div`
   display:grid;
   overflow-x: hidden;

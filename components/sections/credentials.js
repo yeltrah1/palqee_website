@@ -53,7 +53,7 @@ const Text = styled.div`
 
 const ContainerLogos = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
     grid-template-rows: 1fr;
     width: 100%;
@@ -79,11 +79,10 @@ const Credentials = () => {
                 <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
             </Text>
             <ContainerLogos>
-                <div></div>
-                <Logos width={80} style={{ paddingTop: "100px" }} src={"/static/icons/badges/exin.png"}/>
-                <Logos width={140} style={{ paddingBottom: "80px", paddingRight: "10px" }} src={"/static/icons/badges/anppd.png"}/>
-                <Logos width={80} style={{ paddingBottom: "120px", paddingRight: "30px" }} src={"/static/icons/badges/iapp_cert.png"}/>
-                <Logos width={90} style={{ paddingBottom: "160px", paddingRight: "100px" }} src={"/static/icons/badges/palqee_privacyops.png"}/>
+                <Logos width={100} src={"/static/icons/badges/palqee_privacyops.png"}/>
+                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos width={140} src={"/static/icons/badges/anppd.png"}/>
+                <Logos width={80} src={"/static/icons/badges/iapp_cert.png"}/>
                 <div></div>
             </ContainerLogos>
           </Wrapper>
