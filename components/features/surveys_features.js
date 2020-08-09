@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
-import ArrowLeft from '../../public/static/icons/arrow_left.png';
-import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
 
@@ -43,27 +42,6 @@ const HeaderText = styled.div`
         line-height: 1.33;
         color: ${props => props.theme.mainFontColor};
     }
-
-    .arrows {
-        grid-row: 1;
-        grid-column: 1;
-        display: grid;
-        justify-self: end;
-        justify-items: center;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding-right: 60px;
-    }
-`;
-
-const Arrow = styled.img`
-    cursor: pointer;
-    width: 18px;
-    margin: 0 10px;
-
-    :hover {
-        transform: scale(1.2);
-    }
 `;
 
 const Cards = styled.div`
@@ -73,152 +51,50 @@ const Cards = styled.div`
     align-content: left;
     height: 200px;
     margin-top: 20px;
-
+    
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 `;
 
-const SliderContent = styled.div`
-    transform: translateX(-${props => props.translate}px);
-    transition: transform ease-out ${props => props.transition}s;
+const SliderContent = styled(motion.div)`
     height: 100%;
-    width: ${props => props.width}px;
     display: flex;
 `;
 
 const SurveysFeatures = () => {
-    
-    const firstCard = features[0]
-    const secondCard = features[1]
-    const lastCard = features[features.length - 1]
-    const width = 260
-    const getWidth = () => window.innerWidth
 
-    const [state, setState] = useState({
-        activeCard: 0,
-        translate: width,
-        transition: 0.45,
-        _slides: [lastCard, firstCard, secondCard]
-    })
-
-    const { activeCard, translate, _slides, transition } = state
-
-    const autoPlayRef = useRef()
-    const transitionRef = useRef()
-    const resizeRef = useRef()
-
-    useEffect(() => {
-        autoPlayRef.current = nextSlide
-        transitionRef.current = smoothTransition
-        resizeRef.current = handleResize
-    })
-
-    // useEffect(() => {
-    //     const play = () => {
-    //       autoPlayRef.current()
-    //     }
-
-    //     const smooth = e => {
-    //         if (e.target.className.includes('SliderContent')) {
-    //           transitionRef.current()
-    //         }
-    //     }
-
-    //     const resize = () => {
-    //         resizeRef.current()
-    //     }
-
-    //     const transitionEnd = window.addEventListener('transitionend', smooth)
-    //     const onResize = window.addEventListener('resize', resize)
-
-    //     let interval = null
-      
-    //     if (features.autoPlay) {
-    //        interval = setInterval(play, features.autoPlay * 1000)
-    //     }
-
-    //     return () => {
-    //         window.removeEventListener('transitionend', transitionEnd)
-    //         window.removeEventListener('resize', onResize)
-
-    //         if (features.autoPlay) {
-    //           clearInterval(interval)
-    //         }
-    //       }
-    // }, [])
-
-    useEffect(() => {
-        if (transition === 0) setState({ ...state, transition: 0.45 })
-    }, [transition])
-
-    const handleResize = () => {
-        setState({ ...state, translate: width, transition: 0 })
-      }
-
-    const smoothTransition = () => {
-        let _slides = []
-
-        // We're at the last slide.
-        if (activeCard === features.length - 1)
-            _slides = [features[features.length - 2], lastCard, firstCard]
-        // We're back at the first slide. Just reset to how it was on initial render
-        else if (activeCard === 0) _slides = [lastCard, firstCard, secondCard]
-        // Create an array of the previous last slide, and the next two slides that follow it.
-        else _slides = features.slice(activeCard - 1, activeCard + 2)
-        
-        setState({
-            ...state,
-            _slides,
-            transition: 0,
-            translate: width
-        })
-    }
-
-    const nextSlide = () => {
-        if (activeCard !== features.length - 5) // deactivate nextSlide
-        setState({
-            ...state,
-            translate: translate + width,
-            activeCard: activeCard === features.length - 1 ? 0 : activeCard + 1
-    })
-    }
-
-    const prevSlide = () => {
-        if (activeCard !== 0) // deactivate prevSlide
-            setState({
-            ...state,
-            translate: translate - width,
-            activeCard: activeCard === 0 ? 0 : activeCard - 1
-    })
-    }
+    const constraintsRef = useRef(null);
 
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
             <HeaderText>
                 <div className="text">The tools you need at your fingertips</div>
-                <div className="arrows">
-                    <Arrow className={activeCard === 0 ? "hidden" : "visible"} src={ArrowLeft} onClick={prevSlide}/>
-                    <Arrow className={activeCard === (features.length - 1) ? "hidden" : "visible"} src={ArrowRight} onClick={nextSlide}/> 
-                </div>
             </HeaderText>
             <Cards>
-            <SliderContent
-                translate={translate}
-                transition={transition}
-                width={width * _slides.length}
-            >
-                {features.map(features =>
-                <FeaturesCard 
-                    image={features.image}
-                    name={features.name}
-                    description={features.description} 
-                    key={features.id}
+                <motion.div className="drag-area" style={{ width:"3920px", transform: "translateX(-1310px)" }} ref={constraintsRef} />
+                <SliderContent
+                    animate={{ x: -5000 }}
+                    drag="x"
+                    dragConstraints={constraintsRef}
+                    dragElastic={0.1}
+                    transition={{ 
+                        from: -3920, 
+                        ease: "linear", 
+                        loop: Infinity, 
+                        duration: 20 }}
+                    >
+                    {features.map(features =>
+                    <FeaturesCard
+                        image={features.image}
+                        name={features.name}
+                        description={features.description} 
+                        key={features.id}
                 />
-                )}
-            </SliderContent>
+                    )}
+                </SliderContent>
             </Cards>
         </Wrapper>
     </ThemeProvider>

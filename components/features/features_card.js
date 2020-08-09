@@ -12,6 +12,18 @@ const ContainerStyle = styled.div`
     width: 200px;
     padding: 20px;
     margin: 0 10px;
+    cursor: grab;
+
+    :hover {
+        animation-name: scale;
+        animation-duration: 0.3s;
+        transform: scale(1.05);
+    }
+
+    @keyframes scale {
+        from {transform: scale(1.0)}
+        to {transform: scale(1.05)}
+      }
 `;
 
 const IconStyle = styled.img`
