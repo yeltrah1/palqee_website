@@ -66,7 +66,7 @@ const BenefitAdmin = () => {
                     <div className="large">Streamline admin work and focus on what matters</div>
                     <div className="small">Palqee saves you time by automating and consolidating time-intensive interviews for data mapping, assessments and DPIAs so you can concentrate on your compliance agenda.</div>
                 </BenefitText>
-                <Image src={"/static/images/palqee_builder.svg"}/>
+                <Image src={"/static/images/palqee_templates.svg"}/>
             </Wrapper>
       </ThemeProvider>
     )

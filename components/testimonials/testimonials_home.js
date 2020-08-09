@@ -8,6 +8,7 @@ import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { TextCard } from './text_card';
+import { VideoCard } from './video_card';
 
 const Wrapper = styled.div`
     display: grid;
@@ -24,7 +25,7 @@ const Skewed = styled.div`
     height: 450px;
     width: 300vw;
     position: relative;
-    left: -350vw;
+    left: -360vw;
     transform: skew(-78deg);
 `;
 
@@ -114,12 +115,12 @@ const Testimonials = () => {
             <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
             </div>
         </TestimonialsText>
-        <Cards>
-            <TextCard/>
-            <TextCard/>
-            <TextCard/>
-            <TextCard/>
-        </Cards>
+            <Cards>
+                <TextCard/>
+                <VideoCard/>
+                <TextCard/>
+                <TextCard/>
+            </Cards>
         </Wrapper>
     </ThemeProvider>
     )

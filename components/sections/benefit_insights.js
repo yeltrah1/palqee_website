@@ -73,7 +73,7 @@ const BenefitInsights = () => {
                     loop={true}
                     autoPlay={true}
                     muted
-                    height="500px"
+                    height="600px"
                     />
                 </Video>
                 <BenefitText>
