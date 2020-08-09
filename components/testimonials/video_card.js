@@ -131,7 +131,7 @@ const VideoCard = () => {
                 </div>
             </TitleStyle>
             <a href="#open-modal" onClick={() => { setPlay(true) }}>
-                <CoverStyle src={"static/photos/marcio_cover.jpg"}/>
+                <CoverStyle src={"https://res.cloudinary.com/palqee/image/upload/v1596932499/marcio_cover.jpg"}/>
             </a>
             <Logo src={"static/icons/clients/getglobal_logo.png"}/>
 
