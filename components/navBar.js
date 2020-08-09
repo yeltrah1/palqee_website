@@ -74,11 +74,11 @@ const NavBar = ({ white, setWhite }) => {
                             </div>
                         </div>
                         <div className="dropdown">
-                            <Link as="/use-cases/startups" href="/use-cases/[cases]"><a className="menu-item">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
+                            <Link as="/startups" href="/[cases]"><a className="menu-item">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-cases">
-                                <Link as="/use-cases/startups" href="/use-cases/[cases]"><a>Start-ups</a></Link>
-                                <Link as="/use-cases/smes" href="/use-cases/[cases]"><a>Small & Midsize Businesses</a></Link>
-                                <Link as="/use-cases/enterprise" href="/use-cases/[cases]"><a>Large Enterprises</a></Link>
+                                <Link as="/startups" href="/[cases]"><a>Start-ups</a></Link>
+                                <Link as="/smes" href="/[cases]"><a>Small & Midsize Businesses</a></Link>
+                                <Link as="/enterprise" href="/[cases]"><a>Large Enterprises</a></Link>
                             </div>
                         </div>
                         <Link href="/about-us">

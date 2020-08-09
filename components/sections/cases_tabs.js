@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 0.5fr 1.5fr 1.5fr 1.5fr;
   width: 100vw;
-  height: 2000px;
   padding-top: 50px;
 `;
 
@@ -107,6 +106,7 @@ const TitleText = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+    height: 220px;
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -119,13 +119,14 @@ const TitleText = styled.div`
     font-weight: normal;
     text-align: center;
     font-style: normal;
-    line-height: 1.33;
     letter-spacing: normal;
     color: #1a3154;
+    align-self: end;
+    padding-bottom: 10px;
     }
 
     .small {
-        width: 50%;
+        width: 40%;
         font-family: Poppins;
         font-size: 14px;
         text-align: center;
@@ -136,14 +137,70 @@ const TitleText = styled.div`
     }
 `;
 
-const CasesContainer = styled(motion.div)`
+const CaseOne = styled.div`
     display: grid;
-    grid-template-columns: 315px 315px 315px;
-    grid-column-gap: 20px;
-    grid-row-gap: 3em;
-    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 80vw;
+    height: 300px;
+    place-self: center;
+    justify-content: center;   
+    
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    .text-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-content: start; 
+    }
+
+    .text-container .title{
+        font-family: Poppins-Semi;
+        font-size: 42px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #1a3154;
+        align-text: left;
+        align-self: end;
+        padding-bottom: 10px;
+    }
+
+    .text-container .details{
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        color: #758194;
+        align-text: left;
+        white-space: pre-wrap;
+    }
+
+    .text-container .link {
+        font-family: Poppins-Semi;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.54;
+        letter-spacing: normal;
+        color: #3f6db4;
+        align-self: start;
+    }
+`;
+
+const ImageOne = styled(motion.img)`
     height: 400px;
-    justify-content: center;    
+    place-self: center;
 `;
 
 const CasesTabs = () => {
@@ -166,6 +223,36 @@ const CasesTabs = () => {
         if (cases === "startups") { return "Get it right" }
         if (cases === "smes") { return "Keeping it simple" }
         if (cases === "enterprise") { return "Streamline your Privacy Operations" }
+    }
+
+    const changeSubHeader = () => {
+        if (cases === "startups") { return "Put a check mark on your compliance reporting responsibilities with a tool that fits your needs, so you can focus on growing your business." }
+        if (cases === "smes") { return "Designed to help SME’s with privacy operations." }
+        if (cases === "enterprise") { return "Bring down costs, resources and work flows for your data privacy assessments and ensure ongoing compliance assessments." }
+    }
+
+    const titleOne = () => {
+        if (cases === "startups") { return "Forever Free" }
+        if (cases === "smes") { return "Increase your efficiency" }
+        if (cases === "enterprise") { return "Streamline assessment processes" }
+    }
+
+    const detailsOne = () => {
+        if (cases === "startups") { return "Compliance with data protection regulations isn’t optional. At Palqee we understand the pressure this can put on growing businesses both from a financial perspective and having the resources. This is why we made Palqee essential features for free, always!" }
+        if (cases === "smes") { return "Assess your data landscape, train your workforce and assess 3rd party vendors through one platform. With Palqee you can hit the ground running on your data compliance, saving valuable time and money." }
+        if (cases === "enterprise") { return "Make space and save on lengthy interview processes and even longer excel sheets. With Palqee it’s easy to manage large and international workforces efficiently. Organise assessments by respondent category in our audiences feature e.g. by Process Owners, department, role, location and vendors. \n\nUnderstand quickly who has responded and participated in data protection training, send reminders and automate assessments for integrated privacy ops." }
+    }
+
+    const linkOne = () => {
+        if (cases === "startups") { return "Try it out now" }
+        if (cases === "smes") { return "Speak to sales" }
+        if (cases === "enterprise") { return "Speak to sales" }
+    }
+
+    const changeImgOne = () => {
+        if (cases === "startups") { return "/static/images/useCases/palqee_free.png" }
+        if (cases === "smes") { return "/static/images/useCases/palqee_efficiency.png" }
+        if (cases === "enterprise") { return "/static/images/useCases/palqee_streamline.png" }
     }
 
     return (
@@ -202,18 +289,23 @@ const CasesTabs = () => {
                 </TabsContainer>
                 <TitleText>
                     <div className="large">{changeHeader()}</div>
-                    <div className="small">We are a PrivacyTech company created by experts in software development, privacy by design, and Enterprise solutions.</div>
+                    <div className="small">{changeSubHeader()}</div>
                 </TitleText>
-                <CasesContainer 
-                    // key={tab}
-                    // initial={{ opacity: 0 }} 
-                    // animate={{ opacity: 1 }} 
-                    // exit={{ opacity: 0 }}
-                    // transition={{ duration: 0.2 }}
-                    >
-                        
-
-                </CasesContainer>
+                <CaseOne>
+                        <div className="text-container">
+                            <div className="title">{titleOne()}</div>
+                            <div className="details">
+                                {detailsOne()}
+                                <p className="link"><u><a href="/">{linkOne()}</a></u></p>
+                            </div>
+                        </div>
+                        <ImageOne src={changeImgOne()}
+                            key={cases}
+                            initial={{ opacity: 0 }} 
+                            animate={{ opacity: 1 }} 
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}/>
+                </CaseOne>
             </Wrapper>
       </ThemeProvider>
     )
