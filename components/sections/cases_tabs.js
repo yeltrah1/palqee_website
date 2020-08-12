@@ -137,12 +137,12 @@ const TitleText = styled.div`
     }
 `;
 
-const CaseOne = styled.div`
+const Cases = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 80vw;
-    height: 300px;
+    height: 450px;
     place-self: center;
     justify-content: center;   
     
@@ -198,7 +198,7 @@ const CaseOne = styled.div`
     }
 `;
 
-const ImageOne = styled(motion.img)`
+const Images = styled(motion.img)`
     height: 400px;
     place-self: center;
 `;
@@ -255,6 +255,31 @@ const CasesTabs = () => {
         if (cases === "enterprise") { return "/static/images/useCases/palqee_streamline.png" }
     }
 
+    
+    const titleTwo = () => {
+        if (cases === "startups") { return "Forever Free" }
+        if (cases === "smes") { return "Increase your efficiency" }
+        if (cases === "enterprise") { return "Streamline assessment processes" }
+    }
+
+    const detailsTwo = () => {
+        if (cases === "startups") { return "Compliance with data protection regulations isn’t optional. At Palqee we understand the pressure this can put on growing businesses both from a financial perspective and having the resources. This is why we made Palqee essential features for free, always!" }
+        if (cases === "smes") { return "Assess your data landscape, train your workforce and assess 3rd party vendors through one platform. With Palqee you can hit the ground running on your data compliance, saving valuable time and money." }
+        if (cases === "enterprise") { return "Make space and save on lengthy interview processes and even longer excel sheets. With Palqee it’s easy to manage large and international workforces efficiently. Organise assessments by respondent category in our audiences feature e.g. by Process Owners, department, role, location and vendors. \n\nUnderstand quickly who has responded and participated in data protection training, send reminders and automate assessments for integrated privacy ops." }
+    }
+
+    const linkTwo = () => {
+        if (cases === "startups") { return "Try it out now" }
+        if (cases === "smes") { return "Speak to sales" }
+        if (cases === "enterprise") { return "Speak to sales" }
+    }
+
+    const changeImgTwo = () => {
+        if (cases === "startups") { return "/static/images/useCases/palqee_compliance.png" }
+        if (cases === "smes") { return "/static/images/useCases/palqee_guided.png" }
+        if (cases === "enterprise") { return "/static/images/useCases/palqee_insights.png" }
+    }
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
@@ -291,7 +316,7 @@ const CasesTabs = () => {
                     <div className="large">{changeHeader()}</div>
                     <div className="small">{changeSubHeader()}</div>
                 </TitleText>
-                <CaseOne>
+                <Cases>
                         <div className="text-container">
                             <div className="title">{titleOne()}</div>
                             <div className="details">
@@ -299,13 +324,31 @@ const CasesTabs = () => {
                                 <p className="link"><u><a href="/">{linkOne()}</a></u></p>
                             </div>
                         </div>
-                        <ImageOne src={changeImgOne()}
+                        <Images 
+                            src={changeImgOne()}
                             key={cases}
                             initial={{ opacity: 0 }} 
                             animate={{ opacity: 1 }} 
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}/>
-                </CaseOne>
+                </Cases>
+                <Cases>
+                        <Images
+                            style={{paddingRight:"60px"}}
+                            src={changeImgTwo()}
+                            key={cases}
+                            initial={{ opacity: 0 }} 
+                            animate={{ opacity: 1 }} 
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}/>
+                        <div className="text-container">
+                            <div className="title">{titleTwo()}</div>
+                            <div className="details">
+                                {detailsTwo()}
+                                <p className="link"><u><a href="/">{linkTwo()}</a></u></p>
+                            </div>
+                        </div>
+                </Cases>
             </Wrapper>
       </ThemeProvider>
     )

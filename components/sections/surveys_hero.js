@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
@@ -60,8 +60,26 @@ const HeroText = styled.div`
     }
 `;
 
+const Words = [
+    "gain data insights",
+    "streamline assessments",
+    "train the workforce",
+    "manage ongoing compliance",
+];
+
 const SurveysHero = () => {
     
+    const [word, setWord] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        if ( word < 3 ) {
+            setWord(word => word + 1) }
+            else {setWord(0)}
+            }, 3000);
+        return () => clearInterval(interval);
+    });
+
     return (
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
@@ -69,7 +87,7 @@ const SurveysHero = () => {
                 <div className="large">
                         A data protection management tool <br/>
                         that helps you&nbsp;
-                        <span className="semi"><u>gain data insights</u>.</span><br/>
+                        <span className="semi"><u>{Words[word]}</u>.</span><br/>
                 </div>
                 <div className="small">
                 Get started in minutes and send out your first data assessment survey now.<br/>
