@@ -101,12 +101,24 @@ const TabsContainer = styled.div`
     }
 `;
 
+const Skewed = styled.div`
+    align-self: end;
+    background: #FBFBFB;
+    height: 470px;
+    width: 300vw;
+    z-index: -1;
+    position: absolute;
+    left: -270vw;
+    bottom: -20px;
+    transform: skew(78deg);
+`;
+
 const TitleText = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
-    height: 220px;
+    height: 180px;
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -142,7 +154,7 @@ const Cases = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 80vw;
-    height: 450px;
+    height: 470px;
     place-self: center;
     justify-content: center;   
     
@@ -257,27 +269,51 @@ const CasesTabs = () => {
 
     
     const titleTwo = () => {
-        if (cases === "startups") { return "Forever Free" }
-        if (cases === "smes") { return "Increase your efficiency" }
-        if (cases === "enterprise") { return "Streamline assessment processes" }
+        if (cases === "startups") { return "Data Compliance Assessment" }
+        if (cases === "smes") { return "Guided and jargon-free compliance" }
+        if (cases === "enterprise") { return "Instant insights" }
     }
 
     const detailsTwo = () => {
-        if (cases === "startups") { return "Compliance with data protection regulations isn’t optional. At Palqee we understand the pressure this can put on growing businesses both from a financial perspective and having the resources. This is why we made Palqee essential features for free, always!" }
-        if (cases === "smes") { return "Assess your data landscape, train your workforce and assess 3rd party vendors through one platform. With Palqee you can hit the ground running on your data compliance, saving valuable time and money." }
-        if (cases === "enterprise") { return "Make space and save on lengthy interview processes and even longer excel sheets. With Palqee it’s easy to manage large and international workforces efficiently. Organise assessments by respondent category in our audiences feature e.g. by Process Owners, department, role, location and vendors. \n\nUnderstand quickly who has responded and participated in data protection training, send reminders and automate assessments for integrated privacy ops." }
+        if (cases === "startups") { return "Palqee guides you through the process of mapping out data flows and identifying potential risks, when to make a DPIA (Data Protection Impact Assessment) and how to train your workforce on data protection best practices." }
+        if (cases === "smes") { return "Not every company has the resources to invest into data privacy professionals who know what to do. Once you did your first assessment, often the question comes up: What’s next? \n\nOur guided content helps you to analyse how and if you need to act and what the next logical step should be in your data protection implementation process." }
+        if (cases === "enterprise") { return "Palqee summarises the results of all surveys for you, delivering you the insights you need from gap assessments, DPIAs, workforce knowledge assessments and more. Focus on identifying risks and taking measures to improve your companies’ Privacy Ops." }
     }
 
     const linkTwo = () => {
-        if (cases === "startups") { return "Try it out now" }
-        if (cases === "smes") { return "Speak to sales" }
-        if (cases === "enterprise") { return "Speak to sales" }
+        if (cases === "startups") { return "Get started" }
+        if (cases === "smes") { return "Get started" }
+        if (cases === "enterprise") { return "Get started" }
     }
 
     const changeImgTwo = () => {
         if (cases === "startups") { return "/static/images/useCases/palqee_compliance.png" }
         if (cases === "smes") { return "/static/images/useCases/palqee_guided.png" }
         if (cases === "enterprise") { return "/static/images/useCases/palqee_insights.png" }
+    }
+
+    const titleThree = () => {
+        if (cases === "startups") { return "Automated Reports" }
+        if (cases === "smes") { return "Improved security" }
+        if (cases === "enterprise") { return "Workforce training" }
+    }
+
+    const detailsThree = () => {
+        if (cases === "startups") { return "Create reports at the push of a button for new investors, potential partners and programme applications that require details about your compliance agenda." }
+        if (cases === "smes") { return "SME’s are increasingly targeted by fraudulent activities. Use Palqee to regularly update your workforce on your companies’ internal data protection and security policies and train them how to act in case of a data breach to minimise risks." }
+        if (cases === "enterprise") { return "Use one of our templates or create your own to test and train data protection protocols within your company. Keep track on confidence level of your colleagues on how to deal with personal data with automated surveys, reduce data leakage risks and grow your companies’ reputation as data responsible business." }
+    }
+
+    const linkThree = () => {
+        if (cases === "startups") { return "Get started" }
+        if (cases === "smes") { return "Try it now" }
+        if (cases === "enterprise") { return "Try it now" }
+    }
+
+    const changeImgThree = () => {
+        if (cases === "startups") { return "/static/images/useCases/palqee_reports.png" }
+        if (cases === "smes") { return "/static/images/useCases/palqee_security.png" }
+        if (cases === "enterprise") { return "/static/images/useCases/palqee_training.png" }
     }
 
     return (
@@ -349,6 +385,24 @@ const CasesTabs = () => {
                             </div>
                         </div>
                 </Cases>
+                <Cases>
+                    <div className="text-container">
+                        <div className="title">{titleThree()}</div>
+                        <div className="details">
+                            {detailsThree()}
+                            <p className="link"><u><a href="/">{linkThree()}</a></u></p>
+                        </div>
+                    </div>
+                    <Images 
+                        style={{paddingLeft:"40px"}}
+                        src={changeImgThree()}
+                        key={cases}
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}/>
+                </Cases>
+                <Skewed/>
             </Wrapper>
       </ThemeProvider>
     )
