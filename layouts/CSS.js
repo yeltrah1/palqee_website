@@ -445,6 +445,26 @@ export const CasesStyle = styled.div`
   }
 `;
 
+export const DemoStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/blue_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    height: 400px;
+    width: 100vw;
+  }
+
+  .large-white {
+    height: 600px;
+    width: 100vw;
+    position: relative;
+  }
+`;
+
 export const PartnerStyle = styled.div`
   display:grid;
   overflow-x: hidden;
@@ -459,13 +479,13 @@ export const PartnerStyle = styled.div`
 
   .large-white {
     background: white;
-    height: 600px;
+    height: 650px;
     position: relative;
   }
 
   .large-grey {
     background: #FBFCFD;
-    height: 600px;
+    height: 650px;
     position: relative;
   }
 

@@ -70,7 +70,7 @@ const NavBar = ({ white, setWhite }) => {
                             <div className="dropdown-products">
                                 <a href="/surveys-manager">Surveys Manager</a>
                                 <a href="/innovation-roadmap">Innovation Roadmap</a>
-                                <a className="demo" href="/skills/backend">Book a demo</a>
+                                <a className="demo" href="/book-demo">Book a demo</a>
                             </div>
                         </div>
                         <div className="dropdown">
@@ -90,7 +90,7 @@ const NavBar = ({ white, setWhite }) => {
                 </NavBarStyle>
             </div>   
             <div className="demo">
-                <DemoButton>Book Demo</DemoButton>
+                <DemoButton href="/book-demo">Book Demo</DemoButton>
                 <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
             </div>   
         </NavStyle>

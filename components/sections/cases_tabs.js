@@ -154,7 +154,7 @@ const Cases = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 80vw;
-    height: 470px;
+    height: 490px;
     place-self: center;
     justify-content: center;   
     
