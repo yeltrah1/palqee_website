@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import ReactPlayer from 'react-player';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
+import { useOnScreen } from '../../hooks/useOnScreen';
 
 const Wrapper = styled.div`
   display: grid;
@@ -52,13 +54,16 @@ const BenefitText = styled.div`
     }
 `;
 
-const Image = styled.img`
+const Video = styled.div`
     place-self: center;
-    width: 600px;
+    margin-right: 20px;
 `;
 
 const BenefitAdmin = () => {
     
+    const ref = useRef();
+    const onScreen = useOnScreen(ref, '-200px');
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
@@ -66,7 +71,16 @@ const BenefitAdmin = () => {
                     <div className="large">Streamline admin work and focus on what matters</div>
                     <div className="small">Palqee saves you time by automating and consolidating time-intensive interviews for data mapping, assessments and DPIAs so you can concentrate on your compliance agenda.</div>
                 </BenefitText>
-                <Image src={"/static/images/palqee_templates.svg"}/>
+                <Video ref={ref}>
+                    <ReactPlayer 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1597342061/palqee_admin.mp4' 
+                    playing={onScreen ? true : false}
+                    loop={true}
+                    autoPlay={true}
+                    muted
+                    height="600px"
+                    />
+                </Video>
             </Wrapper>
       </ThemeProvider>
     )

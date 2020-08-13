@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import ReactPlayer from 'react-player';
@@ -68,7 +67,7 @@ const BenefitInsights = () => {
             <Wrapper>
             <Video ref={ref}>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/v1596912849/palqee_compliance.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1597342061/palqee_insights.mp4' 
                     playing={onScreen ? true : false}
                     loop={true}
                     autoPlay={true}
