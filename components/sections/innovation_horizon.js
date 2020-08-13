@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -69,19 +68,17 @@ const Image = styled.img`
     width: 550px;
 `;
 
-const InnovationHighlights = () => {
+const InnovationHorizon = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Image src={"/static/images/innovation_highlights.svg"}/>
+                <Image src={"/static/images/palqee_horizon.png"}/>
                 <HighlightText>
-                    <div className="large">Current highlights</div>
+                    <div className="large">On the horizon</div>
                     <ul className="small">
-                            <li>Regulation surveys for GDPR, LGPD and CCPA;</li>
-                            <li>Regulation surveys merge for global compliance projects</li>                     
-                            <li>Templates for employee training</li>
-                            <li>Automated data mapping</li>  
+                        <li>Automation of subject rights</li>
+                        <li>Active Consent® for cross-platform consent management</li>                     
                     </ul>
                 </HighlightText>
             </Wrapper>
@@ -89,4 +86,4 @@ const InnovationHighlights = () => {
     )
 }
 
-export { InnovationHighlights } ;
+export { InnovationHorizon } ;

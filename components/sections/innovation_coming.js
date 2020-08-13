@@ -8,15 +8,17 @@ import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 55% 1fr;
+  grid-template-columns: 50% 1fr;
   width: 100vw;
   height: 100%;
+  padding-top: 30px;
 `;
 
 const HighlightText = styled.div`
     display: grid;
-    place-self: center;
-    justify-items: start;
+    align-self: center;
+    margin-left: 20%;
+    margin-top: -20px;
     grid-template-columns: 1fr;
     height: 40%;  
     width: 100%;
@@ -27,7 +29,6 @@ const HighlightText = styled.div`
     }
 
     .large {
-        width: 85%;
         font-family: Poppins-Semi;
         font-size: 39px;
         font-weight: 600;
@@ -39,7 +40,6 @@ const HighlightText = styled.div`
     }
 
     .small {
-        width: 90%;
         margin-top: 10px;
         font-family: Poppins;
         font-size: 14px;
@@ -64,29 +64,30 @@ const HighlightText = styled.div`
 `;
 
 const Image = styled.img`
-    place-self: center;
-    margin-left: 60px;
+    align-self: center;
+    margin-right: 150px;
     width: 550px;
 `;
 
-const InnovationHighlights = () => {
+const InnovationComing = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Image src={"/static/images/innovation_highlights.svg"}/>
                 <HighlightText>
-                    <div className="large">Current highlights</div>
+                    <div className="large">Coming soon</div>
                     <ul className="small">
-                            <li>Regulation surveys for GDPR, LGPD and CCPA;</li>
-                            <li>Regulation surveys merge for global compliance projects</li>                     
-                            <li>Templates for employee training</li>
-                            <li>Automated data mapping</li>  
+                            <li>Automated Data Discovery</li>
+                            <li>Product integrations with cloud and on-site systems</li>                     
+                            <li>Improved 360 degree view of your Privacy operations</li>
+                            <li>New regulations for global compliance</li>
+                            <li>Multi-level user access</li>  
                     </ul>
                 </HighlightText>
+                <Image src={"/static/images/palqee_coming.png"}/>
             </Wrapper>
       </ThemeProvider>
     )
 }
 
-export { InnovationHighlights } ;
+export { InnovationComing } ;
