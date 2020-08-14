@@ -47,7 +47,7 @@ const TagsStyle = styled.div`
 const LinkStyle = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+        src: url('../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
     padding: 0px 30px;
     padding-bottom: 20px;
