@@ -6,6 +6,7 @@ const ContainerStyle = styled.div`
     border-radius: 6px;
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
+    height: 300px;
 `;
 
 const PartnerLogo = styled.img` 
