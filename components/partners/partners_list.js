@@ -54,8 +54,31 @@ const PartnersList = () => {
         </ListStyle>
         )
     } 
+
+    else if (router.query.service === "all" && router.query.country === "usa") {
+        return (
+        <ListStyle>
+            {partners
+            .filter(partner => partner.location.includes("USA") === true)
+            .map(partner => 
+            <PartnerCard 
+                logo={partner.logo}
+                description={partner.description}
+                service={partner.service} 
+                location={partner.location}
+                website={partner.website}
+                key={partner.id}
+            />
+            )}
+        </ListStyle>
+        )
+    } 
     
-    else {    return null   }
+    else {  
+        return (
+            <div>No Entries Found</div>
+        )
+    }
 }
 
 export default PartnersList ;
