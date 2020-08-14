@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { GetStartedButton } from '../../layouts/CSS';
@@ -85,9 +86,15 @@ const SurveysHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                        A data protection management tool <br/>
-                        that helps you&nbsp;
-                        <span className="semi"><u>{Words[word]}</u>.</span><br/>
+                        A privacy management tool that helps you<br/>
+                        <motion.span 
+                        key={word}
+                        initial={{ opacity: 0.2 }} 
+                        animate={{ opacity: 1 }} 
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}className="semi">
+                            <u>{Words[word]}</u>.
+                        </motion.span><br/>
                 </div>
                 <div className="small">
                 Get started in minutes and send out your first data assessment survey now.<br/>
