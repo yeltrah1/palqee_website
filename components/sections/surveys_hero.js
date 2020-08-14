@@ -86,7 +86,7 @@ const SurveysHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                        A privacy management tool that helps you<br/>
+                        Privacy management tools that help you<br/>
                         <motion.span 
                         key={word}
                         initial={{ opacity: 0.2 }} 

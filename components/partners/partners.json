@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "logo": "getglobal_logo",
+        "description": "GetGlobal International is a training institution global that trains Data Protection Officers.",
+        "service": "Implementation, training and DPO as a Service",
+        "location": "Brazil, USA and Portugal",
+        "website": "https://www.getglobalinternational.com/"
+    },
+    {
+        "id": "2",
+        "logo": "IT2SGroup_logo",
+        "description": "IT2S Group provides IT security and DPO as a Service.",
+        "service": "Implementation and DPO as a Service",
+        "location": "Brazil and USA",
+        "website": "Feb 2020"
+    },
+    {
+        "id": "3",
+        "logo": "Dpofficer_brazil",
+        "description": "DPOfficer Brazil provides consultancy services for LGPD compliance and training of the Palqee Enterprise Suite.",
+        "service": "Compliance consultancy and Implementation",
+        "location": "Brazil",
+        "website": "Feb 2020"
+    },
+    {
+        "id": "4",
+        "logo": "Wesdom_logo",
+        "description": "Wesdom is the CIO consulting group that provides Compliance services and DPO as a Service.",
+        "service": "Compliance consulting and implementation",
+        "location": "Brazil",
+        "website": "Feb 2020"
+    },
+    {
+        "id": "5",
+        "logo": "Dantic_logo",
+        "description": "DanTIC consulting provides compliance consultancy services for SMEs in Brazil and implements the Palqee Enterprise Suite.",
+        "service": "Compliance consulting and implementation",
+        "location": "Brazil",
+        "website": "Feb 2020"
+    }
+    ]

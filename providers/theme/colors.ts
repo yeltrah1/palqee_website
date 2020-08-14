@@ -13,6 +13,7 @@ export const palqeeTheme = {
     fontNavHoverColor: "#3f6db4",
     dropdownBgColor: "white",
     dropdownFontColor: "#192d4d",
+    linkColor: "#3f6db4",
 
     pageBgColor: "white",
     fontSubitemHoverColor: "#c2c2c2",
