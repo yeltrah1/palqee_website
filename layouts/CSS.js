@@ -81,7 +81,7 @@ export const NavBarStyle = styled.div`
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
-      width: 180px;
+      width: 170px;
       height: 100px;
       top: 72px;
       padding-left: 20px;
@@ -95,7 +95,7 @@ export const NavBarStyle = styled.div`
       src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
-    .dropdown-products a, .dropdown-cases a {
+    .dropdown-products a, .dropdown-cases a, .dropdown-partners a {
       font-family: Poppins;
       font-size: 13px;
       font-weight: 500;
@@ -108,7 +108,7 @@ export const NavBarStyle = styled.div`
       cursor: pointer;
     }
 
-    .dropdown-products a:hover, .dropdown-cases a:hover {
+    .dropdown-products a:hover, .dropdown-cases a:hover, .dropdown-partners a:hover  {
       font-family: Poppins-Semi;
     }
 
@@ -145,6 +145,22 @@ export const NavBarStyle = styled.div`
       padding-bottom: 10px;
       box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
     }
+
+    .dropdown-partners {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      position: absolute;
+      visibility: hidden;
+      align-content: center;
+      background: ${props => props.theme.dropdownBgColor};
+      width: 160px;
+      height: 70px;
+      top: 72px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+    }
     
     @keyframes menu-slider {
       from { opacity: 0 }
@@ -152,7 +168,7 @@ export const NavBarStyle = styled.div`
       to { opacity: 1 }
     }
 
-    .dropdown:hover .dropdown-products, .dropdown:hover .dropdown-cases {
+    .dropdown:hover .dropdown-products, .dropdown:hover .dropdown-cases, .dropdown:hover .dropdown-partners {
       animation: menu-slider 0.2s;
       visibility: visible;
   }

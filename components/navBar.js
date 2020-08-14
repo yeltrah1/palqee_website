@@ -66,7 +66,7 @@ const NavBar = ({ white, setWhite }) => {
                 <NavBarStyle>
                     <div className="navbar">
                         <div className="dropdown">
-                            <a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a>
+                            <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
                                 <a href="/surveys-manager">Surveys Manager</a>
                                 <a href="/innovation-roadmap">Innovation Roadmap</a>
@@ -84,7 +84,13 @@ const NavBar = ({ white, setWhite }) => {
                         <Link href="/about-us">
                             <a className="menu-item">About Us</a>
                         </Link>
-                        <a className="menu-item" href="/partners">Partners</a>
+                        <div className="dropdown">
+                            <Link href="/partners"><a className="menu-item">{translate('navBar.partners')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
+                            <div className="dropdown-partners">
+                                <Link href="/partners"><a>Become a Partner</a></Link>
+                                <Link href="/find-a-partner"><a>Accredited Partners</a></Link>
+                            </div>
+                        </div>
                         <a className="menu-item" href="/blog">Blog</a>
                     </div>
                 </NavBarStyle>

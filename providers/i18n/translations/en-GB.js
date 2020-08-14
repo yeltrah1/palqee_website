@@ -6,6 +6,7 @@ export default {
         "landingPage.headline": "This is the main headline",
         "navBar.products": "Products",
         "navBar.cases": "Use Cases",
+        "navBar.partners": "Partners",
         "footer.blog": "Blog",
         "footer.policy": "Privacy Policy",
         "footer.settings": "Privacy Settings",

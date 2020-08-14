@@ -36,7 +36,7 @@ const Headline = styled.div`
 
 const Carousel = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(3, 220px 198px 259px 158px 220px 192px 130px);
+  grid-template-columns: repeat(3, 220px 198px 259px 158px 220px 220px 192px 130px);
   justify-items: end;
   height: 50%;
 `;
@@ -69,6 +69,7 @@ const Clients = () => {
               <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
               <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
               <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
@@ -77,6 +78,7 @@ const Clients = () => {
               <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
               <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
               <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
@@ -85,6 +87,7 @@ const Clients = () => {
               <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
               <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
               <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>

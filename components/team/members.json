@@ -5,7 +5,7 @@
         "name": "Sabrina Palme",
         "image": "sabrina.png",
         "role": "Chief Executive Officer",        
-        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+        "linkedin": "https://www.linkedin.com/in/sabrina-p-95536b79/"
     },
     {
         "id": "2",
@@ -18,18 +18,33 @@
     {
         "id": "3",
         "type": "team",
-        "name": "Andre Quintanilha",
+        "name": "Hartley Jean-Aimee",
         "image": "sabrina.png",
-        "role": "Chief Privacy Officer",        
-        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+        "role": "Chief Technology Officer",        
+        "linkedin": "https://www.linkedin.com/in/hartley-jean-aimee-1277044a/"
     },
     {
         "id": "4",
         "type": "advisor",
-        "name": "Andre Quintanilha",
+        "name": "Neil McLaren",
         "image": "sabrina.png",
-        "role": "Chief Privacy Officer",        
-        "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
+        "role": "Senior Software Engineer & Architect at ConsenSys",        
+        "linkedin": "https://www.linkedin.com/in/neil-mc/"
+    },
+    {
+        "id": "5",
+        "type": "advisor",
+        "name": "Martin Shiers",
+        "image": "sabrina.png",
+        "role": "EU GDPR Practitioner and Data Protection Officer (DPO)",        
+        "linkedin": "https://www.linkedin.com/in/martinshiers/"
+    },
+    {
+        "id": "6",
+        "type": "advisor",
+        "name": "Dr. Marcio Cots",
+        "image": "sabrina.png",
+        "role": "Partner & Attorney-at-law at COTS Advogados",        
+        "linkedin": "https://www.linkedin.com/in/marciocots/"
     }
-    
 ]

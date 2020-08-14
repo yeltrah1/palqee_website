@@ -16,7 +16,10 @@ const TextContainer = styled.div`
     background: white;
     margin: 15px 15px;
     align-self: end;
-    height: 110px;
+
+    a {
+        width: 25%;
+    }
 `;
 
 const NameStyle = styled.div`
@@ -42,6 +45,7 @@ const RoleStyle = styled.div`
     color: #758194;
     cursor: default;
     padding-left: 20px;
+    padding-right: 20px;
 `;
 
 const LinkedinImage = styled.img`
@@ -51,14 +55,14 @@ const LinkedinImage = styled.img`
     padding-top: 5px;
 `;
 
-const MemberCards = ({name, role, image, linkedin}) => {
+const MemberCards = ({name, role, type, image, linkedin}) => {
 
     const photo = "url(/static/photos/"+image+")"
 
     return (
         <Wrapper style={{backgroundImage:photo}}>
             <div></div>
-            <TextContainer>
+            <TextContainer style={{height: type==="team"? "110px": "130px"}}>
                 <NameStyle>{name}</NameStyle>
                 <RoleStyle>{role}</RoleStyle>
                 <a href={linkedin} target="_blank">
