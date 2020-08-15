@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
@@ -15,11 +15,62 @@ const ListStyle = styled.div`
     margin-top: 60px;
 `;
 
+const NoEntries = styled.div`
+    display: grid;
+    justify-self: center;
+    margin-top: 120px;
+    font-family: 'Poppins-Semi';
+
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+`;
+
 const PartnersList = () => {
     
     const router = useRouter()
 
-    return (
+    const searchResults = partners.filter(partner => partner.location.includes(
+            router.query.country === "brazil" ? "Brazil" : 
+            router.query.country === "usa" ? "USA" : 
+            router.query.country === "portugal" ? "Portugal" : "") === true &&
+        partner.service.includes(
+            router.query.service === "consulting" ? "Consulting" : 
+            router.query.service === "implementation" ? "Implementation" : 
+            router.query.service === "training" ? "Training" : "") === true &&
+        partner.industry.includes(
+            router.query.industry === "finance" ? "Finance" : 
+            router.query.industry === "automotive" ? "Automotive" : 
+            router.query.industry === "ecommerce" ? "Ecommerce" : "") === true);
+
+    const searchPartner = partners.filter(partner => partner.description.includes(router.query.partner));
+
+    if (router.query.partner && searchPartner.length !== 0) return (
+        <ListStyle>
+            {partners
+            .filter(partner => partner.description.includes(router.query.partner))
+            .map(partner => 
+            <PartnerCard 
+                logo={partner.logo}
+                description={partner.description}
+                service={partner.service} 
+                location={partner.location}
+                industry={partner.industry}
+                website={partner.website}
+                key={partner.id}
+            />
+            )}
+        </ListStyle>
+    ) 
+
+    else if (router.query.partner && searchPartner.length === 0) return ( 
+        <NoEntries>There are currently no accredited partners matching your search.</NoEntries> )
+    
+    else if (searchResults.length === 0) return ( 
+        <NoEntries>There are currently no accredited partners matching your selection criteria.</NoEntries> )
+    
+    else return (
         <ListStyle>
             {partners
             .filter(partner => partner.location.includes(
