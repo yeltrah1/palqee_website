@@ -40,6 +40,7 @@ const PartnersList = () => {
                 description={partner.description}
                 service={partner.service} 
                 location={partner.location}
+                industry={partner.industry}
                 website={partner.website}
                 key={partner.id}
             />

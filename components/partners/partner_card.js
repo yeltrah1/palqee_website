@@ -38,7 +38,7 @@ const TagsStyle = styled.div`
     letter-spacing: normal;
     color: #758194;
 
-    .service {
+    .tag {
         color: #000000;
         font-family: Poppins-Semi;
     }
@@ -49,6 +49,8 @@ const LinkStyle = styled.div`
         font-family: 'Poppins-Semi';
         src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
+
+    a {
     padding: 0px 30px;
     padding-bottom: 20px;
     font-family: Poppins-Semi;
@@ -59,19 +61,21 @@ const LinkStyle = styled.div`
     line-height: 1.54;
     letter-spacing: normal;
     color: ${props => props.theme.linkColor};
+    }
 `;
 
-const PartnerCard = ({logo, description, service, location, website}) => {
+const PartnerCard = ({logo, description, service, industry, location, website}) => {
 
     return (
         <ContainerStyle>
             <PartnerLogo src={"../../../static/icons/clients/"+logo+".png"}/>
             <DescriptionStyle>{description}</DescriptionStyle>
             <TagsStyle>
-                <div className="service">{service}</div>
-                {location}
+                <a className="tag">Services: </a> {service} <br/>
+                <a className="tag">Industries: </a> {industry} <br/>
+                <a className="tag">Location: </a> {location}
             </TagsStyle>
-            <LinkStyle>{website}</LinkStyle>
+            <LinkStyle><a href={website} target="_blank"><u>Visit Website</u></a></LinkStyle>
         </ContainerStyle>
     );
 }
