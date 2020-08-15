@@ -34,7 +34,7 @@ const HeroText = styled.div`
 
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+        src: url('../../public/static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
     
     .large .semi {

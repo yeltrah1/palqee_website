@@ -497,13 +497,14 @@ export const FindStyle = styled.div`
 
   .large-white {
     display: grid;
+    grid-template-rows: 120px 1fr;
     justify-self: center;
     background-image: url("/static/patterns/partners_bg.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
     width: 100vw;
     position: relative;
-    min-height: 1200px;
+    min-height: 500px;
     padding-bottom: 100px;
   }
 

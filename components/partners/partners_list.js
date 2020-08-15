@@ -11,36 +11,29 @@ const ListStyle = styled.div`
     grid-column-gap: 6em;
     grid-row-gap: 3em;
     justify-self: center;
-    margin-top: 200px;
+    align-self: start;
+    margin-top: 60px;
 `;
 
 const PartnersList = () => {
     
     const router = useRouter()
 
-    if (router.query.service === "all" && router.query.country === "global") {
-        return (
-        <ListStyle>
-            {partners.map(partner => 
-            <PartnerCard 
-                logo={partner.logo}
-                description={partner.description}
-                service={partner.service} 
-                location={partner.location}
-                website={partner.website}
-                key={partner.id}
-            />
-            )}
-        </ListStyle>
-
-        )
-    } 
-        
-    else if (router.query.service === "all" && router.query.country === "brazil") {
-        return (
+    return (
         <ListStyle>
             {partners
-            .filter(partner => partner.location.includes("Brazil") === true)
+            .filter(partner => partner.location.includes(
+                    router.query.country === "brazil" ? "Brazil" : 
+                    router.query.country === "usa" ? "USA" : 
+                    router.query.country === "portugal" ? "Portugal" : "") === true &&
+                partner.service.includes(
+                    router.query.service === "consulting" ? "Consulting" : 
+                    router.query.service === "implementation" ? "Implementation" : 
+                    router.query.service === "training" ? "Training" : "") === true &&
+                partner.industry.includes(
+                    router.query.industry === "finance" ? "Finance" : 
+                    router.query.industry === "automotive" ? "Automotive" : 
+                    router.query.industry === "ecommerce" ? "Ecommerce" : "") === true)
             .map(partner => 
             <PartnerCard 
                 logo={partner.logo}
@@ -52,33 +45,8 @@ const PartnersList = () => {
             />
             )}
         </ListStyle>
-        )
-    } 
+    )
 
-    else if (router.query.service === "all" && router.query.country === "usa") {
-        return (
-        <ListStyle>
-            {partners
-            .filter(partner => partner.location.includes("USA") === true)
-            .map(partner => 
-            <PartnerCard 
-                logo={partner.logo}
-                description={partner.description}
-                service={partner.service} 
-                location={partner.location}
-                website={partner.website}
-                key={partner.id}
-            />
-            )}
-        </ListStyle>
-        )
-    } 
-    
-    else {  
-        return (
-            <div>No Entries Found</div>
-        )
-    }
 }
 
 export default PartnersList ;
