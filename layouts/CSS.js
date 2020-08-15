@@ -785,7 +785,7 @@ export const FooterStyle = styled.div`
 
     @font-face {
       font-family: 'Larsseit';
-      src: url('static/fonts/Larsseit-Regular.ttf') format('truetype');
+      src: url('/static/fonts/Larsseit-Regular.ttf') format('truetype');
     }
   }
 
