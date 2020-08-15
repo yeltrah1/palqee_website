@@ -88,7 +88,7 @@ const NavBar = ({ white, setWhite }) => {
                             <Link href="/partners"><a className="menu-item">{translate('navBar.partners')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-partners">
                                 <Link href="/partners"><a>Become a Partner</a></Link>
-                                <Link as="/accredited/all/global" href="/accredited/[service]/[country]"><a>Accredited Partners</a></Link>
+                                <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a>Accredited Partners</a></Link>
                             </div>
                         </div>
                         <a className="menu-item" href="/blog">Blog</a>
