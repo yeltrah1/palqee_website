@@ -73,7 +73,7 @@ const BenefitAdmin = () => {
                 </BenefitText>
                 <Video ref={ref}>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/v1597342061/palqee_admin.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1597691131/palqee_streamline_admin.mp4' 
                     playing={onScreen ? true : false}
                     loop={true}
                     autoPlay={true}

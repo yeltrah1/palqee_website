@@ -8,7 +8,9 @@ import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { TextCard } from './text_card';
-import { VideoCard } from './video_card';
+import { GetglobalCard } from './getglobal_card';
+import { DrlCard } from './drl_card';
+import { DanticCard } from './dantic_card';
 
 const Wrapper = styled.div`
     display: grid;
@@ -116,9 +118,9 @@ const Testimonials = () => {
             </div>
         </TestimonialsText>
             <Cards>
-                <TextCard/>
-                <VideoCard/>
-                <TextCard/>
+                <DrlCard/>
+                <GetglobalCard/>
+                <DanticCard/>
                 <TextCard/>
             </Cards>
         </Wrapper>

@@ -67,7 +67,7 @@ const BenefitInsights = () => {
             <Wrapper>
             <Video ref={ref}>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/v1597342061/palqee_insights.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1597690972/palqee_insights.mp4' 
                     playing={onScreen ? true : false}
                     loop={true}
                     autoPlay={true}

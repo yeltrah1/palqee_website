@@ -57,7 +57,7 @@ const LinkedinImage = styled.img`
 
 const MemberCards = ({name, role, type, image, linkedin}) => {
 
-    const photo = "url(/static/photos/"+image+")"
+    const photo = "url("+image+")"
 
     return (
         <Wrapper style={{backgroundImage:photo}}>

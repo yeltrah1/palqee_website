@@ -117,23 +117,23 @@ const CoverStyle = styled.img`
     cursor: pointer;
 `;
 
-const VideoCard = () => {
+const DrlCard = () => {
 
     const [play, setPlay] = useState(false)
 
     return (
         <ContainerStyle>
             <TitleStyle>
-                <AvatarStyle src={"static/photos/marcio.png"}/>
+                <AvatarStyle src={"static/photos/avatar.png"}/>
                 <div className="person">
-                    <div className="name">Marcio Riego Cots</div>
-                    <div className="position">COO at Get Global International</div>
+                    <div className="name">Alex Palamarczuk</div>
+                    <div className="position">CEO at Digital Roots Lab</div>
                 </div>
             </TitleStyle>
             <a href="#open-modal" onClick={() => { setPlay(true) }}>
-                <CoverStyle src={"https://res.cloudinary.com/palqee/image/upload/v1596932499/marcio_cover.jpg"}/>
+                <CoverStyle src={"static/images/video_placeholder.jpg"}/>
             </a>
-            <Logo src={"static/icons/clients/getglobal_logo.png"}/>
+            <Logo src={"static/icons/clients/drl_logo.png"}/>
 
             <div id="open-modal" className="modal">
                 <div>
@@ -156,4 +156,4 @@ const VideoCard = () => {
     );
 }
 
-export { VideoCard };
+export { DrlCard };

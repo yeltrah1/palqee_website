@@ -3,7 +3,7 @@
         "id": "1",
         "type": "team",
         "name": "Sabrina Palme",
-        "image": "sabrina.png",
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1597697629/sabrina.jpg",
         "role": "Chief Executive Officer",        
         "linkedin": "https://www.linkedin.com/in/sabrina-p-95536b79/"
     },
@@ -19,7 +19,7 @@
         "id": "3",
         "type": "team",
         "name": "Hartley Jean-Aimee",
-        "image": "hartley.jpg",
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1597696613/hartley.jpg",
         "role": "Chief Technology Officer",        
         "linkedin": "https://www.linkedin.com/in/hartley-jean-aimee-1277044a/"
     },
@@ -43,7 +43,7 @@
         "id": "6",
         "type": "advisor",
         "name": "Dr. Marcio Cots",
-        "image": "sabrina.png",
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1597697967/marcio.jpg",
         "role": "Partner & Attorney-at-law at COTS Advogados",        
         "linkedin": "https://www.linkedin.com/in/marciocots/"
     }
