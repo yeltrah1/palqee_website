@@ -532,20 +532,26 @@ export const PartnerStyle = styled.div`
 
   .large-white {
     background: white;
-    height: 650px;
+    height: 500px;
     position: relative;
+    display: grid;
+    width: 100vw;
   }
 
   .large-grey {
     background: #FBFCFD;
-    height: 650px;
-    position: relative;
+    height: 500px;
+    position: relative;    
+    display: grid;
+    width: 100vw;
   }
 
   .skewed-grey {
-    height: 600px;
+    height: 500px;
     width: 200vw;
     position: relative;
+    display: grid;
+    width: 100vw;
   }
 
   .small-darkblue {
