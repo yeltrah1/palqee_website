@@ -138,7 +138,7 @@ const DanticCard = () => {
             <div id="open-modal" className="modal">
                 <div>
                     <ReactPlayer 
-                    url='https://res.cloudinary.com/palqee/video/upload/v1596929999/marcio_testimonial.mp4' 
+                    url='https://res.cloudinary.com/palqee/video/upload/v1597864714/daniel_testimonial.mp4' 
                     controls={true}
                     playing={play}
                     className="react-player"
