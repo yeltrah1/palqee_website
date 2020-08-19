@@ -59,6 +59,7 @@ const AvatarStyle = styled.img`
     width: 50px;
     margin-top: 10px;
     align-self: center;
+    border-radius: 30px;
 `;
 
 const Logo = styled.img`
@@ -124,14 +125,14 @@ const DanticCard = () => {
     return (
         <ContainerStyle>
             <TitleStyle>
-                <AvatarStyle src={"static/photos/avatar.png"}/>
+                <AvatarStyle src={"static/photos/daniel.jfif"}/>
                 <div className="person">
                     <div className="name">Daniel Nusbaum</div>
                     <div className="position">CEO at DanTIC Consulting</div>
                 </div>
             </TitleStyle>
             <a href="#open-dantic" onClick={() => { setPlay(true) }}>
-                <CoverStyle src={"static/images/video_placeholder.jpg"}/>
+                <CoverStyle src={"https://res.cloudinary.com/palqee/image/upload/v1597865822/daniel_cover.jpg"}/>
             </a>
             <Logo src={"static/icons/clients/dantic_logo.png"}/>
 
