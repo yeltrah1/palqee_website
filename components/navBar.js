@@ -91,7 +91,7 @@ const NavBar = ({ white, setWhite }) => {
                                 <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a>Accredited Partners</a></Link>
                             </div>
                         </div>
-                        <a className="menu-item" href="/blog">Blog</a>
+                        <a className="menu-item" href="/blog/all">Blog</a>
                     </div>
                 </NavBarStyle>
             </div>   

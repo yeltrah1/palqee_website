@@ -518,6 +518,43 @@ export const FindStyle = styled.div`
   }
 `;
 
+export const BlogStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/blue_bg.png");
+    background-color: #fbfcfd;
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    height: 400px;
+    width: 100vw;
+  }
+
+  .large-white {
+    display: grid;
+    grid-template-rows: 120px 1fr;
+    justify-self: center;
+    background-image: url("/static/patterns/partners_bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100vw;
+    position: relative;
+    min-height: 500px;
+    padding-bottom: 100px;
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 100vw;
+  }
+`;
+
 export const PartnerStyle = styled.div`
   display:grid;
   overflow-x: hidden;
