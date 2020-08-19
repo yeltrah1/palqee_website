@@ -130,12 +130,12 @@ const DrlCard = () => {
                     <div className="position">CEO at Digital Roots Lab</div>
                 </div>
             </TitleStyle>
-            <a href="#open-modal" onClick={() => { setPlay(true) }}>
+            <a href="#open-drl" onClick={() => { setPlay(true) }}>
                 <CoverStyle src={"static/images/video_placeholder.jpg"}/>
             </a>
             <Logo src={"static/icons/clients/drl_logo.png"}/>
 
-            <div id="open-modal" className="modal">
+            <div id="open-drl" className="modal">
                 <div>
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1596929999/marcio_testimonial.mp4' 

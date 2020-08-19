@@ -130,12 +130,12 @@ const GetglobalCard = () => {
                     <div className="position">COO at Get Global International</div>
                 </div>
             </TitleStyle>
-            <a href="#open-modal" onClick={() => { setPlay(true) }}>
+            <a href="#open-getglobal" onClick={() => { setPlay(true) }}>
                 <CoverStyle src={"https://res.cloudinary.com/palqee/image/upload/v1596932499/marcio_cover.jpg"}/>
             </a>
             <Logo src={"static/icons/clients/getglobal_logo.png"}/>
 
-            <div id="open-modal" className="modal">
+            <div id="open-getglobal" className="modal">
                 <div>
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1596929999/marcio_testimonial.mp4' 

@@ -130,12 +130,12 @@ const DanticCard = () => {
                     <div className="position">CEO at DanTIC Consulting</div>
                 </div>
             </TitleStyle>
-            <a href="#open-modal" onClick={() => { setPlay(true) }}>
+            <a href="#open-dantic" onClick={() => { setPlay(true) }}>
                 <CoverStyle src={"static/images/video_placeholder.jpg"}/>
             </a>
             <Logo src={"static/icons/clients/dantic_logo.png"}/>
 
-            <div id="open-modal" className="modal">
+            <div id="open-dantic" className="modal">
                 <div>
                     <ReactPlayer 
                     url='https://res.cloudinary.com/palqee/video/upload/v1597864714/daniel_testimonial.mp4' 
