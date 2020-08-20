@@ -1,83 +1,42 @@
 [
     {
         "id": "1",
-        "logo": "getglobal_logo",
-        "description": "GetGlobal International is a training institution global that trains Data Protection Officers.",
-        "service": "Implementation, training and DPO as a Service",
-        "industry": "Ecommerce and Automotive",
-        "location": "Brazil, USA and Portugal",
-        "website": "https://getglobalinternational.com"
+        "date": "Feb 3, 2020",
+        "cover": "data_ethics.jpeg",
+        "title": "Data Ethics as a competitive advantage",
+        "short_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy",
+        "long_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy",
+        "category": "Business",
+        "link": "https://medium.com/@spalme/data-ethics-as-a-competitive-advantage-505c4c4d8bcc"
     },
     {
         "id": "2",
-        "logo": "IT2SGroup_logo",
-        "description": "IT2S Group provides IT security and DPO as a Service.",
-        "service": "Implementation and DPO as a Service",
-        "industry": "Finance and Ecommerce",
-        "location": "Brazil and USA",
-        "website": "https://it2sgroup.com"
+        "date": "Mar 11, 2020",
+        "cover": "privacy_returns.png",
+        "title": "Investing in data privacy brings positive returns",
+        "short_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations, we’ve been reading a lot about businesses struggling to cope with it.",
+        "long_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations, we’ve been reading a lot about businesses struggling to cope with it, as they had to invest large sums of money, time and resources into their data privacy agenda.",
+        "category": "Business",
+        "link": "https://medium.com/datadriveninvestor/investing-in-data-privacy-brings-positive-returns-1c44e3728e72"
     },
     {
         "id": "3",
-        "logo": "Dpofficer_brazil",
-        "description": "DPOfficer Brazil provides consultancy services for LGPD compliance and training of the Palqee Enterprise Suite.",
-        "service": "Compliance Consulting and Implementation",
-        "industry": "All",
-        "location": "Brazil",
-        "website": "Feb 2020"
+        "date": "Apr 28, 2020",
+        "cover": "trusted_data.jpeg",
+        "title": "A summary of “Trusted Data — A New Framework for Identity and Data Sharing",
+        "short_description": "Trusted Data — A new Framework for Identity and Data Sharing edited by Thomas Hardjono, David L. Shrier and Alex Pentland introduces a revolutionary architecture and framework to build the Internet of Trusted Data.",
+        "long_description": "Trusted Data — A new Framework for Identity and Data Sharing edited by Thomas Hardjono, David L. Shrier and Alex Pentland introduces a revolutionary architecture and framework to build the Internet of Trusted Data. The aim of the framework is to allow efficient real-time data and insights sharing while preserving data privacy — a challenge much discussed these days as demand for data increases while international data protection regulations put new restrictions on how data can be used.",
+        "category": "Business",
+        "link": "https://medium.com/datadriveninvestor/a-summary-of-trusted-data-a-new-framework-for-identity-and-data-sharing-94ada762b3fe"
     },
     {
         "id": "4",
-        "logo": "Wesdom_logo",
-        "description": "Wesdom is the CIO consulting group that provides Compliance services and DPO as a Service.",
-        "service": "Compliance Consulting and Implementation",
-        "industry": "All",
-        "location": "Brazil",
-        "website": "Feb 2020"
-    },
-    {
-        "id": "5",
-        "logo": "Dantic_logo",
-        "description": "DanTIC consulting provides compliance consultancy services for SMEs in Brazil and implements the Palqee Enterprise Suite.",
-        "service": "Compliance Consulting and Implementation",
-        "industry": "All",
-        "location": "Brazil",
-        "website": "Feb 2020"
-    },
-    {
-        "id": "6",
-        "logo": "Wesdom_logo",
-        "description": "Wesdom is the CIO consulting group that provides Compliance services and DPO as a Service.",
-        "service": "Compliance Consulting and Implementation",
-        "industry": "Ecommerce",
-        "location": "USA and Portugal",
-        "website": "Feb 2020"
-    },
-    {
-        "id": "7",
-        "logo": "Dantic_logo",
-        "description": "DanTIC consulting provides compliance consultancy services for SMEs in Brazil and implements the Palqee Enterprise Suite.",
-        "service": "Training and Implementation",
-        "industry": "All",
-        "location": "Brazil",
-        "website": "Feb 2020"
-    },
-    {
-        "id": "8",
-        "logo": "Wesdom_logo",
-        "description": "Wesdom is the CIO consulting group that provides Compliance services and DPO as a Service.",
-        "service": "Compliance Consulting and Implementation",
-        "industry": "Ecommerce",
-        "location": "USA and Portugal",
-        "website": "Feb 2020"
-    },
-    {
-        "id": "9",
-        "logo": "Dantic_logo",
-        "description": "DanTIC consulting provides compliance consultancy services for SMEs in Brazil and implements the Palqee Enterprise Suite.",
-        "service": "Training and Implementation",
-        "industry": "All",
-        "location": "Brazil",
-        "website": "Feb 2020"
+        "date": "Aug 4, 2020",
+        "cover": "compliance_palqee.jpeg",
+        "title": "TOP 5 steps to get started with GDPR compliance",
+        "short_description": "A research by GDPR.EU found that over 50% of SME’s were still not GDPR compliant as per May 2019. While the GDPR was mostly dreaded by (tech) giants, time has shown that the regulation is much more of a burden for small businesses.",
+        "long_description": "A research by GDPR.EU found that over 50% of SME’s were still not GDPR compliant as per May 2019. While the GDPR was mostly dreaded by (tech) giants, time has shown that the regulation is much more of a burden for small businesses. Most don’t have the budget to spend on data privacy and if there is some money available the priority usually is to put it into growth rather than something that is seen largely as an expense.",
+        "category": "GDPR",
+        "link": "https://medium.com/palqee/top-5-steps-to-get-started-with-gdpr-compliance-afdecf72650f"
     }
 ]

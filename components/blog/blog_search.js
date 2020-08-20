@@ -5,20 +5,20 @@ import { useRouter } from 'next/router';
 const ContainerStyle = styled.div`
     display: grid;
     justify-self: center; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.4fr 0.6fr;
     border-radius: 6px;
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
     height: 50px;
-    width: 900px;
+    width: 700px;
     margin-top: 50px;
-    padding: 20px;
+    padding: 20px 50px;
 `;
 
 const SelectStyle = styled.select`
   height: 30px;
-  width: 200px;
+  width: 300px;
   background-color: #ffffff;
   border-radius: 6px;
   border: solid 1px rgba(117, 129, 148, 0.12);
@@ -30,6 +30,7 @@ const SelectStyle = styled.select`
   font-style: normal;
   line-height: 1.71;
   margin-top: 10px;
+  margin-left: 20px;
   padding-left: 10px;
   padding-right: 10px;
   
@@ -64,7 +65,7 @@ const SelectStyle = styled.select`
 const InputStyle = styled.input`
     background-color: transparent;
     border: 0;
-    width: 180px;
+    width: 260px;
     text-align: left;
     font-family: Poppins;
     font-size: 12px;
@@ -90,14 +91,15 @@ const InputStyle = styled.input`
 
 const FieldStyle = styled.div`
     .title {
-        font-family: Poppins-Semi;
-        font-size: 10px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        color: #192d4d;
+      font-family: Poppins-Semi;
+      font-size: 10px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      color: #192d4d;
+      margin-left: 20px;
     }
 
     .ico-mglass {
@@ -134,8 +136,9 @@ const SearchStyle = styled.div`
   align-items: center;
   justify-items: end;
   height: 29px;
-  width: 200px;
+  width: 280px;
   margin-top: 10px;
+  margin-left: 20px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 6px;
@@ -154,40 +157,24 @@ const BlogSearch = () => {
     return (
         <ContainerStyle>
             <FieldStyle>
-                <div className="title">By Service</div>
-                <SelectStyle id="service" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})} >
-                    <option selected={router.query.service === "all-services" ? true : false} value="all-services">All Services</option>
-                    <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">Compliance Consulting</option>
-                    <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">Palqee Implementation</option>
-                    <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">Workforce Training</option>
+                <div className="title">By Category</div>
+                <SelectStyle id="category" onChange={() => router.push('/blog/[category]', '/blog/'+document.getElementById("category").value, {shallow: true})} >
+                    <option selected={router.query.category === "all" ? true : false} value="all">All Articles</option>
+                    <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">Tutorials</option>
+                    <option selected={router.query.category === "resources" ? true : false} value="resources">Resources & Tips</option>
+                    <option selected={router.query.category === "business" ? true : false} value="business">Business</option>
+                    <option selected={router.query.category === "lgpd" ? true : false} value="lgpd">Lei Geral de Proteção de Dados (LGPD)</option>
+                    <option selected={router.query.category === "gdpr" ? true : false} value="gdpr">General Data Protection Regulation (GDPR)</option>
                 </SelectStyle>
             </FieldStyle>
             <FieldStyle>
-                <div className="title">By Industry</div>
-                <SelectStyle id="industry" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
-                    <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">All Industries</option>
-                    <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">Finance</option>
-                    <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
-                    <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
-                </SelectStyle>
-            </FieldStyle>
-            <FieldStyle>
-                <div className="title">By Country</div>
-                <SelectStyle id="country" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
-                    <option selected={router.query.country === "global" ? true : false} value="global">All Countries</option>
-                    <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
-                    <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
-                    <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
-                </SelectStyle>
-            </FieldStyle>
-            <FieldStyle>
-                <div className="title">Find a Partner</div>
+                <div className="title">Search</div>
                 <form onSubmit={() => router.push({ 
-                        pathname: '/accredited/[service]/[industry]/[country]',
-                        query: { partner: query }
+                        pathname: '/blog/[category]',
+                        query: { article: query }
                         })}>
                     <SearchStyle>
-                        <InputStyle type="text" name="partner" placeholder="Search"/>
+                        <InputStyle type="text" name="article" placeholder="Search"/>
                         <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
                     </SearchStyle>
                 </form>

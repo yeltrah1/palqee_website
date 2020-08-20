@@ -68,7 +68,7 @@ const BlogCard = ({logo, description, service, industry, location, website}) => 
 
     return (
         <ContainerStyle>
-            <PartnerLogo src={"../../../static/icons/clients/"+logo+".png"}/>
+            <PartnerLogo src={"../../../static/images/blog/"+logo}/>
             <DescriptionStyle>{description}</DescriptionStyle>
             <TagsStyle>
                 <a className="tag">Services: </a> {service} <br/>

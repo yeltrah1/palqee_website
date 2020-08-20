@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
@@ -31,68 +31,56 @@ const BlogList = () => {
     
     const router = useRouter()
 
-    const searchResults = posts.filter(article => article.location.includes(
-            router.query.country === "brazil" ? "Brazil" : 
-            router.query.country === "usa" ? "USA" : 
-            router.query.country === "portugal" ? "Portugal" : "") === true &&
-        article.service.includes(
-            router.query.service === "consulting" ? "Consulting" : 
-            router.query.service === "implementation" ? "Implementation" : 
-            router.query.service === "training" ? "Training" : "") === true &&
-        article.industry.includes(
-            router.query.industry === "finance" ? "Finance" : 
-            router.query.industry === "automotive" ? "Automotive" : 
-            router.query.industry === "ecommerce" ? "Ecommerce" : "") === true);
+    const searchResults = posts.filter(article => article.category.includes(
+            router.query.category === "tutorials" ? "Tutorials" : 
+            router.query.category === "resources" ? "Resources & Tips" : 
+            router.query.category === "business" ? "Business" : 
+            router.query.category === "gdpr" ? "GDPR" : 
+            router.query.category === "lgpd" ? "LGPD" : "") === true);
 
-    const searchPartner = posts.filter(article => article.description.includes(router.query.partner));
+    const searchArticle = posts.filter(article => article.title.includes(router.query.article));
 
-    if (router.query.partner && searchPartner.length !== 0) return (
+    if (router.query.article && searchArticle.length !== 0) return (
         <ListStyle>
             {posts
-            .filter(article => article.description.includes(router.query.partner))
+            .filter(article => article.title.includes(router.query.article))
             .map(article => 
             <BlogCard 
-                logo={article.logo}
-                description={article.description}
-                service={article.service} 
-                location={article.location}
-                industry={article.industry}
-                website={article.website}
+                cover={article.cover}
+                date={article.date}
+                category={article.category} 
+                title={article.title}
+                short_description={article.short_description}
+                link={article.link}
                 key={article.id}
             />
             )}
         </ListStyle>
     ) 
 
-    else if (router.query.partner && searchPartner.length === 0) return ( 
-        <NoEntries>There are currently no accredited partners matching your search.</NoEntries> )
+    else if (router.query.article && searchArticle.length === 0) return ( 
+        <NoEntries>There are currently no articles matching your search.</NoEntries> )
     
     else if (searchResults.length === 0) return ( 
-        <NoEntries>There are currently no accredited partners matching your selection criteria.</NoEntries> )
+        <NoEntries>There are currently no articles in this category.</NoEntries> )
     
     else return (
         <ListStyle>
             {posts
-            .filter(article => article.location.includes(
-                    router.query.country === "brazil" ? "Brazil" : 
-                    router.query.country === "usa" ? "USA" : 
-                    router.query.country === "portugal" ? "Portugal" : "") === true &&
-                article.service.includes(
-                    router.query.service === "consulting" ? "Consulting" : 
-                    router.query.service === "implementation" ? "Implementation" : 
-                    router.query.service === "training" ? "Training" : "") === true &&
-                article.industry.includes(
-                    router.query.industry === "finance" ? "Finance" : 
-                    router.query.industry === "automotive" ? "Automotive" : 
-                    router.query.industry === "ecommerce" ? "Ecommerce" : "") === true)
+            .filter(article => article.category.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") === true)
             .map(article => 
             <BlogCard 
-                logo={article.logo}
-                description={article.description}
-                service={article.service} 
-                location={article.location}
-                industry={article.industry}
-                website={article.website}
+                cover={article.cover}
+                date={article.date}
+                category={article.category} 
+                title={article.title}
+                short_description={article.short_description}
+                link={article.link}
                 key={article.id}
             />
             )}
