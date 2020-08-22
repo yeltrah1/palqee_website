@@ -3,21 +3,25 @@ import styled from 'styled-components';
 
 const ContainerStyle = styled.div`
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     border-radius: 6px;
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
-    height: 300px;
+    height: 440px;
 `;
 
-const PartnerLogo = styled.img` 
-    max-height: 50px;
-    max-width: 150px;
-    padding-left: 30px;
-    padding-top: 20px;
+const Cover = styled.img` 
+    height: 200px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 `;
 
-const DescriptionStyle = styled.div`
-    padding: 0px 30px;
+const InfoStyle = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px 55px 90px 0.5fr;
+    padding: 20px 25px;
     font-family: Poppins;
     font-size: 14px;
     font-weight: normal;
@@ -27,31 +31,106 @@ const DescriptionStyle = styled.div`
     color: #000000;
 `;
 
-const TagsStyle = styled.div`
-    padding: 0px 30px;
+const DateStyle = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 1fr;
     font-family: Poppins;
     font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.5;
     letter-spacing: normal;
     color: #758194;
 
-    .tag {
-        color: #000000;
-        font-family: Poppins-Semi;
+    .reg-tag {
+        display: grid;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #3f6db4;
+        justify-self: end;
+        place-items: center;
+        background: #f2f8fd;
+        border-radius: 6px;
+        width: 60px;
+        height: 20px;
     }
+
+    .business-tag {
+        display: grid;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #3f6db4;
+        justify-self: end;
+        place-items: center;
+        background: #f2f8fd;
+        border-radius: 6px;
+        width: 80px;
+        height: 20px;
+    }
+
+    .tutorials-tag {
+        display: grid;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #3f6db4;
+        justify-self: end;
+        place-items: center;
+        background: #f2f8fd;
+        border-radius: 6px;
+        width: 60px;
+        height: 20px;
+    }
+
+    .resources-tag {
+        display: grid;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #3f6db4;
+        justify-self: end;
+        place-items: center;
+        background: #f2f8fd;
+        border-radius: 6px;
+        width: 60px;
+        height: 20px;
+    }
+`;
+
+const TitleStyle = styled.div`
+    @font-face {
+        font-family: 'Poppins-Semi';
+        src: url('../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    display: grid;
+    align-self: center;
+    font-family: Poppins-Semi;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #192d4d;
+`;
+
+const DescriptionStyle = styled.div`
+    display: grid;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #000000;
 `;
 
 const LinkStyle = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
-        src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+        src: url('../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
     a {
-    padding: 0px 30px;
     padding-bottom: 20px;
     font-family: Poppins-Semi;
     font-size: 14px;
@@ -64,18 +143,26 @@ const LinkStyle = styled.div`
     }
 `;
 
-const BlogCard = ({logo, description, service, industry, location, website}) => {
+const BlogCard = ({cover, short_description, date, title, category, link}) => {
 
     return (
         <ContainerStyle>
-            <PartnerLogo src={"../../../static/images/blog/"+logo}/>
-            <DescriptionStyle>{description}</DescriptionStyle>
-            <TagsStyle>
-                <a className="tag">Services: </a> {service} <br/>
-                <a className="tag">Industries: </a> {industry} <br/>
-                <a className="tag">Location: </a> {location}
-            </TagsStyle>
-            <LinkStyle><a href={website} target="_blank"><u>Visit Website</u></a></LinkStyle>
+            <Cover src={"../../../static/images/blog/"+cover}/>
+            <InfoStyle>
+                <DateStyle>
+                    {date}
+                    <a className={
+                        category === "GDPR" ? "reg-tag" :
+                        category === "LGPD" ? "reg-tag" :
+                        category === "Business" ? "business-tag" :
+                        category === "Tutorials" ? "tutorials-tag" :
+                        category === "Resources" ? "resources-tag" : "reg-tag"}
+                    >{category}</a> 
+                </DateStyle>
+                <TitleStyle>{title}</TitleStyle>
+                <DescriptionStyle>{short_description}</DescriptionStyle>
+                <LinkStyle><a href={link} target="_blank"><u>Read Article</u></a></LinkStyle>
+            </InfoStyle>
         </ContainerStyle>
     );
 }

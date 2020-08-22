@@ -7,8 +7,8 @@ import posts from './blog.json';
 
 const ListStyle = styled.div`
     display: grid;
-    grid-template-columns: 400px 400px;    
-    grid-column-gap: 6em;
+    grid-template-columns: 450px 450px;    
+    grid-column-gap: 2em;
     grid-row-gap: 3em;
     justify-self: center;
     align-self: start;
