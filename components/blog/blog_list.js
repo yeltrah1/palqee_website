@@ -3,7 +3,15 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 import BlogCard from './blog_card';
+import BlogLargeCard from './blog_large_card';
 import posts from './blog.json';
+
+const LargeStyle = styled.div`
+    display: grid;
+    justify-self: center;
+    align-self: start;
+    margin-top: 60px;
+`;
 
 const ListStyle = styled.div`
     display: grid;
@@ -50,7 +58,7 @@ const BlogList = () => {
                 date={article.date}
                 category={article.category} 
                 title={article.title}
-                short_description={article.short_description}
+                description={article.short_description}
                 link={article.link}
                 key={article.id}
             />
@@ -65,6 +73,28 @@ const BlogList = () => {
         <NoEntries>There are currently no articles in this category.</NoEntries> )
     
     else return (
+        <>
+        <LargeStyle>
+            {posts
+            .filter(article => article.category.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") === true)
+            .splice(0, 1)
+            .map(article => 
+            <BlogLargeCard 
+                cover={article.large_cover}
+                date={article.date}
+                category={article.category} 
+                title={article.title}
+                description={article.long_description}
+                link={article.link}
+                key={article.id}
+            />
+            )}
+        </LargeStyle>
         <ListStyle>
             {posts
             .filter(article => article.category.includes(
@@ -73,18 +103,20 @@ const BlogList = () => {
                 router.query.category === "business" ? "Business" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") === true)
+            .slice(1)
             .map(article => 
             <BlogCard 
                 cover={article.cover}
                 date={article.date}
                 category={article.category} 
                 title={article.title}
-                short_description={article.short_description}
+                description={article.short_description}
                 link={article.link}
                 key={article.id}
             />
             )}
         </ListStyle>
+        </>
     )
 
 }

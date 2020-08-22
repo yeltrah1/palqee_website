@@ -10,10 +10,10 @@ const ContainerStyle = styled.div`
     border-radius: 6px;
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
-    height: 50px;
+    height: 55px;
     width: 700px;
     margin-top: 50px;
-    padding: 20px 50px;
+    padding: 10px 50px;
 `;
 
 const SelectStyle = styled.select`

@@ -3,25 +3,26 @@ import styled from 'styled-components';
 
 const ContainerStyle = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     border-radius: 6px;
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
-    height: 430px;
+    height: 300px;
+    width: 930px;
 `;
 
 const Cover = styled.img` 
-    height: 200px;
+    height: 300px;
     border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
 `;
 
 const InfoStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 25px 55px 90px 0.5fr;
-    padding: 0px 25px;
+    grid-template-rows: 25px 55px 150px 0.5fr;
+    padding: 20px 25px;
     font-family: Poppins;
     font-size: 14px;
     font-weight: normal;
@@ -143,7 +144,7 @@ const LinkStyle = styled.div`
     }
 `;
 
-const BlogCard = ({cover, description, date, title, category, link}) => {
+const BlogLargeCard = ({cover, description, date, title, category, link}) => {
 
     return (
         <ContainerStyle>
@@ -167,4 +168,4 @@ const BlogCard = ({cover, description, date, title, category, link}) => {
     );
 }
 
-export default BlogCard;
+export default BlogLargeCard;
