@@ -109,11 +109,11 @@ const Statistics = ({ count, setCount }) => {
     }
 
     const props = useSpring({ 
-        engaged: count ? 100 : 0,
+        engaged: count ? 400 : 0,
         surveys: count ? 5000 : 0, 
-        visits: count ? 760 : 0, 
-        reports: count ? 1000 : 0, 
-        from: { engaged: 0, surveys: 0, visits: 0, reports: 0 },
+        questions: count ? 360 : 0, 
+        reports: count ? 250 : 0, 
+        from: { engaged: 0, surveys: 0, questions: 0, reports: 0 },
         config: { duration: 3000, easing: easings.easeCircleInOut }
     });
 
@@ -135,12 +135,12 @@ const Statistics = ({ count, setCount }) => {
                     <div className="small">N<sup>o</sup> of surveys answered</div>
                 </div>
                 <div>
-                    <div className="large"><animated.a>{props.visits.interpolate(visits => Math.floor(visits))}</animated.a><a className="pink">+</a></div>
-                    <div className="small">Daily Knowledge base visits</div>
+                    <div className="large"><animated.a>{props.questions.interpolate(questions => Math.floor(questions))}</animated.a><a className="pink">+</a></div>
+                    <div className="small">Built-in regulatory questions</div>
                 </div>
                 <div>
                     <div className="large"><animated.a>{props.reports.interpolate(reports => Math.floor(reports))}</animated.a></div>
-                    <div className="small">N<sup>o</sup> of compliance reports generated</div>
+                    <div className="small">Compliance reports generated monthly</div>
                 </div>
             </StatisticsNumbers>
         </InView>

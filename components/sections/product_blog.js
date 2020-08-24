@@ -5,6 +5,8 @@ import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
+import BlogSmallCard from '../blog/blog_small_card';
+import posts from '../blog/blog.json';
 
 const Wrapper = styled.div`
     display: grid;
@@ -40,79 +42,9 @@ const PostsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    place-self: center;
-    column-gap: 35px;
+    place-items: center;
+    column-gap: 15px;
     margin-top: 40px;
-`;
-
-const BlogPosts = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.8fr;
-    background-color: #ffffff;
-    width: 350px;
-    height: 350px;
-    border-radius: 5px;
-    box-shadow: 0 0.8px 15px 0 rgba(206, 206, 206, 0.2);
-    overflow: hidden;
-`;
-
-const TextContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1fr;
-    background-color: #ffffff;
-    z-index:1;
-
-    @font-face {
-        font-family: 'Poppins-Semi';
-        src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
-    }
-
-    .title {
-        font-family: Poppins-Semi;
-        padding-top: 20px;
-        padding-left: 35px;
-        font-size: 14px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.43;
-        letter-spacing: normal;
-        color: ${props => props.theme.mainFontColor};
-    }
-
-    .small {
-        align-self: start;
-        padding: 5px 35px;
-        font-family: Poppins;
-        font-size: 13px;
-        font-weight: normal;
-        font-style: normal;
-        letter-spacing: normal;
-        font-stretch: normal;
-        line-height: 1.71;
-        color: #758194;
-    }
-`;
-
-const Cover = styled.img`
-    align-self: end;
-    justify-self: center;
-    width: 350px;
-    height: 200px;
-    cursor: pointer;
-
-    :hover {
-        transform: scale(1.2);
-        animation: hover;
-        animation-duration: 0.2s;
-    }
-
-    @keyframes hover{
-        from { transform: scale(1) }
-        to { transform: scale(1.2) }
-    }
 `;
 
 const ProductBlog = () => {
@@ -124,27 +56,33 @@ const ProductBlog = () => {
                 <div className="large">See how Palqee works with your Data Privacy agenda</div>
             </TitleText>
             <PostsContainer>
-                <BlogPosts>
-                    <Cover src="/static/images/blog/security.jpg"/>
-                    <TextContainer>
-                        <div className="title">Assign Process Owners</div>
-                        <div className="small">Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!</div>
-                    </TextContainer>
-                </BlogPosts>
-                <BlogPosts>
-                <Cover src="/static/images/blog/security.jpg"/>
-                <TextContainer>
-                        <div className="title">Assign Process Owners</div>
-                        <div className="small">Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!</div>
-                    </TextContainer>
-                </BlogPosts>
-                <BlogPosts>
-                <Cover src="/static/images/blog/security.jpg"/>
-                <TextContainer>
-                        <div className="title">Assign Process Owners</div>
-                        <div className="small">Palqee is the best privacy management software. Great tool to suceed with privacy.  I highly recommend it!</div>
-                    </TextContainer>
-                </BlogPosts>
+                <BlogSmallCard 
+                    cover={posts[1].cover}
+                    date={posts[1].date}
+                    category={posts[1].category} 
+                    title={posts[1].title}
+                    description={posts[1].short_description}
+                    link={posts[1].link}
+                    key={posts[1].id}
+                />
+                <BlogSmallCard 
+                    cover={posts[2].cover}
+                    date={posts[2].date}
+                    category={posts[2].category} 
+                    title={posts[2].title}
+                    description={posts[2].short_description}
+                    link={posts[2].link}
+                    key={posts[2].id}
+                />
+                <BlogSmallCard 
+                    cover={posts[3].cover}
+                    date={posts[3].date}
+                    category={posts[3].category} 
+                    title={posts[3].title}
+                    description={posts[3].short_description}
+                    link={posts[3].link}
+                    key={posts[3].id}
+                />
             </PostsContainer>
         </Wrapper>
     </ThemeProvider>
