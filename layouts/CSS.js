@@ -11,34 +11,82 @@ export const NavStyle = styled.div`
   left: 0px;
   top: 0px;
 
-  .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5px;
-    top: 5px;  
+  @media screen and (max-width: 750px) {
+    #hamburger {
+      position: absolute;
+      right: 40px;
+      top: 25px;
+      cursor: pointer;
+      width: 28px;
+      height: 22.5px;
+    }
 
-    .line {
-      @media screen and (max-width: 900px) {
-          width: 30px;
-          height: 3px;
-          background: ${props => props.theme.navBgColor};
-          margin: 5px;
-      }
+    #hamburger span {    
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 2.5px;
+      background: ${props => props.theme.hamburgerColor};
+      border-radius: 6px;
+      opacity: 1;
+      transform: rotate(0deg);
+      transition: 0.2s ease-in-out;
+    }
+
+    #hamburger span:nth-child(1) {
+      top: 0px;
+    }
+      
+    #hamburger span:nth-child(2), span:nth-child(3) {
+      top: 10px;
+    }
+      
+    #hamburger span:nth-child(4) {
+      top: 20px;
+    }
+      
+    #hamburger.open span:nth-child(1) {
+      top: 10px;
+      width: 0%;
+      left: 50%;
+    }
+      
+    #hamburger.open span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+      
+    #hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+      
+    #hamburger.open span:nth-child(4) {
+      top: 10px;
+      width: 0%;
+      left: 50%;
     }
   }
 
   .demo {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      
+      @media screen and (max-width: 750px) {
+        visibility: hidden;
+      }
   }
 `;
 
 export const NavBarStyle = styled.div` 
     .navbar {
-        overflow: hidden;
-        display: flex;
-        justify-content: center; 
-        padding-top: 10px; 
+      overflow: hidden;
+      display: flex;
+      justify-content: center; 
+      padding-top: 10px; 
+
+      @media screen and (max-width: 750px) {
+        visibility: hidden;
+      }
     }
 
     .dropdown {           // hoverable area to keep the menu open
@@ -269,6 +317,12 @@ export const HomeStyle = styled.div`
     position: relative;
     height: 700px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 180vw;
+      background-size: cover;
+      background-image: url("https://res.cloudinary.com/palqee/image/upload/v1598717879/mobile_bg.svg");
+    }
   }
 
   .small-white {

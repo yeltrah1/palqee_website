@@ -17,12 +17,21 @@ const LogoStyle = styled.img`
     top: 12px;
 `;
 
-const NavBar = ({ white, setWhite }) => {
+const NavBar = ({ white, setWhite, menu, setMenu }) => {
+
+    const toggleMenu = () => {
+        if(menu === false) {
+            setMenu(true)
+        } else {
+            setMenu(false)
+        }
+    };
    
     useEffect(() => {
 
         const element = document.getElementById('hover');
         const isTop = true;
+
         element.addEventListener('mouseover', () => setWhite(true));
 
         element.addEventListener('mouseleave', () => {
@@ -58,10 +67,11 @@ const NavBar = ({ white, setWhite }) => {
                 </Link>
             </div>
             <div>
-                <div className="hamburger">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
+                <div id="hamburger" onClick={toggleMenu} className={menu ? "open" : ""}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <NavBarStyle>
                     <div className="navbar">

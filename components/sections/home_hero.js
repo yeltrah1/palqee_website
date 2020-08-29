@@ -12,7 +12,12 @@ const HeroStyle = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     margin-top: 130px;
-    width:100vw;
+    width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 110px;
+        grid-template-rows: 350px 1fr;
+    }
 `;
 
 const HeroText = styled.div`
@@ -24,6 +29,11 @@ const HeroText = styled.div`
     height: 192px;
     margin-top: 40px;
     margin-left: 8vw;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 10px;
+        width: 90vw;
+    }
 
     .large {
     font-family: Poppins;
@@ -66,6 +76,25 @@ const Image = styled.img`
     justify-self: center;
     margin-left: 40vw;
     width: 900px;
+
+    @media screen and (max-width: 750px) {
+        visibility: hidden;
+    }
+`;
+
+const ImageMobile = styled.img`
+    grid-column: 1;
+    grid-row: 2;
+    position: absolute;
+    margin-left: 5vw;
+    width: 90vw;
+    top: 500px;
+    right: 0;
+    visibility: hidden;
+
+    @media screen and (max-width: 750px) {
+        visibility: visible;
+    }
 `;
 
 const HomeHero = () => {
@@ -85,6 +114,7 @@ const HomeHero = () => {
             </div>
         </HeroText>
         <Image src={"/static/images/palqee_hero.png"}/>
+        <ImageMobile src={"/static/images/palqee_mobile.png"}/>
       </HeroStyle>
     </ThemeProvider>
   )

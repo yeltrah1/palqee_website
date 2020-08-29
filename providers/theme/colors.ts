@@ -22,9 +22,11 @@ export const palqeeTheme = {
 export const initialNavBar = {
     navBgColor: "linear-gradient(299.62deg, #0D254A 36.54%, #112A6B 107.31%)",
     navBarFontColor: "white",
+    hamburgerColor: "white",
 };
 
 export const scrollNavBar = {
     navBgColor: "white",
     navBarFontColor: "#192D4D",
+    hamburgerColor: "#192D4D",
 };

@@ -10,6 +10,7 @@ import { palqeeTheme } from '../providers/theme/colors.ts';
 const Layout = ({ children }) => {
 
     const [white, setWhite] = useState(false);
+    const [menu, setMenu] = useState(false);
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -22,7 +23,7 @@ const Layout = ({ children }) => {
             `}</style>
 
         <div style={{zIndex:3, position:"relative"}}>
-            <NavBar white={white} setWhite={setWhite}/>
+            <NavBar white={white} setWhite={setWhite} menu={menu} setMenu={setMenu}/>
         </div>
         <div>        
             {children}
