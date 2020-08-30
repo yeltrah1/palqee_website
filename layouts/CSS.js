@@ -19,7 +19,7 @@ export const NavStyle = styled.div`
       cursor: pointer;
       width: 28px;
       height: 22.5px;
-      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     #hamburger span {    
@@ -116,6 +116,7 @@ export const NavStyle = styled.div`
         margin-bottom: 5px;
         color: ${props => props.theme.redButton};
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
       }
     }
 
@@ -125,7 +126,7 @@ export const NavStyle = styled.div`
       margin-bottom: 5px;
       width: 80%;
       cursor: pointer;
-      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .active {
@@ -138,7 +139,7 @@ export const NavStyle = styled.div`
       margin-left: 45px;
       width: 80%;
       cursor: pointer;
-      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .item-list {
@@ -147,7 +148,7 @@ export const NavStyle = styled.div`
       width: 80%;
       margin-left: 20px;
       cursor: pointer;
-      outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .hide {
