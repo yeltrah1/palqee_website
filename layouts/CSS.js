@@ -90,8 +90,7 @@ export const NavStyle = styled.div`
     padding-top: 15px;
     width: 100vw;
     animation: menu-open 0.1s;
-    font-size: 15px;
-    color: #192d4d; 
+    font-size: 15px; 
     font-family: Poppins-Semi;
 
     @font-face {
@@ -130,6 +129,7 @@ export const NavStyle = styled.div`
       width: 80%;
       cursor: pointer;
       text-decoration: none;
+      color: #192d4d;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -144,6 +144,7 @@ export const NavStyle = styled.div`
       width: 80%;
       cursor: pointer;
       text-decoration: none;
+      color: #192d4d;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -154,6 +155,7 @@ export const NavStyle = styled.div`
       margin-left: 20px;
       cursor: pointer;
       text-decoration: none;
+      color: #192d4d;
       -webkit-tap-highlight-color: transparent;
     }
 
