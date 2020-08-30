@@ -73,6 +73,9 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                     <span></span>
                     <span></span>
                 </div>
+                <div className={menu ? "mobile-open" : "mobile-close"}>
+                    TEST
+                </div>
                 <NavBarStyle>
                     <div className="navbar">
                         <div className="dropdown">

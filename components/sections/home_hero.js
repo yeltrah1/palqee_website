@@ -15,8 +15,8 @@ const HeroStyle = styled.div`
     width: 100vw;
 
     @media screen and (max-width: 750px) {
-        margin-top: 110px;
-        grid-template-rows: 350px 1fr;
+        margin-top: 75px;
+        grid-template-rows: 320px 1fr;
     }
 `;
 
@@ -31,19 +31,22 @@ const HeroText = styled.div`
     margin-left: 8vw;
 
     @media screen and (max-width: 750px) {
-        margin-top: 10px;
         width: 90vw;
     }
 
     .large {
-    font-family: Poppins;
-    font-size: 40px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.33;
-    padding-bottom: 10px;
-    letter-spacing: normal;
-    color: #ffffff;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.33;
+        padding-bottom: 10px;
+        letter-spacing: normal;
+        color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 32px;
+        }
     }
 
     @font-face {
@@ -67,6 +70,20 @@ const HeroText = styled.div`
         font-style: normal;
         letter-spacing: normal;
         color: #cbd0df;
+
+        span {
+            visibility: hidden;
+            @media screen and (max-width: 750px) {
+                visibility: visible;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            a {
+            padding: 12px;
+            }
+        }
     }
 `;
 
@@ -86,9 +103,9 @@ const ImageMobile = styled.img`
     grid-column: 1;
     grid-row: 2;
     position: absolute;
-    margin-left: 5vw;
-    width: 90vw;
-    top: 500px;
+    margin-left: 3vw;
+    width: 95vw;
+    top: 430px;
     right: 0;
     visibility: hidden;
 
@@ -110,6 +127,7 @@ const HomeHero = () => {
             </div>
             <div className="small">
                 The tool to succeed with internal Privacy Operations.<br/>
+                <span className="mobile"><br/></span>
                 <GetStartedButton>Get started for free</GetStartedButton>
             </div>
         </HeroText>

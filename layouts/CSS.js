@@ -67,6 +67,25 @@ export const NavStyle = styled.div`
     }
   }
 
+  .mobile-close {
+    opacity: 0;
+  }
+
+  .mobile-open {
+    position: absolute;
+    background: white;
+    z-index: 1;
+    margin-top: 72px;
+    height: 100vh;
+    width: 100vw;
+    animation: menu-open 0.1s;
+  }
+
+  @keyframes menu-open {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+
   .demo {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -320,6 +339,7 @@ export const HomeStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       height: 180vw;
+      margin-bottom: 40px;
       background-size: cover;
       background-image: url("https://res.cloudinary.com/palqee/image/upload/v1598717879/mobile_bg.svg");
     }
