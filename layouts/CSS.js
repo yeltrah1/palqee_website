@@ -71,14 +71,101 @@ export const NavStyle = styled.div`
     opacity: 0;
   }
 
-  .mobile-open {
-    position: absolute;
+  .menu-background {
+    display: grid;
     background: white;
-    z-index: 1;
     margin-top: 72px;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
     animation: menu-open 0.1s;
+  }
+
+  .mobile-open {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    margin-top: 72px;
+    padding-top: 15px;
+    width: 100vw;
+    animation: menu-open 0.1s;
+    font-size: 13px;
+    color: #192d4d; 
+    font-family: Poppins-Semi;
+
+    @font-face {
+      font-family: 'Poppins-Semi';
+      src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    .item-group {
+      align-self: center;
+      padding: 5px 0;
+      border-bottom: solid 1px rgba(117, 129, 148, 0.12);
+      width: 80%;
+      margin-left: 45px;
+
+      .book {
+        font-family: Poppins-Semi;
+        font-size: 13px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.54;
+        margin: 0px 20px;
+        margin-bottom: 5px;
+        color: ${props => props.theme.redButton};
+        cursor: pointer;
+      }
+    }
+
+    .item {
+      align-self: center;
+      padding: 10px 0;
+      width: 80%;
+      cursor: pointer;
+    }
+
+    .active {
+      color: #3f6db4;
+    }
+
+    .last-item {
+      align-self: center;
+      padding: 10px 0;
+      margin-left: 45px;
+      width: 80%;
+      cursor: pointer;
+    }
+
+    .item-list {
+      align-self: center;
+      padding-bottom: 15px;
+      width: 80%;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .hide {
+      display: none;
+      overflow: hidden;
+    }
+
+    .arrow {
+      position: absolute;
+      margin-top: 3px;
+      font-size: 8px;
+      transform: rotate(90deg);
+      transition: 0.25s;
+    }
+
+    .up {
+      transform: rotate(-90deg);
+    }
+
+    .item-border:hover .arrow {
+      transform: rotate(-90deg);
+      transition: 0.25s;
+    }
   }
 
   @keyframes menu-open {
@@ -87,12 +174,12 @@ export const NavStyle = styled.div`
   }
 
   .demo {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      
-      @media screen and (max-width: 750px) {
-        visibility: hidden;
-      }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    @media screen and (max-width: 750px) {
+      visibility: hidden;
+    }
   }
 `;
 

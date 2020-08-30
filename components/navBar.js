@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
@@ -19,6 +19,8 @@ const LogoStyle = styled.img`
 
 const NavBar = ({ white, setWhite, menu, setMenu }) => {
 
+    const [item, setItem] = useState("none");
+
     const toggleMenu = () => {
         if(menu === false) {
             setMenu(true)
@@ -26,6 +28,30 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
             setMenu(false)
         }
     };
+
+    const toggleProducts = () => { 
+        if(item==="products") {
+            setItem("none")
+        } else {
+            setItem("products")
+        }
+    }
+
+    const toggleCases = () => { 
+        if(item==="cases") {
+            setItem("none")
+        } else {
+            setItem("cases")
+        }
+    }
+
+    const togglePartners = () => { 
+        if(item==="partners") {
+            setItem("none")
+        } else {
+            setItem("partners")
+        }
+    }
    
     useEffect(() => {
 
@@ -73,8 +99,30 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                     <span></span>
                     <span></span>
                 </div>
-                <div className={menu ? "mobile-open" : "mobile-close"}>
-                    TEST
+                <div className={menu ? "menu-background" : "mobile-close"}>
+                    <div className={menu ? "mobile-open" : "mobile-close"}>
+                        <div className="item-group">
+                            <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>Products&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
+                            <div className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</div>
+                            <div className={item === "products" ? "item-list" : "item-list hide"}>Innovation Roadmap</div>
+                            <div className={item === "products" ? "book" : "book hide"}>Book a demo</div>
+                        </div>
+                        <div className="item-group">
+                            <div className={item === "cases" ? "item active" : "item"} onClick={toggleCases}>Use Cases&nbsp;&nbsp;<a className={item === "cases" ? "arrow up" : "arrow"}>➤</a></div>
+                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</div>
+                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</div>
+                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</div>
+                        </div>
+                        <div className="item-group">
+                            <div className="item">About Us</div>
+                        </div>
+                        <div className="item-group">
+                            <div className={item === "partners" ? "item active" : "item"} onClick={togglePartners}>Partners&nbsp;&nbsp;<a className={item === "partners" ? "arrow up" : "arrow"}>➤</a></div>
+                            <div className={item === "partners" ? "item-list" : "item-list hide"}>Become a Partner</div>
+                            <div className={item === "partners" ? "item-list" : "item-list hide"}>Accredited Partners</div>
+                        </div>
+                        <div className="last-item">Blog</div>
+                    </div>
                 </div>
                 <NavBarStyle>
                     <div className="navbar">
