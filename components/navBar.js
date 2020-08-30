@@ -103,25 +103,25 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                     <div className={menu ? "mobile-open" : "mobile-close"}>
                         <div className="item-group">
                             <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>Products&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
-                            <div className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</div>
-                            <div className={item === "products" ? "item-list" : "item-list hide"}>Innovation Roadmap</div>
-                            <div className={item === "products" ? "book" : "book hide"}>Book a demo</div>
+                            <a href="/surveys-manager" className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</a>
+                            <a href="/innovation-roadmap" className={item === "products" ? "item-list" : "item-list hide"}>Innovation Roadmap</a>
+                            <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>Book a demo</a>
                         </div>
                         <div className="item-group">
                             <div className={item === "cases" ? "item active" : "item"} onClick={toggleCases}>Use Cases&nbsp;&nbsp;<a className={item === "cases" ? "arrow up" : "arrow"}>➤</a></div>
-                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</div>
-                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</div>
-                            <div className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</div>
+                            <Link as="/startups" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</a></Link>
+                            <Link as="/smes" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</a></Link>
+                            <Link as="/enterprise" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</a></Link>
                         </div>
                         <div className="item-group">
-                            <div className="item">About Us</div>
+                            <Link href="/about-us"><a className="item">About Us</a></Link>
                         </div>
                         <div className="item-group">
                             <div className={item === "partners" ? "item active" : "item"} onClick={togglePartners}>Partners&nbsp;&nbsp;<a className={item === "partners" ? "arrow up" : "arrow"}>➤</a></div>
-                            <div className={item === "partners" ? "item-list" : "item-list hide"}>Become a Partner</div>
-                            <div className={item === "partners" ? "item-list" : "item-list hide"}>Accredited Partners</div>
+                            <Link href="/partners"><a className={item === "partners" ? "item-list" : "item-list hide"}>Become a Partner</a></Link>
+                            <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a className={item === "partners" ? "item-list" : "item-list hide"}>Accredited Partners</a></Link>
                         </div>
-                        <div className="last-item">Blog</div>
+                        <a href="/blog/all" className="last-item">Blog</a>
                     </div>
                 </div>
                 <NavBarStyle>

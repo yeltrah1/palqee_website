@@ -100,6 +100,8 @@ export const NavStyle = styled.div`
     }
 
     .item-group {
+      display: grid;
+      grid-template-columns: 1fr;
       align-self: center;
       padding: 5px 0;
       border-bottom: solid 1px rgba(117, 129, 148, 0.12);
@@ -116,6 +118,7 @@ export const NavStyle = styled.div`
         margin-bottom: 5px;
         color: ${props => props.theme.redButton};
         cursor: pointer;
+        text-decoration: none;
         -webkit-tap-highlight-color: transparent;
       }
     }
@@ -126,6 +129,7 @@ export const NavStyle = styled.div`
       margin-bottom: 5px;
       width: 80%;
       cursor: pointer;
+      text-decoration: none;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -139,6 +143,7 @@ export const NavStyle = styled.div`
       margin-left: 45px;
       width: 80%;
       cursor: pointer;
+      text-decoration: none;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -148,6 +153,7 @@ export const NavStyle = styled.div`
       width: 80%;
       margin-left: 20px;
       cursor: pointer;
+      text-decoration: none;
       -webkit-tap-highlight-color: transparent;
     }
 
