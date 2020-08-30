@@ -19,6 +19,7 @@ export const NavStyle = styled.div`
       cursor: pointer;
       width: 28px;
       height: 22.5px;
+      outline: none;
     }
 
     #hamburger span {    
@@ -89,7 +90,7 @@ export const NavStyle = styled.div`
     padding-top: 15px;
     width: 100vw;
     animation: menu-open 0.1s;
-    font-size: 13px;
+    font-size: 15px;
     color: #192d4d; 
     font-family: Poppins-Semi;
 
@@ -107,7 +108,7 @@ export const NavStyle = styled.div`
 
       .book {
         font-family: Poppins-Semi;
-        font-size: 13px;
+        font-size: 15px;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.54;
@@ -121,8 +122,10 @@ export const NavStyle = styled.div`
     .item {
       align-self: center;
       padding: 10px 0;
+      margin-bottom: 5px;
       width: 80%;
       cursor: pointer;
+      outline: none;
     }
 
     .active {
@@ -135,14 +138,16 @@ export const NavStyle = styled.div`
       margin-left: 45px;
       width: 80%;
       cursor: pointer;
+      outline: none;
     }
 
     .item-list {
       align-self: center;
-      padding-bottom: 15px;
+      padding-bottom: 18px;
       width: 80%;
       margin-left: 20px;
       cursor: pointer;
+      outline: none;
     }
 
     .hide {
@@ -153,7 +158,7 @@ export const NavStyle = styled.div`
     .arrow {
       position: absolute;
       margin-top: 3px;
-      font-size: 8px;
+      font-size: 12px;
       transform: rotate(90deg);
       transition: 0.25s;
     }
