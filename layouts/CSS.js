@@ -70,6 +70,8 @@ export const NavStyle = styled.div`
 
   .mobile-close {
     opacity: 0;
+    display: none;
+    overflow: hidden;
   }
 
   .menu-background {
@@ -205,7 +207,8 @@ export const NavBarStyle = styled.div`
       padding-top: 10px; 
 
       @media screen and (max-width: 750px) {
-        visibility: hidden;
+        display: none;
+        overflow: hidden;
       }
     }
 
