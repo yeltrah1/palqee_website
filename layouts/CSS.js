@@ -443,7 +443,7 @@ export const HomeStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       height: 180vw;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
       background-size: cover;
       background-image: url("https://res.cloudinary.com/palqee/image/upload/v1598717879/mobile_bg.svg");
     }
@@ -453,6 +453,10 @@ export const HomeStyle = styled.div`
     background: white;
     height: 30vh;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 35vh;
+    }
   }
 
   .mid-white {
