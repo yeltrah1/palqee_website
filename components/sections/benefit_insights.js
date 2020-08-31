@@ -98,6 +98,7 @@ const BenefitInsights = () => {
     const onScreen = useOnScreen(ref, '-200px');
     const onScreenMobile = useOnScreen(refMobile, '-200px');
 
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
@@ -121,6 +122,7 @@ const BenefitInsights = () => {
                     playing={onScreenMobile ? true : false}
                     loop={true}
                     autoPlay={true}
+                    forceVideo= {true}
                     muted
                     width="90vw"
                     />
