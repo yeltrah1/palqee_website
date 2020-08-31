@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Headline = styled.div`
   width: 100vw;
   height: 32px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-self: center;
   font-family: Poppins-Semi;
@@ -34,7 +34,7 @@ const Headline = styled.div`
   }
 
   @media screen and (max-width: 750px) {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 30px;
   }
 `;
@@ -44,6 +44,10 @@ const Carousel = styled(motion.div)`
   grid-template-columns: repeat(3, 220px 198px 259px 158px 220px 220px 192px 130px);
   justify-items: end;
   height: 50%;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
 `;
 
 const CarouselMobile = styled(motion.div)`
@@ -111,38 +115,49 @@ const Clients = () => {
             </Carousel>
 
             <CarouselMobile 
+            animate={{ x: -1280 }}
+            transition={{ 
+              from: 0, 
+              ease: "linear", 
+              loop: Infinity, 
+              duration: 80 }}>
+              <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
+
+              <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
+
+              <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
+            </CarouselMobile>
+
+            <CarouselMobile 
             animate={{ x: 0 }}
             transition={{ 
               from: -1280, 
               ease: "linear", 
               loop: Infinity, 
               duration: 80 }}>
-              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
-              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
-              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
-              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
-              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
-              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
-              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
+              <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
 
-              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
-              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
-              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
-              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
-              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
-              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
-              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
+              <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
 
-              <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
-              <ClientsStyle height={45} width={110} src={"static/icons/clients/Toutsie_logo.png"}/>
-              <ClientsStyle height={50} width={135} src={"static/icons/clients/Slavian_logo.png"}/>
-              <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
-              <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
-              <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
-              <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
+              <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
+              <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
             </CarouselMobile>
 
         </Wrapper>

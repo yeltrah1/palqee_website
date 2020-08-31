@@ -11,7 +11,12 @@ const TestStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr 950px 1fr;
     grid-template-rows: 1fr;
-    width:100vw;
+    width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 5px 1fr 5px;
+    }
 `;
 
 const Container = styled.div`
@@ -21,6 +26,14 @@ const Container = styled.div`
     margin: 5vh 0;
     width: 100%;
     height: 50vh;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 320px 320px;
+        margin-top: 100px;
+        height: 800px;
+        background-color: #f2f8fd;
+    }
 `;
 
 const TestText = styled.div`
@@ -38,6 +51,14 @@ const TestText = styled.div`
     padding-left: 50px;
     border-radius: 16px;
     background-color: #f2f8fd;
+
+    @media screen and (max-width: 750px) {
+        border-radius: 0px;
+        text-align: center;
+        justify-items: center;
+        width: 100vw;
+        padding-left: 0px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -78,6 +99,14 @@ const Image = styled.img`
     justify-self: end;
     width: 60em;
     margin-right: -50px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        margin-right: 0px;
+        width: 800px;
+        justify-self: start;
+    }
 `;
 
 const TakeTest = () => {

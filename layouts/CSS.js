@@ -463,6 +463,10 @@ export const HomeStyle = styled.div`
     background: white;
     height: 500px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 800px;
+    }
   }
 
   .large-white {
