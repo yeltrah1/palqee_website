@@ -479,6 +479,10 @@ export const HomeStyle = styled.div`
     background: #FBFCFD;
     height: 600px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 550px;
+    }
   }
 
   .small-blue {

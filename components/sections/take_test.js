@@ -30,7 +30,7 @@ const Container = styled.div`
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
         grid-template-rows: 320px 320px;
-        margin-top: 100px;
+        margin-top: 80px;
         height: 800px;
         background-color: #f2f8fd;
         width: 100vw;
@@ -81,7 +81,7 @@ const TestText = styled.div`
 
         @media screen and (max-width: 750px) {
             font-size: 26px;
-            width: 80vw;
+            width: 90vw;
         }
     }
 
@@ -99,7 +99,7 @@ const TestText = styled.div`
 
         @media screen and (max-width: 750px) {
             font-size: 12px;
-            width: 80vw;
+            width: 90vw;
         }
     }
 `;
@@ -119,8 +119,8 @@ const Image = styled.img`
 const ImageMobile = styled.img`
     grid-column: 1;
     grid-row: 1;
-    width: 430px;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 80px;
     justify-self: end;
     display: none;
 
