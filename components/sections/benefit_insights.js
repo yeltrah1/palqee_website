@@ -126,7 +126,7 @@ const BenefitInsights = () => {
                     width="90vw"
                     config={{
                         file: {
-                            forceHLS:"true"
+                            forceVideo: true
                         }
                       }}
                     />
