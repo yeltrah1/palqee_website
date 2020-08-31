@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr 1fr;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 750px) {
+    grid-template-rows: 1fr 50px 50px;
+  }
 `;
 
 const Headline = styled.div`
@@ -53,7 +57,7 @@ const Carousel = styled(motion.div)`
 
 const CarouselMobile = styled(motion.div)`
   display: none;
-  grid-template-columns: repeat(3, 180px 160px 180px 190px);
+  grid-template-columns: repeat(3, 160px 150px 160px 170px);
   justify-items: end;
   height: 25%;
 
