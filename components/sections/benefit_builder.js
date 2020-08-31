@@ -11,6 +11,11 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   width: 95vw;
   height: 100%;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.6fr;
+  }
 `;
 
 const BenefitText = styled.div`
@@ -21,6 +26,13 @@ const BenefitText = styled.div`
     height: 35%;
     margin-right: 65px;
     margin-bottom: 80px;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 1;
+        margin-left: 10px;
+        width: 95%;
+        margin-right: 0px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -38,6 +50,12 @@ const BenefitText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            width: 100%;
+            padding-right: 0px;
+        }
     }
 
     .small {
@@ -50,12 +68,22 @@ const BenefitText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            margin-top: 10px;
+            width: 100%;
+        }
     }
 `;
 
 const Image = styled.img`
     place-self: center;
     width: 600px;
+
+    @media screen and (max-width: 750px) {
+        width: 95vw;
+        padding-left: 10px;
+    }
 `;
 
 const BenefitBuilder = () => {

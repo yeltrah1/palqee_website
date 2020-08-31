@@ -473,6 +473,10 @@ export const HomeStyle = styled.div`
     background: white;
     height: 600px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 580px;
+    }
   }
 
   .large-grey {
@@ -481,7 +485,7 @@ export const HomeStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 550px;
+      height: 600px;
     }
   }
 

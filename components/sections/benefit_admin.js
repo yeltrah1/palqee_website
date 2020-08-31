@@ -125,7 +125,7 @@ const BenefitAdmin = () => {
                     loop={true}
                     autoPlay={true}
                     muted
-                    width="95vw"
+                    width="98vw"
                     playsInline
                     />
                 </VideoMobile>

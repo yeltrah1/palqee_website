@@ -88,6 +88,7 @@ const VideoMobile = styled.div`
 
     @media screen and (max-width: 750px) {
         display: grid;
+        margin-left: -10px;
     }
 `;
 
@@ -123,7 +124,7 @@ const BenefitInsights = () => {
                     loop={true}
                     autoPlay={true}
                     muted
-                    width="95vw"
+                    width="98vw"
                     playsInline
                     />
                 </VideoMobile>
