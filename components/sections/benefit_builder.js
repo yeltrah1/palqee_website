@@ -81,7 +81,7 @@ const Image = styled.img`
     width: 600px;
 
     @media screen and (max-width: 750px) {
-        width: 95vw;
+        width: 90vw;
         padding-left: 10px;
     }
 `;

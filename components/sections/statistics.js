@@ -15,6 +15,10 @@ const Wrapper = styled.div`
     grid-template-rows: 1fr 1fr;
     place-items: center;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 0.2fr 1fr;
+    }
 `;
 
 const StatisticsText = styled.div`
@@ -23,6 +27,10 @@ const StatisticsText = styled.div`
     grid-template-rows: 1fr 1fr;
     place-items: center;
     margin-top: 60px;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 10px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -39,6 +47,10 @@ const StatisticsText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+        }
     }
 
     .small {
@@ -63,6 +75,11 @@ const StatisticsNumbers = styled.div`
     grid-template-rows: 1fr;
     place-items: center;
     margin-top: 40px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -99,6 +116,12 @@ const StatisticsNumbers = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            padding-top: 0px;
+            padding-bottom: 25px;
+            margin: 0;
+        }
     }
 `;
 
