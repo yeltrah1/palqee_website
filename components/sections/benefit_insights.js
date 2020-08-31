@@ -96,7 +96,7 @@ const BenefitInsights = () => {
     const ref = useRef();
     const refMobile = useRef();
     const onScreen = useOnScreen(ref, '-200px');
-    const onScreenMobile = useOnScreen(refMobile, '-200px');
+    const onScreenMobile = useOnScreen(refMobile, '-100px');
 
 
     return (
@@ -124,11 +124,7 @@ const BenefitInsights = () => {
                     autoPlay={true}
                     muted
                     width="90vw"
-                    config={{
-                        file: {
-                            forceVideo: true
-                        }
-                      }}
+                    light={true}
                     />
                 </VideoMobile>
             </Wrapper>
