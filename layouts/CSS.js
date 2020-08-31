@@ -495,7 +495,7 @@ export const HomeStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 700px;
+      height: 640px;
     }
   }
 
@@ -503,6 +503,11 @@ export const HomeStyle = styled.div`
     height: 500px;
     width: 200vw;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 580px;
+      width: 300vw;
+    }
   }
 
   .bottom-grey {
@@ -891,6 +896,12 @@ export const EmailInput = styled.input`
   font-style: normal;
   line-height: 1.71;
 
+  @media screen and (max-width: 750px) {
+    width: 190px;
+    padding-left: 0px;
+    font-size: 12px;
+  }
+
   :focus {
     outline: none;
   }
@@ -903,6 +914,10 @@ export const EmailInput = styled.input`
     font-style: normal;
     line-height: 1.71;
     color: rgba(117, 129, 148, 0.5);
+
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -922,6 +937,12 @@ export const ListInput = styled.select`
   margin-top: 20px;
   padding-left: 30px;
   padding-right: 10px;
+
+  @media screen and (max-width: 750px) {
+    width: 340px;
+    padding-left: 22px;
+    font-size: 12px;
+  }
   
   :focus {
     outline: none;

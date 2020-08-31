@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     width: 100vw;
 
     @media screen and (max-width: 750px) {
-        grid-template-rows: 0.2fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
     }
 `;
 
@@ -66,6 +66,10 @@ const StatisticsText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            width: 85%;
+        }
     }
 `;
 

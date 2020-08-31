@@ -18,6 +18,11 @@ const Wrapper = styled.div`
     grid-template-rows: 1fr;
     place-items: center;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 240px 340px;
+    }
 `;
 
 const Skewed = styled.div`
@@ -29,6 +34,13 @@ const Skewed = styled.div`
     position: relative;
     left: -360vw;
     transform: skew(-78deg);
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        transform: skew(-56deg);
+        height: 300px;
+        left: -250vw;
+    }
 `;
 
 const TestimonialsText = styled.div`
@@ -41,6 +53,14 @@ const TestimonialsText = styled.div`
     place-self: center;
     justify-items: end;
     margin-top: 80px;
+
+    @media screen and (max-width: 750px) {
+        width: 95vw;
+        margin-top: 0px;
+        margin-left: -25px;
+        place-self: start;
+        grid-template-rows: 80px 160px 20px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -56,6 +76,10 @@ const TestimonialsText = styled.div`
         font-style: normal;
         line-height: 1.33;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+        }
     }
 
     .small {
@@ -85,6 +109,10 @@ const Arrow = styled.img`
     :hover {
         transform: scale(1.2);
     }
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 }
 `;
 
@@ -102,6 +130,13 @@ const Cards = styled.div`
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0px;
+        margin-left: -170px;
+    }
+
 `;
 
 const Testimonials = () => {
@@ -109,14 +144,14 @@ const Testimonials = () => {
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
-        <Skewed/>
-        <TestimonialsText>
-            <div className="large">We believe in the power of community</div>
-            <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
-            <div className="arrows">
-            <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
-            </div>
-        </TestimonialsText>
+            <Skewed/>
+            <TestimonialsText>
+                <div className="large">We believe in the power of community</div>
+                <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
+                <div className="arrows">
+                <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
+                </div>
+            </TestimonialsText>
             <Cards>
                 <DrlCard/>
                 <GetglobalCard/>

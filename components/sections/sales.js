@@ -28,6 +28,10 @@ const SalesStyle = styled.div`
     font-style: normal;
     line-height: 1.33;
     color: ${props => props.theme.mainFontColor};
+
+    @media screen and (max-width: 750px) {
+      font-size: 26px;
+    }
   }
 
   .small {
@@ -64,6 +68,13 @@ const EmailStyle = styled.div`
   border-radius: 6px;
   border: solid 1px rgba(117, 129, 148, 0.12);
   background-color: #ffffff;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 220px 100px;
+    width: 320px;
+    padding-left: 20px;
+    justify-items: center;
+  }
 
   :focus-within {
     border: solid 1px #3f6db4;
