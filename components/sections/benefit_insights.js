@@ -124,7 +124,7 @@ const BenefitInsights = () => {
                     autoPlay={true}
                     muted
                     width="90vw"
-                    light={true}
+                    playsInline
                     />
                 </VideoMobile>
             </Wrapper>
