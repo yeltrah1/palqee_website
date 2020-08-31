@@ -30,7 +30,7 @@ const Container = styled.div`
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
         grid-template-rows: 320px 320px;
-        margin-top: 80px;
+        margin-top: 30px;
         height: 800px;
         background-color: #f2f8fd;
         width: 100vw;
