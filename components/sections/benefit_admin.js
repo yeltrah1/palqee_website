@@ -33,6 +33,7 @@ const BenefitText = styled.div`
         grid-row: 1;
         margin-left: 10px;
         width: 95%;
+        margin-right: 0px;
     }
 
     @font-face {
@@ -124,7 +125,7 @@ const BenefitAdmin = () => {
                     loop={true}
                     autoPlay={true}
                     muted
-                    width="90vw"
+                    width="95vw"
                     playsInline
                     />
                 </VideoMobile>

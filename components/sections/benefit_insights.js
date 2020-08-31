@@ -123,7 +123,7 @@ const BenefitInsights = () => {
                     loop={true}
                     autoPlay={true}
                     muted
-                    width="90vw"
+                    width="95vw"
                     playsInline
                     />
                 </VideoMobile>
