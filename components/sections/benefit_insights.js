@@ -122,9 +122,13 @@ const BenefitInsights = () => {
                     playing={onScreenMobile ? true : false}
                     loop={true}
                     autoPlay={true}
-                    forceVideo= {true}
                     muted
                     width="90vw"
+                    config={{
+                        file: {
+                            forceHLS="true"
+                        }
+                      }}
                     />
                 </VideoMobile>
             </Wrapper>
