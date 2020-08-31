@@ -34,7 +34,7 @@ const Headline = styled.div`
   }
 
   @media screen and (max-width: 750px) {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     height: 25px;
   }
@@ -53,10 +53,9 @@ const Carousel = styled(motion.div)`
 
 const CarouselMobile = styled(motion.div)`
   display: none;
-  margin-top: 10px;
   grid-template-columns: repeat(3, 180px 160px 180px 190px);
   justify-items: end;
-  height: 30%;
+  height: 25%;
 
   @media screen and (max-width: 750px) {
     display: grid;
