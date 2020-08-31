@@ -15,7 +15,7 @@ const TestStyle = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 5px 1fr 5px;
+        grid-template-rows: 0px 1fr 0px;
     }
 `;
 
@@ -33,6 +33,7 @@ const Container = styled.div`
         margin-top: 100px;
         height: 800px;
         background-color: #f2f8fd;
+        width: 100vw;
     }
 `;
 
@@ -77,6 +78,11 @@ const TestText = styled.div`
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
         margin-top: 45px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            width: 80vw;
+        }
     }
 
     .small {
@@ -90,6 +96,11 @@ const TestText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            width: 80vw;
+        }
     }
 `;
 
@@ -101,11 +112,20 @@ const Image = styled.img`
     margin-right: -50px;
 
     @media screen and (max-width: 750px) {
-        grid-column: 1;
-        grid-row: 2;
-        margin-right: 0px;
-        width: 800px;
-        justify-self: start;
+        display: none;
+    }
+`;
+
+const ImageMobile = styled.img`
+    grid-column: 1;
+    grid-row: 1;
+    width: 430px;
+    margin-top: 50px;
+    justify-self: end;
+    display: none;
+
+    @media screen and (max-width: 750px) {
+        display: grid;
     }
 `;
 
@@ -122,6 +142,7 @@ const TakeTest = () => {
                     <TakeTestButton>Take the free test</TakeTestButton>
                 </TestText>
                 <Image src={"/static/images/palqee_test.svg"}/>
+                <ImageMobile src={"/static/images/test_mobile.svg"}/>
             </Container>
             <div></div>
           </TestStyle>

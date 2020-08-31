@@ -34,7 +34,7 @@ const Headline = styled.div`
   }
 
   @media screen and (max-width: 750px) {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
 `;
@@ -53,7 +53,7 @@ const Carousel = styled(motion.div)`
 const CarouselMobile = styled(motion.div)`
   display: none;
   margin-top: 10px;
-  grid-template-columns: repeat(3, 220px 198px 259px 158px 220px 220px 192px 130px);
+  grid-template-columns: repeat(3, 180px 160px 180px 190px);
   justify-items: end;
   height: 50%;
 
@@ -143,20 +143,20 @@ const Clients = () => {
               from: -1280, 
               ease: "linear", 
               loop: Infinity, 
-              duration: 80 }}>
-              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
+              duration: 80 }}>       
               <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
               <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
 
-              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
               <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
               <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
 
-              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
               <ClientsStyle height={36} width={88} src={"static/icons/clients/Toutsie_logo.png"}/>
               <ClientsStyle height={40} width={108} src={"static/icons/clients/Slavian_logo.png"}/>
+              <ClientsStyle height={43} width={43} src={"static/icons/clients/Wesdom_logo.png"}/>
               <ClientsStyle height={30} width={136} src={"static/icons/clients/Dpofficer_brazil.png"}/>
             </CarouselMobile>
 
