@@ -12,6 +12,10 @@ const LogoFooterStyle = styled.img`
     position: absolute;
     height: 35.2px;
     top: 40px;
+
+    @media screen and (max-width: 750px) {
+      top: 0;
+    }
 `;
 
 const Footer = () => {
@@ -25,14 +29,18 @@ const Footer = () => {
             <LogoFooterStyle src={"https://res.cloudinary.com/palqee/image/upload/c_scale,w_1103/v1595107689/palqee_blue.png"}/>
           </div>
           <div className="links">
-              <div>
-                <a className="pages" href="/">{translate('footer.blog')}</a>
-                <a className="pages" href="/">{translate('footer.policy')}</a>
-                <a className="pages" href="/">{translate('footer.settings')}</a>
-                <a className="pages" href="/">{translate('footer.terms')}</a>
-                <a className="pages" href="/">{translate('footer.resources')}</a>
-              </div>
-              <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
+            <span>
+              <span className="row1">
+                <a className="pages one" href="/">{translate('footer.policy')}</a>
+                <a className="pages one" href="/">{translate('footer.settings')}</a>
+                <a className="pages one" href="/">{translate('footer.resources')}</a>
+              </span>
+              <span className="row2">  
+                <a className="pages two" href="/">{translate('footer.terms')}</a>
+                <a className="pages two" href="/">{translate('footer.blog')}</a>
+              </span>
+            </span>
+            <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
           </div>
           <div className="social">
             <a href="//www.linkedin.com/company/37457018/" target="_blank">

@@ -517,6 +517,10 @@ export const HomeStyle = styled.div`
     position: relative;
     height: 300px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 280px;
+    }
   }
 `;
 
@@ -1012,6 +1016,13 @@ export const FooterStyle = styled.div`
   height: 130px;
   width: 100%;
 
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 5px;
+    height: 200px;
+    padding-bottom: 20px;
+  }
+
   .content {
     box-shadow: 0px -1px 0px rgba(117, 129, 148, 0.1);
     border-top: 1px solid #eaeaea;
@@ -1019,14 +1030,33 @@ export const FooterStyle = styled.div`
     grid-template-columns: 1fr 3fr 1fr;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+      grid-row: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 120px;
+      border-top: none;
+      box-shadow: none;
+    }
   }
 
   .content .logo {
     justify-content: start;
+
+    @media screen and (max-width: 750px) {
+      grid-row: 1;
+      margin-left: 30px;
+    }
   }
 
   .content .social {
-    justify-self: center;
+    justify-self: end;
+    padding-right: 38px;
+
+    @media screen and (max-width: 750px) {
+      justify-self: end;
+      margin-right: 50px;
+    }
   }
 
   .content .links {
@@ -1034,6 +1064,47 @@ export const FooterStyle = styled.div`
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     line-height: 20px;
+
+    @media screen and (max-width: 750px) {
+      grid-row: 2;
+      grid-template-rows: 80px 40px;
+    }
+
+    span {
+      @media screen and (max-width: 750px) {
+        display: grid;
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 40px;
+        text-align: center;
+        justify-self: center;
+        line-height: 50px;
+        width: 90vw;
+      }
+    }
+
+    .row1 {
+      @media screen and (max-width: 750px) {
+        display: flex;
+        grid-row: 1;
+        text-align: center;
+        justify-content: center;
+        line-height: 50px;
+        width: 90vw;
+      }
+    }
+
+      .row2 {
+        @media screen and (max-width: 750px) {
+          display: flex;
+          grid-row: 2;
+          text-align: center;
+          justify-content: center;
+          line-height: 40px;
+          width: 90vw;
+        }
+      }
+    }
   }
       
   .content .links .pages {
@@ -1051,6 +1122,20 @@ export const FooterStyle = styled.div`
     }
   }
 
+  .one {
+    @media screen and (max-width: 750px) {
+      justify-items: center;
+      grid-row: 1;
+    }
+  }
+
+  .two {
+    @media screen and (max-width: 750px) {
+      justify-items: center;
+      grid-row: 2;
+    }
+  }
+
   .content .links .rights {
     font-family: Poppins;
     font-style: normal;
@@ -1060,5 +1145,9 @@ export const FooterStyle = styled.div`
     line-height: 34px;
     color: "#758194";
     opacity: 0.5;
+
+    @media screen and (max-width: 750px) {
+      line-height: 20px;
+    }
   }
 `;
