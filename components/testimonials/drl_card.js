@@ -58,6 +58,7 @@ const ContainerStyle = styled.div`
             cursor: pointer;
             height: 100%;
             width: 100%;
+            -webkit-tap-highlight-color: transparent;
         }
     }
 `;
