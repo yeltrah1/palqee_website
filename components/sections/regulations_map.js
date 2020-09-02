@@ -11,6 +11,11 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   width: 100vw;
   height: 100%;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 const BenefitText = styled.div`
@@ -20,6 +25,14 @@ const BenefitText = styled.div`
     grid-template-columns: 1fr;
     margin-left: 60px;
     height: 35%;  
+
+    @media screen and (max-width: 750px) {
+        grid-row: 1;
+        margin-left: 20px;
+        margin-top: 50px;
+        width: 600px;
+        place-self: start;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -36,6 +49,11 @@ const BenefitText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 24px;
+            width: 70%;
+        }
     }
 
     .small {
@@ -48,6 +66,11 @@ const BenefitText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            width: 60%;
+            margin-top: 20px;
+        }
     }
 `;
 
@@ -55,6 +78,13 @@ const Image = styled.img`
     place-self: center;
     margin-left: 80px;
     width: 600px;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        width: 380px;
+        place-self: start;
+        margin-left: 5px;
+    }
 `;
 
 const RegulationsMap = () => {

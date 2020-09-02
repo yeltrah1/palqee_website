@@ -41,6 +41,12 @@ const HeaderText = styled.div`
         font-style: normal;
         line-height: 1.33;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 22px;
+            text-align: left;
+            margin-left: 20px;
+        }
     }
 `;
 
@@ -55,6 +61,20 @@ const Cards = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    @media screen and (max-width: 750px) {
+        margin-top: 40px;
+    }
+
+    .drag-area {
+        width: 3920px;
+        transform: translateX(-1310px);
+
+        @media screen and (max-width: 750px) {
+            width: 4870px;
+            transform: translateX(-2240px);
+        }
     }
 `;
 
@@ -74,7 +94,7 @@ const SurveysFeatures = () => {
                 <div className="text">The tools you need at your fingertips</div>
             </HeaderText>
             <Cards>
-                <motion.div className="drag-area" style={{ width:"3920px", transform: "translateX(-1310px)" }} ref={constraintsRef} />
+                <motion.div className="drag-area" ref={constraintsRef} />
                 <SliderContent
                     animate={{ x: -5000 }}
                     drag="x"

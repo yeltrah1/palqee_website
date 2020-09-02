@@ -12,27 +12,36 @@ const HeroStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    justify-items: center;
     width: 100vw;
 `;
 
 const HeroText = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
-    width: 100vw;
+    width: 900px;
     height: 400px;
     margin-top: 160px;
+    justify-self: center;
+
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+        margin-top: 120px;
+    }
 
     .large {
     font-family: Poppins;
     font-size: 42px;
     font-weight: normal;
     font-style: normal;
-    text-align: center;
     line-height: 1.33;
     padding-bottom: 10px;
     letter-spacing: normal;
     color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 28px;
+            height: 150px;
+        }
     }
 
     @font-face {
@@ -53,11 +62,15 @@ const HeroText = styled.div`
         font-family: Poppins;
         font-size: 16px;
         font-weight: normal;
-        text-align: center;
         font-style: normal;
         line-height: 2;
         letter-spacing: normal;
         color: #cbd0df;
+
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+            line-height: 1.71;
+        }
     }
 `;
 
