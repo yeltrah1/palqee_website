@@ -30,7 +30,7 @@ const BenefitText = styled.div`
         grid-row: 1;
         margin-left: 20px;
         margin-top: 50px;
-        width: 600px;
+        width: 500px;
         place-self: start;
     }
 
@@ -81,9 +81,9 @@ const Image = styled.img`
 
     @media screen and (max-width: 750px) {
         grid-row: 2;
-        width: 380px;
+        width: 360px;
         place-self: start;
-        margin-left: 5px;
+        margin-left: 15px;
     }
 `;
 

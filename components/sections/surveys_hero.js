@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
-import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { GetStartedButton } from '../../layouts/CSS';
@@ -74,13 +74,6 @@ const HeroText = styled.div`
     }
 `;
 
-const Words = [
-    "gain data insights",
-    "streamline assessments",
-    "train the workforce",
-    "manage ongoing compliance",
-];
-
 const SurveysHero = () => {
     
     const [word, setWord] = useState(0);
@@ -99,15 +92,23 @@ const SurveysHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                        Privacy management tools that help you<br/>
-                        <motion.span 
-                        key={word}
-                        initial={{ opacity: 0.2 }} 
-                        animate={{ opacity: 1 }} 
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}className="semi">
-                            <u>{Words[word]}</u>.
-                        </motion.span><br/>
+                    Privacy management tools that help you<br/>
+                    <div className="semi">
+                    <u>
+                        <Typewriter 
+                        options={{
+                            strings: ["gain data insights.",
+                                    "streamline assessments.",
+                                    "train the workforce.",
+                                    "manage ongoing compliance."],
+                            autoStart: true,
+                            delay: 40,
+                            deleteSpeed: 30,
+                            loop: true,
+                        }}
+                        />
+                    </u>
+                    </div>
                 </div>
                 <div className="small">
                 Get started in minutes and send out your first data assessment survey now.<br/>
