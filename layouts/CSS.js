@@ -582,10 +582,16 @@ export const SurveysStyle = styled.div`
     background-repeat: no-repeat;
     background-size: 100% 1250px;
     height: 1500px;
-    width: 100vw;
     margin-top: -100px;
     padding-top: 100px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 3450px;
+      background-size: cover;
+      background-image: url("/static/patterns/light_blue_surveys.png");
+    }
+    
   }
 
   .bottom-grey {

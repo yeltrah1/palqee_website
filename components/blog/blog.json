@@ -27,7 +27,7 @@
         "cover": "privacy_returns.png",
         "large_cover": "returns_large.jpeg",
         "title": "Investing in data privacy brings positive returns",
-        "short_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations, we’ve been reading a lot about businesses struggling to cope with it.",
+        "short_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations.",
         "long_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations, we’ve been reading a lot about businesses struggling to cope with it, as they had to invest large sums of money, time and resources into their data privacy agenda.",
         "category": "Business",
         "link": "https://medium.com/datadriveninvestor/investing-in-data-privacy-brings-positive-returns-1c44e3728e72"
@@ -38,8 +38,8 @@
         "cover": "data_ethics.jpeg",
         "large_cover": "ethics_large.jpeg",
         "title": "Data Ethics as a competitive advantage",
-        "short_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy",
-        "long_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy",
+        "short_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy.",
+        "long_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy.",
         "category": "Business",
         "link": "https://medium.com/@spalme/data-ethics-as-a-competitive-advantage-505c4c4d8bcc"
     }

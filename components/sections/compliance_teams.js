@@ -11,9 +11,16 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
-    width:100vw;
+    width: 100vw;
     justify-items: center;
     padding-top: 80px;
+
+    @media screen and (max-width: 750px) {
+        padding-top: 50px;
+        justify-content: center;
+        grid-template-columns: 90vw;
+        grid-template-rows: 250px 1700px;
+    }
 `;
 
 const Header = styled.div`
@@ -23,6 +30,10 @@ const Header = styled.div`
     justify-items: center;
     height: 280px;
     width: 60%;
+
+    @media screen and (max-width: 750px) {
+        width: 100%;
+    }
     
     @font-face {
         font-family: 'Poppins-Semi';
@@ -41,6 +52,10 @@ const Header = styled.div`
         align-self: end;
         padding-bottom: 20px;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+        }
     }
 `;
 
@@ -50,6 +65,11 @@ const ContainerTeams = styled.div`
     grid-template-rows: 200px 200px;
     column-gap: 35px;
     row-gap: 35px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 240px);
+    }
 `;
 
 const Cards = styled.div`
@@ -58,6 +78,11 @@ const Cards = styled.div`
     grid-template-rows: 1fr 0.5fr 1fr;
     padding-bottom: 20px;
     background: white;
+
+    @media screen and (max-width: 750px) {
+        margin: 20px;
+        height: 220px
+    }
 
     .icon {
         align-self: end;

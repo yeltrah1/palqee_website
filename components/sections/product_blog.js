@@ -15,6 +15,12 @@ const Wrapper = styled.div`
     place-items: center;
     height: 300px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        justify-content: center;
+        grid-template-columns: 100vw;
+        grid-template-rows: 170px 1200px;
+    }
 `;
 
 const TitleText = styled.div`
@@ -32,6 +38,12 @@ const TitleText = styled.div`
     letter-spacing: normal;
     color: ${props => props.theme.mainFontColor};
 
+    @media screen and (max-width: 750px) {
+        align-self: center;
+        font-size: 26px;
+        width: 85%;
+    }
+
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
@@ -45,6 +57,13 @@ const PostsContainer = styled.div`
     place-items: center;
     column-gap: 15px;
     margin-top: 40px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 0px;
+        row-gap: 20px;
+    }
 `;
 
 const ProductBlog = () => {

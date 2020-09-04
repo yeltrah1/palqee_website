@@ -10,12 +10,21 @@ const ContainerStyle = styled.div`
     background-color: #ffffff;
     height: 390px;
     width: 400px;
+
+    @media screen and (max-width: 750px) {
+        width: 350px;
+        grid-template-rows: 180px 1fr;
+    }
 `;
 
 const Cover = styled.img` 
     width: 400px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+
+    @media screen and (max-width: 750px) {
+        width: 350px;
+    }
 `;
 
 const InfoStyle = styled.div`
@@ -112,6 +121,10 @@ const TitleStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #192d4d;
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
+    }
 `;
 
 const DescriptionStyle = styled.div`
