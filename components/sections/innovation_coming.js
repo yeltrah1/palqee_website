@@ -12,6 +12,12 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100%;
   padding-top: 30px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 20px;
+    }
 `;
 
 const HighlightText = styled.div`
@@ -22,6 +28,13 @@ const HighlightText = styled.div`
     grid-template-columns: 1fr;
     height: 40%;  
     width: 100%;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 1;
+        height: 100%;  
+        margin-left: 0px;
+        margin-top: 0px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -37,6 +50,13 @@ const HighlightText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            padding-left: 20px;
+            padding-top: 20px;
+            font-size: 24px;
+            height: 10px;
+        }
     }
 
     .small {
@@ -50,15 +70,26 @@ const HighlightText = styled.div`
         line-height: 2.71;
         color: #758194;
         list-style: none;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            line-height: 1.71;
+            margin-top: 30px;
+            width: 80%;
+        }
     }
       
     .small li::before {
-    content: "•";
-    color: #ff696d;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+        content: "•";
+        color: #ff696d;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+
+        @media screen and (max-width: 750px) {
+            margin-top: 1em;
+        }
     }
 
 `;
@@ -67,6 +98,15 @@ const Image = styled.img`
     align-self: center;
     margin-right: 150px;
     width: 550px;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        width: 300px;
+        margin-right: 0px;
+        justify-self: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 `;
 
 const InnovationComing = () => {

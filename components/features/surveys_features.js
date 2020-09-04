@@ -67,6 +67,20 @@ const Cards = styled.div`
         margin-top: 40px;
     }
 
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: flex;
+        }
+    }
+
+    .desktop {
+        display: flex;
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+
     .drag-area {
         width: 3920px;
         transform: translateX(-1310px);
@@ -95,7 +109,7 @@ const SurveysFeatures = () => {
             </HeaderText>
             <Cards>
                 <motion.div className="drag-area" ref={constraintsRef} />
-                <SliderContent
+                <SliderContent className="desktop"
                     animate={{ x: -5000 }}
                     drag="x"
                     dragConstraints={constraintsRef}
@@ -112,7 +126,27 @@ const SurveysFeatures = () => {
                         name={features.name}
                         description={features.description} 
                         key={features.id}
-                />
+                    />
+                    )}
+                </SliderContent>
+                <SliderContent className="mobile"
+                    animate={{ x: -7200 }}
+                    drag="x"
+                    dragConstraints={constraintsRef}
+                    dragElastic={0.1}
+                    transition={{ 
+                        from: -4870, 
+                        ease: "linear", 
+                        loop: Infinity, 
+                        duration: 55 }}
+                    >
+                    {features.map(features =>
+                    <FeaturesCard
+                        image={features.image}
+                        name={features.name}
+                        description={features.description} 
+                        key={features.id}
+                    />
                     )}
                 </SliderContent>
             </Cards>

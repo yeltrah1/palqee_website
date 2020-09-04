@@ -845,12 +845,21 @@ export const InnovationStyle = styled.div`
     background-size: 100vw 550px;
     position: relative;
     height: 550px;
+
+    @media screen and (max-width: 750px) {
+      height: 500px;
+      background-size: 100vw 500px;
+    }
   }
 
   .large-white {
     background: white;
     height: 600px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 550px;
+    }
   }
 
   .large-grey {

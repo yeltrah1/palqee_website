@@ -21,6 +21,11 @@ const HeroText = styled.div`
     width: 60vw;
     height: 400px;
     margin-top: 140px;
+    
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+        margin-top: 110px;
+    }
 
     .large {
     font-family: Poppins;
@@ -32,6 +37,11 @@ const HeroText = styled.div`
     padding-bottom: 20px;
     letter-spacing: normal;
     color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            text-align: left;
+        }
     }
 
     @font-face {
@@ -57,6 +67,11 @@ const HeroText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: #cbd0df;
+
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+            text-align: left;
+        }
     }
 `;
 
