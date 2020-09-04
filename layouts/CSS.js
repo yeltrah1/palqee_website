@@ -888,6 +888,10 @@ export const InnovationStyle = styled.div`
     height: 500px;
     width: 200vw;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 550px;
+    }
   }
 
   .bottom-grey {

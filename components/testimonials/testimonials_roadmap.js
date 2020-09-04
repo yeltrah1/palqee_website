@@ -8,6 +8,9 @@ import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
 import { TextCard } from './text_card';
+import { GetglobalCard } from './getglobal_card';
+import { DrlCard } from './drl_card';
+import { DanticCard } from './dantic_card';
 
 const Wrapper = styled.div`
     display: grid;
@@ -15,6 +18,11 @@ const Wrapper = styled.div`
     grid-template-rows: 1fr;
     place-items: center;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 240px 340px;
+    }
 `;
 
 const Skewed = styled.div`
@@ -26,6 +34,13 @@ const Skewed = styled.div`
     position: relative;
     left: -50vw;
     transform: skew(78deg);
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        transform: skew(-56deg);
+        height: 300px;
+        left: -250vw;
+    }
 `;
 
 const TestimonialsText = styled.div`
@@ -38,6 +53,14 @@ const TestimonialsText = styled.div`
     place-self: center;
     justify-items: end;
     margin-top: 80px;
+
+    @media screen and (max-width: 750px) {
+        width: 95vw;
+        margin-top: 0px;
+        margin-left: -25px;
+        place-self: start;
+        grid-template-rows: 80px 160px 20px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -53,6 +76,10 @@ const TestimonialsText = styled.div`
         font-style: normal;
         line-height: 1.33;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+        }
     }
 
     .small {
@@ -82,6 +109,10 @@ const Arrow = styled.img`
     :hover {
         transform: scale(1.2);
     }
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 }
 `;
 
@@ -97,6 +128,13 @@ const Cards = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0px;
+        margin-left: -170px;
     }
 
 `;
@@ -115,9 +153,9 @@ const Testimonials = () => {
             </div>
         </TestimonialsText>
         <Cards>
-            <TextCard/>
-            <TextCard/>
-            <TextCard/>
+            <DrlCard/>
+            <GetglobalCard/>
+            <DanticCard/>
             <TextCard/>
         </Cards>
         </Wrapper>
