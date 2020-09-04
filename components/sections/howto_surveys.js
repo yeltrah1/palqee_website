@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   grid-template-rows: 0.2fr 1fr;
   width: 100vw;
   height: 100%;
+
+  @media screen and (max-width: 750px) {
+    grid-template-rows: 50px 650px;
+  }
 `;
 
 const TitleText = styled.div`
@@ -31,6 +35,13 @@ const TitleText = styled.div`
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
+
+    @media screen and (max-width: 750px) {
+      grid-row: 1;
+      font-size: 26px;
+      width: 100vw;
+      padding-top: 50px;
+    }
 `;
 
 const StepsContainer = styled.div`
@@ -39,11 +50,23 @@ const StepsContainer = styled.div`
     grid-template-rows: 1fr;
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 600px 300px;
+    }
 `;
 
 const Image = styled(motion.img)`
     place-self: center;
     margin-left: 80px;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        margin-left: 0px;
+        place-self: center;
+    }
 `;
 
 const StepsItems = styled.div`
@@ -53,6 +76,13 @@ const StepsItems = styled.div`
     width: 100%;
     height: 80%;
     align-self: center;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 1;
+        width: 60%;
+        padding-left: 10px;
+        grid-template-rows: 170px 180px 200px;
+    }
 `;
 
 const Items = styled.div`
@@ -62,6 +92,11 @@ const Items = styled.div`
     width: 90%;
     height: 80%;
 
+    @media screen and (max-width: 750px) {
+        height: 90%;
+        grid-template-columns: 20px 350px;
+    }
+
     .active-bar {
         grid-column: 1;
         grid-row: 1;
@@ -69,6 +104,10 @@ const Items = styled.div`
         height: 130px;
         border-radius: 1px;
         background-color: #ff696d;
+
+        @media screen and (max-width: 750px) {
+            height: 80%;
+        }
     }
 
     .inactive-bar {
@@ -78,19 +117,27 @@ const Items = styled.div`
         height: 130px;
         border-radius: 1px;
         background-color: #f2f2f2;
+
+        @media screen and (max-width: 750px) {
+            height: 80%;
+        }
     }
 `;
 
 const TextItems = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 60px 1fr;
     width: 100%;
     height: 100%;
     cursor: pointer;
+    
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 60px 100px;
+    }
 
     .active-large {
-        padding-top: 20px;
+        padding-top: 10px;
         font-family: Poppins-Semi;
         font-size: 25px;
         font-weight: 600;
@@ -101,7 +148,7 @@ const TextItems = styled.div`
     }
 
     .inactive-large {
-        padding-top: 20px;
+        padding-top: 10px;
         font-family: Poppins-Semi;
         font-size: 25px;
         font-weight: 600;
@@ -138,7 +185,7 @@ const TextItems = styled.div`
 const HowToSurveys = () => {
     
     const [tab, setTab] = useState(1)
-    const [width, setWidth] = useState(550)
+    const [width, setWidth] = useState("80%")
 
     const changeImage = () => {
         if (tab === 1) { return "https://res.cloudinary.com/palqee/image/upload/v1594398833/survey_builder.svg" }
@@ -164,11 +211,11 @@ const HowToSurveys = () => {
                             <motion.div className={ tab === 1 ? "active-bar" : "inactive-bar" }
                                 key={tab}
                                 initial={{ height: 0 }} 
-                                animate={{ height: 130 }} 
+                                animate={{ height: "100%" }} 
                                 exit={{ height: 0 }}
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
-                            <TextItems onClick={() => { setTab(1); setWidth(550) }}>
+                            <TextItems onClick={() => { setTab(1); setWidth("80%") }}>
                             <div className={ tab === 1 ? "active-large" : "inactive-large" }>1. Start with a survey</div>
                             <div className={ tab === 1 ? "active-small" : "inactive-small" }>Know what you have to do, with Palqee regulatory survey templates or create your own with our survey wizard.</div>
                             </TextItems>
@@ -178,11 +225,11 @@ const HowToSurveys = () => {
                             <motion.div className={ tab === 2 ? "active-bar" : "inactive-bar" }
                                 key={tab}
                                 initial={{ height: 0 }} 
-                                animate={{ height: 130 }} 
+                                animate={{ height: "100%" }} 
                                 exit={{ height: 0 }}
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
-                            <TextItems onClick={() => {setTab(2); setWidth(530)}}>
+                            <TextItems onClick={() => {setTab(2); setWidth("76%")}}>
                             <div className={ tab === 2 ? "active-large" : "inactive-large" }>2. Pick your audience</div>
                             <div className={ tab === 2 ? "active-small" : "inactive-small" }>Create audiences and manage your stakeholders efficiently. Send a data mapping survey to your businesses’ workforce and a assessments to your 3rd party vendors.</div>
                             </TextItems>
@@ -192,11 +239,11 @@ const HowToSurveys = () => {
                             <motion.div className={ tab === 3 ? "active-bar" : "inactive-bar" }
                                 key={tab}
                                 initial={{ height: 0 }} 
-                                animate={{ height: 130 }} 
+                                animate={{ height: "100%" }} 
                                 exit={{ height: 0 }}
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
-                            <TextItems onClick={() => {setTab(3), setWidth(600)}}>
+                            <TextItems onClick={() => {setTab(3), setWidth("85%")}}>
                             <div className={ tab === 3 ? "active-large" : "inactive-large" }>3. Get the insight</div>
                             <div className={ tab === 3 ? "active-small" : "inactive-small" }>Palqee automatically summarises and analyses results for you. Identify areas of improvement in your data map, recommend next steps on DPIAs and track workforce confidence on data protection best practices.</div>
                             </TextItems>

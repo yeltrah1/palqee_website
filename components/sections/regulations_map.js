@@ -83,7 +83,7 @@ const Image = styled.img`
         grid-row: 2;
         width: 360px;
         place-self: start;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 `;
 

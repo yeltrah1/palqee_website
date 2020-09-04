@@ -557,6 +557,10 @@ export const SurveysStyle = styled.div`
     background: white;
     height: 700px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 950px;
+    }
   }
 
   .small-darkblue {
