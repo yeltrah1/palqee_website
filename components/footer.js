@@ -14,7 +14,7 @@ const LogoFooterStyle = styled.img`
     top: 40px;
 
     @media screen and (max-width: 750px) {
-      top: 0;
+      top: 25px;
     }
 `;
 

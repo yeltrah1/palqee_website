@@ -700,12 +700,21 @@ export const DemoStyle = styled.div`
     position: relative;
     height: 400px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+    }
   }
 
   .large-white {
     height: 600px;
     width: 100vw;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 700px;
+      width: 100vw;
+    }
   }
 `;
 
@@ -1066,8 +1075,8 @@ export const FooterStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 5px;
-    height: 200px;
+    grid-template-rows: 120px 5px;
+    height: 220px;
     padding-bottom: 20px;
   }
 
@@ -1082,7 +1091,7 @@ export const FooterStyle = styled.div`
     @media screen and (max-width: 750px) {
       grid-row: 1;
       grid-template-columns: 1fr;
-      grid-template-rows: 80px 120px;
+      grid-template-rows: 100px 120px;
       border-top: none;
       box-shadow: none;
     }

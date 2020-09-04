@@ -38,6 +38,10 @@ const HeroText = styled.div`
         color: #ffffff;
         text-decoration: underline solid;
         text-decoration-color: ${props => props.theme.redButton};
+
+        @media screen and (max-width: 750px) {
+            font-size: 32px;
+        }
     }
 `;
 
