@@ -587,9 +587,11 @@ export const SurveysStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
+      margin-top: 0px;
+      padding-top: 0px;
       height: 3450px;
-      background-size: cover;
-      background-image: url("/static/patterns/light_blue_surveys.png");
+      background-size: 100% 2150px;
+      background-image: url("/static/patterns/light_blue_mobile.png");
     }
     
   }
@@ -836,7 +838,7 @@ export const PartnerStyle = styled.div`
 `;
 
 export const InnovationStyle = styled.div`
-  display:grid;
+  display: grid;
   overflow-x: hidden;
 
   .headline {
@@ -862,10 +864,24 @@ export const InnovationStyle = styled.div`
     }
   }
 
-  .large-grey {
+  .large-grey-1 {
     background: #FBFCFD;
     height: 500px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 600px;
+    }
+  }
+
+  .large-grey-2 {
+    background: #FBFCFD;
+    height: 500px;
+    position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 450px;
+    }
   }
 
   .skewed-grey {

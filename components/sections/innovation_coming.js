@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
         padding-top: 20px;
     }
 `;
@@ -31,7 +31,7 @@ const HighlightText = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-row: 1;
-        height: 100%;  
+        height: 270px;  
         margin-left: 0px;
         margin-top: 0px;
     }
@@ -104,8 +104,6 @@ const Image = styled.img`
         width: 300px;
         margin-right: 0px;
         justify-self: center;
-        padding-bottom: 20px;
-        padding-top: 20px;
     }
 `;
 

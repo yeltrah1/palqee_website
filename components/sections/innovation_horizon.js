@@ -10,6 +10,12 @@ const Wrapper = styled.div`
   grid-template-columns: 55% 1fr;
   width: 100vw;
   height: 100%;
+
+    @media screen and (max-width: 750px) {
+        height: 420px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 160px 230px;
+    }
 `;
 
 const HighlightText = styled.div`
@@ -19,6 +25,11 @@ const HighlightText = styled.div`
     grid-template-columns: 1fr;
     height: 40%;  
     width: 100%;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 1;
+        height: 180px;  
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -35,6 +46,13 @@ const HighlightText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            padding-left: 20px;
+            margin-top: 40px;
+            font-size: 24px;
+            height: 10px;
+        }
     }
 
     .small {
@@ -49,15 +67,24 @@ const HighlightText = styled.div`
         line-height: 2.71;
         color: #758194;
         list-style: none;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            line-height: 1.71;
+        }
     }
       
     .small li::before {
-    content: "•";
-    color: #ff696d;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+        content: "•";
+        color: #ff696d;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+
+        @media screen and (max-width: 750px) {
+            margin-top: 1em;
+        }
     }
 
 `;
@@ -66,6 +93,12 @@ const Image = styled.img`
     place-self: center;
     margin-left: 60px;
     width: 550px;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        width: 300px;
+        margin-left: 0px;
+    }
 `;
 
 const InnovationHorizon = () => {

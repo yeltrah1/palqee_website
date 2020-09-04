@@ -25,10 +25,10 @@ const Roadmap = () => {
             <div className="large-white">
               <InnovationHighlights/>
             </div>
-            <div className="large-grey">
+            <div className="large-grey-1">
               <InnovationComing/>
             </div>
-            <div className="large-grey">
+            <div className="large-grey-2">
               <InnovationHorizon/>
             </div>
             <div className="skewed-grey">
