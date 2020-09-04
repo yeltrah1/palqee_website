@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     align-items: center;
 
     @media screen and (max-width: 750px) {
-        grid-template-columns: 95vw;
+        grid-template-columns: 90vw;
         grid-template-rows: 180px 200px;
     }
 `;
@@ -95,6 +95,7 @@ const ContainerLogos = styled.div`
     @media screen and (max-width: 750px) {
         align-self: center;
         padding-bottom: 40px;
+        padding-left: 10px;
     }
 `;
 
@@ -118,10 +119,10 @@ const Credentials = () => {
                 <Logos className="desktop" width={80} src={"/static/icons/badges/iapp_cert.png"}/>
                 <div className="desktop"></div>
 
-                <Logos className="mobile" width={80} src={"/static/icons/badges/palqee_privacyops.png"}/>
-                <Logos className="mobile" width={64} src={"/static/icons/badges/exin.png"}/>
-                <Logos className="mobile" width={112} src={"/static/icons/badges/anppd.png"}/>
-                <Logos className="mobile" width={64} src={"/static/icons/badges/iapp_cert.png"}/>
+                <Logos className="mobile" width={72} src={"/static/icons/badges/palqee_privacyops.png"}/>
+                <Logos className="mobile" width={58} src={"/static/icons/badges/exin.png"}/>
+                <Logos className="mobile" width={100} src={"/static/icons/badges/anppd.png"}/>
+                <Logos className="mobile" width={58} src={"/static/icons/badges/iapp_cert.png"}/>
                 <div className="mobile"></div>
             </ContainerLogos>
           </Wrapper>

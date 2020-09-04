@@ -170,6 +170,10 @@ const TextItems = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            width: 90%;
+        }
     }
 
     .inactive-small {
@@ -182,6 +186,10 @@ const TextItems = styled.div`
         line-height: 1.71;
         letter-spacing: normal;
         color: #192d4d;
+
+        @media screen and (max-width: 750px) {
+            width: 90%;
+        }
     }
 `;
 
