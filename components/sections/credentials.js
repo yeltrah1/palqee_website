@@ -10,9 +10,14 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 45% 1fr;
     grid-template-rows: 1fr;
-    width:100vw;
+    width: 100vw;
     height: 100%;
     align-items: center;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 95vw;
+        grid-template-rows: 180px 200px;
+    }
 `;
 
 const Text = styled.div`
@@ -22,6 +27,12 @@ const Text = styled.div`
     align-items: center;
     margin-left: 150px;
     margin-right: 60px;
+
+    @media screen and (max-width: 750px) {
+        margin-left: 15px;
+        margin-right: 30px;
+        padding-top: 30px;
+    }
     
     @font-face {
         font-family: 'Poppins-Semi';
@@ -37,6 +48,10 @@ const Text = styled.div`
         line-height: 1.43;
         letter-spacing: normal;
         color: #f2f8fd;
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+        }
     }
 
     .small {
@@ -63,6 +78,24 @@ const ContainerLogos = styled.div`
     background-repeat: no-repeat;
     background-size: 100% 80%;
     background-position: bottom;
+
+    .desktop {
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: grid;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        align-self: center;
+        padding-bottom: 40px;
+    }
 `;
 
 const Logos = styled.img`
@@ -79,11 +112,17 @@ const Credentials = () => {
                 <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
             </Text>
             <ContainerLogos>
-                <Logos width={100} src={"/static/icons/badges/palqee_privacyops.png"}/>
-                <Logos width={80} src={"/static/icons/badges/exin.png"}/>
-                <Logos width={140} src={"/static/icons/badges/anppd.png"}/>
-                <Logos width={80} src={"/static/icons/badges/iapp_cert.png"}/>
-                <div></div>
+                <Logos className="desktop" width={100} src={"/static/icons/badges/palqee_privacyops.png"}/>
+                <Logos className="desktop" width={80} src={"/static/icons/badges/exin.png"}/>
+                <Logos className="desktop" width={140} src={"/static/icons/badges/anppd.png"}/>
+                <Logos className="desktop" width={80} src={"/static/icons/badges/iapp_cert.png"}/>
+                <div className="desktop"></div>
+
+                <Logos className="mobile" width={80} src={"/static/icons/badges/palqee_privacyops.png"}/>
+                <Logos className="mobile" width={64} src={"/static/icons/badges/exin.png"}/>
+                <Logos className="mobile" width={112} src={"/static/icons/badges/anppd.png"}/>
+                <Logos className="mobile" width={64} src={"/static/icons/badges/iapp_cert.png"}/>
+                <div className="mobile"></div>
             </ContainerLogos>
           </Wrapper>
       </ThemeProvider>

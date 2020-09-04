@@ -53,19 +53,21 @@ const StepsContainer = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-row: 2;
-        grid-template-columns: 1fr;
-        grid-template-rows: 600px 300px;
+        grid-template-columns: 95vw;
+        grid-template-rows: 600px 350px;
     }
 `;
 
 const Image = styled(motion.img)`
     place-self: center;
     margin-left: 80px;
+    width: 80%;
 
     @media screen and (max-width: 750px) {
         grid-row: 2;
         margin-left: 0px;
         place-self: center;
+        width: 90vw;
     }
 `;
 
@@ -131,6 +133,7 @@ const TextItems = styled.div`
     width: 100%;
     height: 100%;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     
     @media screen and (max-width: 750px) {
         grid-template-rows: 60px 100px;
@@ -201,7 +204,7 @@ const HowToSurveys = () => {
                     <Image 
                         key={tab} 
                         src={changeImage()} 
-                        initial={{ opacity: 0, width: width}} 
+                        initial={{ opacity: 0 }} 
                         animate={{ opacity: 1 }} 
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.4 }}/>

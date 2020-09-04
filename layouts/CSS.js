@@ -559,7 +559,7 @@ export const SurveysStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 950px;
+      height: 1000px;
     }
   }
 
@@ -571,6 +571,10 @@ export const SurveysStyle = styled.div`
     position: relative;
     margin-top: 50px;
     z-index: 1;
+
+    @media screen and (max-width: 750px) {
+      height: 380px;
+    }
   }
 
   .large-blue {
