@@ -12,8 +12,8 @@ const ContainerStyle = styled.div`
     width: 400px;
 
     @media screen and (max-width: 750px) {
-        width: 350px;
-        grid-template-rows: 180px 1fr;
+        width: 300px;
+        grid-template-rows: 160px 1fr;
     }
 `;
 
@@ -23,7 +23,7 @@ const Cover = styled.img`
     border-top-right-radius: 6px;
 
     @media screen and (max-width: 750px) {
-        width: 350px;
+        width: 300px;
     }
 `;
 
@@ -39,6 +39,10 @@ const InfoStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #000000;
+
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 30px 70px 85px 20px;
+    }
 `;
 
 const DateStyle = styled.div`

@@ -60,7 +60,7 @@ const EmailStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr;
-  align-items: center;
+  place-items: center;
   justify-items: end;
   height: 50px;
   width: 400px;
@@ -70,10 +70,9 @@ const EmailStyle = styled.div`
   background-color: #ffffff;
 
   @media screen and (max-width: 750px) {
-    grid-template-columns: 220px 100px;
+    grid-template-columns: 200px 120px;
     width: 320px;
-    padding-left: 20px;
-    justify-items: center;
+    margin: 8px;
   }
 
   :focus-within {

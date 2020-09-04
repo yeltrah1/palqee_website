@@ -920,7 +920,7 @@ export const EmailInput = styled.input`
   line-height: 1.71;
 
   @media screen and (max-width: 750px) {
-    width: 190px;
+    width: 170px;
     padding-left: 0px;
     font-size: 12px;
   }
@@ -962,7 +962,7 @@ export const ListInput = styled.select`
   padding-right: 10px;
 
   @media screen and (max-width: 750px) {
-    width: 340px;
+    width: 320px;
     padding-left: 22px;
     font-size: 12px;
   }
