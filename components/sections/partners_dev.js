@@ -7,11 +7,19 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100vw;
-  height: 100%;
-  margin: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    height: 100%;
+    margin: 0 30px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 100vw;
+        grid-template-rows: 200px 280px;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 `;
 
 const PartnerText = styled.div`
@@ -21,6 +29,14 @@ const PartnerText = styled.div`
     grid-template-columns: 1fr;
     height: 40%;
     margin-left: 8vw;
+
+    @media screen and (max-width: 750px) {
+        margin-left: 0px;
+        justify-items: center;
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;  
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -37,6 +53,12 @@ const PartnerText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: white;
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            text-align: center;
+            width: 90%;
+        }
     }
 
     .small {
@@ -50,6 +72,12 @@ const PartnerText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: white;
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     .link {
@@ -70,6 +98,13 @@ const Image = styled.img`
     place-self: center;
     margin-right: 10vw;
     width: 350px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        width: 270px;
+        margin-right: 0px;
+    }
 `;
 
 const DevPartner = () => {

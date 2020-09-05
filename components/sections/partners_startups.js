@@ -6,12 +6,31 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 1fr;
-  width: 90vw;
-  height: 100%;
-  justify-self: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    width: 90vw;
+    height: 100%;
+    justify-self: center;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 100vw;
+        grid-template-rows: 200px 550px;
+        width: 100vw;
+    }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: grid;
+        }
+    }
+
+    .desktop {
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
 `;
 
 const PartnerText = styled.div`
@@ -22,6 +41,13 @@ const PartnerText = styled.div`
     height: 40%;
     margin-left: 8vw;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 750px) {
+        margin-left: 0px;
+        justify-items: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -38,6 +64,12 @@ const PartnerText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            text-align: center;
+            width: 90%;
+        }
     }
 
     .small {
@@ -51,6 +83,12 @@ const PartnerText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     .link {
@@ -72,6 +110,12 @@ const Image = styled.img`
     grid-row: 1;
     place-self: center;
     width: 550px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        width: 350px;
+    }
 `;
 
 const HighlightText = styled.div`
@@ -81,6 +125,14 @@ const HighlightText = styled.div`
     place-self: center;
     grid-template-columns: 1fr;
     margin-top: -20px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        justify-items: center;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -96,6 +148,10 @@ const HighlightText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 18px;
+        }
     }
 
     .small {
@@ -110,6 +166,11 @@ const HighlightText = styled.div`
         font-stretch: normal;
         color: #758194;
         list-style: none;
+
+        @media screen and (max-width: 750px) {
+            font-size: 13px;
+            margin-left: 10px;
+        }
     }
       
     .small li::before {
@@ -133,7 +194,8 @@ const StartupsPartner = () => {
                     <div className="small">You support startups grow and we want to help. Data Privacy is one of the many things startups have to deal with, better to get started from day one. Startup Partners receive a range of benefits, contact us now to check if you qualify.</div>
                     <div className="link"><u>Get in touch to learn more</u></div>
                 </PartnerText>
-                <Image src={"/static/patterns/partner_startups.svg"}/>
+                <Image className="desktop" src={"/static/patterns/partner_startups.svg"}/>
+                <Image className="mobile" src={"/static/patterns/partner_startups_mobile.svg"}/>
                 <HighlightText>
                     <div className="large">Startups Program Benefits</div>
                         <ul className="small">

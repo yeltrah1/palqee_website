@@ -26,10 +26,10 @@ const Partners = () => {
             <div className="large-white">
                 <SolutionsPartner/>
             </div>
-            <div className="large-grey">
+            <div className="large-grey-1">
                 <PartnersDPO/>
             </div>
-            <div className="large-grey">
+            <div className="large-grey-2">
                 <StartupsPartner/>
             </div>
             <div className="skewed-grey">

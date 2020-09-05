@@ -7,11 +7,29 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 0.6fr 0.4fr;
-  grid-template-rows: 1fr;
-  width: 90vw;
-  height: 100%;
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-rows: 1fr;
+    width: 90vw;
+    height: 100%;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 100vw;
+        grid-template-rows: 150px 550px;
+    }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: grid;
+        }
+    }
+
+    .desktop {
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
 `;
 
 const PartnerText = styled.div`
@@ -23,6 +41,13 @@ const PartnerText = styled.div`
     grid-template-columns: 1fr;
     margin-left: 20px;
     height: 40%;  
+
+    @media screen and (max-width: 750px) {
+        margin-left: 0px;
+        justify-items: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -39,6 +64,12 @@ const PartnerText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            text-align: center;
+            width: 90%;
+        }
     }
 
     .small {
@@ -52,6 +83,12 @@ const PartnerText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     .link {
@@ -74,6 +111,13 @@ const Image = styled.img`
     place-self: center;
     margin-left: 80px;
     width: 500px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        width: 350px;
+        margin-left: 0px;
+    }
 `;
 
 const HighlightText = styled.div`
@@ -84,6 +128,14 @@ const HighlightText = styled.div`
     grid-template-columns: 1fr;
     margin-top: 5px;
     margin-left: 150px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        justify-items: center;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -99,6 +151,10 @@ const HighlightText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 18px;
+        }
     }
 
     .small {
@@ -113,17 +169,21 @@ const HighlightText = styled.div`
         font-stretch: normal;
         color: #758194;
         list-style: none;
+
+        @media screen and (max-width: 750px) {
+            font-size: 13px;
+            margin-left: 10px;
+        }
     }
       
     .small li::before {
-    content: "•";
-    color: #ff696d;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+        content: "•";
+        color: #ff696d;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
     }
-
 `;
 
 
@@ -132,7 +192,8 @@ const PartnersDPO = () => {
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <Image src={"/static/patterns/partner_dpo.svg"}/>
+                <Image className="desktop" src={"/static/patterns/partner_dpo.svg"}/>
+                <Image className="mobile" src={"/static/patterns/partner_dpo_mobile.svg"}/>
                 <HighlightText>
                     <div className="large">The DPO Partner Benefits</div>
                         <ul className="small">

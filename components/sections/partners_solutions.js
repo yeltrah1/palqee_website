@@ -6,19 +6,31 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 1fr;
-  width: 90vw;
-  height: 100%;
-  justify-self: center;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    width: 90vw;
+    height: 100%;
+    justify-self: center;
 
-  @media screen and (max-width: 750px) {
+    @media screen and (max-width: 750px) {
     grid-template-columns: 100vw;
     grid-template-rows: 200px 600px;
     width: 100vw;
-  }
+    }
 
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: grid;
+        }
+    }
+
+    .desktop {
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
 `;
 
 const PartnerText = styled.div`
@@ -99,7 +111,7 @@ const Image = styled.img`
     @media screen and (max-width: 750px) {
         grid-column: 1;
         grid-row: 2;
-        width: 330px;
+        width: 350px;
     }
 `;
 
@@ -152,6 +164,10 @@ const HighlightText = styled.div`
         font-stretch: normal;
         color: #758194;
         list-style: none;
+
+        @media screen and (max-width: 750px) {
+            font-size: 13px;
+        }
     }
       
     .small li::before {
@@ -175,7 +191,8 @@ const SolutionsPartner = () => {
                     <div className="small">No matter if you’re planning to expand your service offering, work on implementing data compliance projects for your clients or look for IT solutions to recommend, our Solutions Partner Program offers you an opportunity to unlock growth.</div>
                     <div className="link"><u>Become a Solutions Partner</u></div>
                 </PartnerText>
-                <Image src={"/static/patterns/partner_solutions_mobile.svg"}/>
+                <Image className="desktop" src={"/static/patterns/partner_solutions.svg"}/>
+                <Image className="mobile" src={"/static/patterns/partner_solutions_mobile.svg"}/>
                 <HighlightText>
                     <div className="large">The Solutions Partner Benefits</div>
                         <ul className="small">

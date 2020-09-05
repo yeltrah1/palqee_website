@@ -855,16 +855,32 @@ export const PartnerStyle = styled.div`
     width: 100vw;
 
     @media screen and (max-width: 750px) {
-      height: 800px;
+      height: 750px;
     }
   }
 
-  .large-grey {
+  .large-grey-1 {
     background: #FBFCFD;
     height: 500px;
     position: relative;    
     display: grid;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 650px;
+    }
+  }
+
+  .large-grey-2 {
+    background: #FBFCFD;
+    height: 500px;
+    position: relative;    
+    display: grid;
+    width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 750px;
+    }
   }
 
   .skewed-grey {
@@ -873,6 +889,10 @@ export const PartnerStyle = styled.div`
     position: relative;
     display: grid;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 700px;
+    }
   }
 
   .small-darkblue {
@@ -881,6 +901,10 @@ export const PartnerStyle = styled.div`
     background-size: 100vw 100%;
     height: 350px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 550px;
+    }
   }
 
   .bottom-grey {
