@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
@@ -100,7 +101,6 @@ const Cards = styled.div`
     @media screen and (max-width: 750px) {
         grid-row: 2;
         grid-column: 1;
-        column-gap: 10px;
     }
 
     @font-face {
@@ -108,9 +108,28 @@ const Cards = styled.div`
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
+    .drag-area {
+        width: 3920px;
+        transform: translateX(-1310px);
+
+        @media screen and (max-width: 750px) {
+            width: 1570px;
+            transform: translateX(-620px);
+        }
+    }
+
+`;
+
+const SliderContent = styled(motion.div)`
+    height: 100%;
+    display: flex;
+    cursor: grab;
+    column-gap: 20px;
 `;
 
 const AboutBlog = () => {
+
+    const constraintsRef = useRef(null);
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -123,7 +142,13 @@ const AboutBlog = () => {
                 </div>
             </BlogText>
             <Cards>
-                <BlogSmallCard 
+                <motion.div className="drag-area" ref={constraintsRef} />
+                <SliderContent className="desktop"
+                    drag="x"
+                    dragConstraints={constraintsRef}
+                    dragElastic={0.1}
+                    >
+                    <BlogSmallCard
                         cover={posts[1].cover}
                         date={posts[1].date}
                         category={posts[1].category} 
@@ -132,7 +157,7 @@ const AboutBlog = () => {
                         link={posts[1].link}
                         key={posts[1].id}
                     />
-                    <BlogSmallCard 
+                    <BlogSmallCard
                         cover={posts[2].cover}
                         date={posts[2].date}
                         category={posts[2].category} 
@@ -141,7 +166,7 @@ const AboutBlog = () => {
                         link={posts[2].link}
                         key={posts[2].id}
                     />
-                    <BlogSmallCard 
+                    <BlogSmallCard
                         cover={posts[3].cover}
                         date={posts[3].date}
                         category={posts[3].category} 
@@ -150,6 +175,7 @@ const AboutBlog = () => {
                         link={posts[3].link}
                         key={posts[3].id}
                     />
+                </SliderContent>
             </Cards>
         </Wrapper>
     </ThemeProvider>

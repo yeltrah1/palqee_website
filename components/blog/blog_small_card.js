@@ -21,6 +21,8 @@ const Cover = styled.img`
     width: 400px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    user-drag: none; 
+    user-select: none;
 
     @media screen and (max-width: 750px) {
         width: 300px;
