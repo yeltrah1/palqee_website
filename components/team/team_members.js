@@ -15,6 +15,12 @@ const Wrapper = styled.div`
   grid-template-rows: 0.5fr 0.3fr 1fr;
   width: 100vw;
   height: 700px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 0.5fr 0.2fr 3fr;
+        height: 1750px;
+        width: 90vw;
+    }
 `;
 
 const TitleText = styled.div`
@@ -37,6 +43,11 @@ const TitleText = styled.div`
     line-height: 1.33;
     letter-spacing: normal;
     color: #1a3154;
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            padding-top: 40px;
+        }
     }
 
     .small {
@@ -48,6 +59,11 @@ const TitleText = styled.div`
         font-style: normal;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            width: 90%;
+            font-size: 12px;
+        }
     }
 `;
 
@@ -58,6 +74,12 @@ const TabsContainer = styled.div`
     width: 600px;
     height: 60px;
     justify-self: center;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 45vw 45vw;
+        width: 90%;
+        height: 40px;
+    }
 
     .active-text {
         cursor: pointer;
@@ -71,6 +93,10 @@ const TabsContainer = styled.div`
         font-style: normal;
         line-height: 1.6;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 
     .inactive-text {
@@ -86,6 +112,10 @@ const TabsContainer = styled.div`
         line-height: 1.6;
         color: #192d4d;
         opacity: 0.4;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 
     .active-bar-left {
@@ -128,7 +158,13 @@ const TeamContainer = styled(motion.div)`
     grid-row-gap: 3em;
     width: 100vw;
     height: 400px;
-    justify-content: center;    
+    justify-content: center;
+    
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 280px;
+        grid-template-rows: repeat(3, 400px);
+        grid-column-gap: 0px;
+    }
 `;
 
 const TeamMembers = () => {

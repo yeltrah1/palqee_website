@@ -617,18 +617,32 @@ export const AboutStyle = styled.div`
     position: relative;
     height: 580px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+      background-size: 100% 700px;
+      height: 700px;
+    }
   }
 
   .small-white {
     background: white;
     height: 380px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 340px;
+    }
   }
 
   .large-white {
     background: white;
     height: 330px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 500px;
+    }
   }
 
   .small-darkblue {
@@ -637,6 +651,10 @@ export const AboutStyle = styled.div`
     background-size: 100% 100%;
     height: 350px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      background-image: linear-gradient(to top, #0d254a, #112a6b);
+    }
   }
 
   .large-blue {
@@ -648,6 +666,15 @@ export const AboutStyle = styled.div`
     margin-top: -100px;
     padding-top: 100px;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/light_blue_about.png");
+      background-repeat: no-repeat;
+      background-position: -200px 0px;
+      background-size: 800px 2050px;
+      height: 2300px;
+      padding-top: 0px;
+    }
   }
 
   .bottom-grey {

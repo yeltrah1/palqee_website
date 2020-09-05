@@ -13,6 +13,12 @@ const HeroStyle = styled.div`
     grid-template-rows: 1fr;
     margin-top: 58px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 0px;
+    }
 `;
 
 const HeroText = styled.div`
@@ -20,6 +26,12 @@ const HeroText = styled.div`
     height: 192px;
     margin-left: 18vw;
     margin-top: 120px;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 100px;
+        margin-left: 20px;
+        width: 90vw;
+    }
 
     .large {
     font-family: Poppins;
@@ -30,6 +42,10 @@ const HeroText = styled.div`
     padding-bottom: 10px;
     letter-spacing: normal;
     color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 30px;
+        }
     }
 
     @font-face {
@@ -53,12 +69,20 @@ const HeroText = styled.div`
         font-style: normal;
         letter-spacing: normal;
         color: #cbd0df;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 `;
 
 const Image = styled.img`
     justify-self: center;
     width: 600px;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 `;
 
 const AboutHero = () => {

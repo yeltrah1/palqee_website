@@ -109,9 +109,9 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         </div>
                         <div className="item-group">
                             <div className={item === "cases" ? "item active" : "item"} onClick={toggleCases}>Use Cases&nbsp;&nbsp;<a className={item === "cases" ? "arrow up" : "arrow"}>➤</a></div>
-                            <Link as="/startups" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</a></Link>
-                            <Link as="/smes" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</a></Link>
-                            <Link as="/enterprise" href="/[cases]"><a className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</a></Link>
+                            <Link href="/startups"><a className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</a></Link>
+                            <Link href="/smes"><a className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</a></Link>
+                            <Link href="/enterprise"><a className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</a></Link>
                         </div>
                         <div className="item-group">
                             <Link href="/about-us"><a className="item">About Us</a></Link>
