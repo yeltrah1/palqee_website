@@ -12,7 +12,26 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 0.5fr 1.5fr 1.5fr 1.5fr;
   width: 100vw;
-  padding-top: 50px;
+
+  @media screen and (max-width: 750px) {
+    grid-template-rows: 70px 180px 2fr 2fr 2fr;
+  }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: grid;
+            padding-top: 0px;
+        }
+    }
+
+    .desktop {
+        padding-top: 50px;
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+
 `;
 
 const TabsContainer = styled.div`
@@ -22,6 +41,10 @@ const TabsContainer = styled.div`
     width: 750px;
     height: 60px;
     justify-self: center;
+
+    @media screen and (max-width: 750px) {
+        width: 300px;
+    }
 
     .active-text {
         cursor: pointer;
@@ -35,6 +58,10 @@ const TabsContainer = styled.div`
         font-style: normal;
         line-height: 1.6;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+        }
     }
 
     .inactive-text {
@@ -50,6 +77,10 @@ const TabsContainer = styled.div`
         line-height: 1.6;
         color: #192d4d;
         opacity: 0.4;
+
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+        }
     }
 
     .active-bar-left {
@@ -111,14 +142,22 @@ const Skewed = styled.div`
     left: -270vw;
     bottom: -20px;
     transform: skew(78deg);
+
+    @media screen and (max-width: 750px) {
+        bottom: -120px;
+        left: -270vw;
+    }
 `;
 
 const TitleText = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 120px 80px;
     justify-items: center;
-    height: 180px;
+
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 90px 90px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -135,6 +174,10 @@ const TitleText = styled.div`
     color: #1a3154;
     align-self: end;
     padding-bottom: 10px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 24px;
+        }
     }
 
     .small {
@@ -146,6 +189,11 @@ const TitleText = styled.div`
         font-style: normal;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            width: 90%;
+            font-size: 12px;
+        }
     }
 `;
 
@@ -154,9 +202,16 @@ const Cases = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 80vw;
-    height: 490px;
+    height: 400px;
     place-self: center;
     justify-content: center;   
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 85vw;
+        height: 580px;
+    }
     
     @font-face {
         font-family: 'Poppins-Semi';
@@ -167,7 +222,13 @@ const Cases = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
-        justify-content: start; 
+        justify-content: start;
+
+        @media screen and (max-width: 750px) {
+            grid-row: 2;
+            text-align: center;
+            justify-content: center;
+        }
     }
 
     .text-container .title{
@@ -182,6 +243,11 @@ const Cases = styled.div`
         align-text: left;
         align-self: end;
         padding-bottom: 10px;
+
+        @media screen and (max-width: 750px) {
+            font-size: 22px;
+            padding-top: 20px;
+        }
     }
 
     .text-container .details{
@@ -195,6 +261,11 @@ const Cases = styled.div`
         color: #758194;
         align-text: left;
         white-space: pre-wrap;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            align-text: center;
+        }
     }
 
     .text-container .link {
@@ -213,6 +284,11 @@ const Cases = styled.div`
 const Images = styled(motion.img)`
     height: 400px;
     place-self: center;
+
+    @media screen and (max-width: 750px) {
+        height: 230px;
+        grid-row: 1;
+    }
 `;
 
 const CasesTabs = () => {
@@ -319,7 +395,7 @@ const CasesTabs = () => {
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <TabsContainer>
+                <TabsContainer className="desktop">
                     <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Startups</div>
                     <div className="inactive-bar-left"></div>
                     <motion.div className={ cases === "startups" ? "active-bar-left" : "inactive-bar-left" }
@@ -348,6 +424,37 @@ const CasesTabs = () => {
                         transition={{ duration: 0.1 }}
                     ></motion.div>
                 </TabsContainer>
+
+                <TabsContainer className="mobile">
+                    <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Startups</div>
+                    <div className="inactive-bar-left"></div>
+                    <motion.div className={ cases === "startups" ? "active-bar-left" : "inactive-bar-left" }
+                        key={cases}
+                        initial={{ width: 0 }} 
+                        animate={{ width: 100 }} 
+                        exit={{ width: 0 }}
+                        transition={{ duration: 0.1 }}
+                    ></motion.div>
+                    <div className={ cases === "smes" ? "active-text" : "inactive-text" } onClick={() => { setCases("smes") }}>SME's</div>
+                    <div className="inactive-bar-middle"></div>
+                    <motion.div className={ cases === "smes" ? "active-bar-middle" : "inactive-bar-middle" }
+                        key={cases}
+                        initial={{ width: 0 }} 
+                        animate={{ width: 100}} 
+                        exit={{ width: 0 }}
+                        transition={{ duration: 0.1 }}
+                    ></motion.div>
+                    <div className={ cases === "enterprise" ? "active-text" : "inactive-text" } onClick={() => { setCases("enterprise") }}>Enterprise</div>
+                    <div className="inactive-bar-right"></div>
+                    <motion.div className={ cases === "enterprise" ? "active-bar-right" : "inactive-bar-right" }
+                        key={cases}
+                        initial={{ width: 0 }} 
+                        animate={{ width: 100 }} 
+                        exit={{ width: 0 }}
+                        transition={{ duration: 0.1 }}
+                    ></motion.div>
+                </TabsContainer>
+
                 <TitleText>
                     <div className="large">{changeHeader()}</div>
                     <div className="small">{changeSubHeader()}</div>
@@ -368,7 +475,7 @@ const CasesTabs = () => {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}/>
                 </Cases>
-                <Cases>
+                <Cases className="desktop">
                         <Images
                             style={{paddingRight:"60px"}}
                             src={changeImgTwo()}
@@ -385,7 +492,7 @@ const CasesTabs = () => {
                             </div>
                         </div>
                 </Cases>
-                <Cases>
+                <Cases className="desktop">
                     <div className="text-container">
                         <div className="title">{titleThree()}</div>
                         <div className="details">
@@ -393,7 +500,7 @@ const CasesTabs = () => {
                             <p className="link"><u><a href="/">{linkThree()}</a></u></p>
                         </div>
                     </div>
-                    <Images 
+                    <Images
                         style={{paddingLeft:"40px"}}
                         src={changeImgThree()}
                         key={cases}
@@ -402,6 +509,40 @@ const CasesTabs = () => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}/>
                 </Cases>
+
+                <Cases className="mobile" style={{ height: "500px"}}>
+                        <Images
+                            src={changeImgTwo()}
+                            key={cases}
+                            initial={{ opacity: 0 }} 
+                            animate={{ opacity: 1 }} 
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}/>
+                        <div className="text-container">
+                            <div className="title">{titleTwo()}</div>
+                            <div className="details">
+                                {detailsTwo()}
+                                <p className="link"><u><a href="/">{linkTwo()}</a></u></p>
+                            </div>
+                        </div>
+                </Cases>
+                <Cases className="mobile" style={{ height: "500px"}}>
+                    <div className="text-container">
+                        <div className="title">{titleThree()}</div>
+                        <div className="details">
+                            {detailsThree()}
+                            <p className="link"><u><a href="/">{linkThree()}</a></u></p>
+                        </div>
+                    </div>
+                    <Images
+                        src={changeImgThree()}
+                        key={cases}
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}/>
+                </Cases>
+
                 <Skewed/>
             </Wrapper>
       </ThemeProvider>

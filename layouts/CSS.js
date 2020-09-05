@@ -671,12 +671,22 @@ export const CasesStyle = styled.div`
     position: relative;
     height: 400px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+      background-size: 100% 300px;
+      height: 300px;
+    }
   }
 
   .large-white-skewed {
-    height: 1880px;
+    height: 1800px;
     width: 100vw;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      height: 2000px;
+    }
   }
 
   .bottom-grey {

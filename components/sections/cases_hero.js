@@ -21,6 +21,11 @@ const HeroText = styled.div`
     height: 400px;
     margin-top: 160px;
 
+    @media screen and (max-width: 750px) {
+        font-size: 32px;
+        margin-top: 130px;
+    }
+
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
@@ -38,6 +43,10 @@ const HeroText = styled.div`
         color: #ffffff;
         text-decoration: underline solid;
         text-decoration-color: ${props => props.theme.redButton};
+
+        @media screen and (max-width: 750px) {
+            font-size: 32px;
+        }
     }
 
     .small {
@@ -49,6 +58,10 @@ const HeroText = styled.div`
         line-height: 2;
         letter-spacing: normal;
         color: #cbd0df;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 `;
 
