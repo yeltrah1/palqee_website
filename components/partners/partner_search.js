@@ -41,7 +41,7 @@ const FilterStyle = styled.div`
     justify-self: end;
     grid-column: 1;
     font-size: 14px;
-    color: #000000;
+    color: #192d4d;
     font-family: Poppins-Semi;
   }
 `;
