@@ -12,6 +12,13 @@ const Wrapper = styled.div`
   width: 90vw;
   height: 100%;
   justify-self: center;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 100vw;
+    grid-template-rows: 200px 600px;
+    width: 100vw;
+  }
+
 `;
 
 const PartnerText = styled.div`
@@ -22,6 +29,11 @@ const PartnerText = styled.div`
     height: 40%;
     margin-left: 8vw;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 750px) {
+        margin-left: 0px;
+        justify-items: center;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -38,6 +50,11 @@ const PartnerText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 26px;
+            text-align: center;
+        }
     }
 
     .small {
@@ -51,6 +68,12 @@ const PartnerText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+            width: 90%;
+            text-align: center;
+        }
     }
 
     .link {
@@ -72,6 +95,12 @@ const Image = styled.img`
     grid-row: 1;
     place-self: center;
     width: 550px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        width: 330px;
+    }
 `;
 
 const HighlightText = styled.div`
@@ -82,6 +111,14 @@ const HighlightText = styled.div`
     grid-template-columns: 1fr;
     margin-top: -20px;
     margin-right: 50px;
+
+    @media screen and (max-width: 750px) {
+        grid-column: 1;
+        grid-row: 2;
+        justify-items: center;
+        margin-right: 0px;
+        margin-top: 25px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -97,6 +134,10 @@ const HighlightText = styled.div`
         line-height: 1.33;
         letter-spacing: normal;
         color: ${props => props.theme.mainFontColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 18px;
+        }
     }
 
     .small {
@@ -134,7 +175,7 @@ const SolutionsPartner = () => {
                     <div className="small">No matter if you’re planning to expand your service offering, work on implementing data compliance projects for your clients or look for IT solutions to recommend, our Solutions Partner Program offers you an opportunity to unlock growth.</div>
                     <div className="link"><u>Become a Solutions Partner</u></div>
                 </PartnerText>
-                <Image src={"/static/patterns/partner_solutions.svg"}/>
+                <Image src={"/static/patterns/partner_solutions_mobile.svg"}/>
                 <HighlightText>
                     <div className="large">The Solutions Partner Benefits</div>
                         <ul className="small">

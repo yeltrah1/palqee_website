@@ -839,6 +839,12 @@ export const PartnerStyle = styled.div`
     background-size: 100vw 550px;
     position: relative;
     height: 550px;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+      background-size: 100vw 380px;
+      height: 380px;
+    }
   }
 
   .large-white {
@@ -847,6 +853,10 @@ export const PartnerStyle = styled.div`
     position: relative;
     display: grid;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      height: 800px;
+    }
   }
 
   .large-grey {
