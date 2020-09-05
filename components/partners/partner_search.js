@@ -3,17 +3,53 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 const ContainerStyle = styled.div`
+  display: grid;
+  justify-self: center; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.6fr;
+  border-radius: 6px;
+  box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  height: 50px;
+  width: 900px;
+  margin-top: 50px;
+  padding: 20px;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+`;
+
+const FilterStyle = styled.div`
+  display: none;
+  margin-top: -10px;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: 1fr;
+  height: 30px;
+  width: 90vw;
+
+  @media screen and (max-width: 750px) {
     display: grid;
-    justify-self: center; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.4fr 0.6fr;
-    border-radius: 6px;
-    box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
-    background-color: #ffffff;
-    height: 50px;
-    width: 900px;
-    margin-top: 50px;
-    padding: 20px;
+  }
+
+  @font-face {
+    font-family: 'Poppins-Semi';
+    src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+  }
+
+  .text {
+    justify-self: end;
+    grid-column: 1;
+    font-size: 14px;
+    color: #000000;
+    font-family: Poppins-Semi;
+  }
+`;
+
+const Filter = styled.img`
+  margin-left: 10px;
+  grid-column: 2;
+  width: 20px;
 `;
 
 const SelectStyle = styled.select`
@@ -152,47 +188,53 @@ const PartnerSearch = () => {
     const router = useRouter()
 
     return (
-        <ContainerStyle>
-            <FieldStyle>
-                <div className="title">By Service</div>
-                <SelectStyle id="service" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})} >
-                    <option selected={router.query.service === "all-services" ? true : false} value="all-services">All Services</option>
-                    <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">Compliance Consulting</option>
-                    <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">Palqee Implementation</option>
-                    <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">Workforce Training</option>
-                </SelectStyle>
-            </FieldStyle>
-            <FieldStyle>
-                <div className="title">By Industry</div>
-                <SelectStyle id="industry" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
-                    <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">All Industries</option>
-                    <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">Finance</option>
-                    <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
-                    <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
-                </SelectStyle>
-            </FieldStyle>
-            <FieldStyle>
-                <div className="title">By Country</div>
-                <SelectStyle id="country" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
-                    <option selected={router.query.country === "global" ? true : false} value="global">All Countries</option>
-                    <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
-                    <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
-                    <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
-                </SelectStyle>
-            </FieldStyle>
-            <FieldStyle>
-                <div className="title">Find a Partner</div>
-                <form onSubmit={() => router.push({ 
-                        pathname: '/accredited/[service]/[industry]/[country]',
-                        query: { partner: query }
-                        })}>
-                    <SearchStyle>
-                        <InputStyle type="text" name="partner" placeholder="Search"/>
-                        <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
-                    </SearchStyle>
-                </form>
-            </FieldStyle>
-        </ContainerStyle>
+        <>
+          <FilterStyle>
+              <div className="text">Filter</div>
+              <Filter src={"/static/icons/filter_icon.svg"}/>
+          </FilterStyle>
+          <ContainerStyle>
+              <FieldStyle>
+                  <div className="title">By Service</div>
+                  <SelectStyle id="service" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})} >
+                      <option selected={router.query.service === "all-services" ? true : false} value="all-services">All Services</option>
+                      <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">Compliance Consulting</option>
+                      <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">Palqee Implementation</option>
+                      <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">Workforce Training</option>
+                  </SelectStyle>
+              </FieldStyle>
+              <FieldStyle>
+                  <div className="title">By Industry</div>
+                  <SelectStyle id="industry" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
+                      <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">All Industries</option>
+                      <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">Finance</option>
+                      <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
+                      <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
+                  </SelectStyle>
+              </FieldStyle>
+              <FieldStyle>
+                  <div className="title">By Country</div>
+                  <SelectStyle id="country" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
+                      <option selected={router.query.country === "global" ? true : false} value="global">All Countries</option>
+                      <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
+                      <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
+                      <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
+                  </SelectStyle>
+              </FieldStyle>
+              <FieldStyle>
+                  <div className="title">Find a Partner</div>
+                  <form onSubmit={() => router.push({ 
+                          pathname: '/accredited/[service]/[industry]/[country]',
+                          query: { partner: query }
+                          })}>
+                      <SearchStyle>
+                          <InputStyle type="text" name="partner" placeholder="Search"/>
+                          <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                      </SearchStyle>
+                  </form>
+              </FieldStyle>
+          </ContainerStyle>
+        </>
     );
 }
 

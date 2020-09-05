@@ -20,16 +20,26 @@ const HeroText = styled.div`
     height: 400px;
     margin-top: 160px;
 
+    @media screen and (max-width: 750px) {
+        margin-top: 110px;
+        font-size: 30px;
+        width: 85%;
+    }
+
     .large {
-    font-family: Poppins;
-    font-size: 42px;
-    font-weight: normal;
-    font-style: normal;
-    text-align: center;
-    line-height: 1.33;
-    padding-bottom: 10px;
-    letter-spacing: normal;
-    color: #ffffff;
+        font-family: Poppins;
+        font-size: 42px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        line-height: 1.33;
+        padding-bottom: 10px;
+        letter-spacing: normal;
+        color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 28px;
+        }
     }
 
     @font-face {
@@ -56,7 +66,7 @@ const FindHero = () => {
                 <div className="large">
                     Contact our <span className="semi">
                     <u>certified partners</u></span><br/>
-                    for implementation and training.
+                    for implementation and training
                 </div>
             </HeroText>
         </HeroStyle>

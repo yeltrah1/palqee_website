@@ -767,6 +767,12 @@ export const FindStyle = styled.div`
     position: relative;
     height: 400px;
     width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+      background-size: 100% 380px;
+      height: 380px;
+    }
   }
 
   .large-white {
@@ -780,6 +786,13 @@ export const FindStyle = styled.div`
     position: relative;
     min-height: 500px;
     padding-bottom: 100px;
+
+    @media screen and (max-width: 750px) {
+      grid-template-rows: 10px 1fr;
+      background-image: none;
+      background-color: #ffffff;
+      width: 90vw;
+    }
   }
 
   .bottom-grey {
