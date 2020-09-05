@@ -58,6 +58,7 @@ const TabsContainer = styled.div`
         font-style: normal;
         line-height: 1.6;
         color: ${props => props.theme.mainFontColor};
+        -webkit-tap-highlight-color: transparent;
 
         @media screen and (max-width: 750px) {
             font-size: 14px;
@@ -77,6 +78,7 @@ const TabsContainer = styled.div`
         line-height: 1.6;
         color: #192d4d;
         opacity: 0.4;
+        -webkit-tap-highlight-color: transparent;
 
         @media screen and (max-width: 750px) {
             font-size: 14px;

@@ -160,6 +160,7 @@ const LinkStyle = styled.div`
     line-height: 1.54;
     letter-spacing: normal;
     color: ${props => props.theme.linkColor};
+    -webkit-tap-highlight-color: transparent;
     }
 `;
 
