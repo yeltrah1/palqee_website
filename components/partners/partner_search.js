@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
@@ -307,14 +307,11 @@ const PartnerSearch = () => {
                 </FieldStyle>
                 <FieldStyle>
                     <div className="title">Find a Partner</div>
-                    <form onSubmit={() => router.push({ 
-                            pathname: '/accredited/[service]/[industry]/[country]',
-                            query: { partner: query }
-                            })}>
-                        <SearchStyle>
-                            <InputStyle type="text" name="partner" placeholder="Search"/>
-                            <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
-                        </SearchStyle>
+                    <form onSubmit={() => router.push('/accredited/all-services/all-industries/global?partner='+document.getElementById("partner-mobile").value)}>
+                    <SearchStyle>
+                      <InputStyle type="text" id="partner-mobile" placeholder="Search"/>
+                      <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                    </SearchStyle>
                     </form>
                 </FieldStyle>
               </div>
@@ -353,14 +350,11 @@ const PartnerSearch = () => {
               </FieldStyle>
               <FieldStyle>
                   <div className="title">Find a Partner</div>
-                  <form onSubmit={() => router.push({ 
-                          pathname: '/accredited/[service]/[industry]/[country]',
-                          query: { partner: query }
-                          })}>
-                      <SearchStyle>
-                          <InputStyle type="text" name="partner" placeholder="Search"/>
-                          <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
-                      </SearchStyle>
+                  <form onSubmit={() => router.push('/accredited/all-services/all-industries/global?partner='+document.getElementById("partner").value)}>
+                    <SearchStyle>
+                      <InputStyle type="text" id="partner" placeholder="Search"/>
+                      <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                    </SearchStyle>
                   </form>
               </FieldStyle>
           </ContainerStyle>
