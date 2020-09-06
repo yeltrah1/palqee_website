@@ -9,12 +9,23 @@ const ContainerStyle = styled.div`
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
     height: 430px;
+
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+        height: auto;
+        grid-template-rows: auto 1fr;
+    }
 `;
 
 const Cover = styled.img` 
     height: 200px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+        height: auto;
+    }
 `;
 
 const InfoStyle = styled.div`
@@ -29,6 +40,12 @@ const InfoStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #000000;
+
+    @media screen and (max-width: 750px) {
+        padding: 10px 20px;
+        grid-row-gap: 0.5em;
+        grid-template-rows: auto auto auto auto;
+    }
 `;
 
 const DateStyle = styled.div`
@@ -111,6 +128,10 @@ const TitleStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #192d4d;
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
+    }
 `;
 
 const DescriptionStyle = styled.div`
@@ -122,6 +143,11 @@ const DescriptionStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #000000;
+
+    @media screen and (max-width: 750px) {
+        font-size: 11px;
+        align-self: center;
+    }
 `;
 
 const LinkStyle = styled.div`
@@ -140,6 +166,10 @@ const LinkStyle = styled.div`
     line-height: 1.54;
     letter-spacing: normal;
     color: ${props => props.theme.linkColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 `;
 

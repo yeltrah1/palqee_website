@@ -11,6 +11,10 @@ const LargeStyle = styled.div`
     justify-self: center;
     align-self: start;
     margin-top: 60px;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
 `;
 
 const ListStyle = styled.div`
@@ -21,6 +25,23 @@ const ListStyle = styled.div`
     justify-self: center;
     align-self: start;
     margin-top: 60px;
+
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+`;
+
+const MobileList = styled.div`
+    display: none;
+    justify-self: center;
+    align-self: start;
+    margin-top: 40px;
+    grid-template-columns: 90vw; 
+    grid-row-gap: 1.5em;
+
+    @media screen and (max-width: 750px) {
+        display: grid;
+    }
 `;
 
 const NoEntries = styled.div`
@@ -32,6 +53,10 @@ const NoEntries = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    @media screen and (max-width: 750px) {
+        text-align: center;
     }
 `;
 
@@ -116,6 +141,26 @@ const BlogList = () => {
             />
             )}
         </ListStyle>
+        <MobileList>
+            {posts
+            .filter(article => article.category.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") === true)
+            .map(article => 
+            <BlogCard 
+                cover={article.cover}
+                date={article.date}
+                category={article.category} 
+                title={article.title}
+                description={article.short_description}
+                link={article.link}
+                key={article.id}
+            />
+            )}
+        </MobileList>
         </>
     )
 

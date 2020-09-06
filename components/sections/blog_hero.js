@@ -20,6 +20,12 @@ const HeroText = styled.div`
     height: 400px;
     margin-top: 160px;
 
+    @media screen and (max-width: 750px) {
+        margin-top: 110px;
+        font-size: 30px;
+        width: 95%;
+    }
+
     .large {
     font-family: Poppins;
     font-size: 42px;
@@ -30,6 +36,10 @@ const HeroText = styled.div`
     padding-bottom: 10px;
     letter-spacing: normal;
     color: #ffffff;
+
+        @media screen and (max-width: 750px) {
+            font-size: 28px;
+        }
     }
 
     @font-face {

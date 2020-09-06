@@ -280,7 +280,7 @@ const PartnerSearch = () => {
                 </div>
                 <FieldStyle>
                     <div className="title">By Service</div>
-                    <SelectStyle id="service" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)} >
+                    <SelectStyle id="service-mobile" onChange={() => router.push('/accredited/'+document.getElementById("service-mobile").value+'/'+document.getElementById("industry-mobile").value+'/'+document.getElementById("country-mobile").value)} >
                         <option selected={router.query.service === "all-services" ? true : false} value="all-services">All Services</option>
                         <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">Compliance Consulting</option>
                         <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">Palqee Implementation</option>
@@ -289,7 +289,7 @@ const PartnerSearch = () => {
                 </FieldStyle>
                 <FieldStyle>
                     <div className="title">By Industry</div>
-                    <SelectStyle id="industry" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)}>
+                    <SelectStyle id="industry-mobile" onChange={() => router.push('/accredited/'+document.getElementById("service-mobile").value+'/'+document.getElementById("industry-mobile").value+'/'+document.getElementById("country-mobile").value)}>
                         <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">All Industries</option>
                         <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">Finance</option>
                         <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
@@ -298,7 +298,7 @@ const PartnerSearch = () => {
                 </FieldStyle>
                 <FieldStyle>
                     <div className="title">By Country</div>
-                    <SelectStyle id="country" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)}>
+                    <SelectStyle id="country-mobile" onChange={() => router.push('/accredited/'+document.getElementById("service-mobile").value+'/'+document.getElementById("industry-mobile").value+'/'+document.getElementById("country-mobile").value)}>
                         <option selected={router.query.country === "global" ? true : false} value="global">All Countries</option>
                         <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
                         <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
