@@ -13,6 +13,12 @@ const ListStyle = styled.div`
     justify-self: center;
     align-self: start;
     margin-top: 60px;
+
+    @media screen and (max-width: 750px) {
+        margin-top: 40px;
+        grid-template-columns: 400px; 
+        grid-row-gap: 1.5em;
+    }
 `;
 
 const NoEntries = styled.div`
@@ -24,6 +30,10 @@ const NoEntries = styled.div`
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
+    }
+
+    @media screen and (max-width: 750px) {
+        text-align: center;
     }
 `;
 

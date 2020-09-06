@@ -7,6 +7,11 @@ const ContainerStyle = styled.div`
     box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
     height: 300px;
+
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+        height: 280px;
+    }
 `;
 
 const PartnerLogo = styled.img` 
@@ -25,6 +30,10 @@ const DescriptionStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #000000;
+
+    @media screen and (max-width: 750px) {
+        font-size: 12px;
+    }
 `;
 
 const TagsStyle = styled.div`
@@ -61,6 +70,10 @@ const LinkStyle = styled.div`
     line-height: 1.54;
     letter-spacing: normal;
     color: ${props => props.theme.linkColor};
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
     }
 `;
 

@@ -57,22 +57,15 @@ const FilterMobile = styled.div`
   .modal {
     position: fixed;
     display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
-    grid-template-rows: 1fr 80vw 1fr;
     background-color: rgba(7, 16, 42, 0.5);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 10;
+    z-index: 5;
     visibility: hidden;
     pointer-events: none;
     transition: all 0.3s;
-
-    @media screen and (max-width: 750px) {
-      grid-template-columns: 3vw 94vw 3vw;
-      grid-template-rows: 30vh 40vh 30vh;
-    }
 
     &:target {
       visibility: visible;
@@ -80,27 +73,50 @@ const FilterMobile = styled.div`
       pointer-events: auto;
     }
 
-    &>div {
-      grid-row: 2;
-      grid-column: 2;
+    .header {
+      grid-column: 1;
+      font-size: 12px;
+      color: #192d4d;
+      font-family: Poppins-Semi;
+      justify-self: start;
+      padding-left: 20px;
+    }
+
+    .box {
+      grid-row: 1;
+      grid-column: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50px 60px 60px 60px 60px;
       display: grid;
-      width: 100%;
-      height: 12vh;
+      width: 80vw;
+      height: 300px;
       margin-top: 10vh;
+      padding-bottom: 10px;
       place-items: center;
+      place-self: center;
+      z-index: 10;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
+      background-color: #ffffff;
     }
 
     .modal-close {
-      grid-row-start: 1;
-      grid-row-end: 4;
-      grid-column-start: 1;
-      grid-column-end: 4;
+      grid-row: 1;
+      grid-column: 1;
+      z-index: 8;
       cursor: pointer;
-      height: 100%;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
       -webkit-tap-highlight-color: transparent;
     }
-}
+  }
+`;
+
+const Close = styled.img`
+  position: absolute;  
+  width: 12px;
+  right: 40px;
 `;
 
 const Filter = styled.img`
@@ -124,6 +140,10 @@ const SelectStyle = styled.select`
   margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+
+  @media screen and (max-width: 750px) {
+    width: 225px;
+  }
   
   :focus {
     outline: none;
@@ -251,8 +271,52 @@ const PartnerSearch = () => {
               <Filter src={"/static/icons/filter_icon.svg"}/>
             </a>
             <div id="open-search" className="modal">
-              <div>
-                  CONTENT
+              <div className="box">
+                <div className="header">
+                  Filter
+                  <a href="#_" title="Close" className="modal-close">
+                    <Close src={"/static/icons/close_dark.svg"}/>
+                  </a>  
+                </div>
+                <FieldStyle>
+                    <div className="title">By Service</div>
+                    <SelectStyle id="service" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)} >
+                        <option selected={router.query.service === "all-services" ? true : false} value="all-services">All Services</option>
+                        <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">Compliance Consulting</option>
+                        <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">Palqee Implementation</option>
+                        <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">Workforce Training</option>
+                    </SelectStyle>
+                </FieldStyle>
+                <FieldStyle>
+                    <div className="title">By Industry</div>
+                    <SelectStyle id="industry" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)}>
+                        <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">All Industries</option>
+                        <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">Finance</option>
+                        <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
+                        <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
+                    </SelectStyle>
+                </FieldStyle>
+                <FieldStyle>
+                    <div className="title">By Country</div>
+                    <SelectStyle id="country" onChange={() => router.push('/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value)}>
+                        <option selected={router.query.country === "global" ? true : false} value="global">All Countries</option>
+                        <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
+                        <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
+                        <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
+                    </SelectStyle>
+                </FieldStyle>
+                <FieldStyle>
+                    <div className="title">Find a Partner</div>
+                    <form onSubmit={() => router.push({ 
+                            pathname: '/accredited/[service]/[industry]/[country]',
+                            query: { partner: query }
+                            })}>
+                        <SearchStyle>
+                            <InputStyle type="text" name="partner" placeholder="Search"/>
+                            <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                        </SearchStyle>
+                    </form>
+                </FieldStyle>
               </div>
               <a href="#_" title="Close" className="modal-close">
               </a>

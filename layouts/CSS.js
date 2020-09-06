@@ -791,7 +791,9 @@ export const FindStyle = styled.div`
       grid-template-rows: 10px 1fr;
       background-image: none;
       background-color: #ffffff;
+      min-height: 200px;
       width: 90vw;
+      padding-bottom: 80px;
     }
   }
 
