@@ -91,6 +91,7 @@ const FilterMobile = styled.div`
       width: 80vw;
       height: 300px;
       padding-bottom: 10px;
+      margin-top: -20px;
       place-items: center;
       place-self: center;
       z-index: 10;
@@ -114,8 +115,8 @@ const FilterMobile = styled.div`
 
 const Close = styled.img`
   position: absolute;  
-  width: 12px;
-  right: 40px;
+  width: 14px;
+  right: 50px;
 `;
 
 const Filter = styled.img`
