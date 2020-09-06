@@ -20,13 +20,14 @@ const ContainerStyle = styled.div`
   }
 `;
 
-const FilterStyle = styled.div`
+const FilterMobile = styled.div`
   display: none;
   margin-top: -10px;
-  grid-template-columns: 1fr 30px;
+  grid-template-columns: 1fr 80px;
   grid-template-rows: 1fr;
   height: 30px;
   width: 90vw;
+  place-items: center;
 
   @media screen and (max-width: 750px) {
     display: grid;
@@ -37,17 +38,72 @@ const FilterStyle = styled.div`
     src: url('../../../static/fonts/Poppins-SemiBold.ttf') format('truetype');
   }
 
-  .text {
-    justify-self: end;
-    grid-column: 1;
-    font-size: 14px;
-    color: #192d4d;
-    font-family: Poppins-Semi;
+  .button {
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 45px 35px;
+    grid-template-rows: 1fr;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    .text {
+      grid-column: 1;
+      font-size: 14px;
+      color: #192d4d;
+      font-family: Poppins-Semi;
+    }
   }
+
+  .modal {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 1fr 80vw 1fr;
+    background-color: rgba(7, 16, 42, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 750px) {
+      grid-template-columns: 3vw 94vw 3vw;
+      grid-template-rows: 30vh 40vh 30vh;
+    }
+
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &>div {
+      grid-row: 2;
+      grid-column: 2;
+      display: grid;
+      width: 100%;
+      height: 12vh;
+      margin-top: 10vh;
+      place-items: center;
+    }
+
+    .modal-close {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+}
 `;
 
 const Filter = styled.img`
-  margin-left: 10px;
   grid-column: 2;
   width: 20px;
 `;
@@ -189,10 +245,20 @@ const PartnerSearch = () => {
 
     return (
         <>
-          <FilterStyle>
+          <FilterMobile>
+            <a className="button" href="#open-search">
               <div className="text">Filter</div>
               <Filter src={"/static/icons/filter_icon.svg"}/>
-          </FilterStyle>
+            </a>
+            <div id="open-search" className="modal">
+              <div>
+                  CONTENT
+              </div>
+              <a href="#_" title="Close" className="modal-close">
+              </a>
+            </div>
+          </FilterMobile>
+
           <ContainerStyle>
               <FieldStyle>
                   <div className="title">By Service</div>

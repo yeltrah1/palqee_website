@@ -297,7 +297,7 @@ export const NavBarStyle = styled.div`
       line-height: 1.54;
       margin-top: 5px;
       color: ${props => props.theme.redButton};
-      text-decoration:none;
+      text-decoration: none;
       cursor: pointer;
     }
 
