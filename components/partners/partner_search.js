@@ -90,7 +90,6 @@ const FilterMobile = styled.div`
       display: grid;
       width: 80vw;
       height: 300px;
-      margin-top: 10vh;
       padding-bottom: 10px;
       place-items: center;
       place-self: center;
