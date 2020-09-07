@@ -15,7 +15,7 @@ const CultureStyle = styled.div`
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        margin-top: 30px; 
+        margin-top: 0px; 
     }
 `;
 
@@ -120,7 +120,7 @@ const Culture = () => {
                         <div className="small">There is a general misconception that data privacy equals to less data sharing which is why companies often see it as an innovation road blocker and expense rather than an opportunity.</div>
                         <div className="small-bold">We are changing that.</div>
                     </CultureText>
-                    <Image src={"/static/patterns/lines_small.svg"}/>
+                    <Image src={"/static/patterns/lines_mobile.png"}/>
                 </Container>
             </CultureStyle>
       </ThemeProvider>

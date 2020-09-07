@@ -154,7 +154,7 @@ const HighlightText = styled.div`
         grid-row: 2;
         justify-items: center;
         margin-left: 0px;
-        margin-top: 20px;
+        margin-top: 0px;
     }
 
     @font-face {
@@ -193,6 +193,7 @@ const HighlightText = styled.div`
         @media screen and (max-width: 750px) {
             font-size: 13px;
             margin-left: 10px;
+            margin-top: 0px;
         }
     }
       
@@ -214,7 +215,7 @@ const PartnersTraining = () => {
             <Wrapper>
             <Skewed/>
                 <Image className="desktop" src={"/static/patterns/partner_training.svg"}/>
-                <Image className="mobile" src={"/static/patterns/partner_training_mobile.svg"}/>
+                <Image className="mobile" src={"/static/patterns/partner_training_mobile.png"}/>
                 <HighlightText>
                     <div className="large">Training Partner Benefits</div>
                         <ul className="small">

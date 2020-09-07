@@ -619,9 +619,10 @@ export const AboutStyle = styled.div`
     width: 100vw;
 
     @media screen and (max-width: 750px) {
-      background-image: url("/static/patterns/blue_bg_clear.png");
-      background-size: 100% 700px;
-      height: 700px;
+      background-image: url("/static/patterns/clouds_mobile.png");
+      background-size: 105% 550px;
+      background-position: -10px 0px;
+      height: 550px;
     }
   }
 
@@ -631,7 +632,7 @@ export const AboutStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 340px;
+      height: 360px;
     }
   }
 
