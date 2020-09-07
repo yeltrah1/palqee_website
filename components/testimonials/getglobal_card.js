@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 
 const ContainerStyle = styled.div`
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.7fr 0.3fr;
     border-radius: 6px;
@@ -13,6 +13,7 @@ const ContainerStyle = styled.div`
     width: 180px;
     padding: 10px 20px;
     margin: 0 10px;
+    cursor: grab;
 
     .modal {
         position: fixed;
@@ -24,7 +25,7 @@ const ContainerStyle = styled.div`
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 10;
+        z-index: 20;
         visibility: hidden;
         pointer-events: none;
         transition: all 0.3s;

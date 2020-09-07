@@ -500,8 +500,7 @@ export const HomeStyle = styled.div`
   }
 
   .skewed-blue {
-    height: 500px;
-    width: 200vw;
+    height: 450px;
     position: relative;
 
     @media screen and (max-width: 750px) {

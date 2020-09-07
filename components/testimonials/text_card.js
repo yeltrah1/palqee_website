@@ -14,6 +14,7 @@ const ContainerStyle = styled.div`
     width: 180px;
     padding: 20px;
     margin: 0 10px;
+    cursor: grab;
 `;
 
 const AvatarStyle = styled.img`

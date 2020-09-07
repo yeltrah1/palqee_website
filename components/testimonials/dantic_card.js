@@ -13,6 +13,7 @@ const ContainerStyle = styled.div`
     width: 180px;
     padding: 10px 20px;
     margin: 0 10px;
+    cursor: grab;
 
     .modal {
         position: fixed;

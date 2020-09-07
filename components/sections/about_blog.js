@@ -118,21 +118,6 @@ const Cards = styled.div`
             transform: translateX(-620px);
         }
     }
-
-    .mobile {
-        display: none;
-        @media screen and (max-width: 750px) {
-            display: flex;
-        }
-    }
-
-    .desktop {
-        display: flex;
-        @media screen and (max-width: 750px) {
-            display: none;
-        }
-    }
-
 `;
 
 const SliderContent = styled(motion.div)`

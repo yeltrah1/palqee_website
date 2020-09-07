@@ -3,22 +3,23 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
-import { TextCard } from './text_card';
 import { GetglobalCard } from './getglobal_card';
 import { DrlCard } from './drl_card';
 import { DanticCard } from './dantic_card';
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    place-self: center;
     place-items: center;
     width: 100vw;
+    padding-top: 100px;
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
@@ -33,7 +34,8 @@ const Skewed = styled.div`
     height: 450px;
     width: 300vw;
     position: relative;
-    left: -360vw;
+    margin-top: -130px;
+    left: -330vw;
     transform: skew(-78deg);
 
     @media screen and (max-width: 750px) {
@@ -53,7 +55,8 @@ const TestimonialsText = styled.div`
     grid-template-rows: 1fr 1fr 0.5fr;
     place-self: center;
     justify-items: end;
-    margin-top: 80px;
+    margin-top: 30px;
+    padding-right: 30px;
 
     @media screen and (max-width: 750px) {
         width: 95vw;
@@ -85,7 +88,7 @@ const TestimonialsText = styled.div`
 
     .small {
         width: 85%;
-        padding-top: 10px;
+        padding-top: 20px;
         font-family: Poppins;
         font-size: 13px;
         font-weight: normal;
@@ -103,13 +106,12 @@ const TestimonialsText = styled.div`
 `;
 
 const Arrow = styled.img`
-    cursor: pointer;
     width: 20px;
     margin: 0 10px;
 
-    :hover {
-        transform: scale(1.2);
-    }
+    // :hover {
+    //     transform: scale(1.2);
+    // }
 
     @media screen and (max-width: 750px) {
         display: none;
@@ -121,42 +123,37 @@ const Cards = styled.div`
     grid-row: 1;
     grid-column: 2;
     display: flex;
-    align-self: start;
+    place-self: center;
     height: 300px;
-    margin-top: 120px;
-    margin-left: 50px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+
+    @media screen and (max-width: 750px) {
+        grid-row: 2;
+        grid-column: 1;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
-    @media screen and (max-width: 750px) {
-        grid-column: 1;
-        grid-row: 2;
-        margin-top: 0px;
-        margin-left: -170px;
-    }
+    // .drag-area {
+    //     width: 1200px;
+    //     transform: translateX(-200px);
 
-    .drag-area {
-        width: 1320px;
-        transform: translateX(1010px);
-
-        @media screen and (max-width: 750px) {
-            width: 1570px;
-            transform: translateX(-620px);
-        }
-    }
-
+    //     @media screen and (max-width: 750px) {
+    //         width: 1570px;
+    //         transform: translateX(-620px);
+    //     }
+    // }
 `;
 
-const SliderContent = styled(motion.div)`
-    height: 100%;
-    display: flex;
-    cursor: grab;
-    column-gap: 20px;
-`;
+// const SliderContent = styled(motion.div)`
+//     height: 100%;
+//     display: flex;
+//     padding-top: 20px;
+// `;
 
 const Testimonials = () => {
 
@@ -170,21 +167,20 @@ const Testimonials = () => {
                 <div className="large">We believe in the power of community</div>
                 <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
                 <div className="arrows">
-                {/* <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/>  */}
+                {/* <Arrow src={ArrowLeft}/> */}
                 </div>
             </TestimonialsText>
             <Cards>
-                <motion.div className="drag-area" ref={constraintsRef} />
+                {/* <motion.div className="drag-area" ref={constraintsRef}/>
                 <SliderContent 
                     drag="x"
                     dragConstraints={constraintsRef}
                     dragElastic={0.1}
-                    >
+                    > */}
                     <DrlCard/>
                     <GetglobalCard/>
                     <DanticCard/>
-                    <TextCard/>
-                </SliderContent>
+                {/* </SliderContent> */}
             </Cards>
         </Wrapper>
     </ThemeProvider>
