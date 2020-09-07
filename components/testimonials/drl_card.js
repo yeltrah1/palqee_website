@@ -123,6 +123,8 @@ const CoverStyle = styled.img`
     height: 120px;
     border-radius: 6px;
     cursor: pointer;
+    user-drag: none; 
+    user-select: none;
 `;
 
 const DrlCard = () => {

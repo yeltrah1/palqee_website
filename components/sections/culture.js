@@ -31,6 +31,20 @@ const Container = styled.div`
         grid-column: 1;
         grid-row: 1;
     }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: flex;
+        }
+    }
+
+    .desktop {
+        display: flex;
+        @media screen and (max-width: 750px) {
+            display: none;
+        }
+    }
 `;
 
 const CultureText = styled.div`
@@ -120,7 +134,8 @@ const Culture = () => {
                         <div className="small">There is a general misconception that data privacy equals to less data sharing which is why companies often see it as an innovation road blocker and expense rather than an opportunity.</div>
                         <div className="small-bold">We are changing that.</div>
                     </CultureText>
-                    <Image src={"/static/patterns/lines_mobile.png"}/>
+                    <Image className="desktop" src={"/static/patterns/lines_small.svg"}/>
+                    <Image className="mobile" src={"/static/patterns/lines_mobile.png"}/>
                 </Container>
             </CultureStyle>
       </ThemeProvider>

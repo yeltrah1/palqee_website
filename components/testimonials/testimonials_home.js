@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { motion } from "framer-motion"
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
@@ -121,9 +122,10 @@ const Cards = styled.div`
     grid-column: 2;
     display: flex;
     align-self: start;
-    height: 200px;
+    height: 300px;
     margin-top: 120px;
     margin-left: 50px;
+    overflow-x: hidden;
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -137,9 +139,28 @@ const Cards = styled.div`
         margin-left: -170px;
     }
 
+    .drag-area {
+        width: 1320px;
+        transform: translateX(1010px);
+
+        @media screen and (max-width: 750px) {
+            width: 1570px;
+            transform: translateX(-620px);
+        }
+    }
+
+`;
+
+const SliderContent = styled(motion.div)`
+    height: 100%;
+    display: flex;
+    cursor: grab;
+    column-gap: 20px;
 `;
 
 const Testimonials = () => {
+
+    const constraintsRef = useRef(null);
 
     return (
     <ThemeProvider theme={palqeeTheme}>
@@ -149,14 +170,21 @@ const Testimonials = () => {
                 <div className="large">We believe in the power of community</div>
                 <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
                 <div className="arrows">
-                <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
+                {/* <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/>  */}
                 </div>
             </TestimonialsText>
             <Cards>
-                <DrlCard/>
-                <GetglobalCard/>
-                <DanticCard/>
-                <TextCard/>
+                <motion.div className="drag-area" ref={constraintsRef} />
+                <SliderContent 
+                    drag="x"
+                    dragConstraints={constraintsRef}
+                    dragElastic={0.1}
+                    >
+                    <DrlCard/>
+                    <GetglobalCard/>
+                    <DanticCard/>
+                    <TextCard/>
+                </SliderContent>
             </Cards>
         </Wrapper>
     </ThemeProvider>

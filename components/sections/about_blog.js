@@ -96,7 +96,8 @@ const Cards = styled.div`
     grid-column: 2;
     display: flex;
     place-self: start;
-    height: 200px;
+    height: 400px;
+    overflow-x: hidden;
 
     @media screen and (max-width: 750px) {
         grid-row: 2;
@@ -109,12 +110,26 @@ const Cards = styled.div`
     }
 
     .drag-area {
-        width: 3920px;
-        transform: translateX(-1310px);
+        width: 1760px;
+        transform: translateX(-510px);
 
         @media screen and (max-width: 750px) {
             width: 1570px;
             transform: translateX(-620px);
+        }
+    }
+
+    .mobile {
+        display: none;
+        @media screen and (max-width: 750px) {
+            display: flex;
+        }
+    }
+
+    .desktop {
+        display: flex;
+        @media screen and (max-width: 750px) {
+            display: none;
         }
     }
 
@@ -136,14 +151,14 @@ const AboutBlog = () => {
         <Wrapper>
             <BlogText>
                 <div className="large">Read more about Palqee in our blog</div>
-                <DemoButton style={{marginTop:"30px"}}>Go to Blog</DemoButton>
+                <DemoButton href="/blog/all" style={{marginTop:"30px"}}>Go to Blog</DemoButton>
                 <div className="arrows">
-                    <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
+                    {/* <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/>  */}
                 </div>
             </BlogText>
             <Cards>
                 <motion.div className="drag-area" ref={constraintsRef} />
-                <SliderContent className="desktop"
+                <SliderContent 
                     drag="x"
                     dragConstraints={constraintsRef}
                     dragElastic={0.1}
