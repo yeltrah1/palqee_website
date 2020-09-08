@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 
 const ContainerStyle = styled.div`
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.7fr 0.3fr;
     border-radius: 6px;
@@ -13,13 +13,18 @@ const ContainerStyle = styled.div`
     width: 180px;
     padding: 10px 20px;
     margin: 0 10px;
-    cursor: grab;
+
+    @media screen and (max-width: 750px) {
+        width: 35vw;
+        height: 200px;
+        padding: 5px 10px;
+    }
 
     .modal {
         position: fixed;
         display: grid;
-        grid-template-columns: 1fr 700px 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 15vw 70vw 15vw;
+        grid-template-rows: 1fr 80vw 1fr;
         background-color: rgba(7, 16, 42, 0.5);
         top: 0;
         right: 0;
@@ -29,7 +34,12 @@ const ContainerStyle = styled.div`
         visibility: hidden;
         pointer-events: none;
         transition: all 0.3s;
-    
+
+        @media screen and (max-width: 750px) {
+            grid-template-columns: 3vw 94vw 3vw;
+            grid-template-rows: 30vh 40vh 30vh;
+        }
+
         &:target {
             visibility: visible;
             opacity: 1;
@@ -37,21 +47,24 @@ const ContainerStyle = styled.div`
         }
     
         &>div {
-            grid-row: 1;
+            grid-row: 2;
             grid-column: 2;
             display: grid;
             width: 100%;
-            height: 100%;
+            height: 12vh;
+            margin-top: 10vh;
             place-items: center;
         }
     
         .modal-close {
-            grid-row: 1;
-            grid-column: 3;
-            align-self: center;
-            padding-bottom: 330px;
-            margin-left: -20px;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 4;
             cursor: pointer;
+            height: 100%;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
         }
     }
 `;
@@ -61,11 +74,20 @@ const AvatarStyle = styled.img`
     margin-top: 10px;
     align-self: center;
     border-radius: 30px;
+
+    @media screen and (max-width: 750px) {
+        width: 10vw;
+        height: auto;
+    }
 `;
 
 const Logo = styled.img`
     width: 50px;
     padding-top: 15px;
+
+    @media screen and (max-width: 750px) {
+        padding-top: 10px;
+    }
 `;
 
 const TitleStyle = styled.div`
@@ -75,6 +97,12 @@ const TitleStyle = styled.div`
     align-self: center;
     height: 50px;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 750px) {
+        width: 35vw;
+        height: 60px;
+        margin-bottom: 10px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -97,6 +125,10 @@ const TitleStyle = styled.div`
         font-style: normal;
         color: #192d4d;
         align-self: end;
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+        }
     }
 
     .person .position {
@@ -119,6 +151,11 @@ const CoverStyle = styled.img`
     cursor: pointer;
     user-drag: none; 
     user-select: none;
+
+    @media screen and (max-width: 750px) {
+        width: 35vw;
+        height: auto;
+    }
 `;
 
 const DanticCard = () => {
@@ -146,13 +183,14 @@ const DanticCard = () => {
                     controls={true}
                     playing={play}
                     className="react-player"
+                    width='100%'
+                    height='100%'
                     pip={false}
                     config={{ file: { attributes: { controlsList: 'nodownload' } } }} // remove download option
                     onContextMenu={e => e.preventDefault()}  //remove right click
                     />
                 </div>
                 <a href="#_" title="Close" className="modal-close" onClick={() => { setPlay(false) }}>
-                    <img src="static/icons/close_button.svg"/>
                 </a>
             </div>
         </ContainerStyle>

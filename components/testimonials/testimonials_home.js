@@ -21,9 +21,9 @@ const Wrapper = styled.div`
     width: 100vw;
     padding-top: 100px;
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 750px) {        
         grid-template-columns: 1fr;
-        grid-template-rows: 240px 340px;
+        grid-template-rows: 220px 340px;
     }
 `;
 
@@ -34,15 +34,17 @@ const Skewed = styled.div`
     height: 450px;
     width: 300vw;
     position: relative;
-    margin-top: -130px;
+    margin-top: -190px;
     left: -330vw;
     transform: skew(-78deg);
 
     @media screen and (max-width: 750px) {
         grid-column: 1;
-        transform: skew(-56deg);
+        grid-row: 1;
+        margin-top: -150px;
+        transform: skew(-68deg);
         height: 300px;
-        left: -250vw;
+        left: -270vw;
     }
 `;
 
@@ -60,8 +62,8 @@ const TestimonialsText = styled.div`
 
     @media screen and (max-width: 750px) {
         width: 95vw;
-        margin-top: 0px;
         margin-left: -25px;
+        margin-top: -90px;
         place-self: start;
         grid-template-rows: 80px 160px 20px;
     }
@@ -131,6 +133,9 @@ const Cards = styled.div`
     @media screen and (max-width: 750px) {
         grid-row: 2;
         grid-column: 1;
+        place-self: start;
+        margin-left: 20px;
+        margin-top: -60px;
     }
 
     @font-face {

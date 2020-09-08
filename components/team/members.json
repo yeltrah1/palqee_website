@@ -35,7 +35,7 @@
         "id": "5",
         "type": "advisor",
         "name": "Martin Shiers",
-        "image": "sabrina.png",
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1599567993/martin.jpg",
         "role": "EU GDPR Practitioner and Data Protection Officer (DPO)",        
         "linkedin": "https://www.linkedin.com/in/martinshiers/"
     },
