@@ -79,6 +79,7 @@ const TabsContainer = styled.div`
         grid-template-columns: 45vw 45vw;
         width: 90%;
         height: 40px;
+        overflow: hidden;
     }
 
     .active-text {

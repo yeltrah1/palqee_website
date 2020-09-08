@@ -40,7 +40,6 @@ const Skewed = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-column: 1;
-        grid-row: 1;
         margin-top: -150px;
         transform: skew(-68deg);
         height: 300px;

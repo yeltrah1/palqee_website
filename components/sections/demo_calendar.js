@@ -45,9 +45,9 @@ const Plane = styled.img`
 
   @media screen and (max-width: 750px) {
     grid-row: 2;
-    width: 200px;
+    width: 180px;
     margin-top: 0px;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-right: 0px;
     align-self: center;
   }
@@ -84,7 +84,7 @@ const DemoCalendar = () => {
                 }}
                 styles={{
                   justifySelf: 'center',
-                  width: '80vw',
+                  width: '85vw',
                   height: '600px'
                 }}
                 url="https://calendly.com/palqee/demo"

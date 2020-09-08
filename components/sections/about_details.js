@@ -16,6 +16,7 @@ const DetailsStyle = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 130px 300px;
     width: 90vw;
+    padding-top: 20px;
   }
 `;
 

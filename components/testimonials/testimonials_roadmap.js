@@ -39,7 +39,7 @@ const Skewed = styled.div`
         grid-column: 1;
         transform: skew(-56deg);
         height: 300px;
-        left: -250vw;
+        left: -240vw;
     }
 `;
 
@@ -131,10 +131,11 @@ const Cards = styled.div`
     }
 
     @media screen and (max-width: 750px) {
-        grid-column: 1;
         grid-row: 2;
-        margin-top: 0px;
-        margin-left: -170px;
+        grid-column: 1;
+        place-self: start;
+        margin-left: 20px;
+        margin-top: -20px;
     }
 
 `;

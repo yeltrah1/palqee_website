@@ -990,7 +990,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 450px;
+      height: 500px;
     }
   }
 
@@ -1000,7 +1000,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 550px;
+      height: 540px;
     }
   }
 
