@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import translate from "../providers/i18n/translate";
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
 import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
@@ -17,15 +18,44 @@ const LogoStyle = styled.img`
     top: 12px;
 `;
 
+const CountryStyle = styled.img`
+    cursor: pointer;
+    place-self: center;
+    width: 25px;
+    height: auto;
+    margin-top: -3px;
+    -webkit-tap-highlight-color: transparent;
+
+    @media screen and (max-width: 750px) {
+        position: fixed;
+        right: 110px;
+        top: 21px;
+        width: 30px;
+        margin-top: 0px;
+        visibility: visible;
+    }
+`;
+
 const NavBar = ({ white, setWhite, menu, setMenu }) => {
 
     const [item, setItem] = useState("none");
+    const [country, setCountry] = useState("BR");
+    const [countryMenu, setCountryMenu] = useState(false);
+
 
     const toggleMenu = () => {
         if(menu === false) {
             setMenu(true)
         } else {
             setMenu(false)
+        }
+    };
+
+    const toggleCountryMenu = () => {
+        if(countryMenu === false) {
+            setCountryMenu(true)
+        } else {
+            setCountryMenu(false)
         }
     };
 
@@ -93,33 +123,35 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                 </Link>
             </div>
             <div>
-                <div id="hamburger" onClick={toggleMenu} className={menu ? "open" : ""}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className="mobile-menu">
+                    <div id="hamburger" onClick={toggleMenu} className={menu ? "open" : ""}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div className={menu ? "menu-background" : "mobile-close"}>
                     <div className={menu ? "mobile-open" : "mobile-close"}>
                         <div className="item-group">
-                            <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>Products&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
+                            <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>{translate('navBar.products')}&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
                             <a href="/surveys-manager" className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</a>
-                            <a href="/innovation-roadmap" className={item === "products" ? "item-list" : "item-list hide"}>Innovation Roadmap</a>
-                            <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>Book a demo</a>
+                            <a href="/innovation-roadmap" className={item === "products" ? "item-list" : "item-list hide"}>{translate('navBar.innovation')}</a>
+                            <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>{translate('navBar.demo')}</a>
                         </div>
                         <div className="item-group">
-                            <div className={item === "cases" ? "item active" : "item"} onClick={toggleCases}>Use Cases&nbsp;&nbsp;<a className={item === "cases" ? "arrow up" : "arrow"}>➤</a></div>
+                            <div className={item === "cases" ? "item active" : "item"} onClick={toggleCases}>{translate('navBar.cases')}&nbsp;&nbsp;<a className={item === "cases" ? "arrow up" : "arrow"}>➤</a></div>
                             <Link href="/startups"><a className={item === "cases" ? "item-list" : "item-list hide"}>Start-ups</a></Link>
-                            <Link href="/smes"><a className={item === "cases" ? "item-list" : "item-list hide"}>Small & Midsize Businesses</a></Link>
-                            <Link href="/enterprise"><a className={item === "cases" ? "item-list" : "item-list hide"}>Large Enterprises</a></Link>
+                            <Link href="/smes"><a className={item === "cases" ? "item-list" : "item-list hide"}>{translate('navBar.smes')}</a></Link>
+                            <Link href="/enterprise"><a className={item === "cases" ? "item-list" : "item-list hide"}>{translate('navBar.enterprise')}</a></Link>
                         </div>
                         <div className="item-group">
-                            <Link href="/about-us"><a className="item">About Us</a></Link>
+                            <Link href="/about-us"><a className="item">{translate('navBar.about')}</a></Link>
                         </div>
                         <div className="item-group">
-                            <div className={item === "partners" ? "item active" : "item"} onClick={togglePartners}>Partners&nbsp;&nbsp;<a className={item === "partners" ? "arrow up" : "arrow"}>➤</a></div>
-                            <Link href="/partners"><a className={item === "partners" ? "item-list" : "item-list hide"}>Become a Partner</a></Link>
-                            <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a className={item === "partners" ? "item-list" : "item-list hide"}>Accredited Partners</a></Link>
+                            <div className={item === "partners" ? "item active" : "item"} onClick={togglePartners}>{translate('navBar.partners')}&nbsp;&nbsp;<a className={item === "partners" ? "arrow up" : "arrow"}>➤</a></div>
+                            <Link href="/partners"><a className={item === "partners" ? "item-list" : "item-list hide"}>{translate('navBar.become')}</a></Link>
+                            <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a className={item === "partners" ? "item-list" : "item-list hide"}>{translate('navBar.accredited')}</a></Link>
                         </div>
                         <a href="/blog/all" className="last-item">Blog</a>
                     </div>
@@ -130,35 +162,50 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                             <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
                                 <a href="/surveys-manager">Surveys Manager</a>
-                                <a href="/innovation-roadmap">Innovation Roadmap</a>
-                                <a className="demo" href="/book-demo">Book a demo</a>
+                                <a href="/innovation-roadmap">{translate('navBar.innovation')}</a>
+                                <a className="demo" href="/book-demo">{translate('navBar.demo')}</a>
                             </div>
                         </div>
                         <div className="dropdown">
                             <Link as="/startups" href="/[cases]"><a className="menu-item">{translate('navBar.cases')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-cases">
                                 <Link as="/startups" href="/[cases]"><a>Start-ups</a></Link>
-                                <Link as="/smes" href="/[cases]"><a>Small & Midsize Businesses</a></Link>
-                                <Link as="/enterprise" href="/[cases]"><a>Large Enterprises</a></Link>
+                                <Link as="/smes" href="/[cases]"><a>{translate('navBar.smes')}</a></Link>
+                                <Link as="/enterprise" href="/[cases]"><a>{translate('navBar.enterprise')}</a></Link>
                             </div>
                         </div>
                         <Link href="/about-us">
-                            <a className="menu-item">About Us</a>
+                            <a className="menu-item">{translate('navBar.about')}</a>
                         </Link>
                         <div className="dropdown">
                             <Link href="/partners"><a className="menu-item">{translate('navBar.partners')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-partners">
-                                <Link href="/partners"><a>Become a Partner</a></Link>
-                                <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a>Accredited Partners</a></Link>
+                                <Link href="/partners"><a>{translate('navBar.become')}</a></Link>
+                                <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a>{translate('navBar.accredited')}</a></Link>
                             </div>
                         </div>
                         <a className="menu-item" href="/blog/all">Blog</a>
+                        <OutsideClickHandler onOutsideClick={() => {setCountryMenu(false)}}>
+                            <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
+                                <a href="/">Brazil (Portuguese)</a>
+                                <a href="/">United Kingdom (English)</a>
+                                <a href="/">United States (English)</a>
+                                <a href="/">Portugal (Portuguese)</a>
+                                <a href="/">Other Countries (English)</a>
+                            </div>
+                        </OutsideClickHandler>
                     </div>
                 </NavBarStyle>
             </div>   
             <div className="demo">
-                <DemoButton href="/book-demo">Book Demo</DemoButton>
+                <DemoButton href="/book-demo">{translate('navBar.demo_button')}</DemoButton>
                 <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
+                <CountryStyle onClick={toggleCountryMenu} src={
+                    country === "BR" ? "/static/icons/flags/br.png" :
+                    country === "US" ? "/static/icons/flags/us.png" :
+                    country === "GB" ? "/static/icons/flags/gb.png" :
+                    country === "PT" ? "/static/icons/flags/pt.png" :
+                    "/static/icons/flags/pt.png"}/>
             </div>   
         </NavStyle>
         </ThemeProvider>

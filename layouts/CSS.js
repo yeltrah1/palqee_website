@@ -4,7 +4,7 @@ export const NavStyle = styled.div`
   position: fixed;
   background: ${props => props.theme.navBgColor};
   display: grid;
-  grid-template-columns: 0.8fr 3fr 1fr;
+  grid-template-columns: 0.8fr 3fr 1.1fr;
   transition: all 0.2s ease-in;
   height: 72px;
   width: 100%;
@@ -191,7 +191,7 @@ export const NavStyle = styled.div`
 
   .demo {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 130px 80px 50px;
     
     @media screen and (max-width: 750px) {
       visibility: hidden;
@@ -210,6 +210,31 @@ export const NavBarStyle = styled.div`
         display: none;
         overflow: hidden;
       }
+    }
+
+    .dropdown-countries {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 2px;
+      position: absolute;
+      align-content: center;
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Poppins;
+      font-style: normal;
+      background: ${props => props.theme.dropdownBgColor};
+      width: 190px;
+      height: 110px;
+      right: 0;
+      top: 72px;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+    }
+
+    .close {
+      visibility: hidden;
     }
 
     .dropdown {           // hoverable area to keep the menu open
@@ -308,12 +333,13 @@ export const NavBarStyle = styled.div`
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
-      width: 200px;
+      width: 210px;
       height: 100px;
       top: 72px;
       padding-left: 20px;
+      padding-right: 10px;
       padding-top: 20px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
       box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
     }
 
@@ -324,7 +350,7 @@ export const NavBarStyle = styled.div`
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
-      width: 160px;
+      width: 165px;
       height: 70px;
       top: 72px;
       padding-left: 20px;
@@ -363,7 +389,7 @@ export const DemoButton = styled.a`
     background: ${props => props.theme.redButton};
     border-radius: 4px;
     height: 18px;
-    width: 90px;
+    width: 95px;
     margin-top: 16px;
     padding: 10px 10px;
     font-family: Poppins-Semi;
