@@ -147,7 +147,7 @@ const DrlCard = () => {
             <a href="#open-drl" onClick={() => { setPlay(true) }}>
                 <CoverStyle src={"static/images/video_placeholder.jpg"}/>
             </a>
-            <Logo src={"static/icons/clients/drl_logo.png"}/>
+            <Logo src={"../static/icons/clients/drl_logo.png"}/>
 
             <div id="open-drl" className="modal">
                 <div>

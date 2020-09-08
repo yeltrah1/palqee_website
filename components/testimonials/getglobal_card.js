@@ -144,6 +144,10 @@ const TitleStyle = styled.div`
         font-style: normal;
         line-height: normal;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            font-size: 8px;
+        }
     }
 `;
 
