@@ -193,11 +193,11 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         <a className="menu-item" href="/blog/all">Blog</a>
                         <div id="countries-box" className="countries-area">
                             <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
-                                <a href="/">Brazil (Portuguese)</a>
-                                <a href="/">United Kingdom (English)</a>
-                                <a href="/">United States (English)</a>
-                                <a href="/">Portugal (Portuguese)</a>
-                                <a href="/">Other Countries (English)</a>
+                                <a onClick={() => setCountry("BR")}>Brazil (Portuguese)</a>
+                                <a onClick={() => setCountry("GB")}>United Kingdom (English)</a>
+                                <a onClick={() => setCountry("US")}>United States (English)</a>
+                                <a onClick={() => setCountry("PT")}>Portugal (Portuguese)</a>
+                                <a onClick={() => setCountry("OC")}>Other Countries (English)</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                     country === "US" ? "/static/icons/flags/us.png" :
                     country === "GB" ? "/static/icons/flags/gb.png" :
                     country === "PT" ? "/static/icons/flags/pt.png" :
-                    "/static/icons/flags/pt.png"}/>
+                    "/static/icons/flags/oc.webp"}/>
             </div>   
         </NavStyle>
         </ThemeProvider>

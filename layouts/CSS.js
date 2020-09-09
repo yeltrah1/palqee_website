@@ -256,8 +256,13 @@ export const NavBarStyle = styled.div`
           font-size: 13px;
           font-family: Poppins;
           font-style: normal;
+          cursor: pointer;
           color: ${props => props.theme.navBarFontColor};
         }
+      }
+
+      .dropdown-countries a:hover {
+        font-family: Poppins-Semi;
       }
     }
 
