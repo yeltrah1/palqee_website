@@ -138,7 +138,9 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         <div className="item-group">
                             <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>{translate('navBar.products')}&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
                             <a href="/surveys-manager" className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</a>
+                            <a href="/surveys-manager" className={item === "products" ? "item-description" : "item-description hide"}>For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
                             <a href="/innovation-roadmap" className={item === "products" ? "item-list" : "item-list hide"}>{translate('navBar.innovation')}</a>
+                            <a href="/innovation-roadmap" className={item === "products" ? "item-description" : "item-description hide"}>Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
                             <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>{translate('navBar.demo')}</a>
                         </div>
                         <div className="item-group">
@@ -163,14 +165,10 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         <div className="dropdown">
                             <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
-                                <a href="/surveys-manager">
-                                    Surveys Manager
-                                    <a className="description">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
-                                </a>
-                                <a href="/innovation-roadmap">
-                                    {translate('navBar.innovation')}
-                                    <a className="description">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
-                                </a>
+                                <a href="/surveys-manager">Surveys Manager</a>
+                                <a href="/surveys-manager" className="description">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
+                                <a href="/innovation-roadmap">{translate('navBar.innovation')}</a>
+                                <a href="/innovation-roadmap" className="description">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
                                 <a className="demo" href="/book-demo">{translate('navBar.demo')}</a>
                             </div>
                         </div>

@@ -116,7 +116,7 @@ export const NavStyle = styled.div`
         font-style: normal;
         line-height: 1.54;
         margin: 0px 20px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         color: ${props => props.theme.redButton};
         cursor: pointer;
         text-decoration: none;
@@ -160,6 +160,22 @@ export const NavStyle = styled.div`
       color: #192d4d;
       -webkit-tap-highlight-color: transparent;
     }
+
+    .item-description {
+      display: flex;
+      width: 100%;
+      font-family: Poppins;
+      font-size: 12px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.54;
+      color: #758194;
+      text-decoration: none;
+      margin-top: -15px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
 
     .hide {
       display: none;
@@ -284,7 +300,7 @@ export const NavBarStyle = styled.div`
     .dropdown-products {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       grid-row-gap: 10px;
       position: absolute;
       visibility: hidden;
@@ -331,7 +347,6 @@ export const NavBarStyle = styled.div`
       font-stretch: normal;
       font-style: normal;
       line-height: 1.54;
-      margin-top: 5px;
       color: ${props => props.theme.redButton};
       text-decoration: none;
       cursor: pointer;
@@ -346,6 +361,7 @@ export const NavBarStyle = styled.div`
       line-height: 1.54;
       color: #758194;
       text-decoration: none;
+      margin-top: -10px;
     }
 
     .dropdown-products .description:hover {
