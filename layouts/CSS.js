@@ -84,6 +84,28 @@ export const NavStyle = styled.div`
     animation: menu-open 0.1s;
   }
 
+  .dropdown-countries {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    align-content: center;
+    background: ${props => props.theme.dropdownBgColor};
+    position: absolute;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    margin-top: 72px;
+    padding-top: 30px;
+
+    a {
+      text-decoration: none;
+      font-size: 13px;
+      font-family: Poppins;
+      font-style: normal;
+      cursor: pointer;
+      color: ${props => props.theme.navBarFontColor};
+    }
+  }
+
   .mobile-open {
     display: grid;
     grid-template-columns: 1fr;
@@ -115,7 +137,7 @@ export const NavStyle = styled.div`
         font-stretch: normal;
         font-style: normal;
         line-height: 1.54;
-        margin: 0px 20px;
+        margin: 0px 10px;
         margin-bottom: 10px;
         color: ${props => props.theme.redButton};
         cursor: pointer;
@@ -161,10 +183,15 @@ export const NavStyle = styled.div`
       -webkit-tap-highlight-color: transparent;
     }
 
+    .no-margin {
+      margin-left: 10px;
+    }
+
     .item-description {
       display: flex;
       width: 100%;
       font-family: Poppins;
+      margin-left: 10px;
       font-size: 12px;
       font-stretch: normal;
       font-style: normal;
@@ -172,10 +199,8 @@ export const NavStyle = styled.div`
       color: #758194;
       text-decoration: none;
       margin-top: -15px;
-      margin-left: 20px;
       margin-bottom: 10px;
     }
-
 
     .hide {
       display: none;

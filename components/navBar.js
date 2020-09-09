@@ -35,7 +35,7 @@ const CountryStyle = styled.img`
     }
 `;
 
-const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
+const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, setWhite, menu, setMenu }) => {
 
     const [item, setItem] = useState("none");
     const [countryMenu, setCountryMenu] = useState(false);
@@ -53,6 +53,14 @@ const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
             setCountryMenu(true)
         } else {
             setCountryMenu(false)
+        }
+    };
+
+    const toggleCountryMobile = () => {
+        if(countryMobile === false) {
+            setCountryMobile(true)
+        } else {
+            setCountryMobile(false)
         }
     };
 
@@ -124,7 +132,7 @@ const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
             </div>
             <div>
                 <div className="mobile-menu">
-                    <div id="hamburger" onClick={toggleMenu} className={menu ? "open" : ""}>
+                    <div id="hamburger" onClick={() => {toggleMenu(); setCountryMobile(false)}} className={menu ? "open" : ""}>
                         <span></span>
                         <span></span>
                         <span></span>
@@ -135,9 +143,9 @@ const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
                     <div className={menu ? "mobile-open" : "mobile-close"}>
                         <div className="item-group">
                             <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>{translate('navBar.products')}&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
-                            <a href="/surveys-manager" className={item === "products" ? "item-list" : "item-list hide"}>Survey Manager</a>
+                            <a href="/surveys-manager" className={item === "products" ? "item-list no-margin" : "item-list hide"}>Survey Manager</a>
                             <a href="/surveys-manager" className={item === "products" ? "item-description" : "item-description hide"}>For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
-                            <a href="/innovation-roadmap" className={item === "products" ? "item-list" : "item-list hide"}>{translate('navBar.innovation')}</a>
+                            <a href="/innovation-roadmap" className={item === "products" ? "item-list no-margin" : "item-list hide"}>{translate('navBar.innovation')}</a>
                             <a href="/innovation-roadmap" className={item === "products" ? "item-description" : "item-description hide"}>Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
                             <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>{translate('navBar.demo')}</a>
                         </div>
@@ -156,6 +164,15 @@ const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
                             <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a className={item === "partners" ? "item-list" : "item-list hide"}>{translate('navBar.accredited')}</a></Link>
                         </div>
                         <a href="/blog/all" className="last-item">Blog</a>
+                    </div>
+                </div>
+                <div className={countryMobile ? "menu-background" : "mobile-close"}>
+                    <div className={countryMobile ? "dropdown-countries" : "dropdown-countries close"}>
+                        <a onClick={() => {setCountry("pt-BR"); setCountryMobile(false)}}>Brazil (Portuguese)</a>
+                        <a onClick={() => {setCountry("en-GB"); setCountryMobile(false)}}>United Kingdom (English)</a>
+                        <a onClick={() => {setCountry("en-US"); setCountryMobile(false)}}>United States (English)</a>
+                        <a onClick={() => {setCountry("pt-PT"); setCountryMobile(false)}}>Portugal (Portuguese)</a>
+                        <a onClick={() => {setCountry("en-OC"); setCountryMobile(false)}}>Other Countries (English)</a>
                     </div>
                 </div>
                 <NavBarStyle>
@@ -204,7 +221,7 @@ const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
             <div className="demo">
                 <DemoButton href="/book-demo">{translate('navBar.demo_button')}</DemoButton>
                 <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
-                <CountryStyle onClick={toggleCountryMenu} src={
+                <CountryStyle onClick={() => {toggleCountryMenu(); setMenu(false); toggleCountryMobile()}} src={
                     country === "pt-BR" ? "/static/icons/flags/br.png" :
                     country === "en-US" ? "/static/icons/flags/us.png" :
                     country === "en-GB" ? "/static/icons/flags/gb.png" :
