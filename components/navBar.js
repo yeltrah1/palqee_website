@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import translate from "../providers/i18n/translate";
-import OutsideClickHandler from 'react-outside-click-handler';
 
 import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
 import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
@@ -86,6 +85,7 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
     useEffect(() => {
 
         const element = document.getElementById('hover');
+        const countriesElement = document.getElementById('countries-box');
         const isTop = true;
 
         element.addEventListener('mouseover', () => setWhite(true));
@@ -95,6 +95,8 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                 setWhite(false)
             }
         });
+
+        countriesElement.addEventListener('mouseleave', () => setCountryMenu(false));
 
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 10;
@@ -161,8 +163,14 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         <div className="dropdown">
                             <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
-                                <a href="/surveys-manager">Surveys Manager</a>
-                                <a href="/innovation-roadmap">{translate('navBar.innovation')}</a>
+                                <a href="/surveys-manager">
+                                    Surveys Manager
+                                    <a className="description">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
+                                </a>
+                                <a href="/innovation-roadmap">
+                                    {translate('navBar.innovation')}
+                                    <a className="description">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
+                                </a>
                                 <a className="demo" href="/book-demo">{translate('navBar.demo')}</a>
                             </div>
                         </div>
@@ -185,7 +193,7 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                             </div>
                         </div>
                         <a className="menu-item" href="/blog/all">Blog</a>
-                        <OutsideClickHandler onOutsideClick={() => {setCountryMenu(false)}}>
+                        <div id="countries-box" className="countries-area">
                             <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
                                 <a href="/">Brazil (Portuguese)</a>
                                 <a href="/">United Kingdom (English)</a>
@@ -193,7 +201,7 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                                 <a href="/">Portugal (Portuguese)</a>
                                 <a href="/">Other Countries (English)</a>
                             </div>
-                        </OutsideClickHandler>
+                        </div>
                     </div>
                 </NavBarStyle>
             </div>   

@@ -212,25 +212,37 @@ export const NavBarStyle = styled.div`
       }
     }
 
-    .dropdown-countries {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 2px;
-      position: absolute;
-      align-content: center;
-      text-decoration: none;
-      font-size: 13px;
-      font-family: Poppins;
-      font-style: normal;
-      background: ${props => props.theme.dropdownBgColor};
-      width: 190px;
-      height: 110px;
-      right: 0;
-      top: 72px;
-      padding-left: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+    .countries-area {
+      float: left;
+      overflow: hidden;
+      height: 65px;
+      width: 185px;
+
+      .dropdown-countries {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+        position: absolute;
+        align-content: center;
+        background: ${props => props.theme.dropdownBgColor};
+        width: 185px;
+        height: 130px;
+        right: 0;
+        top: 72px;
+        padding-left: 20px;
+        margin-top: -10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
+
+        a {
+          text-decoration: none;
+          font-size: 13px;
+          font-family: Poppins;
+          font-style: normal;
+          color: ${props => props.theme.navBarFontColor};
+        }
+      }
     }
 
     .close {
@@ -273,16 +285,15 @@ export const NavBarStyle = styled.div`
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 10px;
       position: absolute;
       visibility: hidden;
       align-content: center;
       background: ${props => props.theme.dropdownBgColor};
-      width: 170px;
-      height: 100px;
+      width: 280px;
+      height: 150px;
       top: 72px;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      padding: 20px;
       box-shadow: 0px 10px 16px -10px rgba(0,0,0,0.2);
     }
 
@@ -324,6 +335,21 @@ export const NavBarStyle = styled.div`
       color: ${props => props.theme.redButton};
       text-decoration: none;
       cursor: pointer;
+    }
+
+    .dropdown-products .description {
+      display: flex;
+      font-family: Poppins;
+      font-size: 10px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.54;
+      color: #758194;
+      text-decoration: none;
+    }
+
+    .dropdown-products .description:hover {
+      font-family: Poppins;
     }
 
     .dropdown-cases {
