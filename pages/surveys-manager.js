@@ -1,9 +1,7 @@
 import React from 'react';
-import { PageContextProvider } from "../providers/context";
-import { I18nProvider, LOCALES } from "../providers/i18n";
 
 //components
-import Layout from '../layouts/layout';
+import { Layout } from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { SurveysStyle } from '../layouts/CSS';
 import { SurveysHero } from '../components/sections/surveys_hero';
@@ -17,8 +15,6 @@ import { ProductBlog } from '../components/sections/product_blog';
 const SurveysManager = () => {
 
   return (
-    <PageContextProvider>
-    <I18nProvider>
       <Layout>
         <SurveysStyle>
           <div className="headline">
@@ -45,8 +41,6 @@ const SurveysManager = () => {
           </div>
         </SurveysStyle>
       </Layout>
-    </I18nProvider>
-    </PageContextProvider>
   )
 }
 

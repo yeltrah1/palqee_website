@@ -1,14 +1,12 @@
 import React, { Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
-
-import { LOCALES } from './locales';
 import translations from './translations';
 
-const Provider = ({ children, locale = LOCALES.BR_PORTUGUESE }) => (
+const Provider = ({ country, children }) => (
     <IntlProvider
-    locale={locale}
+    locale={country}
     textComponent={Fragment}
-    messages={translations[locale]}
+    messages={translations[country]}
     >
       {children}
     </IntlProvider>

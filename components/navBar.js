@@ -35,12 +35,10 @@ const CountryStyle = styled.img`
     }
 `;
 
-const NavBar = ({ white, setWhite, menu, setMenu }) => {
+const NavBar = ({ country, setCountry, white, setWhite, menu, setMenu }) => {
 
     const [item, setItem] = useState("none");
-    const [country, setCountry] = useState("BR");
     const [countryMenu, setCountryMenu] = useState(false);
-
 
     const toggleMenu = () => {
         if(menu === false) {
@@ -193,11 +191,11 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                         <a className="menu-item" href="/blog/all">Blog</a>
                         <div id="countries-box" className="countries-area">
                             <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
-                                <a onClick={() => setCountry("BR")}>Brazil (Portuguese)</a>
-                                <a onClick={() => setCountry("GB")}>United Kingdom (English)</a>
-                                <a onClick={() => setCountry("US")}>United States (English)</a>
-                                <a onClick={() => setCountry("PT")}>Portugal (Portuguese)</a>
-                                <a onClick={() => setCountry("OC")}>Other Countries (English)</a>
+                                <a onClick={() => {setCountry("pt-BR"); setCountryMenu(false)}}>Brazil (Portuguese)</a>
+                                <a onClick={() => {setCountry("en-GB"); setCountryMenu(false)}}>United Kingdom (English)</a>
+                                <a onClick={() => {setCountry("en-US"); setCountryMenu(false)}}>United States (English)</a>
+                                <a onClick={() => {setCountry("pt-PT"); setCountryMenu(false)}}>Portugal (Portuguese)</a>
+                                <a onClick={() => {setCountry("en-OC"); setCountryMenu(false)}}>Other Countries (English)</a>
                             </div>
                         </div>
                     </div>
@@ -207,10 +205,10 @@ const NavBar = ({ white, setWhite, menu, setMenu }) => {
                 <DemoButton href="/book-demo">{translate('navBar.demo_button')}</DemoButton>
                 <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
                 <CountryStyle onClick={toggleCountryMenu} src={
-                    country === "BR" ? "/static/icons/flags/br.png" :
-                    country === "US" ? "/static/icons/flags/us.png" :
-                    country === "GB" ? "/static/icons/flags/gb.png" :
-                    country === "PT" ? "/static/icons/flags/pt.png" :
+                    country === "pt-BR" ? "/static/icons/flags/br.png" :
+                    country === "en-US" ? "/static/icons/flags/us.png" :
+                    country === "en-GB" ? "/static/icons/flags/gb.png" :
+                    country === "pt-PT" ? "/static/icons/flags/pt.png" :
                     "/static/icons/flags/oc.webp"}/>
             </div>   
         </NavStyle>

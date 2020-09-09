@@ -1,9 +1,7 @@
 import React from 'react';
-import { PageContextProvider } from "../providers/context";
-import { I18nProvider, LOCALES } from "../providers/i18n";
 
 //components
-import Layout from '../layouts/layout';
+import { Layout } from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { InnovationStyle } from '../layouts/CSS';
 import { Testimonials } from '../components/testimonials/testimonials_roadmap';
@@ -15,8 +13,6 @@ import { InnovationHorizon } from '../components/sections/innovation_horizon';
 const Roadmap = () => {
 
   return (
-    <PageContextProvider>
-    <I18nProvider>
       <Layout>
         <InnovationStyle>
             <div className="headline">
@@ -39,8 +35,6 @@ const Roadmap = () => {
             </div>
         </InnovationStyle>
       </Layout>
-    </I18nProvider>
-    </PageContextProvider>
   )
 }
 

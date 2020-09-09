@@ -1,9 +1,7 @@
 import React from 'react';
-import { PageContextProvider } from "../providers/context";
-import { I18nProvider, LOCALES } from "../providers/i18n";
 
 //components
-import Layout from '../layouts/layout';
+import { Layout } from '../layouts/layout';
 import { Sales } from '../components/sections/sales';
 import { PartnerStyle } from '../layouts/CSS';
 import { PartnersHero } from '../components/sections/partners_hero';
@@ -16,8 +14,6 @@ import { DevPartner } from '../components/sections/partners_dev';
 const Partners = () => {
 
   return (
-    <PageContextProvider>
-    <I18nProvider>
       <Layout>
         <PartnerStyle>
             <div className="headline">
@@ -43,8 +39,6 @@ const Partners = () => {
             </div>
         </PartnerStyle>
       </Layout>
-    </I18nProvider>
-    </PageContextProvider>
   )
 }
 

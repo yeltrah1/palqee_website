@@ -1,9 +1,7 @@
 import React from 'react';
-import { PageContextProvider } from "../../../../providers/context";
-import { I18nProvider, LOCALES } from "../../../../providers/i18n";
 
 //components
-import Layout from '../../../../layouts/layout';
+import { Layout } from '../../../../layouts/layout';
 import { Sales } from '../../../../components/sections/sales';
 import { FindStyle } from '../../../../layouts/CSS';
 import { FindHero } from '../../../../components/sections/find_hero';
@@ -13,8 +11,6 @@ import PartnerSearch from '../../../../components/partners/partner_search';
 const FindPartner = () => {
 
   return (
-    <PageContextProvider>
-    <I18nProvider>
       <Layout>
         <FindStyle>
           <div className="headline">
@@ -29,8 +25,6 @@ const FindPartner = () => {
           </div>
         </FindStyle>
       </Layout>
-    </I18nProvider>
-    </PageContextProvider>
   )
 }
 

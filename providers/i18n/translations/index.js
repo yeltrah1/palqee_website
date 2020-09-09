@@ -1,9 +1,15 @@
-import en from "./en-GB";
-import de from "./de-DE";
-import pt from "./pt-BR";
+import enGB from "./en-GB";
+import deDE from "./de-DE";
+import ptBR from "./pt-BR";
+import enUS from "./en-US";
+import enOC from "./en-OC";
+import ptPT from "./pt-PT";
 
 export default {
-    ...en,
-    ...de,
-    ...pt,
+    ...enGB,
+    ...deDE,
+    ...ptBR,
+    ...enUS,
+    ...enOC,
+    ...ptPT,
 }
