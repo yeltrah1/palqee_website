@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
     const [white, setWhite] = useState(false);
     const [menu, setMenu] = useState(false);
     const [countryMobile, setCountryMobile] = useState(false);
-    const [country, setCountry] = useState("pt-BR");
+    const [country, setCountry] = useState("en-OC");
 
     useEffect(() => {
         setCountry(localStorage.getItem("country"));
