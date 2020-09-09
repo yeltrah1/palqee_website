@@ -66,44 +66,48 @@ export const NavStyle = styled.div`
       width: 0%;
       left: 50%;
     }
+
+    .dropdown-countries-mobile {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 15px;
+      align-content: center;
+      background: ${props => props.theme.dropdownBgColor};
+      position: absolute;
+      padding-left: 40px;
+      padding-bottom: 10px;
+      margin-top: 72px;
+      padding-top: 30px;
+  
+      a {
+        text-decoration: none;
+        font-size: 13px;
+        font-family: Poppins;
+        font-style: normal;
+        cursor: pointer;
+        color: ${props => props.theme.navBarFontColor};
+      }
+    }
+  }
+
+  .menu-background {
+    display: none;
+
+    @media screen and (max-width: 750px) {
+      display: grid;
+      background: white;
+      margin-top: 72px;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1;
+      animation: menu-open 0.1s;
+    }
   }
 
   .mobile-close {
     opacity: 0;
     display: none;
     overflow: hidden;
-  }
-
-  .menu-background {
-    display: grid;
-    background: white;
-    margin-top: 72px;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-    animation: menu-open 0.1s;
-  }
-
-  .dropdown-countries {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 15px;
-    align-content: center;
-    background: ${props => props.theme.dropdownBgColor};
-    position: absolute;
-    padding-left: 40px;
-    padding-bottom: 10px;
-    margin-top: 72px;
-    padding-top: 30px;
-
-    a {
-      text-decoration: none;
-      font-size: 13px;
-      font-family: Poppins;
-      font-style: normal;
-      cursor: pointer;
-      color: ${props => props.theme.navBarFontColor};
-    }
   }
 
   .mobile-open {

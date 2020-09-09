@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { PageContextProvider } from "../providers/context";
@@ -15,6 +15,14 @@ const Layout = ({ children }) => {
     const [menu, setMenu] = useState(false);
     const [countryMobile, setCountryMobile] = useState(false);
     const [country, setCountry] = useState("pt-BR");
+
+    useEffect(() => {
+        setCountry(localStorage.getItem("country"));
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("country", country);
+    }, ["country", country]);
 
     return (
         <PageContextProvider>

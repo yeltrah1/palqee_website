@@ -167,7 +167,7 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                     </div>
                 </div>
                 <div className={countryMobile ? "menu-background" : "mobile-close"}>
-                    <div className={countryMobile ? "dropdown-countries" : "dropdown-countries close"}>
+                    <div className={countryMobile ? "dropdown-countries-mobile" : "dropdown-countries close"}>
                         <a onClick={() => {setCountry("pt-BR"); setCountryMobile(false)}}>Brazil (Portuguese)</a>
                         <a onClick={() => {setCountry("en-GB"); setCountryMobile(false)}}>United Kingdom (English)</a>
                         <a onClick={() => {setCountry("en-US"); setCountryMobile(false)}}>United States (English)</a>
