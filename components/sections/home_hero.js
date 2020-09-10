@@ -121,12 +121,12 @@ const HomeHero = () => {
       <HeroStyle>
         <HeroText>
             <div className="large">
-                There is privacy<br/>
-                management software.<br/>
-                <span className="semi">And there is <u>Palqee</u>.</span><br/>
+                {translate('headline.line1')}<br/>
+                {translate('headline.line2')}<br/>
+                <span className="semi">{translate('headline.line3')}<u>Palqee</u>.</span><br/>
             </div>
             <div className="small">
-                The tool to succeed with internal Privacy Operations.<br/>
+                {translate('headline.small')}<br/>
                 <span className="mobile"><br/></span>
                 <GetStartedButton>Get started for free</GetStartedButton>
             </div>

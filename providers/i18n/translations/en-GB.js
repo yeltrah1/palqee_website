@@ -2,9 +2,10 @@ import { LOCALES } from "../locales";
 
 export default {
     [LOCALES.GB_ENGLISH]: {
+        //head
         "page.title": "Palqee Technologies | Software Solutions for Privacy Operations",
-        "landingPage.headline": "This is the main headline",
 
+        //navBar
         "navBar.products": "Products",
         "navBar.innovation": "Innovation Roadmap",
         "navBar.demo": "Book a demo",
@@ -17,11 +18,18 @@ export default {
         "navBar.accredited": "Accredited Partners",
         "navBar.demo_button": "Book Demo",
 
+        //footer
         "footer.blog": "Blog",
         "footer.policy": "Privacy Policy",
         "footer.settings": "Privacy Settings",
         "footer.terms": "Terms and Conditions",
         "footer.contact": "Contact Us",
         "footer.resources": "Resources",
+
+        //home_hero
+        "headline.line1": "There is privacy",
+        "headline.line2": "management software.",
+        "headline.line3": "And there is ",
+        "headline.small": "The tool to succeed with internal Privacy Operations.",
     }
 }
