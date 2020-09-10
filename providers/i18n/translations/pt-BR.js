@@ -27,9 +27,10 @@ export default {
         "footer.contact": "Contato",
 
         //home_hero
-        "headline.line1": "Existe sistema de",
+        "headline.line1": "Existem sistemas de",
         "headline.line2": "gestão de privacidade.",
         "headline.line3": "E existe a ",
         "headline.small": "A plataforma para o seu sucesso em Operações de Privacidade.",
+        "headline.button": "Agende uma demo",
     }
 }

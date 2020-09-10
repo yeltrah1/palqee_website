@@ -128,7 +128,9 @@ const HomeHero = () => {
             <div className="small">
                 {translate('headline.small')}<br/>
                 <span className="mobile"><br/></span>
-                <GetStartedButton>Get started for free</GetStartedButton>
+                <Link href="/book-demo">
+                    <GetStartedButton>{translate('headline.button')}</GetStartedButton>
+                </Link>
             </div>
         </HeroText>
         <Image src={"/static/images/palqee_hero.png"}/>

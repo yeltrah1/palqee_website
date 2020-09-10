@@ -31,5 +31,6 @@ export default {
         "headline.line2": "management software.",
         "headline.line3": "And there is ",
         "headline.small": "The tool to succeed with internal Privacy Operations.",
+        "headline.button": "Book a Demo",
     }
 }
