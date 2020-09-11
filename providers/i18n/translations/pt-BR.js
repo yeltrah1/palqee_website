@@ -30,7 +30,7 @@ export default {
         "headline.line1": "Existem sistemas de",
         "headline.line2": "gestão de privacidade.",
         "headline.line3": "E existe a ",
-        "headline.small": "A plataforma para o seu sucesso em Operações de Privacidade.",
+        "headline.small": "A plataforma para o seu sucesso em Operações de Privacidade",
         "headline.button": "Agende uma demo",
         "home.clients": "Empresas de todos os tamanhos confiam",
         'test.large': "Não está 100% certo se precisa se adequar ao GDPR, CCPA ou à LGPD?",
@@ -52,5 +52,8 @@ export default {
         'stats.reports': "Relatórios de compliance automaizados",
         'testimonials.large': "Nós acreditamos no poder da comunidade",
         'testimonials.small': "Nossa obsessão está em criar produtos e serviços que te deixem satisfeitos e atendam as suas necessidades do dia-a-dia. É por isso que nós estamos constantemente ouvindo o que nossos clientes e parceiros tem a dizer e trabalhando em nossos produtos para torná-los melhores cada dia",
+        'contact.large': "Fale Conosco",
+        'contact.reason': "Qual o motivo do seu contato?",
+        'contact.product': "Informações sobre produto",
     }
 }

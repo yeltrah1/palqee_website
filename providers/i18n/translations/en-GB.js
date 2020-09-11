@@ -30,7 +30,7 @@ export default {
         "headline.line1": "There is privacy",
         "headline.line2": "management software.",
         "headline.line3": "And there is ",
-        "headline.small": "The tool to succeed with internal Privacy Operations.",
+        "headline.small": "The tool to succeed with internal Privacy Operations",
         "headline.button": "Book a Demo",
         "home.clients": "Trusted by businesses of all sizes",
         'test.large': "Not 100% sure whether you have to comply with GDPR, CCPA or LGPD?",
@@ -52,5 +52,8 @@ export default {
         'stats.reports': "Compliance reports generated",
         'testimonials.large': "We believe in the power of community",
         'testimonials.small': "Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen to what our users have to say",
+        'contact.large': "Speak to Us",
+        'contact.reason': "What is the reason of your inquiry?",
+        'contact.product': "Product Information",
     }
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import emailjs from 'emailjs-com';
@@ -101,12 +100,12 @@ const Sales = () => {
     <ThemeProvider theme={palqeeTheme}>
       <SalesStyle>
         <div>
-          <div className="large">Speak to Sales</div>
-          <div className="small">The tool to succeed with internal Privacy Operations.</div>
+          <div className="large">{translate('contact.large')}</div>
+          <div className="small">{translate('headline.small')}.</div>
           <form onSubmit={sendEmail} id="request_info">
             <ListInput name="reason" required>
-              <option className="selected" value="" selected disabled>What is the reason of your inquiry?</option>
-              <option value="product information">Product information</option>
+              <option className="selected" value="" selected disabled>{translate('contact.reason')}</option>
+              <option value="product information">{translate('contact.product')}</option>
               <option value="partnerships">Partnerships</option>
               <option value="resellers">Resellers</option>
               <option value="technical support">Technical Support</option>

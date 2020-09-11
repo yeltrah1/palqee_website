@@ -126,7 +126,7 @@ const HomeHero = () => {
                 <span className="semi">{translate('headline.line3')}<u>Palqee</u>.</span><br/>
             </div>
             <div className="small">
-                {translate('headline.small')}<br/>
+                {translate('headline.small')}.<br/>
                 <span className="mobile"><br/></span>
                 <Link href="/book-demo">
                     <GetStartedButton>{translate('headline.button')}</GetStartedButton>
