@@ -616,7 +616,7 @@ export const HomeStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
 
     @media screen and (max-width: 750px) {
@@ -702,7 +702,7 @@ export const SurveysStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -784,7 +784,7 @@ export const AboutStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -823,7 +823,7 @@ export const CasesStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -904,7 +904,7 @@ export const FindStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -956,7 +956,7 @@ export const BlogStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -1044,7 +1044,7 @@ export const PartnerStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
@@ -1111,7 +1111,7 @@ export const InnovationStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 300px;
+    height: 310px;
     width: 100vw;
   }
 `;
