@@ -44,5 +44,13 @@ export default {
         'engage.small': "Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team",
         'builder.large': "Be content you have it all covered",
         'builder.small': "Palqee helps you with required assessments based on your business’ operations and combines repetitive regulation work among data protection regulations for streamlined global compliance",
+        'stats.header': "Statistics on Palqee",
+        'stats.small': "You don't have to do it alone. Have our pioneering technology, a global support team and world-class privacy and technology experts behind you",
+        'stats.employees': " of employees engaged",
+        'stats.surveys': " of surveys answered",
+        'stats.questions': "Built-in regulatory questions",
+        'stats.reports': "Compliance reports generated",
+        'testimonials.large': "We believe in the power of community",
+        'testimonials.small': "Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen to what our users have to say",
     }
 }

@@ -1,6 +1,5 @@
 import React, {useRef} from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion";
@@ -51,13 +50,13 @@ const TestimonialsText = styled.div`
     grid-row: 1;
     grid-column: 1;
     display: grid;
-    width: 40vw;
+    width: 42vw;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 0.5fr;
     place-self: center;
     justify-items: end;
     margin-top: 30px;
-    padding-right: 30px;
+    padding-right: 25px;
 
     @media screen and (max-width: 750px) {
         width: 95vw;
@@ -89,7 +88,7 @@ const TestimonialsText = styled.div`
 
     .small {
         width: 85%;
-        padding-top: 20px;
+        padding-top: 10px;
         font-family: Poppins;
         font-size: 13px;
         font-weight: normal;
@@ -97,6 +96,10 @@ const TestimonialsText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+
+        @media screen and (max-width: 750px) {
+            padding-top: 20px;
+        }
     }
 
     .arrows {
@@ -126,6 +129,7 @@ const Cards = styled.div`
     display: flex;
     place-self: center;
     height: 300px;
+    margin-left: -10px;
     // overflow-x: hidden;
     // overflow-y: hidden;
 
@@ -168,8 +172,8 @@ const Testimonials = () => {
         <Wrapper>
             <Skewed/>
             <TestimonialsText>
-                <div className="large">We believe in the power of community</div>
-                <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
+                <div className="large">{translate('testimonials.large')}</div>
+                <div className="small">{translate('testimonials.small')}.</div>
                 <div className="arrows">
                 {/* <Arrow src={ArrowLeft}/> */}
                 </div>

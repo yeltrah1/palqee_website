@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { useSpring, animated } from 'react-spring';
@@ -148,26 +147,26 @@ const Statistics = ({ count, setCount }) => {
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
         <StatisticsText>
-            <div className="large">Statistics on Palqee</div>
-            <div className="small">Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team.</div>
+            <div className="large">{translate('stats.header')}</div>
+            <div className="small">{translate('stats.small')}.</div>
         </StatisticsText>
         <InView onChange={onInViewChange}>
             <StatisticsNumbers>
                 <div>
                     <div className="large"><animated.a>{props.engaged.interpolate(engaged => Math.floor(engaged))}</animated.a><a className="pink">+</a></div>
-                    <div className="small">N<sup>o</sup> of employees engaged</div>
+                    <div className="small">N<sup>o</sup>{translate('stats.employees')}</div>
                 </div>
                 <div>
                     <div className="large"><animated.a>{props.surveys.interpolate(surveys => Math.floor(surveys))}</animated.a></div>
-                    <div className="small">N<sup>o</sup> of surveys answered</div>
+                    <div className="small">N<sup>o</sup>{translate('stats.surveys')}</div>
                 </div>
                 <div>
                     <div className="large"><animated.a>{props.questions.interpolate(questions => Math.floor(questions))}</animated.a><a className="pink">+</a></div>
-                    <div className="small">Built-in regulatory questions</div>
+                    <div className="small">{translate('stats.questions')}</div>
                 </div>
                 <div>
                     <div className="large"><animated.a>{props.reports.interpolate(reports => Math.floor(reports))}</animated.a></div>
-                    <div className="small">Compliance reports generated monthly</div>
+                    <div className="small">{translate('stats.reports')}</div>
                 </div>
             </StatisticsNumbers>
         </InView>

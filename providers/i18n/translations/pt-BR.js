@@ -44,5 +44,13 @@ export default {
         'engage.small': "Painel de controle para colaboradores, livre de jargões, e automatização de comunicação interna para facilitar a colaboração e o buy-in de executivos",
         'builder.large': "Tenha a certeza que você tem tudo coberto",
         'builder.small': "Palqee te ajuda com as avaliações obrigatórias baseadas em seus processos de negócio, e combina questionários repetidos de diferentes regulamentações para rapidez na adequação à leis internacionais",
+        'stats.header': "Os números da Palqee",
+        'stats.small': "Você não está sozinho. Tenha nossa tecnologia pioneira, um time de suporte internacional e especialistas renomados de tecnologia e privacidade de dados a seu favor",
+        'stats.employees': " de colaboradores engajados",
+        'stats.surveys': " de entrevistas respondidas",
+        'stats.questions': "Perguntas de mapeamento inclusas",
+        'stats.reports': "Relatórios de compliance automaizados",
+        'testimonials.large': "Nós acreditamos no poder da comunidade",
+        'testimonials.small': "Nossa obsessão está em criar produtos e serviços que te deixem satisfeitos e atendam as suas necessidades do dia-a-dia. É por isso que nós estamos constantemente ouvindo o que nossos clientes e parceiros tem a dizer e trabalhando em nossos produtos para torná-los melhores cada dia",
     }
 }
