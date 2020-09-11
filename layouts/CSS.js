@@ -583,7 +583,7 @@ export const HomeStyle = styled.div`
 
   .large-grey {
     background: #FBFCFD;
-    height: 600px;
+    height: 580px;
     position: relative;
 
     @media screen and (max-width: 750px) {
@@ -1125,8 +1125,8 @@ export const TakeTestButton = styled.a`
   background: ${props => props.theme.greenButton};
   border-radius: 4px;
   height: 22px;
-  width: 140px;
-  padding: 10px 10px;
+  width: 110px;
+  padding: 10px 20px;
   font-family: Poppins-Semi;
   font-style: normal;
   font-size: 14px;

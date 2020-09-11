@@ -11,7 +11,7 @@ import { useOnScreen } from '../../hooks/useOnScreen';
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 95vw;
+  width: 99vw;
   height: 100%;
 
   @media screen and (max-width: 750px) {
@@ -26,7 +26,7 @@ const BenefitText = styled.div`
     justify-items: start;
     grid-template-columns: 1fr;
     margin-left: 70px;
-    height: 45%;    
+    height: 50%;    
 
     @media screen and (max-width: 750px) {
         grid-row: 1;
@@ -122,8 +122,8 @@ const BenefitEngagement = () => {
                     />
                 </Video>
                 <BenefitText>
-                    <div className="large">Have your workforce engaged on privacy programs</div>
-                    <div className="small">Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team.</div>
+                    <div className="large">{translate('engage.large')}</div>
+                    <div className="small">{translate('engage.small')}.</div>
                 </BenefitText>
                 <VideoMobile ref={refMobile}>
                     <ReactPlayer 

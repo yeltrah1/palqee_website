@@ -92,8 +92,8 @@ const BenefitBuilder = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <BenefitText>
-                    <div className="large">Be content you have it all covered</div>
-                    <div className="small">Palqee helps you with required assessments based on your business’ operations and combines repetitive regulation work among data protection regulations for streamlined global compliance.</div>
+                    <div className="large">{translate('builder.large')}</div>
+                    <div className="small">{translate('builder.small')}.</div>
                 </BenefitText>
                 <Image src={"/static/images/palqee_builder.svg"}/>
             </Wrapper>

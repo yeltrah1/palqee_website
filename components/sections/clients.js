@@ -81,7 +81,7 @@ const Clients = () => {
       <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
           <Headline>
-            Trusted by businesses of all sizes
+            {translate('home.clients')}
           </Headline>
 
           <Carousel 

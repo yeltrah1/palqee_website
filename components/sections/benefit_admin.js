@@ -11,7 +11,7 @@ import { useOnScreen } from '../../hooks/useOnScreen';
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 95vw;
+  width: 98vw;
   height: 100%;
 
   @media screen and (max-width: 750px) {
@@ -68,6 +68,7 @@ const BenefitText = styled.div`
         font-stretch: normal;
         line-height: 1.71;
         color: #758194;
+        padding-top: 10px;
 
         @media screen and (max-width: 750px) {
             margin-top: 10px;
@@ -105,8 +106,8 @@ const BenefitAdmin = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <BenefitText>
-                    <div className="large">Streamline admin work and focus on what matters</div>
-                    <div className="small">Palqee saves you time by automating and consolidating time-intensive interviews for data mapping, assessments and DPIAs so you can concentrate on your compliance agenda.</div>
+                    <div className="large">{translate('admin.large')}</div>
+                    <div className="small">{translate('admin.small')}.</div>
                 </BenefitText>
                 <Video ref={ref}>
                     <ReactPlayer 

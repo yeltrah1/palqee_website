@@ -137,9 +137,9 @@ const TakeTest = () => {
             <div></div>
             <Container>
                 <TestText>
-                    <div className="large">Not 100% sure whether you have to comply with GDPR, CCPA or LGPD?</div>
-                    <div className="small">Take our test and have an answer within minutes.</div>
-                    <TakeTestButton>Take the free test</TakeTestButton>
+                    <div className="large">{translate('test.large')}</div>
+                    <div className="small">{translate('test.small')}.</div>
+                    <TakeTestButton>{translate('test.button')}</TakeTestButton>
                 </TestText>
                 <Image src={"/static/images/palqee_test.svg"}/>
                 <ImageMobile src={"/static/images/test_mobile.svg"}/>

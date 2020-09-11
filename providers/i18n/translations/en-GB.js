@@ -32,5 +32,17 @@ export default {
         "headline.line3": "And there is ",
         "headline.small": "The tool to succeed with internal Privacy Operations.",
         "headline.button": "Book a Demo",
+        "home.clients": "Trusted by businesses of all sizes",
+        'test.large': "Not 100% sure whether you have to comply with GDPR, CCPA or LGPD?",
+        'test.small': "Take our free test and have an answer within minutes",
+        'test.button': "Take the test",
+        'insights.large': "Act on privacy compliance risks and insights",
+        'insights.small': "With Palqee you have ongoing visibility on how your data landscape is evolving",
+        'admin.large': "Streamline admin work and focus on what matters",
+        'admin.small': "Palqee saves you time by automating and consolidating time-intensive interviews for data mapping, assessments and DPIAs so you can concentrate on your compliance agenda",
+        'engage.large': "Have your workforce engaged on privacy programs",
+        'engage.small': "Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team",
+        'builder.large': "Be content you have it all covered",
+        'builder.small': "Palqee helps you with required assessments based on your business’ operations and combines repetitive regulation work among data protection regulations for streamlined global compliance",
     }
 }

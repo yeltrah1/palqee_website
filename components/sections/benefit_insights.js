@@ -9,8 +9,8 @@ import { useOnScreen } from '../../hooks/useOnScreen';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 95vw;
+  grid-template-columns: 1fr 1.1fr;
+  width: 99vw;
   height: 100%;
 
   @media screen and (max-width: 750px) {
@@ -56,7 +56,7 @@ const BenefitText = styled.div`
     }
 
     .small {
-        width: 85%;
+        width: 75%;
         font-family: Poppins;
         font-size: 13px;
         font-weight: normal;
@@ -99,7 +99,6 @@ const BenefitInsights = () => {
     const onScreen = useOnScreen(ref, '-200px');
     const onScreenMobile = useOnScreen(refMobile, '-100px');
 
-
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
@@ -114,8 +113,8 @@ const BenefitInsights = () => {
                     />
                 </Video>
                 <BenefitText>
-                    <div className="large">Act on privacy compliance risks and insights</div>
-                    <div className="small">With Palqee you have ongoing visibility on how your data landscape is evolving.</div>
+                    <div className="large">{translate('insights.large')}</div>
+                    <div className="small">{translate('insights.small')}.</div>
                 </BenefitText>
                 <VideoMobile ref={refMobile}>
                     <ReactPlayer 
