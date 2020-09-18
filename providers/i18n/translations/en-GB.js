@@ -67,5 +67,17 @@ export default {
         'contact.email': "Your business email",
         'contact.info': "Request info",
         'contact.thanks': "Thanks for contacting us, our team will be in touch shortly",
+    
+        //surveys_manager
+        'surveysHero.large': "Privacy management tools that help you",
+        'surveysHero.small': "Get started in minutes and send out your first data assessment survey now",
+        'surveysHero.string1': "gain data insights.",
+        'surveysHero.string2': "streamline assessments.",
+        'surveysHero.string3': "train the workforce.",
+        'surveysHero.string4': "manage ongoing compliance.",
+        'surveysHero.button': "Book a Demo",
+
+        //take_test
+        "test.country": "en-GB",
     }
 }

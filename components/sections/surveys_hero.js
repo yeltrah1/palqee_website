@@ -4,6 +4,7 @@ import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import Typewriter from 'typewriter-effect';
+import { useIntl } from 'react-intl';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { GetStartedButton } from '../../layouts/CSS';
@@ -77,6 +78,7 @@ const HeroText = styled.div`
 const SurveysHero = () => {
     
     const [word, setWord] = useState(0);
+    const intl = useIntl()
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -92,18 +94,18 @@ const SurveysHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                    Privacy management tools that help you<br/>
+                    {translate('surveysHero.large')}<br/>
                     <div className="semi">
                     <u>
                         <Typewriter 
                         options={{
-                            strings: ["gain data insights.",
-                                    "streamline assessments.",
-                                    "train the workforce.",
-                                    "manage ongoing compliance."],
+                            strings: [intl.formatMessage({id:'surveysHero.string1'}),
+                                    intl.formatMessage({id:'surveysHero.string2'}),
+                                    intl.formatMessage({id:'surveysHero.string3'}),
+                                    intl.formatMessage({id:'surveysHero.string4'})],
                             autoStart: true,
                             delay: 40,
-                            deleteSpeed: 30,
+                            deleteSpeed: 15,
                             loop: true,
                         }}
                         />
@@ -111,8 +113,10 @@ const SurveysHero = () => {
                     </div>
                 </div>
                 <div className="small">
-                Get started in minutes and send out your first data assessment survey now.<br/>
-                    <GetStartedButton>Get started for free</GetStartedButton>
+                    {translate('surveysHero.small')}.<br/>
+                    <Link href="/book-demo">
+                        <GetStartedButton>{translate('surveysHero.button')}</GetStartedButton>
+                    </Link>
                 </div>
             </HeroText>
         </HeroStyle>

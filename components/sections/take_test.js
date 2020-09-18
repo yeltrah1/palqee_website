@@ -139,7 +139,9 @@ const TakeTest = () => {
                 <TestText>
                     <div className="large">{translate('test.large')}</div>
                     <div className="small">{translate('test.small')}.</div>
-                    <TakeTestButton>{translate('test.button')}</TakeTestButton>
+                    <Link href="/take-test">
+                        <TakeTestButton>{translate('test.button')}</TakeTestButton>
+                    </Link>
                 </TestText>
                 <Image src={"/static/images/palqee_test.svg"}/>
                 <ImageMobile src={"/static/images/test_mobile.svg"}/>

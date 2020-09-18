@@ -26,7 +26,7 @@ export default {
         "footer.blog": "Blog",
         "footer.contact": "Contato",
 
-        //home_hero
+        //index
         "headline.line1": "Existem sistemas de",
         "headline.line2": "gestão de privacidade.",
         "headline.line3": "E existe a ",
@@ -67,5 +67,18 @@ export default {
         'contact.email': "Seu email corporativo",
         'contact.info': "Solicitar info",
         'contact.thanks': "Obrigado pela sua mensagem, nosso time entrará em contato em breve",
+    
+        //surveys_manager
+        'surveysHero.large': "A plataforma de privacidade para",
+        'surveysHero.small': "Configure a sua empresa em minutos e envie a sua primeira entrevista de mapeamento agora mesmo",
+        'surveysHero.string1': "gestão de dados pessoais.",
+        'surveysHero.string2': "automatização de avaliações.",
+        'surveysHero.string3': "treinamento da organização.",
+        'surveysHero.string4': "conformidade contínua.",
+        "surveysHero.button": "Agende uma demo",
+
+        
+        //take_test
+        "test.country": "pt-BR",
     }
 }

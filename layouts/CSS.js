@@ -857,6 +857,36 @@ export const DemoStyle = styled.div`
   }
 `;
 
+export const TestStyle = styled.div`
+  display:grid;
+  overflow-x: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/blue_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    position: relative;
+    height: 400px;
+    width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+    }
+  }
+
+  .large-white {
+    height: 550px;
+    width: 100vw;
+    position: relative;
+    display: grid;
+
+    @media screen and (max-width: 750px) {
+      height: 700px;
+      width: 100vw;
+    }
+  }
+`;
+
 export const FindStyle = styled.div`
   display:grid;
   overflow-x: hidden;

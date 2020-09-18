@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { PageContextProvider } from "../providers/context";
-import { I18nProvider, LOCALES } from "../providers/i18n";
+import { I18nProvider } from "../providers/i18n";
 
 import Head from '../components/head'
 import { NavBar } from '../components/navBar';
@@ -47,7 +46,7 @@ const Layout = ({ children }) => {
                             menu={menu} 
                             setMenu={setMenu}/>
                     </div>
-                    <div>        
+                    <div>    
                         {children}
                     </div>
                     <div>
