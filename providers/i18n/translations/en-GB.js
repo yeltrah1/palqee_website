@@ -76,7 +76,17 @@ export default {
         'surveysHero.string3': "train the workforce.",
         'surveysHero.string4': "manage ongoing compliance.",
         'surveysHero.button': "Book a Demo",
-
+        'surveysHero.tools': "The tools you need at your fingertips",
+        "surveysMap.large": "Take the guess-work out of international data protection regulations",
+        "surveysMap.small": "Palqee automates, organises and combines workforce and vendor surveys based on your business setup",
+        "surveysHow.title": "How it works",
+        "surveysHow.tab1": "Start with a survey",
+        "surveysHow.tab2": "Pick your audience",
+        "surveysHow.tab3": "Get the insight",
+        "surveysHow.desc1": "Know what you have to do with Palqee regulatory survey templates or create your own with our survey wizard.",
+        "surveysHow.desc2": "Create audiences and manage your stakeholders efficiently. Send a data mapping survey to your businesses’ workforce and a assessments to your 3rd party vendors.",
+        "surveysHow.desc3": "Palqee automatically summarises and analyses results for you. Identify areas of improvement in your data map, recommend next steps on DPIAs and track workforce confidence on data protection best practices.",
+        
         //take_test
         "test.country": "en-GB",
     }

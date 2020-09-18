@@ -207,7 +207,7 @@ const HowToSurveys = () => {
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
-                <TitleText>How it works</TitleText>
+                <TitleText>{translate('surveysHow.title')}</TitleText>
                 <StepsContainer>
                     <Image 
                         key={tab} 
@@ -227,8 +227,8 @@ const HowToSurveys = () => {
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
                             <TextItems onClick={() => { setTab(1); setWidth("80%") }}>
-                            <div className={ tab === 1 ? "active-large" : "inactive-large" }>1. Start with a survey</div>
-                            <div className={ tab === 1 ? "active-small" : "inactive-small" }>Know what you have to do, with Palqee regulatory survey templates or create your own with our survey wizard.</div>
+                            <div className={ tab === 1 ? "active-large" : "inactive-large" }>1. {translate('surveysHow.tab1')}</div>
+                            <div className={ tab === 1 ? "active-small" : "inactive-small" }>{translate('surveysHow.desc1')}</div>
                             </TextItems>
                         </Items>
                         <Items>
@@ -241,8 +241,8 @@ const HowToSurveys = () => {
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
                             <TextItems onClick={() => {setTab(2); setWidth("76%")}}>
-                            <div className={ tab === 2 ? "active-large" : "inactive-large" }>2. Pick your audience</div>
-                            <div className={ tab === 2 ? "active-small" : "inactive-small" }>Create audiences and manage your stakeholders efficiently. Send a data mapping survey to your businesses’ workforce and a assessments to your 3rd party vendors.</div>
+                            <div className={ tab === 2 ? "active-large" : "inactive-large" }>2. {translate('surveysHow.tab2')}</div>
+                            <div className={ tab === 2 ? "active-small" : "inactive-small" }>{translate('surveysHow.desc2')}</div>
                             </TextItems>
                         </Items>
                         <Items>
@@ -255,8 +255,8 @@ const HowToSurveys = () => {
                                 transition={{ duration: 0.2 }}
                             ></motion.div>
                             <TextItems onClick={() => {setTab(3), setWidth("85%")}}>
-                            <div className={ tab === 3 ? "active-large" : "inactive-large" }>3. Get the insight</div>
-                            <div className={ tab === 3 ? "active-small" : "inactive-small" }>Palqee automatically summarises and analyses results for you. Identify areas of improvement in your data map, recommend next steps on DPIAs and track workforce confidence on data protection best practices.</div>
+                            <div className={ tab === 3 ? "active-large" : "inactive-large" }>3. {translate('surveysHow.tab3')}</div>
+                            <div className={ tab === 3 ? "active-small" : "inactive-small" }>{translate('surveysHow.desc3')}</div>
                             </TextItems>
                         </Items>
                     </StepsItems>

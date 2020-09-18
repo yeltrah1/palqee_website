@@ -76,8 +76,17 @@ export default {
         'surveysHero.string3': "treinamento da organização.",
         'surveysHero.string4': "conformidade contínua.",
         "surveysHero.button": "Agende uma demo",
+        'surveysHero.tools': "As ferramentas que você precisa ao seu alcance",
+        "surveysMap.large": "Elimine as dúvidas sobre regulamentações de dados pessoais internacionais",
+        "surveysMap.small": "Palqee automatiza, organiza e combina entrevistas de colaboradores, vendors e terceiros baseado na estruturação do seu negócio",
+        "surveysHow.title": "Como funciona",
+        "surveysHow.tab1": "Escolha o questionário",
+        "surveysHow.tab2": "Monte sua audiência",
+        "surveysHow.tab3": "Receba as análises",
+        "surveysHow.desc1": "Faça com confiança usando os modelos da Palqee para regulamentações ou crie a sua própria entrevista do início.",
+        "surveysHow.desc2": "Crie audiências e faça a gestão de stakeholders com eficiência. Envie questionários de mapeamento de dados para sua organização e avaliações para vendors e terceiros.",
+        "surveysHow.desc3": "Palqee agrupa e analisa automáticamente as respostas recebidas, identificando áreas para melhoria no seu mapa de dados, recomendando próximos passos no seu DPIA e monitorando o conhecimento da organização sobre atividades de privacidade.",
 
-        
         //take_test
         "test.country": "pt-BR",
     }

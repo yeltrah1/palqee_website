@@ -94,8 +94,8 @@ const RegulationsMap = () => {
             <Wrapper>
                 <Image src={"/static/images/regulations_map.png"}/>
                 <BenefitText>
-                    <div className="large">Take the guess-work out of international data protection regulations</div>
-                    <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
+                    <div className="large">{translate('surveysMap.large')}</div>
+                    <div className="small">{translate('surveysMap.small')}.</div>
                 </BenefitText>
             </Wrapper>
       </ThemeProvider>

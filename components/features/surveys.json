@@ -3,60 +3,80 @@
         "id": "0",
         "image": "interviews_icon.svg",
         "name": "Ready-to-use interview templates",
-        "description": "From training to regulatory assessments. Choose a template from the Palqee library."
+        "namePT": "Questionários para entrevistas",
+        "description": "From training to regulatory assessments. Choose a template from the Palqee library.",        
+        "descriptionPT": "De treinamento à avaliações de conformidade. Escolha entre modelos da biblioteca da Palqee."
     },
     {
         "id": "1",
         "image": "dashboard_icon.svg",
         "name": "Employees dashboard",
-        "description": "Secure authentication for every employee with their own dashboard to manage their data privacy responsibilities."
+        "namePT": "Painel do colaborador",
+        "description": "Secure authentication for every employee with their own dashboard to manage their data privacy responsibilities.",
+        "descriptionPT": "Autenticação segura para colaboradores com painel de controle exclusivo para gestão das atividades de privacidade."
     },
     {
         "id": "2",
         "image": "audiences_icon.svg",
         "name": "Audience management",
-        "description": "Assign Process-Owners and organise your companies' workforce."
+        "namePT": "Gestão de audiências",
+        "description": "Assign Process-Owners and organise your companies' workforce.",
+        "descriptionPT": "Nomeie donos de processo e organize os diferentes grupos em sua empresa."
     },
     {
         "id": "3",
         "image": "assessments_icon.svg",
         "name": "Gap assessments",
-        "description": "Ongoing assessments make sure you don't miss anything."
+        "namePT": "Análise de gaps",
+        "description": "Ongoing assessments make sure you don't miss anything.",
+        "descriptionPT": "Avaliações contínuas garantem que você não deixe nada de lado."
     },
     {
         "id": "4",
         "image": "dpia_icon.svg",
         "name": "Data protection impact assessments (DPIA)",
-        "description": "Easy to use template with automated assessment."
+        "namePT": "Avaliações de impacto (DPIA)",
+        "description": "Easy to use template with automated assessment.",
+        "descriptionPT": "Modelos automatizados e prontos para uso."
     },
     {
         "id": "5",
         "image": "reminders_icon.svg",
         "name": "Reminders and notifications",
-        "description": "Send reminders to survey respondents."
+        "namePT": "Lembretes e Notificações",
+        "description": "Send reminders to survey respondents.",
+        "descriptionPT": "Notificações automáticas com lembretes de prazo para colaboradores entrevistados."
     },
     {
         "id": "6",
         "image": "vendors_icon.svg",
         "name": "Vendor and 3rd party assessment",
-        "description": "Send third-party assessment surveys to suppliers and vendors."
+        "namePT": "Avaliação de vendors e terceiros",
+        "description": "Send third-party assessment surveys to suppliers and vendors.",
+        "descriptionPT": "Envie questionários de avaliação de terceiros para fornecedores e vendors."
     },
     {
         "id": "7",
         "image": "insights_icon.svg",
         "name": "Interviews summary and insights",
-        "description": "Keep track and organise all insights in one place."
+        "namePT": "Resumo de respostas e análises",
+        "description": "Keep track and organise all insights in one place.",
+        "descriptionPT": "Acompanhe e organize todas as análises de respostas em um só lugar."
     },
     {
         "id": "8",
         "image": "reports_icon.svg",
         "name": "Automated compliance reports",
-        "description": "Download compiled reports with all the insights you need."
+        "namePT": "Relatórios de conformidade automáticos",
+        "description": "Download compiled reports with all the insights you need.",
+        "descriptionPT": "Download de relatórios com todas as análises que você precisa."
     },
     {
         "id": "9",
         "image": "mapping_icon.svg",
         "name": "Automated data mapping",
-        "description": "Automate surveys for ongoing compliance."
+        "namePT": "Mapeamento de dados automatizado",
+        "description": "Automate surveys for ongoing compliance.",
+        "descriptionPT": "Agende e automatize todas as entrevistas de mapeamento para conformidade contínua."
     }
 ]

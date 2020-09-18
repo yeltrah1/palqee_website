@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { FeaturesCard } from './features_card';
 import features from './surveys.json';
+import { useIntl } from 'react-intl';
 
 const Wrapper = styled.div`
     display: grid;
@@ -100,12 +101,13 @@ const SliderContent = styled(motion.div)`
 const SurveysFeatures = () => {
 
     const constraintsRef = useRef(null);
+    const intl = useIntl()
 
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
             <HeaderText>
-                <div className="text">The tools you need at your fingertips</div>
+                <div className="text">{translate('surveysHero.tools')}</div>
             </HeaderText>
             <Cards>
                 <motion.div className="drag-area" ref={constraintsRef} />
@@ -123,8 +125,8 @@ const SurveysFeatures = () => {
                     {features.map(features =>
                     <FeaturesCard
                         image={features.image}
-                        name={features.name}
-                        description={features.description} 
+                        name={intl.formatMessage({id:'test.country'}) === "pt-BR" ? features.namePT : features.name}
+                        description={intl.formatMessage({id:'test.country'}) === "pt-BR" ? features.descriptionPT : features.description} 
                         key={features.id}
                     />
                     )}
@@ -143,8 +145,8 @@ const SurveysFeatures = () => {
                     {features.map(features =>
                     <FeaturesCard
                         image={features.image}
-                        name={features.name}
-                        description={features.description} 
+                        name={intl.formatMessage({id:'test.country'}) === "pt-BR" ? features.namePT : features.name}
+                        description={intl.formatMessage({id:'test.country'}) === "pt-BR" ? features.descriptionPT : features.description} 
                         key={features.id}
                     />
                     )}
