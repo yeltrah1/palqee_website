@@ -183,7 +183,7 @@ const TitleText = styled.div`
     }
 
     .small {
-        width: 40%;
+        width: 50%;
         font-family: Poppins;
         font-size: 14px;
         text-align: center;
@@ -310,33 +310,33 @@ const CasesTabs = () => {
     }, [router.query.cases]);
 
     const changeHeader = () => {
-        if (cases === "startups") { return "Get it right" }
-        if (cases === "smes") { return "Keeping it simple" }
-        if (cases === "enterprise") { return "Streamline your Privacy Operations" }
+        if (cases === "startups") { return translate('casesStartup.title') }
+        if (cases === "smes") { return translate('casesSme.title') }
+        if (cases === "enterprise") { return translate('casesEnterprise.title') }
     }
 
     const changeSubHeader = () => {
-        if (cases === "startups") { return "Put a check mark on your compliance reporting responsibilities with a tool that fits your needs, so you can focus on growing your business." }
-        if (cases === "smes") { return "Designed to help SME’s with privacy operations." }
-        if (cases === "enterprise") { return "Bring down costs, resources and work flows for your data privacy assessments and ensure ongoing compliance assessments." }
+        if (cases === "startups") { return translate('casesStartup.desc') }
+        if (cases === "smes") { return translate('casesSme.desc') }
+        if (cases === "enterprise") { return translate('casesEnterprise.desc') }
     }
 
     const titleOne = () => {
-        if (cases === "startups") { return "Forever Free" }
-        if (cases === "smes") { return "Increase your efficiency" }
-        if (cases === "enterprise") { return "Streamline assessment processes" }
+        if (cases === "startups") { return translate('casesStartup.title1') }
+        if (cases === "smes") { return translate('casesSme.title1') }
+        if (cases === "enterprise") { return translate('casesEnterprise.title1') }
     }
 
     const detailsOne = () => {
-        if (cases === "startups") { return "Compliance with data protection regulations isn’t optional. At Palqee we understand the pressure this can put on growing businesses both from a financial perspective and having the resources. This is why we made Palqee essential features for free, always!" }
-        if (cases === "smes") { return "Assess your data landscape, train your workforce and assess 3rd party vendors through one platform. With Palqee you can hit the ground running on your data compliance, saving valuable time and money." }
-        if (cases === "enterprise") { return "Make space and save on lengthy interview processes and even longer excel sheets. With Palqee it’s easy to manage large and international workforces efficiently. Organise assessments by respondent category in our audiences feature e.g. by Process Owners, department, role, location and vendors. \n\nUnderstand quickly who has responded and participated in data protection training, send reminders and automate assessments for integrated privacy ops." }
+        if (cases === "startups") { return translate('casesStartup.desc1') }
+        if (cases === "smes") { return translate('casesSme.desc1') }
+        if (cases === "enterprise") { return translate('casesEnterprise.desc1') }
     }
 
     const linkOne = () => {
-        if (cases === "startups") { return "Try it out now" }
-        if (cases === "smes") { return "Speak to sales" }
-        if (cases === "enterprise") { return "Speak to sales" }
+        if (cases === "startups") { return translate('casesStartup.link1') }
+        if (cases === "smes") { return translate('casesSme.link1') }
+        if (cases === "enterprise") { return translate('casesEnterprise.link1') }
     }
 
     const changeImgOne = () => {
@@ -347,21 +347,21 @@ const CasesTabs = () => {
 
     
     const titleTwo = () => {
-        if (cases === "startups") { return "Data Compliance Assessment" }
-        if (cases === "smes") { return "Guided and jargon-free compliance" }
-        if (cases === "enterprise") { return "Instant insights" }
+        if (cases === "startups") { return translate('casesStartup.title2') }
+        if (cases === "smes") { return translate('casesSme.title2') }
+        if (cases === "enterprise") { return translate('casesEnterprise.title2') }
     }
 
     const detailsTwo = () => {
-        if (cases === "startups") { return "Palqee guides you through the process of mapping out data flows and identifying potential risks, when to make a DPIA (Data Protection Impact Assessment) and how to train your workforce on data protection best practices." }
-        if (cases === "smes") { return "Not every company has the resources to invest into data privacy professionals who know what to do. Once you did your first assessment, often the question comes up: What’s next? \n\nOur guided content helps you to analyse how and if you need to act and what the next logical step should be in your data protection implementation process." }
-        if (cases === "enterprise") { return "Palqee summarises the results of all surveys for you, delivering you the insights you need from gap assessments, DPIAs, workforce knowledge assessments and more. Focus on identifying risks and taking measures to improve your companies’ Privacy Ops." }
+        if (cases === "startups") { return translate('casesStartup.desc2') }
+        if (cases === "smes") { return translate('casesSme.desc2') }
+        if (cases === "enterprise") { return translate('casesEnterprise.desc2') }
     }
 
     const linkTwo = () => {
-        if (cases === "startups") { return "Get started" }
-        if (cases === "smes") { return "Get started" }
-        if (cases === "enterprise") { return "Get started" }
+        if (cases === "startups") { return translate('casesStartup.link2') }
+        if (cases === "smes") { return translate('casesSme.link2') }
+        if (cases === "enterprise") { return translate('casesEnterprise.link2') }
     }
 
     const changeImgTwo = () => {
@@ -371,21 +371,21 @@ const CasesTabs = () => {
     }
 
     const titleThree = () => {
-        if (cases === "startups") { return "Automated Reports" }
-        if (cases === "smes") { return "Improved security" }
-        if (cases === "enterprise") { return "Workforce training" }
+        if (cases === "startups") { return translate('casesStartup.title3') }
+        if (cases === "smes") { return translate('casesSme.title3') }
+        if (cases === "enterprise") { return translate('casesEnterprise.title3') }
     }
 
     const detailsThree = () => {
-        if (cases === "startups") { return "Create reports at the push of a button for new investors, potential partners and programme applications that require details about your compliance agenda." }
-        if (cases === "smes") { return "SME’s are increasingly targeted by fraudulent activities. Use Palqee to regularly update your workforce on your companies’ internal data protection and security policies and train them how to act in case of a data breach to minimise risks." }
-        if (cases === "enterprise") { return "Use one of our templates or create your own to test and train data protection protocols within your company. Keep track on confidence level of your colleagues on how to deal with personal data with automated surveys, reduce data leakage risks and grow your companies’ reputation as data responsible business." }
+        if (cases === "startups") { return translate('casesStartup.desc3') }
+        if (cases === "smes") { return translate('casesSme.desc3') }
+        if (cases === "enterprise") { return translate('casesEnterprise.desc3') }
     }
 
     const linkThree = () => {
-        if (cases === "startups") { return "Get started" }
-        if (cases === "smes") { return "Try it now" }
-        if (cases === "enterprise") { return "Try it now" }
+        if (cases === "startups") { return translate('casesStartup.link3') }
+        if (cases === "smes") { return translate('casesSme.link3') }
+        if (cases === "enterprise") { return translate('casesEnterprise.link3') }
     }
 
     const changeImgThree = () => {
@@ -398,7 +398,7 @@ const CasesTabs = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <TabsContainer className="desktop">
-                    <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Startups</div>
+                    <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Start-ups</div>
                     <div className="inactive-bar-left"></div>
                     <motion.div className={ cases === "startups" ? "active-bar-left" : "inactive-bar-left" }
                         key={cases}
@@ -407,7 +407,7 @@ const CasesTabs = () => {
                         exit={{ width: 0 }}
                         transition={{ duration: 0.1 }}
                     ></motion.div>
-                    <div className={ cases === "smes" ? "active-text" : "inactive-text" } onClick={() => { setCases("smes") }}>SME's</div>
+                    <div className={ cases === "smes" ? "active-text" : "inactive-text" } onClick={() => { setCases("smes") }}>{translate('casesTabs.smes')}</div>
                     <div className="inactive-bar-middle"></div>
                     <motion.div className={ cases === "smes" ? "active-bar-middle" : "inactive-bar-middle" }
                         key={cases}
@@ -416,7 +416,7 @@ const CasesTabs = () => {
                         exit={{ width: 0 }}
                         transition={{ duration: 0.1 }}
                     ></motion.div>
-                    <div className={ cases === "enterprise" ? "active-text" : "inactive-text" } onClick={() => { setCases("enterprise") }}>Enterprise</div>
+                    <div className={ cases === "enterprise" ? "active-text" : "inactive-text" } onClick={() => { setCases("enterprise") }}>{translate('casesTabs.enterprise')}</div>
                     <div className="inactive-bar-right"></div>
                     <motion.div className={ cases === "enterprise" ? "active-bar-right" : "inactive-bar-right" }
                         key={cases}
@@ -428,7 +428,7 @@ const CasesTabs = () => {
                 </TabsContainer>
 
                 <TabsContainer className="mobile">
-                    <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Startups</div>
+                    <div className={ cases === "startups" ? "active-text" : "inactive-text" } onClick={() => { setCases("startups") }}>Start-ups</div>
                     <div className="inactive-bar-left"></div>
                     <motion.div className={ cases === "startups" ? "active-bar-left" : "inactive-bar-left" }
                         key={cases}
@@ -437,7 +437,7 @@ const CasesTabs = () => {
                         exit={{ width: 0 }}
                         transition={{ duration: 0.1 }}
                     ></motion.div>
-                    <div className={ cases === "smes" ? "active-text" : "inactive-text" } onClick={() => { setCases("smes") }}>SME's</div>
+                    <div className={ cases === "smes" ? "active-text" : "inactive-text" } onClick={() => { setCases("smes") }}>{translate('casesTabs.smes')}</div>
                     <div className="inactive-bar-middle"></div>
                     <motion.div className={ cases === "smes" ? "active-bar-middle" : "inactive-bar-middle" }
                         key={cases}
@@ -446,7 +446,7 @@ const CasesTabs = () => {
                         exit={{ width: 0 }}
                         transition={{ duration: 0.1 }}
                     ></motion.div>
-                    <div className={ cases === "enterprise" ? "active-text" : "inactive-text" } onClick={() => { setCases("enterprise") }}>Enterprise</div>
+                    <div className={ cases === "enterprise" ? "active-text" : "inactive-text" } onClick={() => { setCases("enterprise") }}>{translate('casesTabs.enterprise')}</div>
                     <div className="inactive-bar-right"></div>
                     <motion.div className={ cases === "enterprise" ? "active-bar-right" : "inactive-bar-right" }
                         key={cases}

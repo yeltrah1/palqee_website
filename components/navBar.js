@@ -144,9 +144,9 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                         <div className="item-group">
                             <div className={item === "products" ? "item active" : "item"} onClick={toggleProducts}>{translate('navBar.products')}&nbsp;&nbsp;<a className={item === "products" ? "arrow up" : "arrow"}>➤</a></div>
                             <a href="/surveys-manager" className={item === "products" ? "item-list no-margin" : "item-list hide"}>Survey Manager</a>
-                            <a href="/surveys-manager" className={item === "products" ? "item-description" : "item-description hide"}>For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
+                            <a href="/surveys-manager" className={item === "products" ? "item-description" : "item-description hide"}>{translate('surveys.description')}</a>
                             <a href="/innovation-roadmap" className={item === "products" ? "item-list no-margin" : "item-list hide"}>{translate('navBar.innovation')}</a>
-                            <a href="/innovation-roadmap" className={item === "products" ? "item-description" : "item-description hide"}>Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
+                            <a href="/innovation-roadmap" className={item === "products" ? "item-description" : "item-description hide"}>{translate('innov.description')}</a>
                             <a href="/book-demo" className={item === "products" ? "book" : "book hide"}>{translate('navBar.demo')}</a>
                         </div>
                         <div className="item-group">
@@ -181,9 +181,9 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                             <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
                                 <a href="/surveys-manager" className="title1">Surveys Manager</a>
-                                <a href="/surveys-manager" className="description1">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
+                                <a className="description1">{translate('surveys.description')}</a>
                                 <a href="/innovation-roadmap" className="title2">{translate('navBar.innovation')}</a>
-                                <a href="/innovation-roadmap" className="description2">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
+                                <a className="description2">{translate('innov.description')}</a>
                                 <a className="demo" href="/book-demo">{translate('navBar.demo')}</a>
                             </div>
                         </div>

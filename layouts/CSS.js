@@ -396,16 +396,14 @@ export const NavBarStyle = styled.div`
       color: #758194;
       text-decoration: none;
       margin-top: -10px;
+      cursor: default;
     }
 
-    .title1:hover, .title2:hover, .description1:hover, .description2:hover {
+    .title1:hover, .title2:hover {
       font-family: Poppins-Semi;
     }
 
-    .title1:hover ~ .description1,
-    .title2:hover ~ .description2, 
-    .description1:hover ~ .title1, 
-    .description2:hover ~ .title2 {
+    .title1:hover ~ .description1, .title2:hover ~ .description2 {
       font-family: Poppins-Semi;
     }
 

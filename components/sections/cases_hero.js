@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -73,7 +72,7 @@ const CasesHero = () => {
             <HeroText>
                 <div className="large">Use Cases</div>
                 <div className="small">
-                How people and brands are using Palqee.<br/>
+                {translate('casesHero.small')}<br/>
                 </div>
             </HeroText>
         </HeroStyle>
