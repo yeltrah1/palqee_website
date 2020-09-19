@@ -123,39 +123,41 @@ const ComplianceTeams = () => {
       <ThemeProvider theme={palqeeTheme}>
           <Wrapper>
             <Header>
-                <div className="large">Engage with everyone and keep your compliance running</div>
-                <DemoButton>Book Demo</DemoButton>
+                <div className="large">{translate('teams.title')}</div>
+                <Link href="/book-demo">
+                    <DemoButton>{translate('navBar.demo_button')}</DemoButton>
+                </Link>
             </Header>
             <ContainerTeams>
                 <Cards>
                     <img src="/static/icons/teams/process_owners.svg" className="icon"/>
-                    <div className="title">Process-Owners</div>
-                    <div className="small">Integrate privacy into your operations together with your company's process owners.</div>
+                    <div className="title">{translate('teams.title1')}</div>
+                    <div className="small">{translate('teams.desc1')}</div>
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/executives.svg" className="icon"/>
-                    <div className="title">C-Level Executives</div>
-                    <div className="small">Keep your executives updated on their data privacy responsibilities and help shape a culture around responsible data management supported through all levels.</div>
+                    <div className="title">{translate('teams.title2')}</div>
+                    <div className="small">{translate('teams.desc2')}</div>
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/sales.svg" className="icon"/>
-                    <div className="title">Marketing and Sales</div>
-                    <div className="small">Engage with your colleagues on the customer facing front and give them the data privacy know-how, so they can do their job with confidence.</div>
+                    <div className="title">{translate('teams.title3')}</div>
+                    <div className="small">{translate('teams.desc3')}</div>
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/it.svg" className="icon"/>
-                    <div className="title">Information Technology</div>
-                    <div className="small">Collate and analyse technical risk assessments on new tools and projects in the planning. Train principles on Privacy and Security by Design.</div>
+                    <div className="title">{translate('teams.title4')}</div>
+                    <div className="small">{translate('teams.desc4')}</div>
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/vendors.svg" className="icon"/>
-                    <div className="title">3rd Party Vendors</div>
-                    <div className="small">Organise 3rd party vendor information in one place. From mapping out the services they use to keeping track of and adherence to processing agreements.</div>
+                    <div className="title">{translate('teams.title5')}</div>
+                    <div className="small">{translate('teams.desc5')}</div>
                 </Cards>
                 <Cards>
                     <img src="/static/icons/teams/members.svg" className="icon"/>
-                    <div className="title">New Team Members</div>
-                    <div className="small">Get every new team member on board with Data Privacy training.</div>
+                    <div className="title">{translate('teams.title6')}</div>
+                    <div className="small">{translate('teams.desc6')}</div>
                 </Cards>
             </ContainerTeams>
           </Wrapper>

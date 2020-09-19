@@ -82,13 +82,15 @@ const InnovationHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                    <span className="semi"><u>Palqee Roadmap</u></span> for<br/>
-                        New Tools and Features
+                    <span className="semi"><u>{translate('innov.bold')}</u></span> {translate('innov.for')}<br/>
+                        {translate('innov.features')}
                         <br/>
                 </div>
                 <div className="small">
-                Our drive is to deliver you the best tools for successful data privacy management. Period. Check out the Palqee roadmap and explore our current updates, coming soon launches and future innovations.<br/><br/>
-                    <GetStartedButton>Get started for free</GetStartedButton>
+                {translate('innov.small')}<br/><br/>
+                <Link href="/book-demo">
+                    <GetStartedButton>{translate('navBar.demo_button')}</GetStartedButton>
+                </Link>
                 </div>
             </HeroText>
         </HeroStyle>

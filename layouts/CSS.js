@@ -352,7 +352,7 @@ export const NavBarStyle = styled.div`
       src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
     }
 
-    .dropdown-products a, .dropdown-cases a, .dropdown-partners a {
+    .dropdown-products .title1, .dropdown-products .title2, .dropdown-cases a, .dropdown-partners a {
       font-family: Poppins;
       font-size: 13px;
       font-weight: 500;
@@ -365,7 +365,7 @@ export const NavBarStyle = styled.div`
       cursor: pointer;
     }
 
-    .dropdown-products a:hover, .dropdown-cases a:hover, .dropdown-partners a:hover  {
+    .dropdown-cases a:hover, .dropdown-partners a:hover  {
       font-family: Poppins-Semi;
     }
 
@@ -386,7 +386,7 @@ export const NavBarStyle = styled.div`
       cursor: pointer;
     }
 
-    .dropdown-products .description {
+    .dropdown-products .description1, .dropdown-products .description2 {
       display: flex;
       font-family: Poppins;
       font-size: 10px;
@@ -398,8 +398,15 @@ export const NavBarStyle = styled.div`
       margin-top: -10px;
     }
 
-    .dropdown-products .description:hover {
-      font-family: Poppins;
+    .title1:hover, .title2:hover, .description1:hover, .description2:hover {
+      font-family: Poppins-Semi;
+    }
+
+    .title1:hover ~ .description1,
+    .title2:hover ~ .description2, 
+    .description1:hover ~ .title1, 
+    .description2:hover ~ .title2 {
+      font-family: Poppins-Semi;
     }
 
     .dropdown-cases {

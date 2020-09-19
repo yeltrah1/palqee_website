@@ -108,10 +108,10 @@ const InnovationHorizon = () => {
             <Wrapper>
                 <Image src={"/static/images/palqee_horizon.png"}/>
                 <HighlightText>
-                    <div className="large">On the horizon</div>
+                    <div className="large">{translate('innov.horizon')}</div>
                     <ul className="small">
-                        <li>Automation of subject rights</li>
-                        <li>Active Consent® for cross-platform consent management</li>                     
+                        <li>{translate('innov.horizon1')}</li>
+                        <li>{translate('innov.horizon2')}</li>                     
                     </ul>
                 </HighlightText>
             </Wrapper>

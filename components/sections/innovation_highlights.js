@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -109,12 +108,12 @@ const InnovationHighlights = () => {
             <Wrapper>
                 <Image src={"/static/images/innovation_highlights.svg"}/>
                 <HighlightText>
-                    <div className="large">Current highlights</div>
+                    <div className="large">{translate('innov.highlights')}</div>
                     <ul className="small">
-                            <li>Regulation surveys for GDPR, LGPD and CCPA;</li>
-                            <li>Regulation surveys merge for global compliance projects</li>                     
-                            <li>Templates for employee training</li>
-                            <li>Automated data mapping</li>  
+                        <li>{translate('innov.highlights1')}</li>
+                        <li>{translate('innov.highlights2')}</li>                     
+                        <li>{translate('innov.highlights3')}</li>
+                        <li>{translate('innov.highlights4')}</li>  
                     </ul>
                 </HighlightText>
             </Wrapper>

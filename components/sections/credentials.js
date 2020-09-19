@@ -109,8 +109,8 @@ const Credentials = () => {
       <ThemeProvider theme={palqeeTheme}>
           <Wrapper>
             <Text>
-                <div className="large">Our Credentials</div>
-                <div className="small">Palqee automates, organises and combines workforce and vendor surveys based on your business setup.</div>
+                <div className="large">{translate('credentials.title')}</div>
+                <div className="small">{translate('credentials.description')}</div>
             </Text>
             <ContainerLogos>
                 <Logos className="desktop" width={100} src={"/static/icons/badges/palqee_privacyops.png"}/>

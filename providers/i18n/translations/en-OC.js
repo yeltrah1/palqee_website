@@ -2,9 +2,10 @@ import { LOCALES } from "../locales";
 
 export default {
     [LOCALES.OC_ENGLISH]: {
+        //head
         "page.title": "Palqee Technologies | Software Solutions for Privacy Operations",
-        "landingPage.headline": "This is the main headline",
 
+        //navBar
         "navBar.products": "Products",
         "navBar.innovation": "Innovation Roadmap",
         "navBar.demo": "Book a demo",
@@ -17,11 +18,80 @@ export default {
         "navBar.accredited": "Accredited Partners",
         "navBar.demo_button": "Book Demo",
 
+        //footer
         "footer.blog": "Blog",
         "footer.policy": "Privacy Policy",
         "footer.settings": "Privacy Settings",
         "footer.terms": "Terms and Conditions",
         "footer.contact": "Contact Us",
         "footer.resources": "Resources",
+
+        //home_hero
+        "headline.line1": "There is privacy",
+        "headline.line2": "management software.",
+        "headline.line3": "And there is ",
+        "headline.small": "The tool to succeed with internal Privacy Operations",
+        "headline.button": "Book a Demo",
+        "home.clients": "Trusted by businesses of all sizes",
+        'test.large': "Not 100% sure whether you have to comply with GDPR, CCPA or LGPD?",
+        'test.small': "Take our free test and have an answer within minutes",
+        'test.button': "Take the test",
+        'insights.large': "Act on privacy compliance risks and insights",
+        'insights.small': "With Palqee you have ongoing visibility on how your data landscape is evolving",
+        'admin.large': "Streamline admin work and focus on what matters",
+        'admin.small': "Palqee saves you time by automating and consolidating time-intensive interviews for data mapping, assessments and DPIAs so you can concentrate on your compliance agenda",
+        'engage.large': "Have your workforce engaged on privacy programs",
+        'engage.small': "Jargon-free dashboard for employees and automated internal communications support you to get buy-in and collaborate with your team",
+        'builder.large': "Be content you have it all covered",
+        'builder.small': "Palqee helps you with required assessments based on your business’ operations and combines repetitive regulation work among data protection regulations for streamlined global compliance",
+        'stats.header': "Statistics on Palqee",
+        'stats.small': "You don't have to do it alone. Have our pioneering technology, a global support team and world-class privacy and technology experts behind you",
+        'stats.employees': " of employees engaged",
+        'stats.surveys': " of surveys answered",
+        'stats.questions': "Built-in regulatory questions",
+        'stats.reports': "Compliance reports generated",
+        'testimonials.large': "We believe in the power of community",
+        'testimonials.small': "Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen to what our users have to say",
+        'contact.large': "Speak to Us",
+        "contact.small": "The tool to succeed with internal Privacy Operations",
+        'contact.reason': "What is the reason of your inquiry?",
+        'contact.product': "Product Information",
+        'contact.partnerships': "Partnerships",
+        'contact.resellers': "Resellers",
+        'contact.support': "Technical Support",
+        'contact.billing': "Billing",
+        'contact.training': "Palqee Training/Certifications",
+        'contact.media': "Media/Press Requests",
+        'contact.events': "Events/Speaking Requests",
+        'contact.others': "Others",
+        'contact.email': "Your business email",
+        'contact.info': "Request info",
+        'contact.thanks': "Thanks for contacting us, our team will be in touch shortly",
+    
+        //surveys_manager
+        'surveysHero.large': "Privacy management tools that help you",
+        'surveysHero.small': "Get started in minutes and send out your first data assessment survey now",
+        'surveysHero.string1': "gain data insights.",
+        'surveysHero.string2': "streamline assessments.",
+        'surveysHero.string3': "train the workforce.",
+        'surveysHero.string4': "manage ongoing compliance.",
+        'surveysHero.button': "Book a Demo",
+        'surveysHero.tools': "The tools you need at your fingertips",
+        "surveysMap.large": "Take the guess-work out of international data protection regulations",
+        "surveysMap.small": "Palqee automates, organises and combines workforce and vendor surveys based on your business setup",
+        "surveysHow.title": "How it works",
+        "surveysHow.tab1": "Start with a survey",
+        "surveysHow.tab2": "Pick your audience",
+        "surveysHow.tab3": "Get the insight",
+        "surveysHow.desc1": "Know what you have to do with Palqee regulatory survey templates or create your own with our survey wizard.",
+        "surveysHow.desc2": "Create audiences and manage your stakeholders efficiently. Send a data mapping survey to your businesses’ workforce and a assessments to your 3rd party vendors.",
+        "surveysHow.desc3": "Palqee automatically summarises and analyses results for you. Identify areas of improvement in your data map, recommend next steps on DPIAs and track workforce confidence on data protection best practices.",
+        "credentials.title": "Our Credentials",
+        "credentials.description": "Designed by professionals with decades of experience in data protection and software engineering, and loved by businesses of all sizes across the globe.",
+        'teams.title': 'Engage with everyone and keep your compliance running',
+
+
+        //take_test
+        "test.country": "en-GB",
     }
 }

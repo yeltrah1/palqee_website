@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -113,13 +112,13 @@ const InnovationComing = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <HighlightText>
-                    <div className="large">Coming soon</div>
+                    <div className="large">{translate('innov.coming')}</div>
                     <ul className="small">
-                            <li>Automated Data Discovery</li>
-                            <li>Product integrations with cloud and on-site systems</li>                     
-                            <li>Improved 360 degree view of your Privacy operations</li>
-                            <li>New regulations for global compliance</li>
-                            <li>Multi-level user access</li>  
+                        <li>{translate('innov.coming1')}</li>
+                        <li>{translate('innov.coming2')}</li>                     
+                        <li>{translate('innov.coming3')}</li>
+                        <li>{translate('innov.coming4')}</li>
+                        <li>{translate('innov.coming5')}</li>  
                     </ul>
                 </HighlightText>
                 <Image src={"/static/images/palqee_coming.png"}/>

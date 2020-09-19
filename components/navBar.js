@@ -180,10 +180,10 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                         <div className="dropdown">
                             <Link href="/surveys-manager"><a className="menu-item">{translate('navBar.products')}&nbsp;&nbsp;<a className="arrow">➤</a></a></Link>
                             <div className="dropdown-products">
-                                <a href="/surveys-manager">Surveys Manager</a>
-                                <a href="/surveys-manager" className="description">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
-                                <a href="/innovation-roadmap">{translate('navBar.innovation')}</a>
-                                <a href="/innovation-roadmap" className="description">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
+                                <a href="/surveys-manager" className="title1">Surveys Manager</a>
+                                <a href="/surveys-manager" className="description1">For an Evergreen Data Map, Workforce Training, Legal Basis Management and much more.</a>
+                                <a href="/innovation-roadmap" className="title2">{translate('navBar.innovation')}</a>
+                                <a href="/innovation-roadmap" className="description2">Our exciting new features, including Active Consent® Management and Subject Rights Automation.</a>
                                 <a className="demo" href="/book-demo">{translate('navBar.demo')}</a>
                             </div>
                         </div>

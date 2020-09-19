@@ -7,7 +7,6 @@ import { ThemeProvider } from 'styled-components';
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import ArrowLeft from '../../public/static/icons/arrow_left.png';
 import ArrowRight from '../../public/static/icons/arrow_right.png';
-import { TextCard } from './text_card';
 import { GetglobalCard } from './getglobal_card';
 import { DrlCard } from './drl_card';
 import { DanticCard } from './dantic_card';
@@ -123,7 +122,7 @@ const Cards = styled.div`
     align-self: start;
     height: 200px;
     margin-top: 120px;
-    margin-left: 50px;
+    margin-left: 20px;
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -145,20 +144,19 @@ const Testimonials = () => {
     return (
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
-        <Skewed/>
-        <TestimonialsText>
-            <div className="large">We believe in the power of community</div>
-            <div className="small">Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen tp what our users has to say.</div>
-            <div className="arrows">
-            <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/> 
-            </div>
-        </TestimonialsText>
-        <Cards>
-            <DrlCard/>
-            <GetglobalCard/>
-            <DanticCard/>
-            <TextCard/>
-        </Cards>
+            <Skewed/>
+            <TestimonialsText>
+                <div className="large">{translate('testimonials.large')}</div>
+                <div className="small">{translate('testimonials.small')}</div>
+                <div className="arrows">
+                {/* <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/>  */}
+                </div>
+            </TestimonialsText>
+            <Cards>
+                <DrlCard/>
+                <GetglobalCard/>
+                <DanticCard/>
+            </Cards>
         </Wrapper>
     </ThemeProvider>
     )
