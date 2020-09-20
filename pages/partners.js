@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 //components
 import { Layout } from '../layouts/layout';
@@ -11,17 +11,13 @@ import { StartupsPartner } from '../components/sections/partners_startups';
 import { PartnersTraining } from '../components/sections/partners_training';
 import { DevPartner } from '../components/sections/partners_dev';
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) 
-
 const Partners = () => {
-
-    const scrollRef = useRef(null)
 
     return (
         <Layout>
             <PartnerStyle>
                 <div className="headline">
-                    <PartnersHero scrollRef={scrollRef} scrollToRef={scrollToRef} />
+                    <PartnersHero/>
                 </div>
                 <div className="large-white">
                     <SolutionsPartner/>
@@ -39,7 +35,7 @@ const Partners = () => {
                     <DevPartner/>
                 </div>
                 <div className="bottom-grey">
-                <Sales scrollRef={scrollRef}/>
+                    <Sales/>
                 </div>
             </PartnerStyle>
         </Layout>

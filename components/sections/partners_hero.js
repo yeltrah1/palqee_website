@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import { GetStartedButton } from '../../layouts/CSS';
@@ -73,9 +74,7 @@ const HeroText = styled.div`
     }
 `;
 
-const PartnersHero = ({ scrollRef, scrollToRef }) => {
-    
-    const executeScroll = () => scrollToRef(scrollRef)
+const PartnersHero = () => {
 
     return (
       <ThemeProvider theme={palqeeTheme}>
@@ -87,7 +86,11 @@ const PartnersHero = ({ scrollRef, scrollToRef }) => {
                 </div>
                 <div className="small">
                 {translate('partner.small')}<br/><br/>
-                    <GetStartedButton onClick={executeScroll}>{translate('partner.button')}</GetStartedButton>
+                <ScrollTo>
+                    {({ scroll }) => (
+                    <GetStartedButton onClick={() => scroll({ y: 3000 })}>{translate('partner.button')}</GetStartedButton>
+                    )}
+                </ScrollTo>
                 </div>
             </HeroText>
         </HeroStyle>

@@ -189,5 +189,10 @@ export default {
         'partner.title': "Seja um parceiro da",
         'partner.small': "Conformidade em privacidade de dados é alcançada somente quando existe sinergia entre parceiros. Nós estamos sempre explorando maneiras de fazer exatamente isso. Leia abaixo sobre os nossos programas para parceiros e entre em contato conosco.",
         "partner.button": "Entre em contato",
+        'solutions.large': "Parceiro de Implementação",
+        'solutions.small': "Não importa se você esteja planejando expandir sua lista de ofertas, entregando projetos de adequação à regulamentações de proteção de dados ou apenas buscando soluções para recomendar a seus clientes, nosso programa de Parceiro de Implementação oferece a oportunidade certa para o seu crescimento.",
+        'solutions.link': "Torne-se um Parceiro de Implementação",
+        'solutions.benefit': "Benefícios para o Parceiro",
+        'solutions.benefit1': "Compartilhamento de receita nos dois primeiros anos em novas contas",
     }
 }

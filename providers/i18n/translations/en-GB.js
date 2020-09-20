@@ -54,7 +54,7 @@ export default {
         'stats.reports': "Compliance reports generated",
         'testimonials.large': "We believe in the power of community",
         'testimonials.small': "Our goal is to create a product and service that you’re satisfied with and use it every day. That is why we’re constantly working on our product to make it better every day and really listen to what our users have to say",
-        'contact.large': "Speak to Us",
+        'contact.large': "Get in Touch",
         "contact.small": "The tool to succeed with internal Privacy Operations",
         'contact.reason': "What is the reason of your inquiry?",
         'contact.product': "Product Information",
@@ -189,5 +189,13 @@ export default {
         'partner.title': "Partner with",
         'partner.small': "Data Privacy Compliance can only be achieved through collaboration. We’re always exploring ways of doing exactly that. Check out our partner programs and reach out to us.",
         "partner.button": "Contact us",
+        'solutions.large': "Solutions Partner Program",
+        'solutions.small': "No matter if you’re planning to expand your service offering, work on implementing data compliance projects for your clients or look for IT solutions to recommend, our Solutions Partner Program offers you an opportunity to unlock growth.",
+        'solutions.link': "Become a Solutions Partner",
+        'solutions.benefit': "The Solutions Partner Benefits",
+        'solutions.benefit1': "Revenue-share on first two years of new accounts",
+    
+    
+    
     }
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
+import { useIntl } from 'react-intl';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -122,7 +124,6 @@ const HighlightText = styled.div`
     place-self: center;
     grid-template-columns: 1fr;
     margin-top: -20px;
-    margin-right: 50px;
 
     @media screen and (max-width: 750px) {
         grid-column: 1;
@@ -153,7 +154,6 @@ const HighlightText = styled.div`
     }
 
     .small {
-        width: 80%;
         margin-top: 10px;
         margin-left: -20px;
         font-family: Poppins;
@@ -183,20 +183,29 @@ const HighlightText = styled.div`
 
 const SolutionsPartner = () => {
     
+    const intl = useIntl()
+
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <PartnerText>
-                    <div className="large">Solutions Partner Program</div>
-                    <div className="small">No matter if you’re planning to expand your service offering, work on implementing data compliance projects for your clients or look for IT solutions to recommend, our Solutions Partner Program offers you an opportunity to unlock growth.</div>
-                    <div className="link"><u>Become a Solutions Partner</u></div>
+                    <div className="large">{translate('solutions.large')}</div>
+                    <div className="small">{translate('solutions.small')}</div>
+                    <div className="link">
+                    <ScrollTo>
+                    {({ scroll }) => (
+                        <u onClick={() => scroll({ y: 3000 })}>{translate('solutions.link')}</u>
+                    )}
+                    </ScrollTo>
+                    </div>
                 </PartnerText>
                 <Image className="desktop" src={"/static/patterns/partner_solutions.svg"}/>
                 <Image className="mobile" src={"/static/patterns/partner_solutions_mobile.svg"}/>
-                <HighlightText>
-                    <div className="large">The Solutions Partner Benefits</div>
-                        <ul className="small">
-                                <br/><li>Revenue-share on first two years of new accounts</li><br/>
+                <HighlightText style={intl.formatMessage({id:'test.country'}) === "en-GB"? {marginRight:"50px"} : {marginRight:"-110px"}}>
+                    <div className="large">{translate('solutions.benefit')}</div>
+                        <ul className="small"
+                        style={intl.formatMessage({id:'test.country'}) === "en-GB"? {width:"80%"} : {width:"60%"}}>
+                                <br/><li>{translate('solutions.benefit1')}</li><br/>
                                 <li>Flexible billing-to-client options</li><br/>                    
                                 <li>Listed in the Palqee Accreddited Partners Directory</li><br/>
                                 <li>Dedicated Palqee Account Manager</li><br/>
