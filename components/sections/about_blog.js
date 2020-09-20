@@ -1,6 +1,5 @@
 import React, {useRef} from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion"
@@ -135,8 +134,8 @@ const AboutBlog = () => {
     <ThemeProvider theme={palqeeTheme}>
         <Wrapper>
             <BlogText>
-                <div className="large">Read more about Palqee in our blog</div>
-                <DemoButton href="/blog/all" style={{marginTop:"30px"}}>Go to Blog</DemoButton>
+                <div className="large">{translate('aboutBlog.title')}</div>
+                <DemoButton href="/blog/all" style={{marginTop:"30px"}}>{translate('aboutBlog.button')}</DemoButton>
                 <div className="arrows">
                     {/* <Arrow src={ArrowLeft}/><Arrow src={ArrowRight}/>  */}
                 </div>

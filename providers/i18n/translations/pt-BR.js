@@ -165,5 +165,29 @@ export default {
         'casesStartup.link3': "Fale com Vendas",
         'casesSme.link3': "Agende uma Demo",
         'casesEnterprise.link3': "Fale com Vendas",
+
+        //about_us
+        'about.large': "Nossa Missão",    
+        'about.small': "Facilitar uma gestão ética e segura de dados pessoais, universalmente, para todos.",
+        'culture.title': "Nossa Cultura",
+        'culture.desc': "Existe um conceito equivocado de que privacidade de dados significa compartilhar menos dados. Essa é a razão pela qual muitas empresas enxergam isso como uma barreira para inovação e um custo, e não como uma oportunidade.",
+        'culture.bold': "Nós estamos mudando isso.",
+        'details.large': "A gente acredita que Privacidade de Dados significa transparência e a construção de uma relação de confiança entre indivíduos e empresas.",
+        'details.small1': "Privacidade tem o potencial de ser o diferenciador mais poderoso para a criação de fidelidade do consumidor e possibilitará organizações acessarem dados valiosos em tempo real.",
+        'details.small2': "Até agora, a infraestrutura para tornar isso possível estava faltando: uma plataforma que possibilita empresas navegarem de maneira segura por regulamentações internacionais enquanto criando uma ponte entre o negócio e seus clientes para uma gestão transparente de dados.",
+        'details.small3': "Nós acordamos todo dia pensando em Privacidade de Dados e na oportunidade de construir relacionamentos de confiança. Existem muitas ideias no pipeline que nós mal podemos esperar para compartilhar!",
+        'innov.banner': "Para saber o que estamos preparando, veja o nosso Roadmap de Inovação.",
+        'innov.button': "Me leve lá",
+        'team.title': "Nosso Time",
+        'team.desc': "Nós somos uma empresa PrivacyTech criada por experts em desenvolvimento de software, privacy by design, e Enterprise solutions.",
+        'team.tab1': "Board Executivo",
+        'team.tab2': "Conselho Consultivo",
+        'aboutBlog.title': "Mais sobre nós no blog da Palqee",
+        'aboutBlog.button': "Ir para Blog",
+        
+        //partners
+        'partner.title': "Seja um parceiro da",
+        'partner.small': "Conformidade em privacidade de dados é alcançada somente quando existe sinergia entre parceiros. Nós estamos sempre explorando maneiras de fazer exatamente isso. Leia abaixo sobre os nossos programas para parceiros e entre em contato conosco.",
+        "partner.button": "Entre em contato",
     }
 }

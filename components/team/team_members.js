@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion";
+import { useIntl } from 'react-intl';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 import  { MemberCards } from './member_cards';
@@ -156,7 +156,6 @@ const TabsContainer = styled.div`
 
 const TeamContainer = styled(motion.div)`
     display: grid;
-    grid-template-columns: 315px 315px 315px;
     grid-column-gap: 20px;
     grid-row-gap: 3em;
     width: 100vw;
@@ -173,16 +172,17 @@ const TeamContainer = styled(motion.div)`
 const TeamMembers = () => {
     
     const [tab, setTab] = useState("team")
+    const intl = useIntl()
 
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <TitleText>
-                    <div className="large">Our Team</div>
-                    <div className="small">We are a PrivacyTech company created by experts in software development, privacy by design, and Enterprise solutions.</div>
+                    <div className="large">{translate('team.title')}</div>
+                    <div className="small">{translate('team.desc')}</div>
                 </TitleText>
                 <TabsContainer>
-                    <div className={ tab === "team" ? "active-text" : "inactive-text" } onClick={() => { setTab("team") }}>Management Team</div>
+                    <div className={ tab === "team" ? "active-text" : "inactive-text" } onClick={() => { setTab("team") }}>{translate('team.tab1')}</div>
                     <div className="inactive-bar-left"></div>
                     <motion.div className={ tab === "team" ? "active-bar-left" : "inactive-bar-left" }
                         key={tab}
@@ -191,7 +191,7 @@ const TeamMembers = () => {
                         exit={{ width: 0 }}
                         transition={{ duration: 0.1 }}
                     ></motion.div>
-                    <div className={ tab === "advisor" ? "active-text" : "inactive-text" } onClick={() => { setTab("advisor") }}>Advisors</div>
+                    <div className={ tab === "advisor" ? "active-text" : "inactive-text" } onClick={() => { setTab("advisor") }}>{translate('team.tab2')}</div>
                     <div className="inactive-bar-right"></div>
                     <motion.div className={ tab === "advisor" ? "active-bar-right" : "inactive-bar-right" }
                         key={tab}
@@ -207,6 +207,7 @@ const TeamMembers = () => {
                     animate={{ opacity: 1 }} 
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
+                    style={ tab === "team" ? {gridTemplateColumns: "315px 315px 315px"} : {gridTemplateColumns: "315px 315px"}}
                     >
                         {members
                         .filter(member => member.type === tab )
@@ -215,7 +216,7 @@ const TeamMembers = () => {
                                 type={member.type}
                                 image={member.image}
                                 name={member.name}
-                                role={member.role} 
+                                role={intl.formatMessage({id:'test.country'}) === "en-GB"? member.role : member.rolePT } 
                                 linkedin={member.linkedin}
                                 key={member.id}
                             />

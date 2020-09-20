@@ -3,16 +3,18 @@
         "id": "1",
         "type": "team",
         "name": "Sabrina Palme",
-        "image": "https://res.cloudinary.com/palqee/image/upload/v1597697629/sabrina.jpg",
-        "role": "Chief Executive Officer",        
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1600601397/sabrina.jpg",
+        "role": "Chief Executive Officer", 
+        "rolePT": "Chief Executive Officer",
         "linkedin": "https://www.linkedin.com/in/sabrina-p-95536b79/"
     },
     {
         "id": "2",
         "type": "team",
         "name": "Andre Quintanilha",
-        "image": "sabrina.png",
-        "role": "Chief Privacy Officer",        
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1600601702/andre.jpg",
+        "role": "Chief Privacy Officer", 
+        "rolePT": "Chief Privacy Officer",       
         "linkedin": "https://www.linkedin.com/in/andrequintanilha/"
     },
     {
@@ -20,31 +22,26 @@
         "type": "team",
         "name": "Hartley Jean-Aimee",
         "image": "https://res.cloudinary.com/palqee/image/upload/v1597696613/hartley.jpg",
-        "role": "Chief Technology Officer",        
+        "role": "Chief Technology Officer",
+        "rolePT": "Chief Technology Officer",        
         "linkedin": "https://www.linkedin.com/in/hartley-jean-aimee-1277044a/"
     },
     {
         "id": "4",
         "type": "advisor",
-        "name": "Neil McLaren",
-        "image": "sabrina.png",
-        "role": "Senior Software Engineer & Architect at ConsenSys",        
-        "linkedin": "https://www.linkedin.com/in/neil-mc/"
+        "name": "Martin Shiers",
+        "image": "https://res.cloudinary.com/palqee/image/upload/v1600601939/martin.jpg",
+        "role": "EU GDPR Practitioner and Data Protection Officer (DPO)",
+        "rolePT": "Profissional de Privacidade Europeu & Data Protection Officer",
+        "linkedin": "https://www.linkedin.com/in/martinshiers/"
     },
     {
         "id": "5",
         "type": "advisor",
-        "name": "Martin Shiers",
-        "image": "https://res.cloudinary.com/palqee/image/upload/v1599567993/martin.jpg",
-        "role": "EU GDPR Practitioner and Data Protection Officer (DPO)",        
-        "linkedin": "https://www.linkedin.com/in/martinshiers/"
-    },
-    {
-        "id": "6",
-        "type": "advisor",
         "name": "Dr. Marcio Cots",
         "image": "https://res.cloudinary.com/palqee/image/upload/v1597697967/marcio.jpg",
-        "role": "Partner & Attorney-at-law at COTS Advogados",        
+        "role": "Partner & Attorney-at-law at COTS Attorneys-at-law",
+        "rolePT": "Sócio & Managing Partner no COTS Advogados",
         "linkedin": "https://www.linkedin.com/in/marciocots/"
     }
 ]

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -55,8 +54,8 @@ const InnovationBanner = () => {
     <ThemeProvider theme={palqeeTheme}>
       <BannerStyle>
         <BannerText>
-            To get a glimpse of what we are up to, check out our innovation roadmap.<br/>
-            <DemoButton style={{marginTop:"30px"}} href="/innovation-roadmap">Take me there</DemoButton>
+            {translate('innov.banner')}<br/>
+            <DemoButton style={{marginTop:"30px"}} href="/innovation-roadmap">{translate('innov.button')}</DemoButton>
         </BannerText>
       </BannerStyle>
     </ThemeProvider>

@@ -84,7 +84,7 @@ const EmailStyle = styled.div`
   }
 `;
 
-const Sales = () => {
+const Sales = ({ scrollRef }) => {
 
   const [ sent, setSent ] = useState(false);
 
@@ -107,7 +107,7 @@ const Sales = () => {
     <ThemeProvider theme={palqeeTheme}>
       <SalesStyle>
         <div>
-          <div className="large">{translate('contact.large')}</div>
+          <div ref={scrollRef} className="large">{translate('contact.large')}</div>
           <div className="small">{translate('contact.small')}.</div>
           <form onSubmit={sendEmail} id="request_info">
             <ListInput name="reason" required>

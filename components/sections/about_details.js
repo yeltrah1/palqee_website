@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -68,14 +67,14 @@ const AboutDetails = () => {
       <DetailsStyle>
         <DetailsText>
             <div className="large">
-            We believe Data Privacy is about transparency and building a trusted relationship between consumer and business.
+              {translate('details.large')}
             </div>
         </DetailsText>
         <DetailsText>
             <div className="small">
-            It has the potential to be the most powerful differentiator for customer loyalty and even more, it will be an enabler to access valuable data in real-time.<br/><br/>
-            Up until now, the infrastructure to achieve that was missing: A tool which allows companies to navigate safely through the data privacy regulation jungle while bridging the gap between company and customer for transparent data privacy management.<br/><br/>
-            We get up every day excited about Data Privacy, the opportunities it can bring in connecting us more and building trustful relationships. There are many ideas and tools in the pipeline we can’t wait to show and share. 
+            {translate('details.small1')}<br/><br/>
+            {translate('details.small2')}<br/><br/>
+            {translate('details.small3')} 
             </div>
         </DetailsText>
       </DetailsStyle>

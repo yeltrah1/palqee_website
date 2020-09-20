@@ -165,5 +165,29 @@ export default {
         'casesStartup.link3': "Speak to sales",
         'casesSme.link3': "Book a demo now",
         'casesEnterprise.link3': "Speak to sales",
+
+        //about_us
+        'about.large': "Our Mission",
+        'about.small': "We facilitate ethical and secure management of Personal Data universally for everyone.",
+        'culture.title': "Our Culture",
+        'culture.desc': "There is a general misconception that data privacy equals to less data sharing which is why companies often see it as an innovation road blocker and expense rather than an opportunity.",
+        'culture.bold': "We are changing that.",
+        'details.large': "We believe Data Privacy is about transparency and building a trusted relationship between consumer and business.",
+        'details.small1': "It has the potential to be the most powerful differentiator for customer loyalty and even more, it will be an enabler to access valuable data in real-time.",
+        'details.small2': "Up until now, the infrastructure to achieve that was missing: A tool which allows companies to navigate safely through the data privacy regulation jungle while bridging the gap between company and customer for transparent data privacy management.",
+        'details.small3': "We get up every day excited about Data Privacy, the opportunities it can bring in connecting us more and building trustful relationships. There are many ideas and tools in the pipeline we can’t wait to show and share.",
+        'innov.banner': "To get a glimpse of what we are up to, check out our innovation roadmap.",
+        'innov.button': "Take me there",
+        'team.title': "Our Team",
+        'team.desc': "We are a PrivacyTech company created by experts in software development, privacy by design, and Enterprise solutions.",
+        'team.tab1': "Management Team",
+        'team.tab2': "Advisory Board",
+        'aboutBlog.title': "Read more about Palqee in our blog",
+        'aboutBlog.button': "Go to Blog",
+
+        //partners
+        'partner.title': "Partner with",
+        'partner.small': "Data Privacy Compliance can only be achieved through collaboration. We’re always exploring ways of doing exactly that. Check out our partner programs and reach out to us.",
+        "partner.button": "Contact us",
     }
 }

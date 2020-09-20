@@ -92,11 +92,13 @@ const AboutHero = () => {
       <HeroStyle>
         <HeroText>
             <div className="large">
-                <span className="semi"><u>Our Mission</u></span><br/>
+                <span className="semi"><u>{translate('about.large')}</u></span><br/>
             </div>
             <div className="small">
-                We facilitate ethical and secure management of Personal Data universally for everyone.<br/>
-                <GetStartedButton>Get started for free</GetStartedButton>
+                {translate('about.small')}<br/>
+                <Link href="/book-demo">
+                    <GetStartedButton>{translate('surveysHero.button')}</GetStartedButton>
+                </Link>
             </div>
         </HeroText>
         <Image src={"/static/images/globe.png"}/>

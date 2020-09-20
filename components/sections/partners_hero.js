@@ -73,19 +73,21 @@ const HeroText = styled.div`
     }
 `;
 
-const PartnersHero = () => {
+const PartnersHero = ({ scrollRef, scrollToRef }) => {
     
+    const executeScroll = () => scrollToRef(scrollRef)
+
     return (
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                        Partner with&nbsp;
-                        <span className="semi"><u>Palqee</u></span><br/>
+                    {translate('partner.title')}&nbsp;
+                    <span className="semi"><u>Palqee</u></span><br/>
                 </div>
                 <div className="small">
-                Data Privacy Compliance can only be achieved through collaboration. We’re always exploring ways of doing exactly that. Check out our partner programs and reach out to us.<br/><br/>
-                    <GetStartedButton>Become a Partner</GetStartedButton>
+                {translate('partner.small')}<br/><br/>
+                    <GetStartedButton onClick={executeScroll}>{translate('partner.button')}</GetStartedButton>
                 </div>
             </HeroText>
         </HeroStyle>

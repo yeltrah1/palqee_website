@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -130,9 +129,9 @@ const Culture = () => {
             <CultureStyle>
                 <Container>
                     <CultureText>
-                        <div className="large">Our Culture</div>
-                        <div className="small">There is a general misconception that data privacy equals to less data sharing which is why companies often see it as an innovation road blocker and expense rather than an opportunity.</div>
-                        <div className="small-bold">We are changing that.</div>
+                        <div className="large">{translate('culture.title')}</div>
+                        <div className="small">{translate('culture.desc')}</div>
+                        <div className="small-bold">{translate('culture.bold')}</div>
                     </CultureText>
                     <Image className="desktop" src={"/static/patterns/lines_small.svg"}/>
                     <Image className="mobile" src={"/static/patterns/lines_mobile.png"}/>
