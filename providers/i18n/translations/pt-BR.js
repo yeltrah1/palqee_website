@@ -193,6 +193,19 @@ export default {
         'solutions.small': "Não importa se você esteja planejando expandir sua lista de ofertas, entregando projetos de adequação à regulamentações de proteção de dados ou apenas buscando soluções para recomendar a seus clientes, nosso programa de Parceiro de Implementação oferece a oportunidade certa para o seu crescimento.",
         'solutions.link': "Torne-se um Parceiro de Implementação",
         'solutions.benefit': "Benefícios para o Parceiro",
-        'solutions.benefit1': "Compartilhamento de receita nos dois primeiros anos em novas contas",
+        'solutions.benefit1': "Compartilhamento de receita em novas contas",
+        'solutions.benefit2': "Repasse de cobrança ao cliente final",
+        'solutions.benefit3': "Listagem no diretório de Parceiros Certificados Palqee",
+        'solutions.benefit4': "Gerente de contas dedicado",
+        'solutions.benefit5': "Acesso gratuito a treinamento e certificações Palqee",
+        'dpo.large': "Programa DPO as a Service",
+        'dpo.small': "Você gerencia atividades de conformidade em Privacidade de Dados para vários clientes? O Programa DPO as a service pode ser a solução certa pra você. Tenha acesso multi-conta para gerenciais diversos clientes e opções flexíveis para repasse de cobrança.",
+        'dpo.link': "Torne-se um DPO Parceiro",
+
+        'dpo.benefits': "Benefícios para o DPO Parceiro",
+        'dpo.benefits1': "Acesso multi-conta",
+        'dpo.benefits2': "Repasse de cobrança ao cliente final",
+        'dpo.benefits3': "Listagem no diretório de Parceiros Certificados",
+        'dpo.benefits4': "Acesso gratuito a treinamento e certificações Palqee",
     }
 }

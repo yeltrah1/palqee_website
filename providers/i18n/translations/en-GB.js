@@ -194,8 +194,17 @@ export default {
         'solutions.link': "Become a Solutions Partner",
         'solutions.benefit': "The Solutions Partner Benefits",
         'solutions.benefit1': "Revenue-share on first two years of new accounts",
-    
-    
-    
+        'solutions.benefit2': "Flexible billing-to-client options",
+        'solutions.benefit3': "Listed in the Palqee Accreddited Partners Directory",
+        'solutions.benefit4': "Dedicated Palqee Account Manager",
+        'solutions.benefit5': "Free access to training and Palqee Certifications",
+        'dpo.large': "DPO as a Service Program",
+        'dpo.small': "You manage data privacy compliance for several accounts and clients? Palqee DPO as a service program could be the right fit for you. Have multi-account management access and flexible billing options.",
+        'dpo.link': "Get in touch to learn more",
+        'dpo.benefits': "The DPO Partner Benefits",
+        'dpo.benefits1': "Multi-account access",
+        'dpo.benefits2': "Flexible billing-to-client options",
+        'dpo.benefits3': "Listed in the Palqee Accreddited Partners Directory",
+        'dpo.benefits4': "Free access to training and Palqee Certifications",
     }
 }

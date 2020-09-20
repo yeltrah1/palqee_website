@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -40,10 +40,12 @@ const PartnerText = styled.div`
     justify-items: start;
     grid-template-columns: 1fr;
     margin-left: 20px;
+    margin-top: -20px;
     height: 40%;  
 
     @media screen and (max-width: 750px) {
         margin-left: 0px;
+        margin-top: 0px;
         justify-items: center;
         grid-column: 1;
         grid-row: 1;
@@ -195,18 +197,24 @@ const PartnersDPO = () => {
                 <Image className="desktop" src={"/static/patterns/partner_dpo.svg"}/>
                 <Image className="mobile" src={"/static/patterns/partner_dpo_mobile.svg"}/>
                 <HighlightText>
-                    <div className="large">The DPO Partner Benefits</div>
+                    <div className="large">{translate('dpo.benefits')}</div>
                         <ul className="small">
-                                <li>Multi-account access</li><br/>
-                                <li>Flexible billing-to-client options</li><br/>                    
-                                <li>Listed in the Palqee Accreddited Partners Directory</li><br/>
-                                <li>Free access to training and Palqee Certifications</li>  
+                                <li>{translate('dpo.benefits1')}</li><br/>
+                                <li>{translate('dpo.benefits2')}</li><br/>                    
+                                <li>{translate('dpo.benefits3')}</li><br/>
+                                <li>{translate('dpo.benefits4')}</li>  
                         </ul>
                 </HighlightText>
                 <PartnerText>
-                    <div className="large">DPO as a Service Program</div>
-                    <div className="small">You manage data privacy compliance for several accounts and clients? Palqee DPO as a service program could be the right fit for you. have multi-account management access and flexible billing options.</div>
-                    <div className="link"><u>Get in touch to learn more</u></div>
+                    <div className="large">{translate('dpo.large')}</div>
+                    <div className="small">{translate('dpo.small')}</div>
+                    <div className="link">
+                        <ScrollTo>
+                        {({ scroll }) => (
+                        <u onClick={() => scroll({ y: 4000 })}>{translate('dpo.link')}</u>
+                        )}
+                        </ScrollTo>
+                    </div>
                 </PartnerText>
             </Wrapper>
       </ThemeProvider>

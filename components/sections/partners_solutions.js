@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { ScrollTo } from "react-scroll-to";
-import { useIntl } from 'react-intl';
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -124,6 +123,7 @@ const HighlightText = styled.div`
     place-self: center;
     grid-template-columns: 1fr;
     margin-top: -20px;
+    margin-right: 50px;
 
     @media screen and (max-width: 750px) {
         grid-column: 1;
@@ -154,6 +154,7 @@ const HighlightText = styled.div`
     }
 
     .small {
+        max-width: 80%;
         margin-top: 10px;
         margin-left: -20px;
         font-family: Poppins;
@@ -183,8 +184,6 @@ const HighlightText = styled.div`
 
 const SolutionsPartner = () => {
     
-    const intl = useIntl()
-
     return (
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
@@ -192,24 +191,23 @@ const SolutionsPartner = () => {
                     <div className="large">{translate('solutions.large')}</div>
                     <div className="small">{translate('solutions.small')}</div>
                     <div className="link">
-                    <ScrollTo>
-                    {({ scroll }) => (
-                        <u onClick={() => scroll({ y: 3000 })}>{translate('solutions.link')}</u>
-                    )}
-                    </ScrollTo>
+                        <ScrollTo>
+                        {({ scroll }) => (
+                            <u onClick={() => scroll({ y: 4000 })}>{translate('solutions.link')}</u>
+                        )}
+                        </ScrollTo>
                     </div>
                 </PartnerText>
                 <Image className="desktop" src={"/static/patterns/partner_solutions.svg"}/>
                 <Image className="mobile" src={"/static/patterns/partner_solutions_mobile.svg"}/>
-                <HighlightText style={intl.formatMessage({id:'test.country'}) === "en-GB"? {marginRight:"50px"} : {marginRight:"-110px"}}>
+                <HighlightText>
                     <div className="large">{translate('solutions.benefit')}</div>
-                        <ul className="small"
-                        style={intl.formatMessage({id:'test.country'}) === "en-GB"? {width:"80%"} : {width:"60%"}}>
+                        <ul className="small">
                                 <br/><li>{translate('solutions.benefit1')}</li><br/>
-                                <li>Flexible billing-to-client options</li><br/>                    
-                                <li>Listed in the Palqee Accreddited Partners Directory</li><br/>
-                                <li>Dedicated Palqee Account Manager</li><br/>
-                                <li>Free access to training and Palqee Certifications</li>  
+                                <li>{translate('solutions.benefit2')}</li><br/>                    
+                                <li>{translate('solutions.benefit3')}</li><br/>
+                                <li>{translate('solutions.benefit4')}</li><br/>
+                                <li>{translate('solutions.benefit5')}</li>  
                         </ul>
                 </HighlightText>
             </Wrapper>
