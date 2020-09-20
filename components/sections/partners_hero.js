@@ -88,7 +88,7 @@ const PartnersHero = () => {
                 {translate('partner.small')}<br/><br/>
                 <ScrollTo>
                     {({ scroll }) => (
-                    <GetStartedButton onClick={() => scroll({ y: 4000 })}>{translate('partner.button')}</GetStartedButton>
+                    <GetStartedButton onClick={() => scroll({ y: 4000, smooth: true })}>{translate('partner.button')}</GetStartedButton>
                     )}
                 </ScrollTo>
                 </div>

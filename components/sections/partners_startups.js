@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -190,19 +191,25 @@ const StartupsPartner = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <PartnerText>
-                    <div className="large">Startups Support Program</div>
-                    <div className="small">You support startups grow and we want to help. Data Privacy is one of the many things startups have to deal with, better to get started from day one. Startup Partners receive a range of benefits, contact us now to check if you qualify.</div>
-                    <div className="link"><u>Get in touch to learn more</u></div>
+                    <div className="large">{translate('startup.large')}</div>
+                    <div className="small">{translate('startup.small')}</div>
+                    <div className="link">
+                    <ScrollTo>
+                        {({ scroll }) => (
+                        <u onClick={() => scroll({ y: 4000, smooth: true })}>{translate('startup.link')}</u>
+                        )}
+                    </ScrollTo>
+                    </div>
                 </PartnerText>
                 <Image className="desktop" src={"/static/patterns/partner_startups.svg"}/>
                 <Image className="mobile" src={"/static/patterns/partner_startups_mobile.svg"}/>
                 <HighlightText>
-                    <div className="large">Startups Program Benefits</div>
+                    <div className="large">{translate('startup.benefits')}</div>
                         <ul className="small">
-                                <br/><li>Discounts for portfolio companies</li><br/>
-                                <li>Palqee Q&A live sessions</li><br/>                    
-                                <li>Dedicate Palqee support for your program</li><br/>
-                                <li>Co-branded marketing materials</li>  
+                                <br/><li>{translate('startup.benefits1')}</li><br/>
+                                <li>{translate('startup.benefits2')}</li><br/>                    
+                                <li>{translate('startup.benefits3')}</li><br/>
+                                <li>{translate('startup.benefits4')}</li>  
                         </ul>
                 </HighlightText>
             </Wrapper>

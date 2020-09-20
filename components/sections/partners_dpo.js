@@ -211,7 +211,7 @@ const PartnersDPO = () => {
                     <div className="link">
                         <ScrollTo>
                         {({ scroll }) => (
-                        <u onClick={() => scroll({ y: 4000 })}>{translate('dpo.link')}</u>
+                        <u onClick={() => scroll({ y: 4000, smooth: true })}>{translate('dpo.link')}</u>
                         )}
                         </ScrollTo>
                     </div>

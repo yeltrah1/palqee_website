@@ -193,7 +193,7 @@ const SolutionsPartner = () => {
                     <div className="link">
                         <ScrollTo>
                         {({ scroll }) => (
-                            <u onClick={() => scroll({ y: 4000 })}>{translate('solutions.link')}</u>
+                            <u onClick={() => scroll({ y: 4000, smooth: true })}>{translate('solutions.link')}</u>
                         )}
                         </ScrollTo>
                     </div>

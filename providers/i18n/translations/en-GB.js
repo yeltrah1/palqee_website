@@ -206,5 +206,13 @@ export default {
         'dpo.benefits2': "Flexible billing-to-client options",
         'dpo.benefits3': "Listed in the Palqee Accreddited Partners Directory",
         'dpo.benefits4': "Free access to training and Palqee Certifications",
+        'startup.large': "Startups Support Program",
+        'startup.small': "You support startups grow and we want to help. Data Privacy is one of the many things startups have to deal with, better to get started from day one. Startup Partners receive a range of benefits, contact us now to check if you qualify.",
+        'startup.link': "Get in touch to learn more",
+        'startup.benefits': "Startups Program Benefits",
+        'startup.benefits1': "Discounts for portfolio companies",
+        'startup.benefits2': "Palqee Q&A live sessions",
+        'startup.benefits3': "Dedicated Palqee support for your program",
+        'startup.benefits4': "Co-branded marketing materials",
     }
 }

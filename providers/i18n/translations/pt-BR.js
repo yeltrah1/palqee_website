@@ -201,11 +201,18 @@ export default {
         'dpo.large': "Programa DPO as a Service",
         'dpo.small': "Você gerencia atividades de conformidade em Privacidade de Dados para vários clientes? O Programa DPO as a service pode ser a solução certa pra você. Tenha acesso multi-conta para gerenciais diversos clientes e opções flexíveis para repasse de cobrança.",
         'dpo.link': "Torne-se um DPO Parceiro",
-
         'dpo.benefits': "Benefícios para o DPO Parceiro",
         'dpo.benefits1': "Acesso multi-conta",
         'dpo.benefits2': "Repasse de cobrança ao cliente final",
         'dpo.benefits3': "Listagem no diretório de Parceiros Certificados",
         'dpo.benefits4': "Acesso gratuito a treinamento e certificações Palqee",
+        'startup.large': "Programa de Suporte a Start-ups",
+        'startup.small': "Se você oferece suporte para start-ups crescerem, nós queremos ajudar. Privacidade de dados é uma das muitas coisas com as quais start-ups tem que lidar, então é melhor começar da maneira certa. Parceiros de Suporte a Start-ups recebem uma variedade de benefícios, entre em contato para saber se você é elegível.",
+        'startup.link': "Entre em contato para saber mais",
+        'startup.benefits': "Benefícios de Suporte a Start-ups",
+        'startup.benefits1': "Descontos para start-ups em seu portfólio",
+        'startup.benefits2': "Sessões de Q&A live com a Palqee",
+        'startup.benefits3': "Time de suporte dedicado para seu programa",
+        'startup.benefits4': "Atividades de co-marketing e co-branding",
     }
 }
