@@ -182,7 +182,6 @@ export default {
         'team.desc': "Nós somos uma empresa PrivacyTech criada por experts em desenvolvimento de software, privacy by design, e Enterprise solutions.",
         'team.tab1': "Board Executivo",
         'team.tab2': "Conselho Consultivo",
-        'team.disclosure': "Nós respeitamos o direito de indivíduos, por essa razão nós removemos um membro do conselho que solicitou não ter seus dados divulgados aqui.",
         'aboutBlog.title': "Mais sobre nós no blog da Palqee",
         'aboutBlog.button': "Ir para Blog",
         
