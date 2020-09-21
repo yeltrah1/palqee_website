@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
@@ -64,9 +64,9 @@ const FindHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                    Contact our <span className="semi">
-                    <u>certified partners</u></span><br/>
-                    for implementation and training
+                    {translate('find.contact')}<span className="semi">
+                    <u>{translate('find.partners')}</u></span><br/>
+                    {translate('find.hero')}
                 </div>
             </HeroText>
         </HeroStyle>

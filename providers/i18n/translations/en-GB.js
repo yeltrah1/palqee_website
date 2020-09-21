@@ -221,5 +221,26 @@ export default {
         'training.benefits4': "Free training and Palqee Certifications",
         'training.large': "Palqee Training & Certification Program",
         'training.small': "As an official partner you can offer training and certification on Palqee to others. We support you with special access to the platform, marketing collateral and our dedicated support team.",
+        'training.link': "Get in touch to learn more",
+        'dev.large': "Development Partner Program",
+        'dev.small': "You want to integrate Palqee with your solution? There are countless opportunities on how we can improve the experience and the services for our and your customers.",
+        'dev.link': "Get in touch to learn more",
+
+        //find_partner
+        'find.contact': "Contact our ",
+        'find.partners': "certified partners",
+        'find.hero': "for implementation, training and more",
+        'find.filter': "Filter",
+        'find.service': "By Service",
+        'find.industry': "By Industry",
+        'find.country': "By Country",
+        'find.search': "Find a Partner",
+        'find.allServices': "All Services",
+        'find.allInd': "All Industries",
+        'find.allCountries': "All Countries",
+        'find.consulting': "Compliance Consulting",
+        'find.palqee': "Palqee Implementation",
+        'find.training': "Workforce Training",
+        'find.finance': "Finance",
     }
 }

@@ -187,7 +187,7 @@ export default {
         
         //partners
         'partner.title': "Seja um parceiro da",
-        'partner.small': "Conformidade em privacidade de dados é alcançada somente quando existe sinergia entre parceiros. Nós estamos sempre explorando maneiras de fazer exatamente isso. Leia abaixo sobre os nossos programas para parceiros e entre em contato conosco.",
+        'partner.small': "Conformidade em privacidade de dados é alcançada somente quando existe sinergia entre parceiros. Nós estamos sempre explorando maneiras de fazer exatamente isso.",
         "partner.button": "Entre em contato",
         'solutions.large': "Parceiro de Implementação",
         'solutions.small': "Não importa se você esteja planejando expandir sua lista de ofertas, entregando projetos de adequação à regulamentações de proteção de dados ou apenas buscando soluções para recomendar a seus clientes, nosso programa de Parceiro de Implementação oferece a oportunidade certa para o seu crescimento.",
@@ -220,5 +220,27 @@ export default {
         'training.benefits3': "Acesso a novos produtos pré-lançamento",
         'training.benefits4': "Treinamento e certificações Palqee gratuitos",
         'training.large': "Programa de Treinamento & Certificação Palqee",
+        'training.small': "Como parceiro oficial você estará credenciado para oferecer treinamento e certificações da Palqee. Nós ofereceremos total suporte com acesso especial à plataforma, material de marketing e nosso time dedicado de suporte ao cliente.",
+        'training.link': "Torne-se um Parceiro Educacional",
+        'dev.large': "Parceiros de Desenvolvimento",
+        'dev.small': "Quer ter sua solução integrada no ambiente da Palqee? Existem diversas oportunidades para melhorar a experiência e os serviços para nossos e seus clientes.",
+        'dev.link': "Entre em contato para saber mais",
+
+        //find_partner
+        'find.contact': "Encontre nossos ",
+        'find.partners': "Parceiros Certificados",
+        'find.hero': "para implementação, treinamento e mais",
+        'find.filter': "Filtrar",
+        'find.service': "Por Serviço",
+        'find.industry': "Por Indústria",
+        'find.country': "Por Localidade",
+        'find.search': "Busque um Parceiro",
+        'find.allServices': "Todos os Serviços",
+        'find.allInd': "Todas as Indústrias",
+        'find.allCountries': "Todos os Locais",
+        'find.consulting': "Consultoria de Adequação",
+        'find.palqee': "Implementação da Palqee",
+        'find.training': "Treinamento da Organização",
+        'find.finance': "Serviços Financeiros",
     }
 }

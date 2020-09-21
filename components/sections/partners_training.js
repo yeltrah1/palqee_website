@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -227,7 +228,13 @@ const PartnersTraining = () => {
                 <PartnerText>
                     <div className="large">{translate('training.large')}</div>
                     <div className="small">{translate('training.small')}</div>
-                    <div className="link"><u>Get in touch to learn more</u></div>
+                    <div className="link">
+                    <ScrollTo>
+                        {({ scroll }) => (
+                        <u onClick={() => scroll({ y: 4000, smooth: true })}>{translate('training.link')}</u>
+                    )}
+                    </ScrollTo>
+                    </div>
                 </PartnerText>
             </Wrapper>
       </ThemeProvider>

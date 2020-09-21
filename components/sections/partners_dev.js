@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -113,9 +114,15 @@ const DevPartner = () => {
       <ThemeProvider theme={palqeeTheme}>
             <Wrapper>
                 <PartnerText>
-                    <div className="large">Development Partner Program</div>
-                    <div className="small">You want to integrate Palqee with your solution? Great. There are countless opportunities on how we can improve experience for our and your customers.</div>
-                    <div className="link"><u>Get in touch to learn more</u></div>
+                    <div className="large">{translate('dev.large')}</div>
+                    <div className="small">{translate('dev.small')}</div>
+                    <div className="link">
+                    <ScrollTo>
+                        {({ scroll }) => (
+                        <u onClick={() => scroll({ y: 4000, smooth: true })}>{translate('dev.link')}</u>
+                        )}
+                    </ScrollTo>
+                    </div>
                 </PartnerText>
                 <Image src={"/static/images/dev_partner.png"}/>
             </Wrapper>
