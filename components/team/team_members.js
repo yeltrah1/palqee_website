@@ -17,22 +17,24 @@ const Wrapper = styled.div`
   height: 700px;
 
     @media screen and (max-width: 750px) {
-        grid-template-rows: 200px 70px;
+        grid-template-rows: 0.5fr 0.2fr 3fr;
         height: auto;
         width: 90vw;
     }
 
-    .mobile {
-        display: none;
+    .team {
+        grid-template-columns: 315px 315px 315px;
         @media screen and (max-width: 750px) {
-            display: grid;
+            grid-template-columns: 280px;
+            grid-template-rows: repeat(3, 400px);
         }
     }
 
-    .desktop {
-        display: grid;
+    .advisor {
+        grid-template-columns: 315px 315px;
         @media screen and (max-width: 750px) {
-            display: none;
+            grid-template-columns: 280px;
+            grid-template-rows: repeat(2, 400px);
         }
     }
 `;
@@ -215,35 +217,12 @@ const TeamMembers = () => {
                     ></motion.div>
                 </TabsContainer>
                 <TeamContainer 
-                    className="desktop"
+                    className={ tab === "team" ? "team" : "advisor" }
                     key={tab}
                     initial={{ opacity: 0.5 }} 
                     animate={{ opacity: 1 }} 
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    style={ tab === "team" ? {gridTemplateColumns: "315px 315px 315px"} : {gridTemplateColumns: "315px 315px"}}
-                    >
-                        {members
-                        .filter(member => member.type === tab )
-                        .map(member => 
-                            <MemberCards 
-                                type={member.type}
-                                image={member.image}
-                                name={member.name}
-                                role={intl.formatMessage({id:'test.country'}) === "en-GB"? member.role : member.rolePT } 
-                                linkedin={member.linkedin}
-                                key={member.id}
-                            />
-                        )}
-                </TeamContainer>
-                <TeamContainer 
-                    className="mobile"
-                    key={tab}
-                    initial={{ opacity: 0.5 }} 
-                    animate={{ opacity: 1 }} 
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    style={ tab === "team" ? {gridTemplateRows: "repeat(3, 400px)"} : {gridTemplateRows: "repeat(2, 400px)"}}
                     >
                         {members
                         .filter(member => member.type === tab )
