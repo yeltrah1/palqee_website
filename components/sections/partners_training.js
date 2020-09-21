@@ -226,7 +226,7 @@ const PartnersTraining = () => {
                 </HighlightText>
                 <PartnerText>
                     <div className="large">{translate('training.large')}</div>
-                    <div className="small">As an official partner you can offer training and certification on Palqee to others. We support you with special access to the platform, marketing collateral and our dedicated support team.</div>
+                    <div className="small">{translate('training.small')}</div>
                     <div className="link"><u>Get in touch to learn more</u></div>
                 </PartnerText>
             </Wrapper>

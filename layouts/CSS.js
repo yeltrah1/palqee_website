@@ -777,9 +777,10 @@ export const AboutStyle = styled.div`
     @media screen and (max-width: 750px) {
       background-image: url("/static/patterns/light_blue_about.png");
       background-repeat: no-repeat;
-      background-position: -200px 0px;
+      background-position: -200px -200px;
       background-size: 800px 2050px;
-      height: 2300px;
+      height: auto;
+      margin-top: 0px;
       padding-top: 0px;
     }
   }

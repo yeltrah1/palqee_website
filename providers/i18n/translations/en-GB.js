@@ -220,5 +220,6 @@ export default {
         'training.benefits3': "Early access to new products",
         'training.benefits4': "Free training and Palqee Certifications",
         'training.large': "Palqee Training & Certification Program",
+        'training.small': "As an official partner you can offer training and certification on Palqee to others. We support you with special access to the platform, marketing collateral and our dedicated support team.",
     }
 }

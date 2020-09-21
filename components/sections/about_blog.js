@@ -21,8 +21,8 @@ const Wrapper = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 120px 300px;
-        margin-top: 20px;
+        grid-template-rows: 120px 430px;
+        margin-top: 120px;
         place-items: start;
     }
 `;
