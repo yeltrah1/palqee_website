@@ -240,7 +240,7 @@ export default {
         'find.allCountries': "Todos os Locais",
         'find.consulting': "Consultoria de Adequação",
         'find.palqee': "Implementação da Palqee",
-        'find.training': "Treinamento da Organização",
+        'find.training': "Treinamento/Certificação",
         'find.finance': "Serviços Financeiros",
     }
 }

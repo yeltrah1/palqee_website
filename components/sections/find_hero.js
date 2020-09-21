@@ -21,7 +21,7 @@ const HeroText = styled.div`
     margin-top: 160px;
 
     @media screen and (max-width: 750px) {
-        margin-top: 110px;
+        margin-top: 90px;
         font-size: 30px;
         width: 85%;
     }
