@@ -182,6 +182,7 @@ export default {
         'team.desc': "Nós somos uma empresa PrivacyTech criada por experts em desenvolvimento de software, privacy by design, e Enterprise solutions.",
         'team.tab1': "Board Executivo",
         'team.tab2': "Conselho Consultivo",
+        'team.disclosure': "Nós respeitamos o direito de indivíduos, por essa razão nós removemos um membro do conselho que solicitou não ter seus dados divulgados aqui.",
         'aboutBlog.title': "Mais sobre nós no blog da Palqee",
         'aboutBlog.button': "Ir para Blog",
         
@@ -214,5 +215,11 @@ export default {
         'startup.benefits2': "Sessões de Q&A live com a Palqee",
         'startup.benefits3': "Time de suporte dedicado para seu programa",
         'startup.benefits4': "Atividades de co-marketing e co-branding",
+        'training.benefits': "Benefícios do Parceiro Educacional",
+        'training.benefits1': "Ambiente Palqee de demonstração gratuito",
+        'training.benefits2': "Acesso a material exclusivo de marketing",
+        'training.benefits3': "Acesso a novos produtos pré-lançamento",
+        'training.benefits4': "Treinamento e certificações Palqee gratuitos",
+        'training.large': "Programa de Treinamento & Certificação Palqee",
     }
 }

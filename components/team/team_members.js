@@ -12,7 +12,7 @@ import members from './members.json';
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.3fr 1fr;
+  grid-template-rows: 0.5fr 0.3fr 1fr 30px;
   width: 100vw;
   height: 700px;
 
@@ -20,6 +20,25 @@ const Wrapper = styled.div`
         grid-template-rows: 0.5fr 0.2fr 3fr;
         height: 1750px;
         width: 90vw;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .disclosure {
+        display: grid;
+        padding-top: 30px;
+        margin-bottom: -20px;
+        place-self: center;
+        width: 50%;
+        font-family: Poppins;
+        font-size: 14px;
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: ${props => props.theme.mainFontColor};
     }
 `;
 
@@ -222,6 +241,9 @@ const TeamMembers = () => {
                             />
                         )}
                 </TeamContainer>
+                <div className={tab === "team" ? "hide" : "disclosure"}>
+                    *{translate('team.disclosure')}
+                </div>
             </Wrapper>
       </ThemeProvider>
     )

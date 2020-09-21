@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -217,16 +216,16 @@ const PartnersTraining = () => {
                 <Image className="desktop" src={"/static/patterns/partner_training.svg"}/>
                 <Image className="mobile" src={"/static/patterns/partner_training_mobile.png"}/>
                 <HighlightText>
-                    <div className="large">Training Partner Benefits</div>
+                    <div className="large">{translate('training.benefits')}</div>
                         <ul className="small">
-                                <br/><li>Free Palqee "demo" environment</li><br/>
-                                <li>Access to marketing material and collateral</li><br/>                    
-                                <li>Early access to new products</li><br/>
-                                <li>Free training and Palqee Certifications</li>  
+                                <br/><li>{translate('training.benefits1')}</li><br/>
+                                <li>{translate('training.benefits2')}</li><br/>                    
+                                <li>{translate('training.benefits3')}</li><br/>
+                                <li>{translate('training.benefits4')}</li>  
                         </ul>
                 </HighlightText>
                 <PartnerText>
-                    <div className="large">Palqee Training & Certification Program</div>
+                    <div className="large">{translate('training.large')}</div>
                     <div className="small">As an official partner you can offer training and certification on Palqee to others. We support you with special access to the platform, marketing collateral and our dedicated support team.</div>
                     <div className="link"><u>Get in touch to learn more</u></div>
                 </PartnerText>
