@@ -64,8 +64,8 @@ const TestHero = () => {
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
             <HeroText>
-                <div className="large">{translate('test.large')}</div>
-                <div className="small">{translate('test.small')}</div>
+                <div className="large">{translate('takeTest.large')}</div>
+                <div className="small">{translate('takeTest.small')}</div>
             </HeroText>
         </HeroStyle>
       </ThemeProvider>

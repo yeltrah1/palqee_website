@@ -40,8 +40,9 @@ const Headline = styled.div`
 
   @media screen and (max-width: 750px) {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     height: 25px;
+    text-align: center;
   }
 `;
 

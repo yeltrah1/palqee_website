@@ -256,7 +256,7 @@ export default {
     'blog.business': "Negócio",
 
     //test
-    'test.large': "Faça o Teste",
-    'test.small': "Responda as perguntas abaixo para saber quais regulamentações de privacidade você precisa seguir.",
+    'takeTest.large': "Faça o Teste",
+    'takeTest.small': "Responda as perguntas abaixo para saber quais regulamentações de privacidade você precisa seguir.",
     }
 }
