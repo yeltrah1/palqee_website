@@ -30,7 +30,7 @@ const TestStyle = styled.div`
   }
 
   @media screen and (max-width: 750px) {
-    margin-top: -180px;
+    margin-top: -150px;
     grid-template-rows: 500px 200px;
   }
 `;
