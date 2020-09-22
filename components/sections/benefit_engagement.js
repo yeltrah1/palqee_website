@@ -32,6 +32,7 @@ const BenefitText = styled.div`
         grid-row: 1;
         margin-left: 10px;
         width: 95%;
+        margin-bottom: 20px;
     }
 
     @font-face {

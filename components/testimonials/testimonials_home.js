@@ -61,7 +61,7 @@ const TestimonialsText = styled.div`
     @media screen and (max-width: 750px) {
         width: 95vw;
         margin-left: -25px;
-        margin-top: -90px;
+        margin-top: -40px;
         place-self: start;
         grid-template-rows: 80px 160px 20px;
     }
@@ -138,7 +138,7 @@ const Cards = styled.div`
         grid-column: 1;
         place-self: start;
         margin-left: 20px;
-        margin-top: -60px;
+        margin-top: 50px;
     }
 
     @font-face {

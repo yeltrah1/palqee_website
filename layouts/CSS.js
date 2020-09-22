@@ -611,7 +611,7 @@ export const HomeStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 560px;
+      height: 600px;
       width: 300vw;
     }
   }
