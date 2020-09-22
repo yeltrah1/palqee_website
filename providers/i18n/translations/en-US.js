@@ -254,5 +254,9 @@ export default {
     'blog.tutorials': "Tutorials",
     'blog.resources': "Resources & Tips",
     'blog.business': "Business",
+    
+    //test
+    'test.large': "Take the Test",
+    'test.small': "Take a short survey to find out which privacy regulations you need to comply with.",
     }
 }

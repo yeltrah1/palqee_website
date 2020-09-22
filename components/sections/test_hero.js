@@ -18,7 +18,11 @@ const HeroText = styled.div`
     grid-template-rows: 1fr 0.5fr;
     width: 100vw;
     height: 400px;
-    margin-top: 160px;
+    margin-top: 140px;
+
+    @media screen and (max-width: 750px) {
+        width: 90vw;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -42,6 +46,16 @@ const HeroText = styled.div`
             font-size: 32px;
         }
     }
+
+    .small {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #cbd0df;
+        text-align: center;
+    }
 `;
 
 const TestHero = () => {
@@ -50,7 +64,8 @@ const TestHero = () => {
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
             <HeroText>
-                <div className="large">Take the Test</div>
+                <div className="large">{translate('test.large')}</div>
+                <div className="small">{translate('test.small')}</div>
             </HeroText>
         </HeroStyle>
       </ThemeProvider>

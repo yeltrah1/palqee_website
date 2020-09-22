@@ -254,5 +254,9 @@ export default {
     'blog.tutorials': "Tutoriais",
     'blog.resources': "Dicas & Materiais",
     'blog.business': "Negócio",
+
+    //test
+    'test.large': "Faça o Teste",
+    'test.small': "Responda as perguntas abaixo para saber quais regulamentações de privacidade você precisa seguir.",
     }
 }
