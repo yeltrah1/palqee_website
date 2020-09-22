@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import translate from "../../providers/i18n/translate";
+import { useIntl } from 'react-intl';
 
 const ContainerStyle = styled.div`
   display: grid;
@@ -285,38 +287,39 @@ const SearchStyle = styled.div`
 const BlogSearch = () => {
 
     const router = useRouter()
+    const intl = useIntl()
 
     return (
     <>
       <FilterMobile>
         <a className="button" href="#open-search">
-          <div className="text">Filter</div>
+          <div className="text">{translate('find.filter')}</div>
           <Filter src={"/static/icons/filter_icon.svg"}/>
         </a>
         <div id="open-search" className="modal">
           <div className="box">
             <div className="header">
-              Filter
+            {translate('find.filter')}
               <a href="#_" title="Close" className="modal-close">
                 <Close src={"/static/icons/close_dark.svg"}/>
               </a>  
             </div>
             <FieldStyle>
-              <div className="title">By Category</div>
+              <div className="title">{translate('blog.category')}</div>
               <SelectStyle id="category-mobile" onChange={() => router.push('/blog/'+document.getElementById("category-mobile").value)} >
-                  <option selected={router.query.category === "all" ? true : false} value="all">All Articles</option>
-                  <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">Tutorials</option>
-                  <option selected={router.query.category === "resources" ? true : false} value="resources">Resources & Tips</option>
-                  <option selected={router.query.category === "business" ? true : false} value="business">Business</option>
+                  <option selected={router.query.category === "all" ? true : false} value="all">{intl.formatMessage({id:'blog.all'})}</option>
+                  <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">{intl.formatMessage({id:'blog.tutorials'})}</option>
+                  <option selected={router.query.category === "resources" ? true : false} value="resources">{intl.formatMessage({id:'blog.resources'})}</option>
+                  <option selected={router.query.category === "business" ? true : false} value="business">{intl.formatMessage({id:'blog.business'})}</option>
                   <option selected={router.query.category === "lgpd" ? true : false} value="lgpd">Lei Geral de Proteção de Dados (LGPD)</option>
                   <option selected={router.query.category === "gdpr" ? true : false} value="gdpr">General Data Protection Regulation (GDPR)</option>
               </SelectStyle>
             </FieldStyle>
             <FieldStyle>
-                <div className="title">Search</div>
+                <div className="title">{translate('blog.search')}</div>
                 <form onSubmit={() => router.push('/blog/all?article='+document.getElementById("article-mobile").value)}>
                 <SearchStyle>
-                  <InputStyle type="text" id="article-mobile" placeholder="Search"/>
+                  <InputStyle type="text" id="article-mobile" placeholder={intl.formatMessage({id:'blog.search'})}/>
                   <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
                 </SearchStyle>
                 </form>
@@ -330,24 +333,21 @@ const BlogSearch = () => {
 
       <ContainerStyle>
           <FieldStyle>
-              <div className="title">By Category</div>
+              <div className="title">{translate('blog.category')}</div>
               <SelectStyle id="category" onChange={() => router.push('/blog/[category]', '/blog/'+document.getElementById("category").value, {shallow: true})} >
-                  <option selected={router.query.category === "all" ? true : false} value="all">All Articles</option>
-                  <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">Tutorials</option>
-                  <option selected={router.query.category === "resources" ? true : false} value="resources">Resources & Tips</option>
-                  <option selected={router.query.category === "business" ? true : false} value="business">Business</option>
+                  <option selected={router.query.category === "all" ? true : false} value="all">{intl.formatMessage({id:'blog.all'})}</option>
+                  <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">{intl.formatMessage({id:'blog.tutorials'})}</option>
+                  <option selected={router.query.category === "resources" ? true : false} value="resources">{intl.formatMessage({id:'blog.resources'})}</option>
+                  <option selected={router.query.category === "business" ? true : false} value="business">{intl.formatMessage({id:'blog.business'})}</option>
                   <option selected={router.query.category === "lgpd" ? true : false} value="lgpd">Lei Geral de Proteção de Dados (LGPD)</option>
                   <option selected={router.query.category === "gdpr" ? true : false} value="gdpr">General Data Protection Regulation (GDPR)</option>
               </SelectStyle>
           </FieldStyle>
           <FieldStyle>
-              <div className="title">Search</div>
-              <form onSubmit={() => router.push({ 
-                      pathname: '/blog/[category]',
-                      query: { article: query }
-                      })}>
+              <div className="title">{translate('blog.search')}</div>
+              <form onSubmit={() => router.push('/blog/all?article='+document.getElementById("article").value)}>
                   <SearchStyle>
-                      <InputStyle type="text" name="article" placeholder="Search"/>
+                      <InputStyle type="text" id="article" placeholder={intl.formatMessage({id:'blog.search'})}/>
                       <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
                   </SearchStyle>
               </form>

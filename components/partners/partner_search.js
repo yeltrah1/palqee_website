@@ -295,7 +295,7 @@ const PartnerSearch = () => {
                     <SelectStyle id="industry-mobile" onChange={() => router.push('/accredited/'+document.getElementById("service-mobile").value+'/'+document.getElementById("industry-mobile").value+'/'+document.getElementById("country-mobile").value)}>
                         <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">{intl.formatMessage({id:'find.allInd'})}</option>
                         <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">{intl.formatMessage({id:'find.finance'})}</option>
-                        <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
+                        <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">{intl.formatMessage({id:'find.automotive'})}</option>
                         <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
                     </SelectStyle>
                 </FieldStyle>
@@ -303,8 +303,8 @@ const PartnerSearch = () => {
                     <div className="title">{translate('find.country')}</div>
                     <SelectStyle id="country-mobile" onChange={() => router.push('/accredited/'+document.getElementById("service-mobile").value+'/'+document.getElementById("industry-mobile").value+'/'+document.getElementById("country-mobile").value)}>
                         <option selected={router.query.country === "global" ? true : false} value="global">{intl.formatMessage({id:'find.allCountries'})}</option>
-                        <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
-                        <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
+                        <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">{intl.formatMessage({id:'find.brazil'})}</option>
+                        <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">{intl.formatMessage({id:'find.usa'})}</option>
                         <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
                     </SelectStyle>
                 </FieldStyle>
@@ -312,7 +312,7 @@ const PartnerSearch = () => {
                     <div className="title">{translate('find.search')}</div>
                     <form onSubmit={() => router.push('/accredited/all-services/all-industries/global?partner='+document.getElementById("partner-mobile").value)}>
                     <SearchStyle>
-                      <InputStyle type="text" id="partner-mobile" placeholder="Search"/>
+                      <InputStyle type="text" id="partner-mobile" placeholder={intl.formatMessage({id:'blog.search'})}/>
                       <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
                     </SearchStyle>
                     </form>
@@ -338,7 +338,7 @@ const PartnerSearch = () => {
                   <SelectStyle id="industry" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
                       <option selected={router.query.industry === "all-industries" ? true : false} value="all-industries">{intl.formatMessage({id:'find.allInd'})}</option>
                       <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">{intl.formatMessage({id:'find.finance'})}</option>
-                      <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">Automotive</option>
+                      <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">{intl.formatMessage({id:'find.automotive'})}</option>
                       <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
                   </SelectStyle>
               </FieldStyle>
@@ -346,8 +346,8 @@ const PartnerSearch = () => {
                   <div className="title">{translate('find.country')}</div>
                   <SelectStyle id="country" onChange={() => router.push('/accredited/[service]/[industry]/[country]', '/accredited/'+document.getElementById("service").value+'/'+document.getElementById("industry").value+'/'+document.getElementById("country").value, {shallow: true})}>
                       <option selected={router.query.country === "global" ? true : false} value="global">{intl.formatMessage({id:'find.allCountries'})}</option>
-                      <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">Brazil</option>
-                      <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">United States</option>
+                      <option selected={router.query.country === "brazil" && !router.query.partner ? true : false} value="brazil">{intl.formatMessage({id:'find.brazil'})}</option>
+                      <option selected={router.query.country === "usa" && !router.query.partner ? true : false} value="usa">{intl.formatMessage({id:'find.usa'})}</option>
                       <option selected={router.query.country === "portugal" && !router.query.partner ? true : false} value="portugal">Portugal</option>
                   </SelectStyle>
               </FieldStyle>
@@ -355,7 +355,7 @@ const PartnerSearch = () => {
                   <div className="title">{translate('find.search')}</div>
                   <form onSubmit={() => router.push('/accredited/all-services/all-industries/global?partner='+document.getElementById("partner").value)}>
                     <SearchStyle>
-                      <InputStyle type="text" id="partner" placeholder="Search"/>
+                      <InputStyle type="text" id="partner" placeholder={intl.formatMessage({id:'blog.search'})}/>
                       <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
                     </SearchStyle>
                   </form>

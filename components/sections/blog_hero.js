@@ -64,8 +64,8 @@ const BlogHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                    Articles, resources<br/>
-                    and many more in our&nbsp;
+                    {translate('blogHero.small')}<br/>
+                    {translate('blogHero.small2')}&nbsp;
                     <span className="semi"><u>blog</u></span>.
                 </div>
             </HeroText>
