@@ -29,9 +29,8 @@ export default {
     "footer.resources": "Resources",
 
     //home_hero
-    "headline.line1": "There is privacy",
-    "headline.line2": "management software.",
-    "headline.line3": "And there is ",
+    "headline.line1": "There is privacy management software.",
+    "headline.line2": "And there is ",
     "headline.small": "The tool to succeed with internal Privacy Operations",
     "headline.button": "Book a Demo",
     "home.clients": "Trusted by businesses of all sizes",

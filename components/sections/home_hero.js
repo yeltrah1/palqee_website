@@ -25,7 +25,7 @@ const HeroText = styled.div`
     grid-row: 1;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
-    width: 40vw;
+    width: 500px;
     height: 192px;
     margin-top: 40px;
     margin-left: 8vw;
@@ -122,8 +122,7 @@ const HomeHero = () => {
         <HeroText>
             <div className="large">
                 {translate('headline.line1')}<br/>
-                {translate('headline.line2')}<br/>
-                <span className="semi">{translate('headline.line3')}<u>Palqee</u>.</span><br/>
+                <span className="semi">{translate('headline.line2')}<u>Palqee</u>.</span><br/>
             </div>
             <div className="small">
                 {translate('headline.small')}.<br/>
