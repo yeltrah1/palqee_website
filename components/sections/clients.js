@@ -43,8 +43,8 @@ const Headline = styled.div`
     margin-bottom: 40px;
     height: 25px;
     text-align: center;
-    width: 80vw;
-    padding: 0px 10vw;
+    width: 70vw;
+    padding: 0px 15vw;
   }
 `;
 
@@ -95,7 +95,7 @@ const Clients = () => {
               loop: Infinity, 
               duration: 80 }}>
               <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
@@ -104,7 +104,7 @@ const Clients = () => {
               <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
 
               <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>
@@ -113,7 +113,7 @@ const Clients = () => {
               <ClientsStyle height={54} width={54} src={"static/icons/clients/Wesdom_logo.png"}/>
 
               <ClientsStyle height={55} width={137} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={57} width={115} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={37} width={170} src={"static/icons/clients/Dpofficer_brazil.png"}/>
               <ClientsStyle height={53} width={79} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={60} width={162} src={"static/icons/clients/IT2SGroup_logo.png"}/>

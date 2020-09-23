@@ -31,7 +31,8 @@ const HeroText = styled.div`
     margin-left: 8vw;
 
     @media screen and (max-width: 750px) {
-        width: 84vw;
+        width: 90vw;
+        margin-left: 6vw;
     }
 
     .large {
