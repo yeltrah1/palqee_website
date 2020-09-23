@@ -1197,9 +1197,10 @@ export const EmailInput = styled.input`
   line-height: 1.71;
 
   @media screen and (max-width: 750px) {
-    width: 170px;
-    padding-left: 0px;
+    width: 138px;
+    padding-left: 18px;
     font-size: 12px;
+    justify-self: start;
   }
 
   :focus {
@@ -1239,8 +1240,11 @@ export const ListInput = styled.select`
   padding-right: 10px;
 
   @media screen and (max-width: 750px) {
-    width: 320px;
-    padding-left: 22px;
+    display: grid;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-left: 18px;
     font-size: 12px;
   }
   
@@ -1364,6 +1368,7 @@ export const FooterStyle = styled.div`
     @media screen and (max-width: 750px) {
       grid-row: 2;
       grid-template-rows: 80px 40px;
+      align-items: center;
     }
 
     span {
@@ -1376,6 +1381,7 @@ export const FooterStyle = styled.div`
         justify-self: center;
         line-height: 50px;
         width: 90vw;
+        align-items: center;
       }
     }
 
@@ -1411,6 +1417,10 @@ export const FooterStyle = styled.div`
     line-height: 10px;
     padding: 0px 10px;
     text-decoration: none;
+
+    @media screen and (max-width: 750px) {
+      line-height: 1.2;
+    }
 
     @font-face {
       font-family: 'Larsseit';

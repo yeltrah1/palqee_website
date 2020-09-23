@@ -31,6 +31,8 @@ const SalesStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       font-size: 26px;
+      width: 80vw;
+      padding: 0 10vw;
     }
   }
 
@@ -44,6 +46,11 @@ const SalesStyle = styled.div`
     line-height: 1.71;
     color: #758194;
     width: 400px;
+
+    @media screen and (max-width: 750px) {
+      width: 80vw;
+      padding: 0 10vw;
+    }
   }
 
   .confirmation {
@@ -74,9 +81,11 @@ const EmailStyle = styled.div`
   background-color: #ffffff;
 
   @media screen and (max-width: 750px) {
-    grid-template-columns: 200px 120px;
-    width: 320px;
-    margin: 8px;
+    grid-template-columns: 60vw 20vw;
+    width: 80vw;
+    margin-top: 5px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   :focus-within {

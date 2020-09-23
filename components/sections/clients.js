@@ -130,17 +130,17 @@ const Clients = () => {
               loop: Infinity, 
               duration: 80 }}>
               <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
 
               <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
 
               <ClientsStyle height={45} width={112} src={"static/icons/clients/getglobal_logo.png"}/>
-              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_logo.png"}/>
+              <ClientsStyle height={46} width={93} src={"static/icons/clients/Dantic_png.png"}/>
               <ClientsStyle height={43} width={63} src={"static/icons/clients/DRL_logo.png"}/>
               <ClientsStyle height={48} width={130} src={"static/icons/clients/IT2SGroup_logo.png"}/>
             </CarouselMobile>
