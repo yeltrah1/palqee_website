@@ -46,7 +46,7 @@ const HeroText = styled.div`
         color: #ffffff;
 
         @media screen and (max-width: 750px) {
-            font-size: 32px;
+            font-size: 30px;
         }
     }
 
