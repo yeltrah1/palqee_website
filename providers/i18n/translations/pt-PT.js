@@ -109,8 +109,7 @@ export default {
 
     //innovation_roadmap
     "innov.bold": "Roadmap da Palqee",
-    "innov.for": "para",
-    "innov.features": "Novas Funcionalidades e Inovações",
+    "innov.features": "para Novas Funcionalidades e Inovações",
     "innov.small": "Construir as ferramentas do futuro para uma gestão de Privacidade de Dados ética e eficiente é o que nos move. Confira abaixo o mapa de desenvolvimento da Palqee e explore nossos mais recente updates, próximos lançamentos e futuras inovações.",
     "innov.highlights": "Releases Recentes",
     "innov.highlights1": "Questionários de conformidade para GDPR, LGPD e CCPA",

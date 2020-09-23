@@ -46,8 +46,8 @@ const HeaderText = styled.div`
         @media screen and (max-width: 750px) {
             font-size: 22px;
             text-align: center;
-            width: 70vw;
-            padding: 0px 15vw;
+            width: 80vw;
+            padding: 0px 10vw;
         }
     }
 `;

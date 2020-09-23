@@ -18,7 +18,7 @@ const HeroStyle = styled.div`
 const HeroText = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
-    width: 60vw;
+    width: 55vw;
     height: 400px;
     margin-top: 140px;
     
@@ -82,7 +82,7 @@ const InnovationHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">
-                    <span className="semi"><u>{translate('innov.bold')}</u></span> {translate('innov.for')}<br/>
+                    <span className="semi"><u>{translate('innov.bold')}</u></span>
                         {translate('innov.features')}
                         <br/>
                 </div>

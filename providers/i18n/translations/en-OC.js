@@ -109,8 +109,7 @@ export default {
     
     //innovation_roadmap
     "innov.bold": "Palqee Roadmap",
-    "innov.for": "for",
-    "innov.features": "New Tools and Features",
+    "innov.features": " for New Tools and Features",
     "innov.small": "Our drive is to deliver you the best tools for successful data privacy management. Period. Check out the Palqee roadmap and explore our current updates, coming soon launches and future innovations.",
     "innov.highlights": "Latest Releases",
     "innov.highlights1": "Regulation surveys for GDPR, LGPD and CCPA",
