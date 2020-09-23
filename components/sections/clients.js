@@ -43,6 +43,8 @@ const Headline = styled.div`
     margin-bottom: 40px;
     height: 25px;
     text-align: center;
+    width: 80vw;
+    padding: 0px 10vw;
   }
 `;
 

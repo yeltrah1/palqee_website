@@ -178,7 +178,7 @@ const DanticCard = () => {
             <a href="#open-dantic" onClick={() => { setPlay(true) }}>
                 <CoverStyle src={"https://res.cloudinary.com/palqee/image/upload/v1597865822/daniel_cover.jpg"}/>
             </a>
-            <Logo src={"../../static/icons/clients/dantic_logo.png"}/>
+            <Logo src={"../../static/icons/clients/dantic_png.png"}/>
 
             <div id="open-dantic" className="modal">
                 <div>
