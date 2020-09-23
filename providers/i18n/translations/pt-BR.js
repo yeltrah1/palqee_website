@@ -52,7 +52,7 @@ export default {
     'stats.questions': "Perguntas de mapeamento inclusas",
     'stats.reports': "Relatórios de compliance automaizados",
     'testimonials.large': "Nós acreditamos no poder do coletivo",
-    'testimonials.small': "Nossa obsessão está em criar produtos e serviços que te deixem satisfeitos e atendam as suas necessidades do dia-a-dia. É por isso que nós estamos constantemente ouvindo o que nossos clientes e parceiros tem a dizer e trabalhando em nossos produtos para torná-los melhores cada dia",
+    'testimonials.small': "Nossa obsessão está em criar produtos e serviços que te deixem satisfeitos e atendam suas necessidades do dia-a-dia. É por isso que nós estamos constantemente ouvindo o que nossos clientes e parceiros tem a dizer sobre a Palqee",
     'contact.large': "Fale Conosco",
     'contact.small': "A plataforma para sucesso em Operações de Privacidade",
     'contact.reason': "Qual o motivo do seu contato?",

@@ -138,7 +138,7 @@ const Cards = styled.div`
         grid-column: 1;
         place-self: start;
         margin-left: 20px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     @font-face {
