@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="links">
             <span>
               <span className="row1">
-                <a className="pages one" href="/">{translate('footer.policy')}</a>
+                <a className="pages one" href="/privacy-policy">{translate('footer.policy')}</a>
                 <a className="pages one" href="/">{translate('footer.settings')}</a>
                 <a className="pages one" href="/">{translate('footer.resources')}</a>
               </span>
@@ -39,7 +39,7 @@ const Footer = () => {
                 <a className="pages two" href="/">{translate('footer.blog')}</a>
               </span>
             </span>
-            <div className="rights">© 2020 Palqee Technologies. All Rights Reserved</div>
+            <div className="rights">© 2019-2020 Palqee Technologies. All Rights Reserved</div>
           </div>
           <div className="social">
             <a href="//www.linkedin.com/company/37457018/" target="_blank">

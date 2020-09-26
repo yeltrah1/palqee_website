@@ -172,12 +172,12 @@ const HighlightText = styled.div`
     }
       
     .small li::before {
-    content: "•";
-    color: #ff696d;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+        content: "•";
+        color: #ff696d;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
     }
 
 `;

@@ -863,6 +863,48 @@ export const DemoStyle = styled.div`
   }
 `;
 
+export const PolicyStyle = styled.div`
+  display:grid;
+  overflow: hidden;
+
+  .headline {
+    background-image: url("/static/patterns/blue_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 350px;
+    position: relative;
+    height: 350px;
+    width: 100vw;
+
+    @media screen and (max-width: 750px) {
+      background-image: url("/static/patterns/blue_bg_clear.png");
+    }
+  }
+
+  .large-white {
+    height: 650px;
+    width: 100vw;
+    position: relative;
+    background-image: url("/static/patterns/plane.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 150px;
+    background-position: -42vw -50px;
+    
+    @media screen and (max-width: 750px) {
+      height: 700px;
+      width: 100vw;
+    }
+  }
+
+  .bottom-grey {
+    background-image: url("/static/patterns/plane_grey_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 310px;
+    width: 100vw;
+  }
+`;
+
 export const TestStyle = styled.div`
   display:grid;
   overflow-x: hidden;

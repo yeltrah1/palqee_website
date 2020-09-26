@@ -257,5 +257,8 @@ export default {
     //test
     'takeTest.large': "Faça o Teste",
     'takeTest.small': "Responda as perguntas abaixo para saber quais regulamentações de privacidade você precisa seguir.",
+    
+    //Demo
+    'demo.large': "Agende uma Demo",  
     }
 }

@@ -44,17 +44,17 @@ const HeroText = styled.div`
     }
 `;
 
-const DemoHero = () => {
+const PolicyHero = () => {
     
     return (
       <ThemeProvider theme={palqeeTheme}>
         <HeroStyle>
             <HeroText>
-                <div className="large">{translate('demo.large')}</div>
+                <div className="large">{translate('policy.large')}</div>
             </HeroText>
         </HeroStyle>
       </ThemeProvider>
     )
   }
   
-  export { DemoHero } ;
+  export { PolicyHero } ;
