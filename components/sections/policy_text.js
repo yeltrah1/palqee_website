@@ -19,42 +19,128 @@ const PolicyStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 300px;
+    grid-template-rows: 80px 600px;
     width: 90vw;
     padding-top: 20px;
     margin: 0 5vw;
+    height: 600px;
   }
 `;
 
 const MobileMenu = styled.div`
   display: none;
-  grid-template-columns: 0.8fr 0.2fr;
-  grid-template-rows: 1fr;
   width: 100%;
-  height: 51px;
-  border-radius: 6px;
-  box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
-  background-color: #ffffff;
-  align-items: center;
-  font-family: Poppins;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  font-weight: 600;
-  font-size: 14px;
-  padding-left: 30px;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
 
   @media screen and (max-width: 750px) {
     display: grid;
   }
-}
+
+  .button {
+    display: grid;
+    grid-template-columns: 0.7fr 0.2fr;
+    grid-template-rows: 1fr;
+    height: 51px;
+    border-radius: 6px;
+    box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
+    background-color: #ffffff;
+    align-items: center;
+    font-family: Poppins;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 20px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .modal {
+    position: fixed;
+    display: grid;
+    background-color: rgba(7, 16, 42, 0.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .header {
+      grid-column: 1;
+      font-size: 12px;
+      color: #192d4d;
+      font-family: Poppins-Semi;
+      justify-self: start;
+      padding-left: 20px;
+    }
+
+    .box {
+      grid-row: 1;
+      grid-column: 1;
+      grid-template-columns: 1fr;
+      display: grid;
+      padding-top: 10px;
+      width: 80vw;
+      height: 350px;
+      place-items: center;
+      place-self: center;
+      z-index: 10;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
+      background-color: #ffffff;
+    }
+
+    .modal-close {
+      grid-row: 1;
+      grid-column: 1;
+      z-index: 8;
+      cursor: pointer;
+      height: 100vh;
+      width: 100vw;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  .list {
+    width: 100%;
+    padding-top: 8px;
+    margin-left: 15px;
+    font-family: Poppins;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #192d4d;
+
+    li {
+      margin: -3px 0;
+      cursor: pointer;
+      font-size: 10px;
+      line-height: 10px;
+      text-decoration: none;
+    }
+  }
 `;
 
 const Filter = styled.img`
   grid-column: 2;
   width: 20px;
+  justify-self: end;
+`;
+
+const Close = styled.img`
+  position: absolute;  
+  width: 14px;
+  right: 50px;
 `;
 
 const TableStyle = styled.div`
@@ -181,8 +267,57 @@ const PolicyText = () => {
     <ThemeProvider theme={palqeeTheme}>
       <PolicyStyle>
         <MobileMenu>
-          <div>{translate('policy.header')}</div>
-          <Filter src={"/static/icons/filter_icon.svg"}/>
+          <a className="button" href="#open-search">
+            <div>{translate('policy.header')}</div>
+            <Filter src={"/static/icons/filter_icon.svg"}/>
+          </a>
+          <div id="open-search" className="modal">
+            <div className="box">
+              <div className="header">
+                {translate('policy.header')}
+                <a href="#_" title="Close" className="modal-close">
+                  <Close src={"/static/icons/close_dark.svg"}/>
+                </a>  
+              </div>
+              <ul className="list">
+                <li><Link containerId="policy" to="menu1" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item1')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu2" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item2')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu3" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item3')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu4" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item4')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu5" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item5')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu6" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item6')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu7" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item7')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu8" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item8')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu9" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item9')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu10" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item10')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy" to="menu11" offset={-20} smooth={true}>
+                  <a href="#_">{translate('policy.item11')}</a>
+                </Link></li>
+              </ul>
+            </div>
+            <a href="#_" title="Close" className="modal-close">
+            </a>
+          </div>
         </MobileMenu>
         <TableStyle>
             <div className="header">

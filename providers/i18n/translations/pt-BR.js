@@ -253,6 +253,8 @@ export default {
     'blog.tutorials': "Tutoriais",
     'blog.resources': "Dicas & Materiais",
     'blog.business': "Negócio",
+    'blog.no': "Não existe nenhum artigo no momento com as palavras buscadas.",
+    'blog.no2': "Não existe nenhum artigo no momento nesta categoria.",
 
     //test
     'takeTest.large': "Faça o Teste",

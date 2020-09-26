@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import translate from "../../providers/i18n/translate";
 
 import BlogCard from './blog_card';
 import BlogLargeCard from './blog_large_card';
@@ -92,10 +93,10 @@ const BlogList = () => {
     ) 
 
     else if (router.query.article && searchArticle.length === 0) return ( 
-        <NoEntries>There are currently no articles matching your search.</NoEntries> )
+        <NoEntries>{translate('blog.no')}</NoEntries> )
     
     else if (searchResults.length === 0) return ( 
-        <NoEntries>There are currently no articles in this category.</NoEntries> )
+        <NoEntries>{translate('blog.no2')}</NoEntries> )
     
     else return (
         <>
