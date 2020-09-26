@@ -103,12 +103,12 @@ const DateStyle = styled.div`
         display: grid;
         font-family: Poppins;
         font-size: 14px;
-        color: #3f6db4;
+        color: #ff6969;
         justify-self: end;
         place-items: center;
-        background: #f2f8fd;
+        background: #ffe6e6;
         border-radius: 6px;
-        width: 60px;
+        width: 135px;
         height: 20px;
     }
 `;
