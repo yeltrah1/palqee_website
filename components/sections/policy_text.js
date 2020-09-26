@@ -19,10 +19,42 @@ const PolicyStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 130px 300px;
+    grid-template-rows: 80px 300px;
     width: 90vw;
     padding-top: 20px;
+    margin: 0 5vw;
   }
+`;
+
+const MobileMenu = styled.div`
+  display: none;
+  grid-template-columns: 0.8fr 0.2fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 51px;
+  border-radius: 6px;
+  box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  align-items: center;
+  font-family: Poppins;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (max-width: 750px) {
+    display: grid;
+  }
+}
+`;
+
+const Filter = styled.img`
+  grid-column: 2;
+  width: 20px;
 `;
 
 const TableStyle = styled.div`
@@ -31,20 +63,23 @@ const TableStyle = styled.div`
   grid-template-rows: 20px 1fr;  
   width: 70%;  
   padding-top: 25px;
-
-  @font-face {
-  font-family: 'Poppins-Semi';
-  src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
-  }
-
   font-family: Poppins;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
   color: #192d4d;
 
+  @font-face {
+  font-family: 'Poppins-Semi';
+  src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+  }
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+
   .header {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 2px solid #eaeaea;
     padding-bottom: 20px;
     font-weight: 600;
     font-size: 14px;
@@ -77,12 +112,6 @@ const TableStyle = styled.div`
       margin-left: -1em;
       }
     }
-  }
-
-  @media screen and (max-width: 750px) {
-    font-size: 18px;
-    padding-left: 20px;
-    padding-right: 0px;
   }
 `;
 
@@ -126,8 +155,6 @@ const TextStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       font-size: 18px;
-      padding-left: 20px;
-      padding-right: 0px;
     }
   }
 
@@ -142,8 +169,6 @@ const TextStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       font-size: 12px;
-      padding-left: 20px;
-      padding-right: 0px;
     }
   }
 `;
@@ -155,6 +180,10 @@ const PolicyText = () => {
   return (
     <ThemeProvider theme={palqeeTheme}>
       <PolicyStyle>
+        <MobileMenu>
+          <div>{translate('policy.header')}</div>
+          <Filter src={"/static/icons/filter_icon.svg"}/>
+        </MobileMenu>
         <TableStyle>
             <div className="header">
                 {translate('policy.header')}

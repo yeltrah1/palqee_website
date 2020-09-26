@@ -263,6 +263,7 @@ export default {
 
     //Policy
     'policy.large': "Privacy Policy",
+    'policy.small': "Last updated on: 24th Sep 2020",
     'policy.header': "Table of contents",
     'policy.item1': "Who we are",
     'policy.item2': "What is a Privacy Notice",

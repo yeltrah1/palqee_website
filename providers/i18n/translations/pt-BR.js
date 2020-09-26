@@ -263,7 +263,8 @@ export default {
     
     //Policy
     'policy.large': "Política de Privacidade",
-    'policy.header': "Conteúdo",
+    'policy.small': "Atualizado em: 24 de Setembro, 2020",
+    'policy.header': "Tabela de Conteúdo",
     'policy.item1': "Quem somos",
     'policy.item2': "O que é uma Política de Privacidade",
     'policy.item3': "Processamento de dados pessoais",

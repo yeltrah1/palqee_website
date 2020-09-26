@@ -876,7 +876,9 @@ export const PolicyStyle = styled.div`
     width: 100vw;
 
     @media screen and (max-width: 750px) {
+      height: 300px;
       background-image: url("/static/patterns/blue_bg_clear.png");
+      background-size: 100% 300px;
     }
   }
 
@@ -890,6 +892,7 @@ export const PolicyStyle = styled.div`
     background-position: -42vw -50px;
     
     @media screen and (max-width: 750px) {
+      background-image: none;
       height: 700px;
       width: 100vw;
     }

@@ -20,6 +20,10 @@ const HeroText = styled.div`
     height: 400px;
     margin-top: 160px;
 
+    @media screen and (max-width: 750px) {
+        margin-top: 120px;
+    }
+
     @font-face {
         font-family: 'Poppins-Semi';
         src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
@@ -42,6 +46,20 @@ const HeroText = styled.div`
             font-size: 32px;
         }
     }
+
+    .small {
+        font-family: Poppins;
+        text-align: center;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #cbd0df;
+
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
+    }
 `;
 
 const PolicyHero = () => {
@@ -51,6 +69,7 @@ const PolicyHero = () => {
         <HeroStyle>
             <HeroText>
                 <div className="large">{translate('policy.large')}</div>
+                <div className="small">{translate('policy.small')}</div>
             </HeroText>
         </HeroStyle>
       </ThemeProvider>
