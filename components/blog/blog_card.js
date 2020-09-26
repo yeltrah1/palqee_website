@@ -186,7 +186,7 @@ const BlogCard = ({cover, description, date, title, category, link}) => {
                         category === "LGPD" ? "reg-tag" :
                         category === "Business" ? "business-tag" :
                         category === "Tutorials" ? "tutorials-tag" :
-                        category === "Resources" ? "resources-tag" : "reg-tag"}
+                        category === "Resources & Tips" ? "resources-tag" : "reg-tag"}
                     >{category}</a> 
                 </DateStyle>
                 <TitleStyle>{title}</TitleStyle>
