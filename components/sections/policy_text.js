@@ -66,6 +66,7 @@ const MobileMenu = styled.div`
     left: 0;
     z-index: 5;
     visibility: hidden;
+    overflow-y: hidden;
     pointer-events: none;
     transition: all 0.3s;
 
