@@ -31,7 +31,7 @@ const Footer = () => {
             <span>
               <span className="row1">
                 <a className="pages one" href="/privacy-policy">{translate('footer.policy')}</a>
-                <a className="pages one" href="/">{translate('footer.settings')}</a>
+                <a className="pages one" href="javascript:window.Metomic('ConsentManager:show')">{translate('footer.settings')}</a>
                 <a className="pages one" href="/blog/resources">{translate('footer.resources')}</a>
               </span>
               <span className="row2">  

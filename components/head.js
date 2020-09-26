@@ -17,6 +17,9 @@ export default function Head() {
             <meta charSet="UTF-8" />
             <title>{intl.formatMessage(description)}</title>
 
+            <script src="https://config.metomic.io/config.js?id=prj:e114b29d-6a87-4a11-bd0f-28df9df2e9e1" crossorigin charset="utf-8"></script>
+            <script src="https://consent-manager.metomic.io/embed.js" crossorigin charset="utf-8"></script>
+
             <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 
             <link rel="apple-touch-icon" sizes="57x57" href="/static/icons/favicons/apple-icon-57x57.png"/>
