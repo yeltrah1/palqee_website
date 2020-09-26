@@ -23,7 +23,7 @@ export default {
     //footer
     "footer.policy": "Política de Privacidade",
     "footer.settings": "Ajuste de Privacidade",
-    "footer.resources": "Recursos",
+    "footer.resources": "Materiais",
     "footer.terms": "Termos de Uso",
     "footer.blog": "Blog",
     "footer.contact": "Contato",
@@ -243,6 +243,8 @@ export default {
     'find.automotive': "Setor Automotivo",
     'find.brazil': "Brasil",
     'find.usa': "Estados Unidos",
+    'partners.no': "Não foi encontrado nenhum parceiro credenciado com o termo buscado.",
+    'partners.no2': "Não existe nenhum parceiro credenciado no momento com as características selecionadas.",
 
     //blog
     'blogHero.small': "Artigos, materiais,",
@@ -251,7 +253,7 @@ export default {
     'blog.search': "Busca",
     'blog.all': "Todos os Artigos",
     'blog.tutorials': "Tutoriais",
-    'blog.resources': "Dicas & Materiais",
+    'blog.resources': "Materiais & Dicas",
     'blog.business': "Negócio",
     'blog.no': "Não existe nenhum artigo no momento com as palavras buscadas.",
     'blog.no2': "Não existe nenhum artigo no momento nesta categoria.",

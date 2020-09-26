@@ -32,11 +32,11 @@ const Footer = () => {
               <span className="row1">
                 <a className="pages one" href="/privacy-policy">{translate('footer.policy')}</a>
                 <a className="pages one" href="/">{translate('footer.settings')}</a>
-                <a className="pages one" href="/">{translate('footer.resources')}</a>
+                <a className="pages one" href="/blog/resources">{translate('footer.resources')}</a>
               </span>
               <span className="row2">  
                 <a className="pages two" href="/">{translate('footer.terms')}</a>
-                <a className="pages two" href="/">{translate('footer.blog')}</a>
+                <a className="pages two" href="/blog/all">{translate('footer.blog')}</a>
               </span>
             </span>
             <div className="rights">© 2019-2020 Palqee Technologies. All Rights Reserved</div>

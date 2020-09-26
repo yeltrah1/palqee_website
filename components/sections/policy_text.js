@@ -90,7 +90,7 @@ const MobileMenu = styled.div`
       grid-template-columns: 1fr;
       display: grid;
       padding-top: 10px;
-      width: 85vw;
+      width: 88vw;
       height: 350px;
       place-items: center;
       place-self: center;
@@ -115,7 +115,7 @@ const MobileMenu = styled.div`
 
   .list {
     width: 85%;
-    margin-left: -30px;
+    margin-left: -38px;
     font-family: Poppins;
     font-stretch: normal;
     font-style: normal;
@@ -124,10 +124,10 @@ const MobileMenu = styled.div`
     color: #192d4d;
 
     li {
-      margin: -4px 0;
+      margin: -5px 0;
       list-style: none;
       font-size: 12px;
-      line-height: 10px;
+      line-height: 12px;
       cursor: pointer;
       text-decoration: none;
       -webkit-tap-highlight-color: transparent;
@@ -144,7 +144,7 @@ const Filter = styled.img`
 const Close = styled.img`
   position: absolute;  
   width: 14px;
-  right: 45px;
+  right: 40px;
 `;
 
 const TableStyle = styled.div`
@@ -270,7 +270,7 @@ const TextStyle = styled.div`
 `;
 
 const TextMobileStyle = styled.div`
-  padding-left: 40px;
+  padding-left: 20px;
   padding-right: 14px;
   overflow-y: scroll;
   border-radius: 6px;

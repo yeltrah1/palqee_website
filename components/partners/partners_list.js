@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import translate from "../../providers/i18n/translate";
 
 import PartnerCard from './partner_card';
 import partners from './partners.json';
@@ -75,10 +76,10 @@ const PartnersList = () => {
     ) 
 
     else if (router.query.partner && searchPartner.length === 0) return ( 
-        <NoEntries>There are currently no accredited partners matching your search.</NoEntries> )
+        <NoEntries>{translate('partners.no')}</NoEntries> )
     
     else if (searchResults.length === 0) return ( 
-        <NoEntries>There are currently no accredited partners matching your selection criteria.</NoEntries> )
+        <NoEntries>{translate('partners.no2')}</NoEntries> )
     
     else return (
         <ListStyle>

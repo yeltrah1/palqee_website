@@ -243,7 +243,9 @@ export default {
     'find.automotive': "Automotive",
     'find.brazil': "Brazil",
     'find.usa': "United States",
-
+    'partners.no': "There are currently no accredited partners matching your search.",
+    'partners.no2': "There are currently no accredited partners matching your selection criteria.",
+    
     //blog
     'blogHero.small': "Articles, resources",
     'blogHero.small2': "and many more in our",

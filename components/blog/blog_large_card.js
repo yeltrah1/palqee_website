@@ -87,12 +87,12 @@ const DateStyle = styled.div`
         display: grid;
         font-family: Poppins;
         font-size: 14px;
-        color: #3f6db4;
+        color: #ff6969;
         justify-self: end;
         place-items: center;
-        background: #f2f8fd;
+        background: #ffe6e6;
         border-radius: 6px;
-        width: 60px;
+        width: 135px;
         height: 20px;
     }
 `;
@@ -157,7 +157,7 @@ const BlogLargeCard = ({cover, description, date, title, category, link}) => {
                         category === "LGPD" ? "reg-tag" :
                         category === "Business" ? "business-tag" :
                         category === "Tutorials" ? "tutorials-tag" :
-                        category === "Resources" ? "resources-tag" : "reg-tag"}
+                        category === "Resources & Tips" ? "resources-tag" : "reg-tag"}
                     >{category}</a> 
                 </DateStyle>
                 <TitleStyle>{title}</TitleStyle>
