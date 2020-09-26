@@ -47,6 +47,7 @@ const MobileMenu = styled.div`
     font-family: Poppins;
     font-stretch: normal;
     font-style: normal;
+    color: #192d4d;
     letter-spacing: normal;
     font-weight: 600;
     font-size: 14px;
@@ -90,7 +91,7 @@ const MobileMenu = styled.div`
       display: grid;
       padding-top: 10px;
       width: 80vw;
-      height: 350px;
+      height: 330px;
       place-items: center;
       place-self: center;
       z-index: 10;
@@ -98,6 +99,7 @@ const MobileMenu = styled.div`
       border-radius: 8px;
       box-shadow: 0 0.9px 20px 0 rgba(0, 0, 0, 0.04);
       background-color: #ffffff;
+      text-decoration: none;
     }
 
     .modal-close {
@@ -112,21 +114,23 @@ const MobileMenu = styled.div`
   }
 
   .list {
-    width: 100%;
-    padding-top: 8px;
-    margin-left: 15px;
+    width: 85%;
+    margin-left: -30px;
     font-family: Poppins;
     font-stretch: normal;
     font-style: normal;
     letter-spacing: normal;
+    text-decoration: none;
     color: #192d4d;
 
     li {
-      margin: -3px 0;
-      cursor: pointer;
+      margin: -4px 0;
+      list-style: none;
       font-size: 10px;
       line-height: 10px;
+      cursor: pointer;
       text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
     }
   }
 `;
@@ -140,7 +144,7 @@ const Filter = styled.img`
 const Close = styled.img`
   position: absolute;  
   width: 14px;
-  right: 50px;
+  right: 40px;
 `;
 
 const TableStyle = styled.div`
@@ -269,7 +273,7 @@ const PolicyText = () => {
         <MobileMenu>
           <a className="button" href="#open-search">
             <div>{translate('policy.header')}</div>
-            <Filter src={"/static/icons/filter_icon.svg"}/>
+            <Filter src={"/static/icons/chevron.png"}/>
           </a>
           <div id="open-search" className="modal">
             <div className="box">
@@ -281,37 +285,37 @@ const PolicyText = () => {
               </div>
               <ul className="list">
                 <li><Link containerId="policy" to="menu1" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item1')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item1')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu2" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item2')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item2')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu3" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item3')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item3')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu4" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item4')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item4')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu5" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item5')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item5')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu6" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item6')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item6')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu7" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item7')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item7')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu8" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item8')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item8')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu9" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item9')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item9')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu10" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item10')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item10')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy" to="menu11" offset={-20} smooth={true}>
-                  <a href="#_">{translate('policy.item11')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item11')}</a>
                 </Link></li>
               </ul>
             </div>
