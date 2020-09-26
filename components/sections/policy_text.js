@@ -77,7 +77,7 @@ const MobileMenu = styled.div`
 
     .header {
       grid-column: 1;
-      font-size: 12px;
+      font-size: 14px;
       color: #192d4d;
       font-family: Poppins-Semi;
       justify-self: start;
@@ -90,8 +90,8 @@ const MobileMenu = styled.div`
       grid-template-columns: 1fr;
       display: grid;
       padding-top: 10px;
-      width: 80vw;
-      height: 330px;
+      width: 85vw;
+      height: 350px;
       place-items: center;
       place-self: center;
       z-index: 10;
@@ -126,7 +126,7 @@ const MobileMenu = styled.div`
     li {
       margin: -4px 0;
       list-style: none;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 10px;
       cursor: pointer;
       text-decoration: none;
@@ -144,7 +144,7 @@ const Filter = styled.img`
 const Close = styled.img`
   position: absolute;  
   width: 14px;
-  right: 40px;
+  right: 45px;
 `;
 
 const TableStyle = styled.div`
@@ -213,6 +213,10 @@ const TextStyle = styled.div`
   box-shadow: 0 0.8px 15px 0 rgba(206, 206, 206, 0.2);
   padding-top: 20px;
 
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+
   :hover {
     overflow-y: scroll;
     padding-right: 4px;
@@ -221,12 +225,65 @@ const TextStyle = styled.div`
   ::-webkit-scrollbar {
     width: 10px;
   }
+
   ::-webkit-scrollbar-track {
     border-radius: 6px;
   }
+
   ::-webkit-scrollbar-thumb {
     background: rgba(25, 45, 77, 0.2);
     border-radius: 6px;
+  }
+
+  @font-face {
+    font-family: 'Poppins-Semi';
+    src: url('static/fonts/Poppins-SemiBold.ttf') format('truetype');
+  }
+
+  .large {
+  font-family: Poppins-Semi;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #1a3154;
+
+    @media screen and (max-width: 750px) {
+      font-size: 18px;
+    }
+  }
+
+  .small {
+    white-space:pre-wrap;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: ${props => props.theme.mainFontColor};
+
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
+    }
+  }
+`;
+
+const TextMobileStyle = styled.div`
+  padding-left: 40px;
+  padding-right: 14px;
+  overflow-y: scroll;
+  border-radius: 6px;
+  box-shadow: 0 0.8px 15px 0 rgba(206, 206, 206, 0.2);
+  padding-top: 20px;
+  display: none;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 
   @font-face {
@@ -284,37 +341,37 @@ const PolicyText = () => {
                 </a>  
               </div>
               <ul className="list">
-                <li><Link containerId="policy" to="menu1" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu1" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item1')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu2" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu2" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item2')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu3" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu3" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item3')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu4" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu4" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item4')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu5" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu5" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item5')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu6" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu6" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item6')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu7" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu7" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item7')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu8" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu8" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item8')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu9" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu9" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item9')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu10" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu10" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item10')}</a>
                 </Link></li><br/>
-                <li><Link containerId="policy" to="menu11" offset={-20} smooth={true}>
+                <li><Link containerId="policy-mobile" to="menu11" offset={-20} smooth={true}>
                   <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item11')}</a>
                 </Link></li>
               </ul>
@@ -436,6 +493,68 @@ const PolicyText = () => {
                 {translate('policy.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         </TextStyle>
+        <TextMobileStyle id="policy-mobile">
+            <div className="small">
+                <Element name="menu1">
+                  <b><u>{translate('policy.title1')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc1')}<br/><br/>
+                <b><u>{translate('policy.title2')}</u></b><br/><br/>
+                {translate('policy.desc2')}<br/><br/>
+                <Element name="menu2">
+                  <b><u>{translate('policy.title3')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc3')}<br/><br/>
+                <Element name="menu3">
+                  <b><u>{translate('policy.title4')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc4')}<br/><br/>
+                <b><u>{translate('policy.title5')}</u></b><br/><br/>
+                {translate('policy.desc5')}<br/><br/>
+                <b><u>{translate('policy.title6')}</u></b><br/><br/>
+                {translate('policy.desc6')}<br/><br/>
+                <b><u>{translate('policy.title7')}</u></b><br/><br/>
+                {translate('policy.desc7')}<br/><br/>
+                <b><u>{translate('policy.title8')}</u></b><br/><br/>
+                {translate('policy.desc8')}<br/><br/>
+                <b><u>{translate('policy.title9')}</u></b><br/><br/>
+                {translate('policy.desc9')}<br/><br/>
+                <Element name="menu4">
+                  <b><u>{translate('policy.title10')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc10')}<br/><br/>
+                <b><u>{translate('policy.title11')}</u></b><br/><br/>
+                {translate('policy.desc11')}<br/><br/>
+                <Element name="menu5">
+                  <b><u>{translate('policy.title12')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc12')}<br/><br/>
+                <Element name="menu6">
+                  <b><u>{translate('policy.title13')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc13')}<br/><br/>
+                <Element name="menu7">
+                  <b><u>{translate('policy.title14')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc14')}<br/><br/>
+                <Element name="menu8">
+                  <b><u>{translate('policy.title15')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc15')}<br/><br/>
+                <Element name="menu9">
+                  <b><u>{translate('policy.title16')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc16')}<br/><br/>
+                <Element name="menu10">
+                  <b><u>{translate('policy.title17')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc17')}<br/><br/>
+                <Element name="menu11">
+                  <b><u>{translate('policy.title18')}</u></b><br/><br/>
+                </Element>
+                {translate('policy.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+        </TextMobileStyle>
       </PolicyStyle>
     </ThemeProvider>
   )
