@@ -14,7 +14,7 @@ const SalesStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 0.3fr;
-  height: 200px;
+  height: 220px;
   width: 100vw;
   place-items: center;
   text-align: center;
