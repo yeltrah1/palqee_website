@@ -15,7 +15,7 @@ const PolicyStyle = styled.div`
   margin: 0 10vw;
   padding-top: 40px;
   overflow: hidden;
-  height: 550px;
+  height: 620px;
   margin-bottom: 60px;
 
   @media screen and (max-width: 750px) {
@@ -321,7 +321,7 @@ const TextMobileStyle = styled.div`
   }
 `;
 
-const PolicyText = () => {
+const TermsText = () => {
 
   const [clause, setClause] = useState("1")
 
@@ -330,50 +330,59 @@ const PolicyText = () => {
       <PolicyStyle>
         <MobileMenu>
           <a className="button" href="#open-search">
-            <div>{translate('policy.header')}</div>
+            <div>{translate('terms.header')}</div>
             <Filter src={"/static/icons/chevron.png"}/>
           </a>
           <div id="open-search" className="modal">
             <div className="box">
               <div className="header">
-                {translate('policy.header')}
+                {translate('terms.header')}
                 <a href="#_" title="Close" className="modal-close">
                   <Close src={"/static/icons/close_dark.svg"}/>
                 </a>  
               </div>
               <ul className="list">
                 <li><Link containerId="policy-mobile" to="mobile-menu1" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item1')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item1')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu2" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item2')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item2')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu3" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item3')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item3')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu4" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item4')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item4')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu5" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item5')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item5')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu6" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item6')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item6')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu7" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item7')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item7')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu8" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item8')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item8')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu9" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item9')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item9')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu10" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item10')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item10')}</a>
                 </Link></li><br/>
                 <li><Link containerId="policy-mobile" to="mobile-menu11" offset={-20} smooth={true}>
-                  <a onClick={()=> window.open("#_", "_self")}>{translate('policy.item11')}</a>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item11')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy-mobile" to="mobile-menu12" offset={-20} smooth={true}>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item12')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy-mobile" to="mobile-menu13" offset={-20} smooth={true}>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item13')}</a>
+                </Link></li><br/>
+                <li><Link containerId="policy-mobile" to="mobile-menu14" offset={-20} smooth={true}>
+                  <a onClick={()=> window.open("#_", "_self")}>{translate('terms.item14')}</a>
                 </Link></li>
               </ul>
             </div>
@@ -383,177 +392,190 @@ const PolicyText = () => {
         </MobileMenu>
         <TableStyle>
             <div className="header">
-                {translate('policy.header')}
+                {translate('terms.header')}
             </div>
             <ul className="list">
                 <li className={ clause === "1" ? "selected" : "" }>
                 <Link containerId="policy" to="menu1" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("1")}>{translate('policy.item1')}</a>
+                  <a onClick={()=>setClause("1")}>{translate('terms.item1')}</a>
                 </Link></li><br/>
                 <li className={ clause === "2" ? "selected" : "" }>
                 <Link containerId="policy" to="menu2" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("2")}>{translate('policy.item2')}</a>
+                  <a onClick={()=>setClause("2")}>{translate('terms.item2')}</a>
                 </Link></li><br/>
                 <li className={ clause === "3" ? "selected" : "" }>
                 <Link containerId="policy" to="menu3" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("3")}>{translate('policy.item3')}</a>
+                  <a onClick={()=>setClause("3")}>{translate('terms.item3')}</a>
                 </Link></li><br/>
                 <li className={ clause === "4" ? "selected" : "" }>
                 <Link containerId="policy" to="menu4" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("4")}>{translate('policy.item4')}</a>
+                  <a onClick={()=>setClause("4")}>{translate('terms.item4')}</a>
                 </Link></li><br/>
                 <li className={ clause === "5" ? "selected" : "" }>
                 <Link containerId="policy" to="menu5" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("5")}>{translate('policy.item5')}</a>
+                  <a onClick={()=>setClause("5")}>{translate('terms.item5')}</a>
                 </Link></li><br/>
                 <li className={ clause === "6" ? "selected" : "" }>
                 <Link containerId="policy" to="menu6" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("6")}>{translate('policy.item6')}</a>
+                  <a onClick={()=>setClause("6")}>{translate('terms.item6')}</a>
                 </Link></li><br/>
                 <li className={ clause === "7" ? "selected" : "" }>
                 <Link containerId="policy" to="menu7" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("7")}>{translate('policy.item7')}</a>
+                  <a onClick={()=>setClause("7")}>{translate('terms.item7')}</a>
                 </Link></li><br/>
                 <li className={ clause === "8" ? "selected" : "" }>
                 <Link containerId="policy" to="menu8" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("8")}>{translate('policy.item8')}</a>
+                  <a onClick={()=>setClause("8")}>{translate('terms.item8')}</a>
                 </Link></li><br/>
                 <li className={ clause === "9" ? "selected" : "" }>
                 <Link containerId="policy" to="menu9" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("9")}>{translate('policy.item9')}</a>
+                  <a onClick={()=>setClause("9")}>{translate('terms.item9')}</a>
                 </Link></li><br/>
                 <li className={ clause === "10" ? "selected" : "" }>
                 <Link containerId="policy" to="menu10" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("10")}>{translate('policy.item10')}</a>
+                  <a onClick={()=>setClause("10")}>{translate('terms.item10')}</a>
                 </Link></li><br/>
                 <li className={ clause === "11" ? "selected" : "" }>
                 <Link containerId="policy" to="menu11" offset={-20} smooth={true}>
-                  <a onClick={()=>setClause("11")}>{translate('policy.item11')}</a>
+                  <a onClick={()=>setClause("11")}>{translate('terms.item11')}</a>
+                </Link></li><br/>
+                <li className={ clause === "12" ? "selected" : "" }>
+                <Link containerId="policy" to="menu12" offset={-20} smooth={true}>
+                  <a onClick={()=>setClause("12")}>{translate('terms.item12')}</a>
+                </Link></li><br/>
+                <li className={ clause === "13" ? "selected" : "" }>
+                <Link containerId="policy" to="menu13" offset={-20} smooth={true}>
+                  <a onClick={()=>setClause("13")}>{translate('terms.item13')}</a>
+                </Link></li><br/>
+                <li className={ clause === "14" ? "selected" : "" }>
+                <Link containerId="policy" to="menu14" offset={-20} smooth={true}>
+                  <a onClick={()=>setClause("14")}>{translate('terms.item14')}</a>
                 </Link></li>
             </ul>
         </TableStyle>
         <TextStyle id="policy">
             <div className="small">
                 <Element name="menu1">
-                  <b><u>{translate('policy.title1')}</u></b><br/><br/>
+                  {translate('terms.intro')}<br/><br/>
+                  <b><u>{translate('terms.title1')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc1')}<br/><br/>
-                <b><u>{translate('policy.title2')}</u></b><br/><br/>
-                {translate('policy.desc2')}<br/><br/>
+                {translate('terms.desc1')}<br/><br/>
+                <b><u>{translate('terms.title2')}</u></b><br/><br/>
+                {translate('terms.desc2')}<br/><br/>
                 <Element name="menu2">
-                  <b><u>{translate('policy.title3')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title3')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc3')}<br/><br/>
+                {translate('terms.desc3')}<br/><br/>
                 <Element name="menu3">
-                  <b><u>{translate('policy.title4')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title4')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc4')}<br/><br/>
-                <b><u>{translate('policy.title5')}</u></b><br/><br/>
-                {translate('policy.desc5')}<br/><br/>
-                <b><u>{translate('policy.title6')}</u></b><br/><br/>
-                {translate('policy.desc6')}<br/><br/>
-                <b><u>{translate('policy.title7')}</u></b><br/><br/>
-                {translate('policy.desc7')}<br/><br/>
-                <b><u>{translate('policy.title8')}</u></b><br/><br/>
-                {translate('policy.desc8')}<br/><br/>
-                <b><u>{translate('policy.title9')}</u></b><br/><br/>
-                {translate('policy.desc9')}<br/><br/>
+                {translate('terms.desc4')}<br/><br/>
+                <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                {translate('terms.desc5')}<br/><br/>
+                <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                {translate('terms.desc6')}<br/><br/>
+                <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                {translate('terms.desc7')}<br/><br/>
+                <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                {translate('terms.desc8')}<br/><br/>
+                <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                {translate('terms.desc9')}<br/><br/>
                 <Element name="menu4">
-                  <b><u>{translate('policy.title10')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title10')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc10')}<br/><br/>
-                <b><u>{translate('policy.title11')}</u></b><br/><br/>
-                {translate('policy.desc11')}<br/><br/>
+                {translate('terms.desc10')}<br/><br/>
+                <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                {translate('terms.desc11')}<br/><br/>
                 <Element name="menu5">
-                  <b><u>{translate('policy.title12')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title12')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc12')}<br/><br/>
+                {translate('terms.desc12')}<br/><br/>
                 <Element name="menu6">
-                  <b><u>{translate('policy.title13')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title13')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc13')}<br/><br/>
+                {translate('terms.desc13')}<br/><br/>
                 <Element name="menu7">
-                  <b><u>{translate('policy.title14')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title14')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc14')}<br/><br/>
+                {translate('terms.desc14')}<br/><br/>
                 <Element name="menu8">
-                  <b><u>{translate('policy.title15')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title15')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc15')}<br/><br/>
+                {translate('terms.desc15')}<br/><br/>
                 <Element name="menu9">
-                  <b><u>{translate('policy.title16')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title16')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc16')}<br/><br/>
+                {translate('terms.desc16')}<br/><br/>
                 <Element name="menu10">
-                  <b><u>{translate('policy.title17')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title17')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc17')}<br/><br/>
+                {translate('terms.desc17')}<br/><br/>
                 <Element name="menu11">
-                  <b><u>{translate('policy.title18')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title18')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                {translate('terms.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         </TextStyle>
         <TextMobileStyle id="policy-mobile">
             <div className="small">
                 <Element name="mobile-menu1">
-                  <b><u>{translate('policy.title1')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title1')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc1')}<br/><br/>
-                <b><u>{translate('policy.title2')}</u></b><br/><br/>
-                {translate('policy.desc2')}<br/><br/>
+                {translate('terms.desc1')}<br/><br/>
+                <b><u>{translate('terms.title2')}</u></b><br/><br/>
+                {translate('terms.desc2')}<br/><br/>
                 <Element name="mobile-menu2">
-                  <b><u>{translate('policy.title3')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title3')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc3')}<br/><br/>
+                {translate('terms.desc3')}<br/><br/>
                 <Element name="mobile-menu3">
-                  <b><u>{translate('policy.title4')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title4')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc4')}<br/><br/>
-                <b><u>{translate('policy.title5')}</u></b><br/><br/>
-                {translate('policy.desc5')}<br/><br/>
-                <b><u>{translate('policy.title6')}</u></b><br/><br/>
-                {translate('policy.desc6')}<br/><br/>
-                <b><u>{translate('policy.title7')}</u></b><br/><br/>
-                {translate('policy.desc7')}<br/><br/>
-                <b><u>{translate('policy.title8')}</u></b><br/><br/>
-                {translate('policy.desc8')}<br/><br/>
-                <b><u>{translate('policy.title9')}</u></b><br/><br/>
-                {translate('policy.desc9')}<br/><br/>
+                {translate('terms.desc4')}<br/><br/>
+                <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                {translate('terms.desc5')}<br/><br/>
+                <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                {translate('terms.desc6')}<br/><br/>
+                <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                {translate('terms.desc7')}<br/><br/>
+                <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                {translate('terms.desc8')}<br/><br/>
+                <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                {translate('terms.desc9')}<br/><br/>
                 <Element name="mobile-menu4">
-                  <b><u>{translate('policy.title10')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title10')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc10')}<br/><br/>
-                <b><u>{translate('policy.title11')}</u></b><br/><br/>
-                {translate('policy.desc11')}<br/><br/>
+                {translate('terms.desc10')}<br/><br/>
+                <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                {translate('terms.desc11')}<br/><br/>
                 <Element name="mobile-menu5">
-                  <b><u>{translate('policy.title12')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title12')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc12')}<br/><br/>
+                {translate('terms.desc12')}<br/><br/>
                 <Element name="mobile-menu6">
-                  <b><u>{translate('policy.title13')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title13')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc13')}<br/><br/>
+                {translate('terms.desc13')}<br/><br/>
                 <Element name="mobile-menu7">
-                  <b><u>{translate('policy.title14')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title14')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc14')}<br/><br/>
+                {translate('terms.desc14')}<br/><br/>
                 <Element name="mobile-menu8">
-                  <b><u>{translate('policy.title15')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title15')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc15')}<br/><br/>
+                {translate('terms.desc15')}<br/><br/>
                 <Element name="mobile-menu9">
-                  <b><u>{translate('policy.title16')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title16')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc16')}<br/><br/>
+                {translate('terms.desc16')}<br/><br/>
                 <Element name="mobile-menu10">
-                  <b><u>{translate('policy.title17')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title17')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc17')}<br/><br/>
+                {translate('terms.desc17')}<br/><br/>
                 <Element name="mobile-menu11">
-                  <b><u>{translate('policy.title18')}</u></b><br/><br/>
+                  <b><u>{translate('terms.title18')}</u></b><br/><br/>
                 </Element>
-                {translate('policy.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                {translate('terms.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         </TextMobileStyle>
       </PolicyStyle>
@@ -561,4 +583,4 @@ const PolicyText = () => {
   )
 }
 
-export { PolicyText } ;
+export { TermsText } ;

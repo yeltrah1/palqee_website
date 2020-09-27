@@ -883,7 +883,7 @@ export const PolicyStyle = styled.div`
   }
 
   .large-white {
-    height: 650px;
+    height: auto;
     width: 100vw;
     position: relative;
     background-image: url("/static/patterns/plane.svg");

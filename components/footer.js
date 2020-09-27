@@ -35,7 +35,7 @@ const Footer = () => {
                 <a className="pages one" href="/blog/resources">{translate('footer.resources')}</a>
               </span>
               <span className="row2">  
-                <a className="pages two" href="/">{translate('footer.terms')}</a>
+                <a className="pages two" href="/terms">{translate('footer.terms')}</a>
                 <a className="pages two" href="/blog/all">{translate('footer.blog')}</a>
               </span>
             </span>
