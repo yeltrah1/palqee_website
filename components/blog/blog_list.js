@@ -69,12 +69,14 @@ const BlogList = () => {
         router.query.category === "tutorials" ? "Tutorials" : 
         router.query.category === "resources" ? "Resources & Tips" : 
         router.query.category === "business" ? "Business" : 
+        router.query.category === "innovation" ? "Innovation" : 
         router.query.category === "gdpr" ? "GDPR" : 
         router.query.category === "lgpd" ? "LGPD" : "") ||
             article.category2.includes(
         router.query.category === "tutorials" ? "Tutorials" : 
         router.query.category === "resources" ? "Resources & Tips" : 
         router.query.category === "business" ? "Business" : 
+        router.query.category === "innovation" ? "Innovation" : 
         router.query.category === "gdpr" ? "GDPR" : 
         router.query.category === "lgpd" ? "LGPD" : "") );
 
@@ -113,12 +115,14 @@ const BlogList = () => {
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") ||
                     article.category2.includes(
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") )
             .splice(0, 1)
@@ -141,12 +145,14 @@ const BlogList = () => {
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") ||
                     article.category2.includes(
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") )
             .slice(1)
@@ -169,12 +175,14 @@ const BlogList = () => {
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") ||
                     article.category2.includes(
                 router.query.category === "tutorials" ? "Tutorials" : 
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
+                router.query.category === "innovation" ? "Innovation" : 
                 router.query.category === "gdpr" ? "GDPR" : 
                 router.query.category === "lgpd" ? "LGPD" : "") )
             .map(article => 

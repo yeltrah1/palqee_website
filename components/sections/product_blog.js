@@ -75,9 +75,20 @@ const ProductBlog = () => {
             </TitleText>
             <PostsContainer>
                 <BlogSmallCard 
+                    cover={posts[0].cover}
+                    date={posts[0].date}
+                    category={posts[0].category} 
+                    category2={posts[0].category2} 
+                    title={posts[0].title}
+                    description={posts[0].short_description}
+                    link={posts[0].link}
+                    key={posts[0].id}
+                />
+                <BlogSmallCard 
                     cover={posts[1].cover}
                     date={posts[1].date}
                     category={posts[1].category} 
+                    category2={posts[1].category2} 
                     title={posts[1].title}
                     description={posts[1].short_description}
                     link={posts[1].link}
@@ -87,19 +98,11 @@ const ProductBlog = () => {
                     cover={posts[2].cover}
                     date={posts[2].date}
                     category={posts[2].category} 
+                    category2={posts[2].category2} 
                     title={posts[2].title}
                     description={posts[2].short_description}
                     link={posts[2].link}
                     key={posts[2].id}
-                />
-                <BlogSmallCard 
-                    cover={posts[3].cover}
-                    date={posts[3].date}
-                    category={posts[3].category} 
-                    title={posts[3].title}
-                    description={posts[3].short_description}
-                    link={posts[3].link}
-                    key={posts[3].id}
                 />
             </PostsContainer>
         </Wrapper>

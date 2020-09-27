@@ -311,6 +311,7 @@ const BlogSearch = () => {
                   <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">{intl.formatMessage({id:'blog.tutorials'})}</option>
                   <option selected={router.query.category === "resources" ? true : false} value="resources">{intl.formatMessage({id:'blog.resources'})}</option>
                   <option selected={router.query.category === "business" ? true : false} value="business">{intl.formatMessage({id:'blog.business'})}</option>
+                  <option selected={router.query.category === "innovation" ? true : false} value="innovation">{intl.formatMessage({id:'blog.innovation'})}</option>
                   <option selected={router.query.category === "lgpd" ? true : false} value="lgpd">Lei Geral de Proteção de Dados (LGPD)</option>
                   <option selected={router.query.category === "gdpr" ? true : false} value="gdpr">General Data Protection Regulation (GDPR)</option>
               </SelectStyle>
@@ -339,6 +340,7 @@ const BlogSearch = () => {
                   <option selected={router.query.category === "tutorials" ? true : false} value="tutorials">{intl.formatMessage({id:'blog.tutorials'})}</option>
                   <option selected={router.query.category === "resources" ? true : false} value="resources">{intl.formatMessage({id:'blog.resources'})}</option>
                   <option selected={router.query.category === "business" ? true : false} value="business">{intl.formatMessage({id:'blog.business'})}</option>
+                  <option selected={router.query.category === "innovation" ? true : false} value="innovation">{intl.formatMessage({id:'blog.innovation'})}</option>
                   <option selected={router.query.category === "lgpd" ? true : false} value="lgpd">Lei Geral de Proteção de Dados (LGPD)</option>
                   <option selected={router.query.category === "gdpr" ? true : false} value="gdpr">General Data Protection Regulation (GDPR)</option>
               </SelectStyle>

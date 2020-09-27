@@ -255,6 +255,7 @@ export default {
     'blog.tutorials': "Tutorials",
     'blog.resources': "Resources & Tips",
     'blog.business': "Business",
+    'blog.innovation': "Innovation",
     'blog.no': "There are currently no articles matching your search.",
     'blog.no2': "There are currently no articles in this category.",
 

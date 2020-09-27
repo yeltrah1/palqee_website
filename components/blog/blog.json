@@ -7,8 +7,8 @@
         "title": "Taking customers temperature as COVID-19 prevention: What you need to know",
         "short_description": "At this point in 2020, thorn between our daily obligations and the COVID-19 outbreak, it’s safe to affirm that we have all been there: 6 feet apart from each other, waiting in a line to get inside the supermarket, ...",
         "long_description": "At this point in 2020, thorn between our daily obligations and the COVID-19 outbreak, it’s safe to affirm that we have all been there: 6 feet apart from each other, waiting in a line to get inside the supermarket, slowly advancing towards one of the employees to have our forehead scanned by an almost futuristic device and be checked for fever, one of the main symptoms of the virus.",
-        "category": "Resources & Tips",
-        "category2": "",
+        "category": "Business",
+        "category2": "GDPR",
         "link": "https://medium.com/palqee/taking-customers-temperature-as-covid-19-prevention-what-you-need-to-know-7ce54621b2e2"
     },
     {
@@ -19,8 +19,8 @@
         "title": "LGPD vs. GDPR – Top 10 Main Differences",
         "short_description": "If your company has relations with partners, suppliers or even has subsidiaries spread over either the European Economic Area or Brazil, bear in mind the need to adapt your business management and stay compliant.",
         "long_description": "If your company has relations with partners, suppliers or even has subsidiaries spread over either the European Economic Area or Brazil, bear in mind the need to adapt your business management and stay compliant with both the LGPD and the GDPR privacy regulations. Two years after the GDPR entered into force across the European Economic Area and with the brazilian LGPD coming into force soon, ... ",
-        "category": "Business",
-        "category2": "",
+        "category": "LGPD",
+        "category2": "GDPR",
         "link": "https://medium.com/palqee/lgpd-vs-gdpr-top-10-main-differences-91dbf29a4b00"
     },
     {
@@ -43,7 +43,7 @@
         "title": "A summary of Trusted Data — A New Framework for Identity and Data Sharing",
         "short_description": "Trusted Data, by Thomas Hardjono, David L. Shrier and Alex Pentland, introduces a revolutionary architecture and framework to build the Internet of Trusted Data.",
         "long_description": "Trusted Data, by Thomas Hardjono, David L. Shrier and Alex Pentland, introduces a revolutionary architecture and framework to build the Internet of Trusted Data. The aim of the framework is to allow efficient real-time data and insights sharing while preserving data privacy — a challenge much discussed these days as demand for data increases while international data protection regulations put new restrictions on how data can be used.",
-        "category": "Business",
+        "category": "Innovation",
         "category2": "",
         "link": "https://medium.com/datadriveninvestor/a-summary-of-trusted-data-a-new-framework-for-identity-and-data-sharing-94ada762b3fe"
     },

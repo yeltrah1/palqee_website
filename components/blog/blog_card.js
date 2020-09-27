@@ -94,6 +94,20 @@ const DateStyle = styled.div`
         height: 20px;
     }
 
+    .innovation-tag {
+        display: grid;
+        grid-row: 1;
+        grid-column: 2;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #a1a100;
+        place-items: center;
+        background: #ffffcc;
+        border-radius: 6px;
+        width: 90px;
+        height: 20px;
+    }
+
     .tutorials-tag {
         display: grid;
         grid-row: 1;
@@ -196,6 +210,7 @@ const BlogCard = ({cover, description, date, title, category, category2, link}) 
                             category === "GDPR" ? "reg-tag" :
                             category === "LGPD" ? "reg-tag" :
                             category === "Business" ? "business-tag" :
+                            category === "Innovation" ? "innovation-tag" :
                             category === "Tutorials" ? "tutorials-tag" :
                             category === "Resources & Tips" ? "resources-tag" : ""}
                         >{category}</a>
@@ -203,6 +218,7 @@ const BlogCard = ({cover, description, date, title, category, category2, link}) 
                             category2 === "GDPR" ? "reg-tag" :
                             category2 === "LGPD" ? "reg-tag" :
                             category2 === "Business" ? "business-tag" :
+                            category2 === "Innovation" ? "innovation-tag" :
                             category2 === "Tutorials" ? "tutorials-tag" :
                             category2 === "Resources & Tips" ? "resources-tag" : ""}
                         >{category2}</a>  
