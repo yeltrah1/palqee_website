@@ -49,7 +49,7 @@ const InfoStyle = styled.div`
 
 const DateStyle = styled.div`
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr 200px;
     grid-template-rows: 1fr;
     font-family: Poppins;
     font-size: 12px;
@@ -59,14 +59,19 @@ const DateStyle = styled.div`
     letter-spacing: normal;
     color: #758194;
 
+    .container {
+        display: flex;
+        column-gap: 10px;
+        justify-content: flex-end;
+    }
+
     .reg-tag {
         display: grid;
         font-family: Poppins;
         font-size: 14px;
-        color: #3f6db4;
-        justify-self: end;
+        color: #40b894;
         place-items: center;
-        background: #f2f8fd;
+        background: #e6faf4;
         border-radius: 6px;
         width: 60px;
         height: 20px;
@@ -77,7 +82,6 @@ const DateStyle = styled.div`
         font-family: Poppins;
         font-size: 14px;
         color: #3f6db4;
-        justify-self: end;
         place-items: center;
         background: #f2f8fd;
         border-radius: 6px;
@@ -90,7 +94,6 @@ const DateStyle = styled.div`
         font-family: Poppins;
         font-size: 14px;
         color: #3f6db4;
-        justify-self: end;
         place-items: center;
         background: #f2f8fd;
         border-radius: 6px;
@@ -103,7 +106,6 @@ const DateStyle = styled.div`
         font-family: Poppins;
         font-size: 14px;
         color: #ff6969;
-        justify-self: end;
         place-items: center;
         background: #ffe6e6;
         border-radius: 6px;
@@ -164,7 +166,7 @@ const LinkStyle = styled.div`
     }
 `;
 
-const BlogSmallCard = ({cover, description, date, title, category, link}) => {
+const BlogSmallCard = ({cover, description, date, title, category, category2, link}) => {
 
     return (
         <ContainerStyle>
@@ -172,13 +174,22 @@ const BlogSmallCard = ({cover, description, date, title, category, link}) => {
             <InfoStyle>
                 <DateStyle>
                     {date}
-                    <a className={
-                        category === "GDPR" ? "reg-tag" :
-                        category === "LGPD" ? "reg-tag" :
-                        category === "Business" ? "business-tag" :
-                        category === "Tutorials" ? "tutorials-tag" :
-                        category === "Resources & Tips" ? "resources-tag" : "reg-tag"}
-                    >{category}</a> 
+                    <div className="container">
+                        <a className={
+                            category === "GDPR" ? "reg-tag" :
+                            category === "LGPD" ? "reg-tag" :
+                            category === "Business" ? "business-tag" :
+                            category === "Tutorials" ? "tutorials-tag" :
+                            category === "Resources & Tips" ? "resources-tag" : ""}
+                        >{category}</a> 
+                        <a className={
+                            category2 === "GDPR" ? "reg-tag" :
+                            category2 === "LGPD" ? "reg-tag" :
+                            category2 === "Business" ? "business-tag" :
+                            category2 === "Tutorials" ? "tutorials-tag" :
+                            category2 === "Resources & Tips" ? "resources-tag" : ""}
+                        >{category2}</a> 
+                    </div>
                 </DateStyle>
                 <TitleStyle>{title}</TitleStyle>
                 <DescriptionStyle>{description}</DescriptionStyle>

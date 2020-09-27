@@ -1,13 +1,38 @@
 [
     {
+        "id": "6",
+        "date": "Sep 7, 2020",
+        "cover": "covid_check.jpeg",
+        "large_cover": "covid_check_large.jpeg",
+        "title": "Taking customers temperature as COVID-19 prevention: What you need to know",
+        "short_description": "At this point in 2020, thorn between our daily obligations and the COVID-19 outbreak, it’s safe to affirm that we have all been there: 6 feet apart from each other, waiting in a line to get inside the supermarket, ...",
+        "long_description": "At this point in 2020, thorn between our daily obligations and the COVID-19 outbreak, it’s safe to affirm that we have all been there: 6 feet apart from each other, waiting in a line to get inside the supermarket, slowly advancing towards one of the employees to have our forehead scanned by an almost futuristic device and be checked for fever, one of the main symptoms of the virus.",
+        "category": "Resources & Tips",
+        "category2": "",
+        "link": "https://medium.com/palqee/taking-customers-temperature-as-covid-19-prevention-what-you-need-to-know-7ce54621b2e2"
+    },
+    {
+        "id": "5",
+        "date": "Aug 25, 2020",
+        "cover": "regulations_comparison.jpeg",
+        "large_cover": "regulations_large.jpeg",
+        "title": "LGPD vs. GDPR – Top 10 Main Differences",
+        "short_description": "If your company has relations with partners, suppliers or even has subsidiaries spread over either the European Economic Area or Brazil, bear in mind the need to adapt your business management and stay compliant with the LGPD and the GDPR.",
+        "long_description": "If your company has relations with partners, suppliers or even has subsidiaries spread over either the European Economic Area or Brazil, bear in mind the need to adapt your business management and stay compliant with both the LGPD and the GDPR privacy regulations. Two years after the GDPR entered into force across the European Economic Area and with the brazilian LGPD coming into force soon, ... ",
+        "category": "Business",
+        "category2": "",
+        "link": "https://medium.com/palqee/lgpd-vs-gdpr-top-10-main-differences-91dbf29a4b00"
+    },
+    {
         "id": "4",
         "date": "Aug 4, 2020",
         "cover": "compliance_palqee.jpeg",
         "large_cover": "compliance_large.jpeg",
         "title": "Top 5 steps to get started with GDPR compliance",
-        "short_description": "A research by GDPR.EU found that over 50% of SME’s were still not GDPR compliant as per May 2019. While the GDPR was mostly dreaded by (tech) giants, time has shown that the regulation is much more of a burden for small businesses.",
+        "short_description": "A research by GDPR.EU found that over 50% of SME’s were still not GDPR compliant as per May 2019. While the GDPR was mostly dreaded by (tech) giants, time has shown that the regulation is much more of a burden for SMEs.",
         "long_description": "A research by GDPR.EU found that over 50% of SME’s were still not GDPR compliant as per May 2019. While the GDPR was mostly dreaded by (tech) giants, time has shown that the regulation is much more of a burden for small businesses. Most don’t have the budget to spend on data privacy and if there is some money available the priority usually is to put it into growth rather than something that is seen largely as an expense.",
         "category": "Resources & Tips",
+        "category2": "GDPR",
         "link": "https://medium.com/palqee/top-5-steps-to-get-started-with-gdpr-compliance-afdecf72650f"
     },
     {
@@ -19,6 +44,7 @@
         "short_description": "Trusted Data, by Thomas Hardjono, David L. Shrier and Alex Pentland, introduces a revolutionary architecture and framework to build the Internet of Trusted Data.",
         "long_description": "Trusted Data, by Thomas Hardjono, David L. Shrier and Alex Pentland, introduces a revolutionary architecture and framework to build the Internet of Trusted Data. The aim of the framework is to allow efficient real-time data and insights sharing while preserving data privacy — a challenge much discussed these days as demand for data increases while international data protection regulations put new restrictions on how data can be used.",
         "category": "Business",
+        "category2": "",
         "link": "https://medium.com/datadriveninvestor/a-summary-of-trusted-data-a-new-framework-for-identity-and-data-sharing-94ada762b3fe"
     },
     {
@@ -30,6 +56,7 @@
         "short_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations.",
         "long_description": "As consumers become more aware of the value of their personal data and countries are implementing their version of data privacy regulations, we’ve been reading a lot about businesses struggling to cope with it, as they had to invest large sums of money, time and resources into their data privacy agenda.",
         "category": "Business",
+        "category2": "",
         "link": "https://medium.com/datadriveninvestor/investing-in-data-privacy-brings-positive-returns-1c44e3728e72"
     },
     {
@@ -41,6 +68,7 @@
         "short_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy.",
         "long_description": "Why businesses should start implementing data ethics as part of their core values now. Albeit the GDPR was implemented to protect and enforce data privacy.",
         "category": "Business",
+        "category2": "",
         "link": "https://medium.com/@spalme/data-ethics-as-a-competitive-advantage-505c4c4d8bcc"
     }
 ]

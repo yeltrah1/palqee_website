@@ -66,11 +66,17 @@ const BlogList = () => {
     const router = useRouter()
 
     const searchResults = posts.filter(article => article.category.includes(
-            router.query.category === "tutorials" ? "Tutorials" : 
-            router.query.category === "resources" ? "Resources & Tips" : 
-            router.query.category === "business" ? "Business" : 
-            router.query.category === "gdpr" ? "GDPR" : 
-            router.query.category === "lgpd" ? "LGPD" : "") === true);
+        router.query.category === "tutorials" ? "Tutorials" : 
+        router.query.category === "resources" ? "Resources & Tips" : 
+        router.query.category === "business" ? "Business" : 
+        router.query.category === "gdpr" ? "GDPR" : 
+        router.query.category === "lgpd" ? "LGPD" : "") ||
+            article.category2.includes(
+        router.query.category === "tutorials" ? "Tutorials" : 
+        router.query.category === "resources" ? "Resources & Tips" : 
+        router.query.category === "business" ? "Business" : 
+        router.query.category === "gdpr" ? "GDPR" : 
+        router.query.category === "lgpd" ? "LGPD" : "") );
 
     const searchArticle = posts.filter(article => article.title.includes(router.query.article));
 
@@ -83,6 +89,7 @@ const BlogList = () => {
                 cover={article.cover}
                 date={article.date}
                 category={article.category} 
+                category2={article.category2} 
                 title={article.title}
                 description={article.short_description}
                 link={article.link}
@@ -107,13 +114,20 @@ const BlogList = () => {
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
                 router.query.category === "gdpr" ? "GDPR" : 
-                router.query.category === "lgpd" ? "LGPD" : "") === true)
+                router.query.category === "lgpd" ? "LGPD" : "") ||
+                    article.category2.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") )
             .splice(0, 1)
             .map(article => 
             <BlogLargeCard 
                 cover={article.large_cover}
                 date={article.date}
                 category={article.category} 
+                category2={article.category2} 
                 title={article.title}
                 description={article.long_description}
                 link={article.link}
@@ -128,13 +142,20 @@ const BlogList = () => {
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
                 router.query.category === "gdpr" ? "GDPR" : 
-                router.query.category === "lgpd" ? "LGPD" : "") === true)
+                router.query.category === "lgpd" ? "LGPD" : "") ||
+                    article.category2.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") )
             .slice(1)
             .map(article => 
             <BlogCard 
                 cover={article.cover}
                 date={article.date}
-                category={article.category} 
+                category={article.category}
+                category2={article.category2}  
                 title={article.title}
                 description={article.short_description}
                 link={article.link}
@@ -149,12 +170,19 @@ const BlogList = () => {
                 router.query.category === "resources" ? "Resources & Tips" : 
                 router.query.category === "business" ? "Business" : 
                 router.query.category === "gdpr" ? "GDPR" : 
-                router.query.category === "lgpd" ? "LGPD" : "") === true)
+                router.query.category === "lgpd" ? "LGPD" : "") ||
+                    article.category2.includes(
+                router.query.category === "tutorials" ? "Tutorials" : 
+                router.query.category === "resources" ? "Resources & Tips" : 
+                router.query.category === "business" ? "Business" : 
+                router.query.category === "gdpr" ? "GDPR" : 
+                router.query.category === "lgpd" ? "LGPD" : "") )
             .map(article => 
             <BlogCard 
                 cover={article.cover}
                 date={article.date}
                 category={article.category} 
+                category2={article.category2} 
                 title={article.title}
                 description={article.short_description}
                 link={article.link}
