@@ -92,7 +92,7 @@ const MobileMenu = styled.div`
       display: grid;
       padding-top: 10px;
       width: 88vw;
-      height: 350px;
+      height: 420px;
       place-items: center;
       place-self: center;
       z-index: 10;
@@ -456,126 +456,125 @@ const TermsText = () => {
         <TextStyle id="policy">
             <div className="small">
                 <Element name="menu1">
+                  <b>{translate('terms.title')}</b><br/><br/>
                   {translate('terms.intro')}<br/><br/>
                   <b><u>{translate('terms.title1')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc1')}<br/><br/>
-                <b><u>{translate('terms.title2')}</u></b><br/><br/>
-                {translate('terms.desc2')}<br/><br/>
                 <Element name="menu2">
+                    <b><u>{translate('terms.title2')}</u></b><br/><br/>
+                </Element>
+                {translate('terms.desc2')}<br/><br/>
+                <Element name="menu3">
                   <b><u>{translate('terms.title3')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc3')}<br/><br/>
-                <Element name="menu3">
+                <Element name="menu4">
                   <b><u>{translate('terms.title4')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc4')}<br/><br/>
-                <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                <Element name="menu5">
+                    <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc5')}<br/><br/>
-                <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                <Element name="menu6">
+                    <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc6')}<br/><br/>
-                <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                <Element name="menu7">
+                    <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc7')}<br/><br/>
-                <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                <Element name="menu8">
+                    <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc8')}<br/><br/>
-                <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                <Element name="menu9">
+                    <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc9')}<br/><br/>
-                <Element name="menu4">
+                <Element name="menu10">
                   <b><u>{translate('terms.title10')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc10')}<br/><br/>
-                <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                <Element name="menu11">
+                    <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc11')}<br/><br/>
-                <Element name="menu5">
+                <Element name="menu12">
                   <b><u>{translate('terms.title12')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc12')}<br/><br/>
-                <Element name="menu6">
+                <Element name="menu13">
                   <b><u>{translate('terms.title13')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc13')}<br/><br/>
-                <Element name="menu7">
+                <Element name="menu14">
                   <b><u>{translate('terms.title14')}</u></b><br/><br/>
                 </Element>
-                {translate('terms.desc14')}<br/><br/>
-                <Element name="menu8">
-                  <b><u>{translate('terms.title15')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc15')}<br/><br/>
-                <Element name="menu9">
-                  <b><u>{translate('terms.title16')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc16')}<br/><br/>
-                <Element name="menu10">
-                  <b><u>{translate('terms.title17')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc17')}<br/><br/>
-                <Element name="menu11">
-                  <b><u>{translate('terms.title18')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                {translate('terms.desc14')}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         </TextStyle>
         <TextMobileStyle id="policy-mobile">
-            <div className="small">
+        <div className="small">
                 <Element name="mobile-menu1">
+                  <b>{translate('terms.title')}</b><br/><br/>
+                  {translate('terms.intro')}<br/><br/>
                   <b><u>{translate('terms.title1')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc1')}<br/><br/>
-                <b><u>{translate('terms.title2')}</u></b><br/><br/>
-                {translate('terms.desc2')}<br/><br/>
                 <Element name="mobile-menu2">
+                    <b><u>{translate('terms.title2')}</u></b><br/><br/>
+                </Element>
+                {translate('terms.desc2')}<br/><br/>
+                <Element name="mobile-menu3">
                   <b><u>{translate('terms.title3')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc3')}<br/><br/>
-                <Element name="mobile-menu3">
+                <Element name="mobile-menu4">
                   <b><u>{translate('terms.title4')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc4')}<br/><br/>
-                <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                <Element name="mobile-menu5">
+                    <b><u>{translate('terms.title5')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc5')}<br/><br/>
-                <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                <Element name="mobile-menu6">
+                    <b><u>{translate('terms.title6')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc6')}<br/><br/>
-                <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                <Element name="mobile-menu7">
+                    <b><u>{translate('terms.title7')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc7')}<br/><br/>
-                <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                <Element name="mobile-menu8">
+                    <b><u>{translate('terms.title8')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc8')}<br/><br/>
-                <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                <Element name="mobile-menu9">
+                    <b><u>{translate('terms.title9')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc9')}<br/><br/>
-                <Element name="mobile-menu4">
+                <Element name="mobile-menu10">
                   <b><u>{translate('terms.title10')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc10')}<br/><br/>
-                <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                <Element name="mobile-menu11">
+                    <b><u>{translate('terms.title11')}</u></b><br/><br/>
+                </Element>
                 {translate('terms.desc11')}<br/><br/>
-                <Element name="mobile-menu5">
+                <Element name="mobile-menu12">
                   <b><u>{translate('terms.title12')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc12')}<br/><br/>
-                <Element name="mobile-menu6">
+                <Element name="mobile-menu13">
                   <b><u>{translate('terms.title13')}</u></b><br/><br/>
                 </Element>
                 {translate('terms.desc13')}<br/><br/>
-                <Element name="mobile-menu7">
+                <Element name="mobile-menu14">
                   <b><u>{translate('terms.title14')}</u></b><br/><br/>
                 </Element>
-                {translate('terms.desc14')}<br/><br/>
-                <Element name="mobile-menu8">
-                  <b><u>{translate('terms.title15')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc15')}<br/><br/>
-                <Element name="mobile-menu9">
-                  <b><u>{translate('terms.title16')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc16')}<br/><br/>
-                <Element name="mobile-menu10">
-                  <b><u>{translate('terms.title17')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc17')}<br/><br/>
-                <Element name="mobile-menu11">
-                  <b><u>{translate('terms.title18')}</u></b><br/><br/>
-                </Element>
-                {translate('terms.desc18')}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                {translate('terms.desc14')}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
         </TextMobileStyle>
       </PolicyStyle>
