@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import translate from "../providers/i18n/translate";
+import { ScrollTo } from "react-scroll-to";
 
 import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
 import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
@@ -163,7 +164,14 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                             <Link href="/partners"><a className={item === "partners" ? "item-list" : "item-list hide"}>{translate('navBar.become')}</a></Link>
                             <Link as="/accredited/all-services/all-industries/global" href="/accredited/[service]/[industry]/[country]"><a className={item === "partners" ? "item-list" : "item-list hide"}>{translate('navBar.accredited')}</a></Link>
                         </div>
-                        <a href="/blog/all" className="last-item">Blog</a>
+                        <div className="item-group">
+                            <a href="/blog/all" className="item">Blog</a>
+                        </div>                        
+                        <ScrollTo>
+                        {({ scroll }) => (
+                            <a className="last-item" onClick={() => scroll({ y: 4000, smooth: true }), toggleMenu()}>{translate('navBar.sales')}</a>
+                        )}
+                        </ScrollTo>
                     </div>
                 </div>
                 <div className={countryMobile ? "menu-background" : "mobile-close"}>
@@ -206,6 +214,7 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                             </div>
                         </div>
                         <a className="menu-item" href="/blog/all">Blog</a>
+                        <a className="menu-item" href="/blog/all">{translate('navBar.sales')}</a>
                         <div id="countries-box" className="countries-area">
                             <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
                                 <a onClick={() => {setCountry("pt-BR"); setCountryMenu(false)}}>Brazil (Portuguese)</a>

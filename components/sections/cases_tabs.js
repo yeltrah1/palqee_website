@@ -4,6 +4,7 @@ import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
+import { ScrollTo } from "react-scroll-to";
 
 import { palqeeTheme } from '../../providers/theme/colors.ts';
 
@@ -280,6 +281,7 @@ const Cases = styled.div`
         letter-spacing: normal;
         color: #3f6db4;
         align-self: start;
+        cursor: pointer;
     }
 `;
 
@@ -466,7 +468,7 @@ const CasesTabs = () => {
                             <div className="title">{titleOne()}</div>
                             <div className="details">
                                 {detailsOne()}
-                                <p className="link"><u><a href="/">{linkOne()}</a></u></p>
+                                <p className="link"><u><a href="/book-demo">{linkOne()}</a></u></p>
                             </div>
                         </div>
                         <Images 
@@ -490,7 +492,11 @@ const CasesTabs = () => {
                             <div className="title">{titleTwo()}</div>
                             <div className="details">
                                 {detailsTwo()}
-                                <p className="link"><u><a href="/">{linkTwo()}</a></u></p>
+                                <ScrollTo>
+                                    {({ scroll }) => (
+                                    <p className="link"><u><a onClick={() => scroll({ y: 4000, smooth: true })}>{linkTwo()}</a></u></p>
+                                    )}
+                                </ScrollTo>
                             </div>
                         </div>
                 </Cases>
@@ -499,7 +505,7 @@ const CasesTabs = () => {
                         <div className="title">{titleThree()}</div>
                         <div className="details">
                             {detailsThree()}
-                            <p className="link"><u><a href="/">{linkThree()}</a></u></p>
+                            <p className="link"><u><a href="/book-demo">{linkThree()}</a></u></p>
                         </div>
                     </div>
                     <Images
@@ -524,7 +530,11 @@ const CasesTabs = () => {
                             <div className="title">{titleTwo()}</div>
                             <div className="details">
                                 {detailsTwo()}
-                                <p className="link"><u><a href="/">{linkTwo()}</a></u></p>
+                                <ScrollTo>
+                                    {({ scroll }) => (
+                                    <p className="link"><u><a onClick={() => scroll({ y: 4000, smooth: true })}>{linkTwo()}</a></u></p>
+                                    )}
+                                </ScrollTo>
                             </div>
                         </div>
                 </Cases>
@@ -533,7 +543,7 @@ const CasesTabs = () => {
                         <div className="title">{titleThree()}</div>
                         <div className="details">
                             {detailsThree()}
-                            <p className="link"><u><a href="/">{linkThree()}</a></u></p>
+                            <p className="link"><u><a href="/book-demo">{linkThree()}</a></u></p>
                         </div>
                     </div>
                     <Images

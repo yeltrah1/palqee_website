@@ -185,7 +185,6 @@ const Testimonials = () => {
                     dragConstraints={constraintsRef}
                     dragElastic={0.1}
                     > */}
-                    <DrlCard/>
                     <GetglobalCard/>
                     <DanticCard/>
                 {/* </SliderContent> */}

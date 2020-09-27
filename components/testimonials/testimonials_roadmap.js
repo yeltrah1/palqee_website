@@ -153,7 +153,6 @@ const Testimonials = () => {
                 </div>
             </TestimonialsText>
             <Cards>
-                <DrlCard/>
                 <GetglobalCard/>
                 <DanticCard/>
             </Cards>

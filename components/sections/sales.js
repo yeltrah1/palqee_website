@@ -100,12 +100,12 @@ const Sales = () => {
   function sendEmail(e) {
     e.preventDefault();
   
-    // emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', e.target, 'user_hcgMWnNDo2w6O830K9ITX')
-    // .then((result) => {
-    //   console.log(result.text);
-    // }, (error) => {
-    //     console.log(error.text);
-    // });
+    emailjs.sendForm('amazon_ses', 'template_Fh92cS6p', e.target, 'user_hcgMWnNDo2w6O830K9ITX')
+    .then((result) => {
+      console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
     document.forms["request_info"].reset();
     setSent(true)
   }

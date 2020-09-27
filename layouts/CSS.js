@@ -167,7 +167,7 @@ export const NavStyle = styled.div`
 
     .last-item {
       align-self: center;
-      padding: 10px 0;
+      padding: 15px 0;
       margin-left: 45px;
       width: 80%;
       cursor: pointer;

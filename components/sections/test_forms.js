@@ -30,7 +30,7 @@ const TestStyle = styled.div`
   }
 
   @media screen and (max-width: 750px) {
-    margin-top: -150px;
+    margin-top: -100px;
     grid-template-rows: 500px 200px;
   }
 `;
@@ -67,8 +67,8 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"500px", 
-                width:"60%", 
+                height:"600px", 
+                width:"70%", 
                 placeSelf:"center", 
                 borderRadius: "16px",
                 boxShadow: "0 0.9px 20px 0 rgba(0, 0, 0, 0.04)"}}>
@@ -82,8 +82,8 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"500px", 
-                width:"60%", 
+                height:"600px", 
+                width:"70%", 
                 placeSelf:"center", 
                 borderRadius: "16px",
                 boxShadow: "0 0.9px 20px 0 rgba(0, 0, 0, 0.04)"}}>
@@ -97,8 +97,8 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"600px", 
-                width:"90%", 
+                height:"800px", 
+                width:"95%", 
                 placeSelf:"center", 
                 borderRadius: "16px",
                 boxShadow: "0 0.9px 20px 0 rgba(0, 0, 0, 0.04)"}}>
@@ -112,8 +112,8 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"600px", 
-                width:"90%", 
+                height:"800px", 
+                width:"95%", 
                 placeSelf:"center", 
                 borderRadius: "16px",
                 boxShadow: "0 0.9px 20px 0 rgba(0, 0, 0, 0.04)"}}>
