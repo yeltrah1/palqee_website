@@ -261,7 +261,6 @@ export const NavBarStyle = styled.div`
       float: left;
       overflow: hidden;
       height: 65px;
-      width: 185px;
 
       .dropdown-countries {
         display: grid;

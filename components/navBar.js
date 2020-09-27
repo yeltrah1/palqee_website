@@ -166,10 +166,10 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                         </div>
                         <div className="item-group">
                             <a href="/blog/all" className="item">Blog</a>
-                        </div>                        
+                        </div>
                         <ScrollTo>
-                        {({ scroll }) => (
-                            <a className="last-item" onClick={() => scroll({ y: 4000, smooth: true }), toggleMenu()}>{translate('navBar.sales')}</a>
+                        {({ scroll }) => (                        
+                            <a className="last-item" onClick={() => {scroll({ y: 7000, smooth: true }); toggleMenu()}}>{translate('navBar.sales')}</a>
                         )}
                         </ScrollTo>
                     </div>
@@ -214,7 +214,11 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
                             </div>
                         </div>
                         <a className="menu-item" href="/blog/all">Blog</a>
-                        <a className="menu-item" href="/blog/all">{translate('navBar.sales')}</a>
+                        <ScrollTo>
+                        {({ scroll }) => ( 
+                            <a className="menu-item" onClick={() => scroll({ y: 6000, smooth: true })}>{translate('navBar.sales')}</a>
+                        )}
+                        </ScrollTo>
                         <div id="countries-box" className="countries-area">
                             <div className={ countryMenu ? "dropdown-countries" : "dropdown-countries close"}>
                                 <a onClick={() => {setCountry("pt-BR"); setCountryMenu(false)}}>Brazil (Portuguese)</a>
