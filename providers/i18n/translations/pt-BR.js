@@ -50,7 +50,7 @@ export default {
     'stats.small': "Você não está sozinho. Tenha nossa tecnologia pioneira, um time de suporte internacional e especialistas renomados de tecnologia e privacidade de dados a seu favor",
     'stats.employees': " de colaboradores engajados",
     'stats.surveys': " de entrevistas respondidas",
-    'stats.questions': "Perguntas de mapeamento inclusas",
+    'stats.questions': "Perguntas de conformidade incluídas",
     'stats.reports': "Relatórios de compliance automaizados",
     'testimonials.large': "Nós acreditamos no poder do coletivo",
     'testimonials.small': "Nossa obsessão está em criar produtos e serviços que te deixem satisfeitos e atendam suas necessidades do dia-a-dia. É por isso que nós estamos constantemente ouvindo o que nossos clientes e parceiros tem a dizer sobre a Palqee",

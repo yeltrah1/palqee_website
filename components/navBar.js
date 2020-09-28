@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ThemeProvider } from 'styled-components';
 import translate from "../providers/i18n/translate";
 import { ScrollTo } from "react-scroll-to";
+import { useIntl } from 'react-intl';
 
 import { NavStyle, NavBarStyle, DemoButton, LoginButton } from '../layouts/CSS';
 import { initialNavBar, scrollNavBar } from '../providers/theme/colors.ts';
@@ -40,6 +41,7 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
 
     const [item, setItem] = useState("none");
     const [countryMenu, setCountryMenu] = useState(false);
+    const intl = useIntl()
 
     const toggleMenu = () => {
         if(menu === false) {
@@ -233,7 +235,7 @@ const NavBar = ({ countryMobile, setCountryMobile, country, setCountry, white, s
             </div>   
             <div className="demo">
                 <DemoButton href="/book-demo">{translate('navBar.demo_button')}</DemoButton>
-                <LoginButton href="https://dev.palqee.com/auth/login">Login</LoginButton>
+                <LoginButton target="_blank" href={intl.formatMessage({id:'test.country'}) === "en-GB" ? "https://dev.palqee.com/auth/login?selectedLocale=en" : "https://dev.palqee.com/auth/login?selectedLocale=pt"}>Login</LoginButton>
                 <CountryStyle onClick={() => {toggleCountryMenu(); setMenu(false); toggleCountryMobile()}} src={
                     country === "pt-BR" ? "/static/icons/flags/br.png" :
                     country === "en-US" ? "/static/icons/flags/us.png" :

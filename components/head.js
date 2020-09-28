@@ -16,7 +16,19 @@ export default function Head() {
         <NextHead>
             <meta charSet="UTF-8" />
             <title>{intl.formatMessage(description)}</title>
-
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179145021-1"/>
+            <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-179145021-1', {
+                page_path: window.location.pathname,
+              });
+            `,
+            }}
+            />
             <script src="https://config.metomic.io/config.js?id=prj:e114b29d-6a87-4a11-bd0f-28df9df2e9e1" crossorigin charset="utf-8"></script>
             <script src="https://consent-manager.metomic.io/embed.js" crossorigin charset="utf-8"></script>
 

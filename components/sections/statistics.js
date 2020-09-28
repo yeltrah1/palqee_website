@@ -74,14 +74,14 @@ const StatisticsText = styled.div`
 
 const StatisticsNumbers = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     place-items: center;
     margin-top: 40px;
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 
     @font-face {
@@ -135,11 +135,10 @@ const Statistics = ({ count, setCount }) => {
     }
 
     const props = useSpring({ 
-        engaged: count ? 400 : 0,
-        surveys: count ? 5000 : 0, 
-        questions: count ? 360 : 0, 
-        reports: count ? 250 : 0, 
-        from: { engaged: 0, surveys: 0, questions: 0, reports: 0 },
+        engaged: count ? 204 : 0,
+        surveys: count ? 782 : 0, 
+        questions: count ? 223 : 0,  
+        from: { engaged: 0, surveys: 0, questions: 0 },
         config: { duration: 3000, easing: easings.easeCircleInOut }
     });
 
@@ -163,10 +162,6 @@ const Statistics = ({ count, setCount }) => {
                 <div>
                     <div className="large"><animated.a>{props.questions.interpolate(questions => Math.floor(questions))}</animated.a><a className="pink">+</a></div>
                     <div className="small">{translate('stats.questions')}</div>
-                </div>
-                <div>
-                    <div className="large"><animated.a>{props.reports.interpolate(reports => Math.floor(reports))}</animated.a></div>
-                    <div className="small">{translate('stats.reports')}</div>
                 </div>
             </StatisticsNumbers>
         </InView>

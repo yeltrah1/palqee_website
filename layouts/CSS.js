@@ -597,11 +597,11 @@ export const HomeStyle = styled.div`
 
   .small-blue {
     background: #f2f8fd;
-    height: 300px;
+    height: auto;
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 640px;
+      height: auto;
     }
   }
 
