@@ -9,7 +9,7 @@ const TestStyle = styled.div`
   align-self: start;
   justify-self: center;
   width: 100vw;
-  margin-top: -150px;
+  margin-top: -120px;
 
   .hide {
     display: none;
@@ -31,7 +31,7 @@ const TestStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     margin-top: -100px;
-    grid-template-rows: 500px 200px;
+    grid-template-rows: auto auto;
   }
 `;
 
@@ -40,14 +40,15 @@ const Plane = styled.img`
   align-self: end;
   justify-self: center;
   width: 180px;
-  margin-top: -80px;
+  margin-top: -50px;
+  margin-bottom: 20px;
   padding-left: 200px;
 
   @media screen and (max-width: 750px) {
     grid-row: 2;
     width: 180px;
-    margin-top: 0px;
-    padding-top: 150px;
+    margin-top: -130px;
+    padding-top: 60px;
     padding-left: 50px;
     align-self: center;
   }
@@ -67,7 +68,7 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"600px", 
+                height:"650px", 
                 width:"70%", 
                 placeSelf:"center", 
                 borderRadius: "16px",
@@ -82,7 +83,7 @@ const TestForms = () => {
                 marginheight="0"
                 marginwidth="0"
                 style={{
-                height:"600px", 
+                height:"650px", 
                 width:"70%", 
                 placeSelf:"center", 
                 borderRadius: "16px",

@@ -926,13 +926,13 @@ export const TestStyle = styled.div`
   }
 
   .large-white {
-    height: 550px;
+    height: auto;
     width: 100vw;
     position: relative;
     display: grid;
 
     @media screen and (max-width: 750px) {
-      height: 700px;
+      height: auto;
       width: 100vw;
     }
   }
