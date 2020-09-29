@@ -313,7 +313,7 @@ const PartnerSearch = () => {
                     <form onSubmit={() => router.push('/accredited/all-services/all-industries/global?partner='+document.getElementById("partner-mobile").value)}>
                     <SearchStyle>
                       <InputStyle type="text" id="partner-mobile" placeholder={intl.formatMessage({id:'blog.search'})}/>
-                      <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                      <button type="submit" style={{border:"none", background:"#FFF"}}><span className="ico-mglass"></span></button>
                     </SearchStyle>
                     </form>
                 </FieldStyle>
