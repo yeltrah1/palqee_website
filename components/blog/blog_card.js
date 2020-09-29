@@ -42,9 +42,9 @@ const InfoStyle = styled.div`
     color: #000000;
 
     @media screen and (max-width: 750px) {
-        padding: 10px 20px;
+        padding: 10px 15px;
         grid-row-gap: 0.5em;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: 30px 40px 90px 20px;
     }
 `;
 
@@ -59,6 +59,10 @@ const DateStyle = styled.div`
     font-style: normal;
     letter-spacing: normal;
     color: #758194;
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr 190px;
+    }
 
     .container {
         display: flex;

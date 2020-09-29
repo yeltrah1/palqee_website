@@ -288,6 +288,7 @@ const PartnerSearch = () => {
                         <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">{intl.formatMessage({id:'find.consulting'})}</option>
                         <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">{intl.formatMessage({id:'find.palqee'})}</option>
                         <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">{intl.formatMessage({id:'find.training'})}</option>
+                        <option selected={router.query.service === "dpo" && !router.query.partner ? true : false} value="dpo">DPO as a Service</option>
                     </SelectStyle>
                 </FieldStyle>
                 <FieldStyle>
@@ -297,6 +298,7 @@ const PartnerSearch = () => {
                         <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">{intl.formatMessage({id:'find.finance'})}</option>
                         <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">{intl.formatMessage({id:'find.automotive'})}</option>
                         <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
+                        <option selected={router.query.industry === "healthcare" && !router.query.partner ? true : false} value="healthcare">{intl.formatMessage({id:'find.healthcare'})}</option>
                     </SelectStyle>
                 </FieldStyle>
                 <FieldStyle>
@@ -331,6 +333,7 @@ const PartnerSearch = () => {
                       <option selected={router.query.service === "consulting" && !router.query.partner ? true : false} value="consulting">{intl.formatMessage({id:'find.consulting'})}</option>
                       <option selected={router.query.service === "implementation" && !router.query.partner ? true : false} value="implementation">{intl.formatMessage({id:'find.palqee'})}</option>
                       <option selected={router.query.service === "training" && !router.query.partner ? true : false} value="training">{intl.formatMessage({id:'find.training'})}</option>
+                      <option selected={router.query.service === "dpo" && !router.query.partner ? true : false} value="dpo">DPO as a Service</option>
                   </SelectStyle>
               </FieldStyle>
               <FieldStyle>
@@ -340,6 +343,7 @@ const PartnerSearch = () => {
                       <option selected={router.query.industry === "finance" && !router.query.partner ? true : false} value="finance">{intl.formatMessage({id:'find.finance'})}</option>
                       <option selected={router.query.industry === "automotive" && !router.query.partner ? true : false} value="automotive">{intl.formatMessage({id:'find.automotive'})}</option>
                       <option selected={router.query.industry === "ecommerce" && !router.query.partner ? true : false} value="ecommerce">Ecommerce</option>
+                      <option selected={router.query.industry === "healthcare" && !router.query.partner ? true : false} value="healthcare">{intl.formatMessage({id:'find.healthcare'})}</option>
                   </SelectStyle>
               </FieldStyle>
               <FieldStyle>

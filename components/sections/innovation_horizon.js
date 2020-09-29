@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   height: 100%;
 
     @media screen and (max-width: 750px) {
-        height: 420px;
+        height: 460px;
         grid-template-columns: 1fr;
         grid-template-rows: 160px 230px;
     }
@@ -28,7 +28,7 @@ const HighlightText = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-row: 1;
-        height: 180px;  
+        height: 220px;  
     }
 
     @font-face {

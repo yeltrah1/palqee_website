@@ -49,10 +49,12 @@ const PartnersList = () => {
         partner.service.includes(
             router.query.service === "consulting" ? "Consulting" : 
             router.query.service === "implementation" ? "Implementation" : 
+            router.query.service === "dpo" ? "DPO as a Service" : 
             router.query.service === "training" ? "Training" : "") === true &&
         partner.industry.includes(
             router.query.industry === "finance" ? "Finance" : 
             router.query.industry === "automotive" ? "Automotive" : 
+            router.query.industry === "healthcare" ? "Healthcare" : 
             router.query.industry === "ecommerce" ? "Ecommerce" : "") === true);
 
     const searchPartner = partners.filter(partner => partner.description.includes(router.query.partner));
@@ -90,11 +92,13 @@ const PartnersList = () => {
                     router.query.country === "portugal" ? "Portugal" : "") === true &&
                 partner.service.includes(
                     router.query.service === "consulting" ? "Consulting" : 
-                    router.query.service === "implementation" ? "Implementation" : 
+                    router.query.service === "implementation" ? "Implementation" :  
+                    router.query.service === "dpo" ? "DPO as a Service" : 
                     router.query.service === "training" ? "Training" : "") === true &&
                 partner.industry.includes(
                     router.query.industry === "finance" ? "Finance" : 
                     router.query.industry === "automotive" ? "Automotive" : 
+                    router.query.industry === "healthcare" ? "Healthcare" : 
                     router.query.industry === "ecommerce" ? "Ecommerce" : "") === true)
             .map(partner => 
             <PartnerCard 

@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   height: 700px;
 
     @media screen and (max-width: 750px) {
-        grid-template-rows: 0.5fr 0.2fr 3fr;
+        grid-template-rows: 200px 70px auto;
         height: auto;
         width: 90vw;
     }
@@ -44,6 +44,10 @@ const TitleText = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+
+    @media screen and (max-width: 750px) {
+        grid-template-rows: 100px 100px;
+    }
 
     @font-face {
         font-family: 'Poppins-Semi';
@@ -93,8 +97,9 @@ const TabsContainer = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 45vw 45vw;
+        grid-template-rows: 30px 2px;
         width: 90%;
-        height: 40px;
+        height: auto;
     }
 
     .active-text {

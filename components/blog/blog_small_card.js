@@ -33,7 +33,7 @@ const InfoStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 25px 55px 85px 20px;
-    padding: 0px 20px;
+    padding: 0px 15px;
     font-family: Poppins;
     font-size: 14px;
     font-weight: normal;
@@ -43,13 +43,13 @@ const InfoStyle = styled.div`
     color: #000000;
 
     @media screen and (max-width: 750px) {
-        grid-template-rows: 30px 70px 85px 20px;
+        grid-template-rows: 28px 70px 92px 20px;
     }
 `;
 
 const DateStyle = styled.div`
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 190px;
     grid-template-rows: 1fr;
     font-family: Poppins;
     font-size: 12px;
@@ -61,7 +61,7 @@ const DateStyle = styled.div`
 
     .container {
         display: flex;
-        column-gap: 10px;
+        column-gap: 5px;
         justify-content: flex-end;
     }
 

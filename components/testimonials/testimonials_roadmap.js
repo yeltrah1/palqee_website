@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import translate from "../../providers/i18n/translate";
 import { ThemeProvider } from 'styled-components';
 
@@ -20,7 +19,7 @@ const Wrapper = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 240px 340px;
+        grid-template-rows: 300px 250px;
     }
 `;
 

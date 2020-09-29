@@ -13,7 +13,7 @@ const DetailsStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 130px 300px;
+    grid-template-rows: 150px 380px;
     width: 90vw;
     padding-top: 20px;
   }

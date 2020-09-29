@@ -27,7 +27,7 @@ const HighlightText = styled.div`
 
     @media screen and (max-width: 750px) {
         grid-row: 1;
-        height: 100%;  
+        height: 320px;  
     }
 
     @font-face {

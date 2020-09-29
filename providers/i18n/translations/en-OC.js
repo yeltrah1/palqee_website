@@ -242,6 +242,7 @@ export default {
     'find.training': "Workforce Training",
     'find.finance': "Finance",
     'find.automotive': "Automotive",
+    'find.healthcare': "Healthcare",
     'find.brazil': "Brazil",
     'find.usa': "United States",
     'partners.no': "There are currently no accredited partners matching your search.",

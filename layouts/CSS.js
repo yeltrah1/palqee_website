@@ -747,7 +747,7 @@ export const AboutStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 500px;
+      height: auto;
     }
   }
 
@@ -760,6 +760,7 @@ export const AboutStyle = styled.div`
 
     @media screen and (max-width: 750px) {
       background-image: linear-gradient(to top, #0d254a, #112a6b);
+      height: auto;
     }
   }
 
@@ -1152,7 +1153,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 550px;
+      height: auto;
     }
   }
 
@@ -1162,7 +1163,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 600px;
+      height: auto;
     }
   }
 
@@ -1172,7 +1173,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 500px;
+      height: auto;
     }
   }
 
@@ -1182,7 +1183,7 @@ export const InnovationStyle = styled.div`
     position: relative;
 
     @media screen and (max-width: 750px) {
-      height: 540px;
+      height: auto;
     }
   }
 

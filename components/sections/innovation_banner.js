@@ -14,7 +14,7 @@ const BannerStyle = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 280px;
   }
 `;
 
@@ -24,7 +24,6 @@ const BannerText = styled.div`
 
   @media screen and (max-width: 750px) {
     grid-column: 1;
-    padding-top: 40px;
     width: 90%;
   }
 
