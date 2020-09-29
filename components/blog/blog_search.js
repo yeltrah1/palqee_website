@@ -321,7 +321,7 @@ const BlogSearch = () => {
                 <form onSubmit={() => router.push('/blog/all?article='+document.getElementById("article-mobile").value)}>
                 <SearchStyle>
                   <InputStyle type="text" id="article-mobile" placeholder={intl.formatMessage({id:'blog.search'})}/>
-                  <button type="submit" style={{border:"none", background:"#FFF"}}><span class="ico-mglass"></span></button>
+                  <button type="submit" style={{border:"none", background:"#FFF"}}><span className="ico-mglass"></span></button>
                 </SearchStyle>
                 </form>
             </FieldStyle>
